@@ -21,7 +21,7 @@ title_separator          : "-"
 name                     : "Remote Sensing and Earth Surface Processes"
 description              : "Team webpage of the Remote Sensing and Earth Surface Processes group at the University of Potsdam"
 url                      : "https://up-rs-esp.github.io/"
-baseurl                  : ""# the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "up-rs-esp/up-rs-esp.github" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs            : false # true, false (default)
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Remote Sensing - Earth Surface Processes"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "images/ben_camera_pole.jpg"
   bio              : #"I am an amazing person."
   location         : "University of Potsdam"
   email            : "bodo.bookhagen@uni-potsdam.de"
@@ -298,10 +298,10 @@ defaults:
       comments: # true
       share: true
       related: true
-  ## _pages
-  #- scope:
-      #path: ""
-      #type: pages
-    #values:
-      #layout: single
-      #author_profile: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
