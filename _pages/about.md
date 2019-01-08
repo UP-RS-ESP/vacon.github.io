@@ -1,10 +1,19 @@
 ---
 permalink: /
 title: "Remote Sensing and Earth Surface Processes"
-excerpt: "Bodo Bookhagen"
+excerpt: ""
+header:
+  overlay_image: images/TolarGrandes_Llullaillaco.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [Bodo Bookhagen](https://bodobookhagen.github.io/)"
+  actions:
+    - label: "More Info"
+      url: "https://unsplash.com"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+Here we go
+
 ![TolarGrandes and Volcano Llullaillaco in the Central Andes](images/TolarGrandes_Llullaillaco.jpg)
