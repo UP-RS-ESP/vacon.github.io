@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Remote Sensing and Earth Surface Processes"
 title_separator          : "-"
-name                     : "Bodo Bookhagen"
+name                     : "Remote Sensing and Earth Surface Processes"
 description              : "Team webpage of the Remote Sensing and Earth Surface Processes group at the University of Potsdam"
 url                      : "https://up-rs-esp.github.io/"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
@@ -107,12 +107,12 @@ author:
   name             : "Remote Sensing - Earth Surface Processes"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : #"I am an amazing person."
-  location         : "Department of Geosciences"
+  location         : "University of Potsdam"
   email            : "bodo.bookhagen@uni-potsdam.de"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:bodo.bookhagen@uni-potsdam.de
+#    - label: "Email"
+#      icon: "fas fa-fw fa-envelope-square"
+#      url: mailto:bodo.bookhagen@uni-potsdam.de
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://up-rs-esp.github.io/"
@@ -140,10 +140,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: https://github.com/UP-RS-ESP
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      url: https://github.com/UP-RS-ESP
+      #url: https://github.com/UP-RS-ESP
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
