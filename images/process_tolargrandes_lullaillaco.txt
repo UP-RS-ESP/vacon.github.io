@@ -1,0 +1,1 @@
+convert -crop 6000x2000+0+1000 -density 150 -quality 100 ~/TolarGrandes_Lullailaco.JPG images/TolarGrandes_Llullaillaco.jpg
