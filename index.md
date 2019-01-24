@@ -26,11 +26,3 @@ Our research methods emphasize data-driven approaches, particularly those which 
 
 Our group is diverse and international, with PhD students and researchers from several countries, and scientific backgrounds ranging from network physics, to meteorology, to tectonic geomorphology. We are always interested in research collaborations, both from within the geosciences and from neighboring disciplines. 
 
-  actions:
-    - label: "Team"
-      url: "https://up-rs-esp.github.io/_team/"
-    - label: "Codes"
-      url: "https://up-rs-esp.github.io/_codes/"
-    - label: "Posts and Tutorials"
-      url: "https://up-rs-esp.github.io/_posts/"
-
