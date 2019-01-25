@@ -12,13 +12,15 @@ header:
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Photo credit: [Bodo Bookhagen](https://bodobookhagen.github.io/)"
 excerpt: ""
+gallery1:
+  - url: https://up-rs-esp.github.io/_team/
+    image_path: /images/team.png
+  - url: https://up-rs-esp.github.io/_codes/
+    image_path: /images/codes.png
+  - url: https://up-rs-esp.github.io/_posts/
+    image_path: /images/blogs_and_tutorials.png
 ---
-
-<figure class="third">
-	<a href="https://up-rs-esp.github.io/_team/"><img src="/images/500x300.png">
-	<a href="https://up-rs-esp.github.io/_codes/"><img src="/images/500x300.png">
-	<a href="https://up-rs-esp.github.io/_posts/"><img src="/images/500x300.png">
-</figure>
+{% include gallery id="gallery1" %}
 
 The **Remote Sensing-Earth Surface Processes** group at Universität Potsdam investigates the physical, climatic, and environmental controls that shape our world. We work across a range of spatial and temporal scales, running from examining sub-annual, sub-centimeter deformation with Synthetic Aperture Radar, to regional controls on continental-scale topography over decades using satellite climate data and digital elevation models, to millennial estimations of sediment transport and erosion from cosmogenic-radio nuclides (CRN). Likewise, in our research, we employ a broad range of datasets, including space-based optical, multi-spectral, synthetic aperture radar, and passive microwave data; point-could data collected from ground and airborne LiDAR and structure-from-motion; and field data collected from around the world. 
 
