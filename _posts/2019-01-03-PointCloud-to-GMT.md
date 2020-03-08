@@ -1,5 +1,5 @@
 ---
-title: 'Howto create webpages'
+title: 'Only Pointclouds'
 date: 2019-01-08
 read_time: false
 permalink: /posts/2019/01/Howto-create-webpages
@@ -11,3 +11,5 @@ permalink: /posts/2019/01/Howto-create-webpages
   - SfM
   - 3D view
 ---
+
+Convert into pointcluds

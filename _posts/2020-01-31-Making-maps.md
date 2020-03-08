@@ -12,3 +12,5 @@ author_profile: false
   - SfM
   - 3D view
 ---
+
+This is how you make maps!

@@ -1,14 +1,14 @@
 # main links
 main:
   - title: "Team"
-    url: /team/
+    url: /team_members/
 
   - title: "Codes"
-    url: /codes/    
+    url: /codes/
 
   - title: "Posts and Tutorials"
-    url: /year-archive/    
-    
+    url: /year-archive/
+
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
