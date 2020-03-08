@@ -2,6 +2,7 @@
 layout: splash
 title: 'RS-ESP'
 read_time: false
+permalink: /_codes/
 ---
 
 Codes:
