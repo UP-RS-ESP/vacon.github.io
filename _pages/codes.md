@@ -1,8 +1,8 @@
 ---
 layout: splash
-title: 'RS-ESP'
+title: 'Codes'
 read_time: false
-permalink: /_codes/
+permalink: /codes/
 author_profile: false
 ---
 
