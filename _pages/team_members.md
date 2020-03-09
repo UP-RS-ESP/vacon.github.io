@@ -31,7 +31,7 @@ researchers2:
   - image_path: /images/team_photo.png
     title: "Dominik Traxl"
     excerpt: "Complex networks, Time series analysis"
-researcher3:
+researchers3:
   - image_path: /images/team_photo.png
     alt: "Stefanie Tofelde"
     title: "Stefanie Tofelde"
@@ -67,7 +67,6 @@ PhD_students2:
   - image_path: /images/team_photo.png
     title: "Sohini Bhattacharjee"
     excerpt: "CRN Erosion, Himalayan Sediment Transport"
-
 former_members1:
   - image_path: /images/team_photo.png
     title: "Fiona Clubb"
