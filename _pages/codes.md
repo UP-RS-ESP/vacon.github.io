@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: splash
 title: 'Codes'
 read_time: false
 permalink: /codes/
