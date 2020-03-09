@@ -7,7 +7,7 @@ entries_layout: grid
 classes: wide
 
 researchers1:
-  - image_path: /images/team_photo.png
+  - image_path: /images/bookhagen.jpg
     alt: "Bodo Bookhagen"
     title: "Bodo Bookhagen"
     excerpt: "Remote Sensing and Earth Surface Processes"
