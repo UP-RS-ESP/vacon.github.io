@@ -1,11 +1,11 @@
 ---
-layout: splash
+layout: single
 title: 'Codes'
 read_time: false
 permalink: /codes/
 author_profile: false
 toc: true
-toc_label: "My Table of Contents"
+toc_label: "List of Codes and Source files"
 ---
 
 # Data Archives and Policies

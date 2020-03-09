@@ -6,39 +6,101 @@ collection: team_members
 entries_layout: grid
 classes: wide
 
-feature_row1:
-  - image_path: /images/ben_camera_pole.jpg
+researchers1:
+  - image_path: /images/team_photo.png
     alt: "Bodo Bookhagen"
     title: "Bodo Bookhagen"
     excerpt: "Remote Sensing and Earth Surface Processes"
     url: "https://bodobookhagen.github.io/"
-  - image_path: /images/ben_camera_pole.jpg
+  - image_path: /images/team_photo.png
     alt: "Aljoscha Rheinwalt"
     title: "Aljoscha Rheinwalt"
-    excerpt: "Aljoscha Rheinwalt"
+    excerpt: "PointClouds, Full-waveform lidar, Big Data Analytics"
     url: "#test-link"
-  - image_path: /images/ben_camera_pole.jpg
+  - image_path: /images/team_photo.png
     title: "Harald Schernthanner"
-    excerpt: "Harald Schernthanner"
-
-feature_row2:
-  - image_path: /images/team.png
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /images/team.png
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    excerpt: "GIS and spatial analysis, Computer Lab Technician"
+researchers2:
+  - image_path: /images/team_photo.png
+    alt: "Taylor Smith"
+    title: "Taylor Smith"
+    excerpt: "Passive Microwave Remote Sensing, Big Data Analytics"
+  - image_path: /images/team_photo.png
+    alt: "Stephanie Olen"
+    title: "Stephanie Olen"
+    excerpt: "Earth Surface Processes, CRN Erosion, SAR"
     url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"
-  - image_path: /images/team.png
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  - image_path: /images/team_photo.png
+    title: "Dominik Traxl"
+    excerpt: "Complex networks, Time series analysis"
+researcher3:
+  - image_path: /images/team_photo.png
+    alt: ""
+    title: ""
+    excerpt: ""
+  - image_path: /images/team_photo.png
+    alt: ""
+    title: ""
+    excerpt: ""
+    url: "#test-link"
+  - image_path: /images/team_photo.png
+    title: ""
+    excerpt: ""
+PhD_students1:
+  - image_path: /images/team_photo.png
+    alt: "Sofia Viotto"
+    title: "Sofia Viotto"
+    excerpt: "DEM, Satellite Photogrammetry, InSAR"
+  - image_path: /images/team_photo.png
+    alt: "Nikolas  Antonoglou"
+    title: "Nikolaos Antonoglou"
+    excerpt: "GNSS Remote Sensing"
+    url: "#test-link"
+  - image_path: /images/team_photo.png
+    title: "Ariane Mueting"
+    excerpt: "Digital Elevation Models, Satellite Photogrammetry"
+PhD_students2:
+  - image_path: /images/team_photo.png
+    alt: "Julia Artel"
+    title: "Julia Artel"
+    excerpt: "Cosmogenic Radionuclides"
+  - image_path: /images/team_photo.png
+    alt: "Maryam Ramezani"
+    title: "Maryam Ramezani"
+    excerpt: "Meteorology of the Central Andes"
+    url: "#test-link"
+  - image_path: /images/team_photo.png
+    title: ""
+    excerpt: ""
+
+former_members1:
+  - image_path: /images/team_photo.png
+    title: "Fiona Clubb"
+    excerpt: "DEM Analysis"
+  - image_path: /images/team_photo.png
+    alt: "Fabiana Castino"
+    title: "Fabiana Castino"
+    excerpt: "Hydrology and meteorology of the Central Andes"
+    url: "#test-link"
+  - image_path: /images/team_photo.png
+    title: ""
+    excerpt: ""
+
 ---
-Our team!
+# Researchers
+{% include feature_row id="researchers1" type=center%}
 
-{% include feature_row id="feature_row1" type=center%}
+{% include feature_row id="researchers2" type=center%}
 
-{% include feature_row id="feature_row2" type=center%}
+# PhD Students
+
+{% include feature_row id="PhD_students1" type=center%}
+
+{% include feature_row id="PhD_students2" type=center%}
+
+# MSc and BSc Students
+
+
+# Former Members
+
+{% include feature_row id="former_members1" type=center%}
