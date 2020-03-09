@@ -19,10 +19,6 @@ researchers1:
   - image_path: /images/team_photo.png
     title: "Harald Schernthanner"
     excerpt: "GIS and spatial analysis, Computer Lab Technician"
-  - image_path: /images/team_photo.png
-    alt: "Taylor Smith"
-    title: "Taylor Smith"
-    excerpt: "Passive Microwave Remote Sensing, Big Data Analytics"
 researchers2:
   - image_path: /images/team_photo.png
     alt: "Taylor Smith"
