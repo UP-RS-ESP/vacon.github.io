@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 title: 'Codes'
 read_time: false
 permalink: /codes/
