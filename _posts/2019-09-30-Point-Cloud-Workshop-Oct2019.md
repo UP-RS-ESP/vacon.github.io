@@ -1,4 +1,5 @@
 ---
+layout: splash
 title: 'Point Cloud Workshop at the University of Potsdam'
 date: 2019-09-30
 read_time: false

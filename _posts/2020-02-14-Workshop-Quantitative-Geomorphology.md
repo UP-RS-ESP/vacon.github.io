@@ -1,4 +1,5 @@
 ---
+layout: splash
 title: 'Workshop Quantitative Geomorphology'
 date: 2020-02-14
 read_time: false
