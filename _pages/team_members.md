@@ -16,15 +16,16 @@ researchers1:
     alt: "Aljoscha Rheinwalt"
     title: "Aljoscha Rheinwalt"
     excerpt: "PointClouds, Full-waveform lidar, Big Data Analytics"
-  - image_path: /images/team_photo.png
+  - image_path: /images/schernthanner.jpg
     title: "Harald Schernthanner"
     excerpt: "GIS and spatial analysis, Computer Lab Technician"
+    url: "https://schernthanner.de/"
 researchers2:
   - image_path: /images/team_photo.png
     alt: "Taylor Smith"
     title: "Taylor Smith"
     excerpt: "Passive Microwave Remote Sensing, Big Data Analytics"
-  - image_path: /images/team_photo.png
+  - image_path: /images/olen.png
     alt: "Stephanie Olen"
     title: "Stephanie Olen"
     excerpt: "Earth Surface Processes, CRN Erosion, SAR"
@@ -32,14 +33,16 @@ researchers2:
     title: "Dominik Traxl"
     excerpt: "Complex networks, Time series analysis"
 researchers3:
-  - image_path: /images/team_photo.png
+  - image_path: /images/tofelde.jpg
     alt: "Stefanie Tofelde"
     title: "Stefanie Tofelde"
     excerpt: "Earth Surface Processes, CRN Erosion, Analog Sediment Modeling"
-  - image_path: /images/team_photo.png
+    url: "http://www.geo.uni-potsdam.de/mitarbeiterdetails/show/771/Stefanie_Tofelde.html"
+  - image_path: /images/purinton.jpg
     alt: "Ben Purinton"
     title: "Ben Purinton"
     excerpt: "SAR, Processing of satellite Remote Sensing Data"
+    url: "https://bpurinton.github.io/"
   - image_path: /images/team_photo.png
     title: "Frank Günther"
     excerpt: "Frank Günther"
