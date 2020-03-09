@@ -16,10 +16,13 @@ researchers1:
     alt: "Aljoscha Rheinwalt"
     title: "Aljoscha Rheinwalt"
     excerpt: "PointClouds, Full-waveform lidar, Big Data Analytics"
-    url: "#test-link"
   - image_path: /images/team_photo.png
     title: "Harald Schernthanner"
     excerpt: "GIS and spatial analysis, Computer Lab Technician"
+  - image_path: /images/team_photo.png
+    alt: "Taylor Smith"
+    title: "Taylor Smith"
+    excerpt: "Passive Microwave Remote Sensing, Big Data Analytics"
 researchers2:
   - image_path: /images/team_photo.png
     alt: "Taylor Smith"
