@@ -29,9 +29,10 @@ researchers2:
     alt: "Stephanie Olen"
     title: "Stephanie Olen"
     excerpt: "Earth Surface Processes, CRN Erosion, SAR"
-  - image_path: /images/team_photo.png
+  - image_path: /images/traxl.jpg
     title: "Dominik Traxl"
     excerpt: "Complex networks, Time series analysis"
+    url: "https://github.com/dominiktraxl"
 researchers3:
   - image_path: /images/tofelde.jpg
     alt: "Stefanie Tofelde"
