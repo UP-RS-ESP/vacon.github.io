@@ -86,7 +86,7 @@ former_members1:
 
 {% include feature_row id="researchers2" type=center%}
 
-{% include feature_row id="researchers2" type=center%}
+{% include feature_row id="researchers3" type=center%}
 
 # PhD Students
 
