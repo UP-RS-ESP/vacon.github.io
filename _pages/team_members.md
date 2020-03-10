@@ -12,10 +12,11 @@ researchers1:
     title: "Bodo Bookhagen"
     excerpt: "Remote Sensing and Earth Surface Processes"
     url: "https://bodobookhagen.github.io/"
-  - image_path: /images/team_photo.png
+  - image_path: /images/rheinwalt.jpg
     alt: "Aljoscha Rheinwalt"
     title: "Aljoscha Rheinwalt"
     excerpt: "PointClouds, Full-waveform lidar, Big Data Analytics"
+    url: "https://github.com/rheinwalt"
   - image_path: /images/schernthanner.jpg
     title: "Harald Schernthanner"
     excerpt: "GIS and spatial analysis, Computer Lab Technician"
@@ -65,7 +66,7 @@ PhD_students2:
     alt: "Julia Artel"
     title: "Julia Artel"
     excerpt: "Cosmogenic Radionuclides"
-  - image_path: /images/team_photo.png
+  - image_path: /images/ramezani.jpg
     alt: "Maryam Ramezani"
     title: "Maryam Ramezani"
     excerpt: "Meteorology of the Central Andes"
