@@ -21,10 +21,11 @@ researchers1:
     excerpt: "GIS and spatial analysis, Computer Lab Technician"
     url: "https://schernthanner.de/"
 researchers2:
-  - image_path: /images/team_photo.png
+  - image_path: /images/smith.jpg
     alt: "Taylor Smith"
     title: "Taylor Smith"
     excerpt: "Passive Microwave Remote Sensing, Big Data Analytics"
+    url: "https://tasmi.github.io/"
   - image_path: /images/olen.png
     alt: "Stephanie Olen"
     title: "Stephanie Olen"
