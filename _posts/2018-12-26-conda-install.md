@@ -8,7 +8,7 @@ author: "Bodo Bookhagen"
 classes: wide
 read_time: false
 toc: true
-toc_label: "Conda installation"
+toc_label: "Conda Installation"
 -- tags:
   - conda
   - installation
