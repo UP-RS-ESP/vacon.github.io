@@ -1,7 +1,6 @@
 ---
 title: 'Geomorphology from Synthetic Aperture Radar (SAR) Coherence'
 date: 2020-03-11
-author_profile: false
 classes: wide
 read_time: false
 permalink: /posts/2020/03/SAR-Coherence-Erosion
