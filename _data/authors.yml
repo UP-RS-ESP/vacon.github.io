@@ -1,0 +1,34 @@
+Billy Rick:
+  name        : "Billy Rick"
+  bio         : "Postdoctoral Researcher"
+  avatar      : "/images/olen.png"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:olen@uni-potsdam.de"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://soslavsk.github.io"
+
+author:
+  name             : "Bodo Bookhagen"
+  avatar           : "/images/bookhagen.jpg"
+  bio              : Research and Teaching in Remote Sensing and Earth Surface Process
+  location         : "University of Potsdam"
+  email            : "bodo.bookhagen@uni-potsdam.de"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:bodo.bookhagen@uni-potsdam.de"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://bodobookhagen.github.io/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/RemotesensingUp"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/UP-RS-ESP"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/bodobookhagen/"
