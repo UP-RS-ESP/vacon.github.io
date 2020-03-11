@@ -4,10 +4,11 @@ layout: archive
 date: 2018-12-26
 permalink: /posts/2018/12/conda-install/
 author_profile: true
+author: "Bodo Bookhagen"
 classes: wide
 read_time: false
 toc: true
-toc_label: "My Table of Contents"
+toc_label: "Conda installation"
 -- tags:
   - conda
   - installation

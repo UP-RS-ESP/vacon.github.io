@@ -1,12 +1,11 @@
 ---
 title: 'Workshop Quantitative Geomorphology at IIT Gandhinagar'
 date: 2020-02-14
-author_profile: false
 classes: wide
 read_time: false
 permalink: /posts/2020/02/Workshop-Quantitative-Geomorphology
 author_profile: false
-toc: true
+toc: false
 toc_label: "My Table of Contents"
 -- tags:
   - Quantitative Geomorphology

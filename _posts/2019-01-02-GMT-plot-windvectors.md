@@ -1,6 +1,7 @@
 ---
 title: 'Plot ECMWF wind vectors with GMT'
 author_profile: true
+author: "Bodo Bookhagen"
 date: 2019-01-02
 permalink: /posts/2019/01/GMT-plot-windvectors/
 toc: true
@@ -24,13 +25,13 @@ tags:
 
 Using GMT to merge topographic and wind-vector data for visually-appealing maps.
 
-Visualizing wind fields with GMT can be tricky, especially if the NETCDF data will need to be pre-processed. Here is a short description of some steps necessary to create visually-appealing maps from ECMWF u and v wind fields using GMT. The example shown is for South America and requires some knowledge of GMT and bash scripting. All processing were done on an Ubuntu system, but should work on any OS. The data and scripts are available at [GMT-plot-windvectors-SAM](https://github.com/BodoBookhagen/GMT-plot-windvectors-SAM). 
+Visualizing wind fields with GMT can be tricky, especially if the NETCDF data will need to be pre-processed. Here is a short description of some steps necessary to create visually-appealing maps from ECMWF u and v wind fields using GMT. The example shown is for South America and requires some knowledge of GMT and bash scripting. All processing were done on an Ubuntu system, but should work on any OS. The data and scripts are available at [GMT-plot-windvectors-SAM](https://github.com/BodoBookhagen/GMT-plot-windvectors-SAM).
 
 
 # Data sources and setup
 The data used in this example are [ECMWF-EI-WND_1999_2013_DJF_200_SAM.nc](ECMWF-EI-WND_1999_2013_DJF_200_SAM.nc) for the 200hPA mean DJF wind from 1999 to 2013 for the South American domain. These have been generated and preprocessed with [CDO](https://code.mpimet.mpg.de/projects/cdo/).
 
-In addition, you will need topographic data for hillshading purposes. In this example, I am using a 15s global topography obtained from [ftp://topex.ucsd.edu/pub/srtm15_plus/](ftp://topex.ucsd.edu/pub/srtm15_plus/). The file [earth_relief_15s.nc](ftp://topex.ucsd.edu/pub/srtm15_plus/earth_relief_15s.nc) is needed. This will come in handy for many other examples as well and it will be good to keep a copy on your local computer. 
+In addition, you will need topographic data for hillshading purposes. In this example, I am using a 15s global topography obtained from [ftp://topex.ucsd.edu/pub/srtm15_plus/](ftp://topex.ucsd.edu/pub/srtm15_plus/). The file [earth_relief_15s.nc](ftp://topex.ucsd.edu/pub/srtm15_plus/earth_relief_15s.nc) is needed. This will come in handy for many other examples as well and it will be good to keep a copy on your local computer.
 
 Install and start the GMT environment with:
 ```bash
@@ -59,7 +60,7 @@ We first need to prepare the DEM data for the region of interest. Define the reg
 REGION=-85/-30/-40/15
 ```
 
-Next, we clip this region from the global Topo15s file (see above). Make sure to properly set the path to the location of the earth_relief_15s.nc file. 
+Next, we clip this region from the global Topo15s file (see above). Make sure to properly set the path to the location of the earth_relief_15s.nc file.
 ```bash
 TOPO15_GRD_NC=/PATH/TO/FILE/earth_relief_15s.nc
 TOPO15_GRD_NC_CentralAndesAmazon=earth_relief_15s_CentralAndesAmazon.nc
@@ -176,7 +177,7 @@ The file contains both, the u and v wind direction, and it is easier to work wit
 gmt grdconvert ${ECMWF_WND}?u -G${ECMWF_WND::-3}_u.nc
 ```
 
-CDO likes to store files with longitudes from 0 to 360. I prefer -180 to +180 and will apply this in the following step. 
+CDO likes to store files with longitudes from 0 to 360. I prefer -180 to +180 and will apply this in the following step.
 
 *NOTE* This is not necessary, but most other data have longitude values between -180 and 180 and I like to keep it consistent. This also makes clipping and cutting easier.
 {: .notice--warning}
@@ -238,7 +239,7 @@ gmt grdmath ${ECMWF_WND::-3}_u.nc ${ECMWF_WND::-3}_v.nc ATAN2 180 D2R MUL = ${EC
 gmt grdedit ${ECMWF_WND::-3}_direction_radians.nc -D+z"Wind Direction [radians]"+r"180/pi*atan2(-u,-v)"
 ```
 
-You can do the same for the direction in degrees: 
+You can do the same for the direction in degrees:
 ```bash
 gmt grdmath ${ECMWF_WND::-3}_u.nc NEG ${ECMWF_WND::-3}_v.nc NEG ATAN2 180 D2R MUL R2D = ${ECMWF_WND::-3}_direction_degree.nc
 gmt grdedit ${ECMWF_WND::-3}_direction_degree.nc -D+z"Wind Direction [degree]"+r"180/pi*atan2(-u,-v)"
@@ -294,7 +295,7 @@ gmt pscoast -W1/thin,black -R -J -N1/thin,gray -O -Df --FORMAT_GEO_MAP=ddd:mm:ss
 ```
 You can adjust width of lines for coast (`-W1`) and international borders (`N1`) separately.
 
-Next, the wind vectors. You need to give the u and v components to `gmt grdvector`. We plot only every 6th vector in X and Y direction (`-Ix6`) because otherwise the data would be too dense. We first plot colored lines (flowlines): 
+Next, the wind vectors. You need to give the u and v components to `gmt grdvector`. We plot only every 6th vector in X and Y direction (`-Ix6`) because otherwise the data would be too dense. We first plot colored lines (flowlines):
 ```bash
 gmt grdvector -S${VECTSCALE} -W1.5p ${ECMWF_WND::-3}_u.nc ${ECMWF_WND::-3}_v.nc -C$WIND_CPT -R -Ix6 -J -O -K -P >> $POSTSCRIPT1
 ```
