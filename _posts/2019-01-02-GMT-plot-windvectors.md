@@ -1,7 +1,7 @@
 ---
 title: 'Plot ECMWF wind vectors with GMT'
-author_profile: true
 author: "Bodo Bookhagen"
+author_profile: true
 date: 2019-01-02
 permalink: /posts/2019/01/GMT-plot-windvectors/
 toc: true
