@@ -3,6 +3,7 @@
 Stephanie Olen:
   name        : "Stephanie Olen"
   bio         : "Postdoctoral Researcher"
+  location    : "University of Potsdam"
   avatar      : "/images/olen.png"
   links:
     - label: "Email"
