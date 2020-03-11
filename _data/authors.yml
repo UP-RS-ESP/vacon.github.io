@@ -1,5 +1,7 @@
-Billy Rick:
-  name        : "Billy Rick"
+# /_data/authors.yml
+
+Stephanie Olen:
+  name        : "Stephanie Olen"
   bio         : "Postdoctoral Researcher"
   avatar      : "/images/olen.png"
   links:
@@ -10,7 +12,7 @@ Billy Rick:
       icon: "fas fa-fw fa-link"
       url: "https://soslavsk.github.io"
 
-author:
+Bodo Bookhagen:
   name             : "Bodo Bookhagen"
   avatar           : "/images/bookhagen.jpg"
   bio              : Research and Teaching in Remote Sensing and Earth Surface Process
