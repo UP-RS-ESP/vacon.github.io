@@ -4,6 +4,7 @@ date: 2020-03-11
 classes: wide
 author: "Stephanie Olen"
 author_profile: true
+comments: true
 read_time: false
 permalink: /posts/2020/03/SAR-Coherence-Erosion
 toc: false
