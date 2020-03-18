@@ -46,9 +46,9 @@ researchers3:
     title: "Ben Purinton"
     excerpt: "SAR, Processing of satellite Remote Sensing Data"
     url: "https://bpurinton.github.io/"
-  - image_path: /images/team_photo.png
+  - image_path: /images/guenther.jpg
     title: "Frank Günther"
-    excerpt: "Frank Günther"
+    excerpt: "Satellite Earth Observation of Polar Regions"
 PhD_students1:
   - image_path: /images/team_photo.png
     alt: "Sofia Viotto"
