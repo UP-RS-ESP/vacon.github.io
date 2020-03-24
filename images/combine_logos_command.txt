@@ -1,4 +1,7 @@
-convert 1200px-Universität_Potsdam_logo.svg.png -resize 2000x2000 2000px-Universität_Potsdam_logo.svg.png
-convert geowiss__rgb_blue.jpg -resize 2000x2000 geowiss__rgb_blue_2000px.jpg
-convert 2000px-Universität_Potsdam_logo.svg.png geowiss__rgb_blue_2000px.jpg -bordercolor white -border 20x10 -gravity center +append UP_Geowiss_logos.png
-
+convert 01_UPjpg.jpg -resize 2000x2000 01_UPjpg_2000px.png
+convert geowiss__cmyk_blue.jpg -resize 2000x2000 geowiss__cmyk_blue_2000px.png
+convert 01_UPjpg_2000px.png geowiss__cmyk_blue_2000px.png -bordercolor white -border 50x0 -gravity center +append UP_Geowiss_logos.jpg
+#get list of available fonts
+convert -list font
+convert -size 6000x2000 -background white -font /usr/share/fonts/TTF/Roboto-Bold.ttf -kerning 50 -pointsize 700 -fill '#1e3f5a' -gravity West caption:"Institute\nof Geosciences" -flatten UP_Geowiss_text.jpg
+convert UP_Geowiss_logos.jpg UP_Geowiss_text.jpg -bordercolor white -border 50x0 +append UP_Geowiss_logos_text.jpg
