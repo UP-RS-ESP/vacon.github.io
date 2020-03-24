@@ -4,4 +4,5 @@ convert 01_UPjpg_2000px.png geowiss__cmyk_blue_2000px.png -bordercolor white -bo
 #get list of available fonts
 convert -list font
 convert -size 11000x2000 -background white -font /usr/share/fonts/TTF/Roboto-Bold.ttf -kerning 400 -pointsize 650 -fill '#00305e' -gravity West caption:"Institute of \nGeosciences" -flatten UP_Geowiss_text.jpg
-convert UP_Geowiss_logos.jpg UP_Geowiss_text.jpg -bordercolor white -border 500x0 +append UP_Geowiss_logos_text.jpg
+convert  UP_Geowiss_logos.jpg UP_Geowiss_text.jpg -bordercolor white -border 500x0 +append \
+ -resize 25% -units PixelsPerInch -density 150 UP_Geowiss_logos_text.jpg
