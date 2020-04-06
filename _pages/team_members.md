@@ -58,7 +58,7 @@ PhD_students1:
     alt: Nikolas  Antonoglou
     title: Nikolaos Antonoglou
     excerpt: GNSS Remote Sensing
-  - image_path: /images/team_photo.png
+  - image_path: /images/mueting.jpg
     title: Ariane Mueting
     excerpt: 'Digital Elevation Models, Satellite Photogrammetry'
 PhD_students2:
