@@ -67,7 +67,7 @@ TOPO15_GRD_NC_CentralAndesAmazon=earth_relief_15s_CentralAndesAmazon.nc
 gmt grdcut -R$REGION $TOPO15_GRD_NC -G$TOPO15_GRD_NC_CentralAndesAmazon
 ```
 
-You can turn this into a more fancy bash-style command set that verifies if the file exist. This will ensure that you only create
+You can turn this into a more fancy bash-style command set that verifies if the file exist. This will ensure that you only create the files that do not exist yet.
 ```bash
 TOPO15_GRD_NC=/PATH/TO/FILE/earth_relief_15s.nc
 TOPO15_GRD_NC_CentralAndesAmazon=earth_relief_15s_CentralAndesAmazon.nc
@@ -88,6 +88,7 @@ then
     gmt grdgradient $TOPO15_GRD_NC -Ne0.6 -Es75/55+a -G$TOPO15_GRD_HS_NC
 fi
 ```
+
 If you instead want to have a simpler hillshading with less relief, use something akin to the Peucker algorithm. We call this `$TOPO15_GRD_HS2_NC`:
 ```bash
 TOPO15_GRD_HS2_NC=earth_relief_15s_CentralAndesAmazon_HS_peucker.nc
@@ -101,7 +102,7 @@ fi
 ### Prepare NETCDF wind file
 The file `ECMWF-EI-WND_1999_2013_DJF_200_SAM.nc` is a typical output generated with CDO. It contains the mean u and v wind components for the DJF season from 1999 to 2013 for South America. If you want to obtain information about the NETCDF .nc file, use `ncdump`
 ```bash
-ncdump -h ncdump -h ECMWF-EI-WND_1999_2013_DJF_200_SAM.nc
+ncdump -h ECMWF-EI-WND_1999_2013_DJF_200_SAM.nc
 ```
 
 with output:
