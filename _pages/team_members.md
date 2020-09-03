@@ -46,9 +46,6 @@ researchers3:
     title: Ben Purinton
     excerpt: 'SAR, Processing of satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
-  - image_path: /images/guenther.jpg
-    title: Frank Günther
-    excerpt: Satellite Earth Observation of Polar Regions
 PhD_students1:
   - image_path: /images/team_photo.png
     alt: Sofia Viotto
@@ -67,10 +64,6 @@ PhD_students2:
     alt: Julia Artel
     title: Julia Artel
     excerpt: Cosmogenic Radionuclides
-  - image_path: /images/ramezani.jpg
-    alt: Maryam Ramezani
-    title: Maryam Ramezani
-    excerpt: Meteorology of the Central Andes
   - image_path: /images/team_photo.png
     title: Sohini Bhattacharjee
     excerpt: 'CRN Erosion, Himalayan Sediment Transport'
@@ -105,4 +98,4 @@ former_members1:
 
 # Past Members
 
-Fabiana Castino, Fiona Clubb
+Dr. Fabiana Castino, Dr. Fiona Clubb, Dr. Frank Günther
