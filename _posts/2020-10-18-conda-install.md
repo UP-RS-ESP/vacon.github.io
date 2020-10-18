@@ -1,5 +1,5 @@
 ---
-title: 'Miniconda environments'
+title: 'Miniconda Environments Oct 2020'
 layout: archive
 date: 2020-10-18
 permalink: /posts/2020/10/conda-install/
