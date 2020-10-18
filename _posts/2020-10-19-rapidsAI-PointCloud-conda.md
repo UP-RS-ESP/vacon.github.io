@@ -21,12 +21,12 @@ toc_label: "RAPIDS Installation"
 There are different software packages available for using NVIDIA CUDA/OPENCL architectures. In addition to Google-supporeted [Tensorflow](https://www.tensorflow.org/) and other packages, [RAPIDS.AI]()(https://rapids.ai/) is a useful open GPU environment. Installation has become more straight forward (after you setup your [CUDA NDVIDIA drivers](/posts/2020/10/CUDA-install-ubuntu/))
 RAPIDS has useful and well maintained [documentation](https://docs.rapids.ai/) and [Jupyter Notebooks](https://github.com/rapidsai/notebooks) (for example, see [Jupyter Notebooks for Machine Learning](https://github.com/rapidsai/cuml/tree/branch-0.16/notebooks)).
 
-# installation
+# Installation
 Follow [conda package selection](https://rapids.ai/start.html#get-rapids) for a pure rapids installation.
 
-In order to install an environment useful for **point cloud processing**, use:
+In order to install an environment useful for **point cloud processing**, use one of the following.
 
-**CUDA 10.2 PointCloud Processing**
+## CUDA 10.2 PointCloud Processing
 
 ```
 conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
@@ -37,7 +37,7 @@ conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-fo
 
 Activate the environment `conda activate PC_cudf` and install additional packages with `pip install laspy` and tables `pip install tables`
 
-**CUDA 11.0 PointCloud Processing**
+## CUDA 11.0 PointCloud Processing
 
 ```
 conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
