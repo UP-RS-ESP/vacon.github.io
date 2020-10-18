@@ -26,7 +26,7 @@ Follow [conda package selection](https://rapids.ai/start.html#get-rapids) for a 
 
 In order to install an environment useful for **point cloud processing**, use one of the following.
 
-## CUDA 10.2 PointCloud Processing
+## CUDA 10.2 PointCloud Processing (Ubuntu 18.04)
 
 ```
 conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
@@ -37,7 +37,7 @@ conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-fo
 
 Activate the environment `conda activate PC_cudf` and install additional packages with `pip install laspy` and tables `pip install tables`
 
-## CUDA 11.0 PointCloud Processing
+## CUDA 11.0 PointCloud Processing (Ubuntu 20.04)
 
 ```
 conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
