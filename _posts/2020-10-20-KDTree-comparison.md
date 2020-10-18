@@ -15,7 +15,7 @@ toc_label: "PC-KDTree"
   - cKDTree
 ---
 
-This short entry describes a comparison of KDTree implementations for Lidar PointClouds (PC) and Structure-from-Motion (SfM) dataset. A more detailed analysis is found on **[Comparing Python KD-Tree Implementations with Focus on Point Cloud Processing]()** and the github repository **[LidarPC-KDTree](https://github.com/UP-RS-ESP/LidarPC-KDTree)**
+This short entry describes a comparison of KDTree implementations for Lidar PointClouds (PC) and Structure-from-Motion (SfM) dataset. A more detailed analysis is found on **[Comparing Python KD-Tree Implementations with Focus on Point Cloud Processing]()** and the github repository **[LidarPC-KDTree](https://github.com/UP-RS-ESP/LidarPC-KDTree)**.
 
 # KDTree and KNN Algorithms
 One of the core processing steps for irregular PC is to understand the neighborhood for each point (kNN - k-Nearest-Neighbors). This is often done using [KD Trees](https://en.wikipedia.org/wiki/K-d_tree). There exist myriad of implementations for various applications and KD Trees have become an important tool for Deep Learning that have been implemented in [kNN (k-nearest neighbor)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) algorithms. Many of the approaches have been optimized for multi-dimensional datasets (n>5 and up to 50). In the recent months and years, KD-Trees relying on [CUDA](https://en.wikipedia.org/wiki/CUDA) or [OpenCL](https://en.wikipedia.org/wiki/OpenCL) implementations have become more coming and easily approachable through Python or Matlab interfaces.
@@ -48,17 +48,15 @@ The airborne point cloud from Santa Cruz Island, California represents a natural
 The test area is from a small subset of the Pozo catchment in the southwestern part of the island. These data are openly accessibly and available from [opentopography](https://opentopography.org/) and were originally acquired by the USGS in 2010. The geologic and geomorphic environment and setting of the Santa Cruz Island has been described in several peer-reviewed scientific publications (e.g., [Perroy et al., 2010](https://doi.org/10.1016/j.geomorph.2010.01.009),  [Perroy et al., 2012](https://doi.org/10.1080/00045608.2012.715054), [Neely et al., 2017](https://doi.org/10.1002/2017JF004250), [Rheinwalt et al., 2019](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JF004827), [Clubb et al., 2019](https://doi.org/10.1029/2019JF005025)).
 
 
-# Results
+# Summary of Results for the Pozo catchment (n=3,348,668 points)
 We ran tests on a AMD Ryzen Threadripper 2970WX 24-Core Processor (2019) with a NVIDIA Titan RTX 24 GB running Ubuntu 18.04 (CUDA 10.1) and a AMD Ryzen 9 3900X 12-Core Processor with a NVIDIA GeForce RTX 2080 SUPER running Ubuntu 20.04 (CUDA 11.0).
 
-## Subset of Pozo catchments (n=3,348,668 points)
 A first test using standard single-core and multi core algorithms for n=3,348,668 queries for n=3,348,668 points. Note that the KDTree calculations from _scipy.spatial.KDTree_ have note been included, because they were too slow. Also, for the single core _sklearnKDTree_ approach, no higher number of neighbors have been included (too slow). All results show times in seconds (s) and have been averaged over n=3 runs.
 
-### Comparing single-core sklearnKDTree and multi-core cKDTree
 Comparing the traditional and widely used _sklearnKDTree_ (single core) and _cKDTree_ (multi core) approaches we note the following results:
-1. The leaf size is an important parameter to speed up single-core querying trees. Depending on point cloud structure, different leaf sizes provide very different results and can improve query times. We note that the default leaf size does not generate useful results for real-world airborne lidar data and that there exists a minimum time representing an optimal leaf size.
+1. The **leaf size** is an important parameter to speed up single-core querying trees. Depending on point cloud structure, different leaf sizes provide very different results and can improve query times. We note that the default leaf size does not generate useful results for real-world airborne lidar data and that there exists a minimum time representing an optimal leaf size.
 2. The _sklearnKDTree_ (single core) is slow on these massive queries. The option `dualtree=True` has been used to speed up processing.
-3. _cKDtree_ with `jobs=-1` set for querying outperforms single-core approaches - especially on modern multi-core systems. Leaf size does not have a significant impact on multi-core processing, but some for larger neighborhood queries (k>100).
+3. **_cKDtree_ with `jobs=-1` set for querying outperforms single-core approaches** - especially on modern multi-core systems. Leaf size does not have a significant impact on multi-core processing, but some for larger neighborhood queries (k>100).
 4. There are minimal difference between different approach. For example. the max. difference between _sklearnKDTree_ and _cKDTree_ is 0.2m and the median difference is 0.0.
-5. Comparing _cKDTree_ with 12, 24, and 48 core processors indicates a clear advantage of multi-threading processes. We emphasize that in order to take full advantage of multi-threading processes, an increase in available DRAM is needed (i.e., more cores require more DRAM). We note that _pyKDTree_ has lower peak memory requirement than _cKDTree_.
+5. Comparing _cKDTree_ with 12, 24, and 48 core processors **indicates a clear advantage of multi-threading systems**. We emphasize that in order to take full advantage of multi-threading processes, an increase in available DRAM is needed (i.e., more cores require more DRAM). We note that _pyKDTree_ has lower peak memory requirement than _cKDTree_.
 6. The FLANN (Fast Library for Approximate Nearest Neighbors) family of approaches provides additional advancements, especially for large datasets and massive queries.
