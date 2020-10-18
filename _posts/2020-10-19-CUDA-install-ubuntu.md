@@ -31,7 +31,7 @@ and the [Patch 10.2 Aug-26 2020](http://developer.download.nvidia.com/compute/cu
 3. **Before Installation** If you are using the NVIDIA card also for the X Server, you have to turn off the xserver. You can simply switch to the console with Ctrl-Alt-F2, logging in and turning off the xserver with `sudo init 3` or in some cases you can use `sudo service lightdm stop`. For compute-only servers, you should not be running an X Server.
 4. **Install the driver** with (here for 10.2. Make sure you are root (`sudo -i`): ```sh ./cuda_10.2.89_440.33.01_linux.run```. Apply patch ```sh ./cuda_10.2.1_linux.run```.
 5. You want to add the binary directory to you PATH variable: `export PATH=$PATH:/usr/local/cuda-10.2/bin`.
-6. Make sure that `/usr/local/cuda-10.2/lib64` is either in LD_LIBRARY PATH with `export LD_LIBRARY PATH=$LD_LIBRARY PATH:/usr/local/cuda-10.2/lib64` or add /usr/local/cuda-10.2/lib64 to /etc/ld.so.conf: `echo /usr/local/cuda-10.2/lib64 >> /etc/ld.so.conf` and run `ldconfig`
+6. Make sure that `/usr/local/cuda-10.2/lib64` is either in LD_LIBRARY PATH with `export LD_LIBRARY PATH=$LD_LIBRARY PATH:/usr/local/cuda-10.2/lib64` or add /usr/local/cuda-10.2/lib64 to /etc/ld.so.conf: `echo /usr/local/cuda-10.2/lib64 > /etc/ld.so.conf.d/cuda.conf` and run `ldconfig`
 7. Reboot (`sudo reboot`). You should now run a fairly recent NDVIDIA driver (440.33) and also should have all nvidia tools installed.
 8. Verify by running `nvcc --version` and `nvidia-smi`.
 
