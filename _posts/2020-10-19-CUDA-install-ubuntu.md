@@ -24,16 +24,16 @@ I advise to manually install the CUDA driver - especially if you are on a comput
 ## General steps to install CUDA Drivers and Toolkits on Ubuntu Systems
 It is best to install the CUDA 10.2/11.0 drivers directly from the [NVIDIA webpage](https://developer.nvidia.com/cuda-11.0-download-archive). On Ubuntu 18.04 we use CUDA 10.2, because 18.04 still runs with GCC v8 and on Ubuntu 20.04 we use CUDA 11.0 (GCC v9). By updating your GCC environment, you can also run 11.0 on Ubuntu 18.04. We have not noticed any differences between the versions.
 
-1. Deinstall all NDVIDIA repository drivers. `sudo apt-get purge nvidia-*`. If (for some reason) you want to keep the drivers, use `sudo apt-get purge nvidia-cuda*`.
-2. Downloaded CUDA drivers from the [pNVIDIA webpage](https://developer.nvidia.com/cuda-downloads). For Ubuntu 18.04 use [Download 10.2](https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal) or
+1. **Deinstall all NDVIDIA repository drivers.** `sudo apt-get purge nvidia-*`. If (for some reason) you want to keep the drivers, use `sudo apt-get purge nvidia-cuda*`.
+2. **Downloaded CUDA drivers** from the [pNVIDIA webpage](https://developer.nvidia.com/cuda-downloads). For Ubuntu 18.04 use [Download 10.2](https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal) or
 ```wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run```
 and the [Patch 10.2 Aug-26 2020](http://developer.download.nvidia.com/compute/cuda/10.2/Prod/patches/1/cuda_10.2.1_linux.run) with ```wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/patches/1/cuda_10.2.1_linux.run```. For Ubuntu 20.04 use [Download 11.0](https://developer.nvidia.com/cuda-11.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=2004&target_type=runfilelocal) or ```wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run```
 3. **Before Installation** If you are using the NVIDIA card also for the X Server, you have to turn off the xserver. You can simply switch to the console with Ctrl-Alt-F2, logging in and turning off the xserver with `sudo init 3` or in some cases you can use `sudo service lightdm stop`. For compute-only servers, you should not be running an X Server.
-4. Install the driver with (here for 10.2. Make sure you are root (`sudo -i`): ```sh ./cuda_10.2.89_440.33.01_linux.run```. Apply patch ```sh ./cuda_10.2.1_linux.run```.
+4. **Install the driver** with (here for 10.2. Make sure you are root (`sudo -i`): ```sh ./cuda_10.2.89_440.33.01_linux.run```. Apply patch ```sh ./cuda_10.2.1_linux.run```.
 5. You want to add the binary directory to you PATH variable: `export PATH=$PATH:/usr/local/cuda-10.2/bin`.
 6. Make sure that `/usr/local/cuda-10.2/lib64` is either in LD_LIBRARY PATH with `export LD_LIBRARY PATH=$LD_LIBRARY PATH:/usr/local/cuda-10.2/lib64` or add /usr/local/cuda-10.2/lib64 to /etc/ld.so.conf: `echo /usr/local/cuda-10.2/lib64 >> /etc/ld.so.conf` and run `ldconfig`
 7. Reboot (`sudo reboot`). You should now run a fairly recent NDVIDIA driver (440.33) and also should have all nvidia tools installed.
-8. verify by running `nvcc --version` and `nvidia-smi`.
+8. Verify by running `nvcc --version` and `nvidia-smi`.
 
 With `nvidia-smi` you should see something along these lines (system _aconcagua_):
 ```
