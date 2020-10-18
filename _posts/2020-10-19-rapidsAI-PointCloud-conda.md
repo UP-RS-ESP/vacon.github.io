@@ -27,17 +27,23 @@ Follow [conda package selection](https://rapids.ai/start.html#get-rapids) for a 
 In order to install an environment useful for **point cloud processing**, use:
 
 **CUDA 10.2 PointCloud Processing**
-```conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
+
+```
+conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
   ipython spyder python=3.8 rapids=0.16 cudatoolkit=10.1 cuspatial gdal=3 numpy scipy dask h5py pandas \
   pytables hdf5 cython matplotlib tabulate scikit-learn pyflann cyflann scikit-image opencv ipywidgets \
   scikit-learn laszip liblas
 ```
+
 Activate the environment `conda activate PC_cudf` and install additional packages with `pip install laspy` and tables `pip install tables`
 
 **CUDA 11.0 PointCloud Processing**
-```conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
+
+```
+conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults \
   ipython spyder python=3.8 rapids=0.16 cudatoolkit=11.0 cuspatial gdal=3 numpy scipy dask h5py pandas \
   pytables hdf5 cython matplotlib tabulate scikit-learn pyflann cyflann scikit-image opencv ipywidgets \
   scikit-learn laszip liblas
 ```
+
 Activate the environment `conda activate PC_cudf` and install additional packages with `pip install laspy` and tables `pip install tables`
