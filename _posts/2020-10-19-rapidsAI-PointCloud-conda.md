@@ -18,7 +18,7 @@ toc_label: "RAPIDS Installation"
   - cuspatial
 ---
 
-There are different software packages available for using NVIDIA CUDA/OPENCL architectures. In addition to Google-supporeted [Tensorflow](https://www.tensorflow.org/) and other packages, [RAPIDS.AI]()(https://rapids.ai/) is a useful open GPU environment. Installation has become more straight forward (after you setup your [CUDA NDVIDIA drivers](/posts/2020/10/CUDA-install-ubuntu/))
+There are different software packages available for using NVIDIA CUDA/OPENCL architectures. In addition to Google-supported [Tensorflow](https://www.tensorflow.org/) and other packages, [RAPIDS.AI](https://rapids.ai/) is a useful open GPU environment. Installation has become more straight forward (after you setup your [CUDA NDVIDIA drivers](/posts/2020/10/CUDA-install-ubuntu/))
 RAPIDS has useful and well maintained [documentation](https://docs.rapids.ai/) and [Jupyter Notebooks](https://github.com/rapidsai/notebooks) (for example, see [Jupyter Notebooks for Machine Learning](https://github.com/rapidsai/cuml/tree/branch-0.16/notebooks)).
 
 # Installation
