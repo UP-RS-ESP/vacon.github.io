@@ -64,13 +64,26 @@ Comparing the traditional and widely used _sklearnKDTree_ (single core) and _cKD
 7. Initial tests with cuML (CUDA RAPIDS) show that the implemented brute-force approach for nearest neighbor searches is not competitive against the multi-core approaches (_cKDTree_ and _pyKDTree_) and highly optimized FLANN approaches. But there are other processing advantages of data analysis using  CUDA Dataframes (cudf).
 
 
-![Generation and query times for single-core sklearnKDTree for varying leafsizes. \label{pc_sklearnKDTree_AMD3900X_12cores}](https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_sklearnKDTree_AMD3900X_12cores.png)
+<figure>
+    <a href="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_sklearnKDTree_AMD3900X_12cores.png"><img src="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_sklearnKDTree_AMD3900X_12cores.png"></a>
+    <figcaption>Generation and query times for single-core sklearnKDTree for varying leafsizes.</figcaption>
+</figure>
 
-![The multi-core cKDTree implementation in _scipy.spatial.cKDTree_ performs well - but you need to set the 'jobs=-1' parameter in the query to achieve best results and use all available cores (only during queries). \label{pc_cKDTree_AMD3900X_12cores}](https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_cKDTree_AMD3900X_12cores.png)
+<figure>
+    <a href="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_cKDTree_AMD3900X_12cores.png"><img src="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_cKDTree_AMD3900X_12cores.png"></a>
+    <figcaption>The multi-core cKDTree implementation in scipy.spatial.cKDTree performs well - but you need to set the 'jobs=-1' parameter in the query to achieve best results and use all available cores (only during queries).</figcaption>
+</figure>
 
-![Comparison of pyKDTree and cKDTree for different number of cores (both use a leaf size of 20). _cKDTree_ outperforms _pyKDTree_ and shows a nearly linear rise in time for increasing values in k-nearest neighbors. Higher number of cores result in faster processing time, most notably at higher number of ks. Processing times for lower k are faster for higher CPU speeds (3.9 GHz vs. 2.1 GHz). \label{pc_ckDTree_pyKDTree_k5_to_k1000_vcores_leafsize20}](https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_ckDTree_pyKDTree_k5_to_k1000_vcores_leafsize20.png)
+<figure>
+    <a href="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_ckDTree_pyKDTree_k5_to_k1000_vcores_leafsize20.png"><img src="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_ckDTree_pyKDTree_k5_to_k1000_vcores_leafsize20.png"></a>
+    <figcaption>Comparison of pyKDTree and cKDTree for different number of cores (both use a leaf size of 20). cKDTree outperforms pyKDTree and shows a nearly linear rise in time for increasing values in k-nearest neighbors. Higher number of cores result in faster processing time, most notably at higher number of ks. Processing times for lower k are faster for higher CPU speeds (3.9 GHz vs. 2.1 GHz).</figcaption>
+</figure>
 
-![Comparison of _cyFLANN_ and _cKDTree_. With higher number of cores, _cKDTree_ performs better than _cyFLANN_ for large number of neighbors. cyFLANN performs better for lower number of neighbors (small k) (a factor of 2 at k=500 neighbors with 40 cores). \label{pc_ckDTree_cyfFLANN_k5_to_k1000_vcores_leafsize20}](https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_ckDTree_cyfFLANN_k5_to_k1000_vcores_leafsize20.png)
+<figure>
+    <a href="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_ckDTree_cyfFLANN_k5_to_k1000_vcores_leafsize20.png"><img src="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/pc_ckDTree_cyfFLANN_k5_to_k1000_vcores_leafsize20.png"></a>
+    <figcaption>Comparison of cyFLANN and cKDTree. With higher number of cores, cKDTree performs better than cyFLANN for large number of neighbors. cyFLANN performs better for lower number of neighbors (small k) (a factor of 2 at k=500 neighbors with 40 cores).</figcaption>
+</figure>
+
 
 |  Algorithm     |   Generate KDTree (s) |   Query k=5 (s) |   Query k=10 (s) |   Query k=50 (s) |   Query k=100 (s) |   Query k=500 (s) |   Query k=1000 (s) |
 | :--------------|----------------------:|----------------:|-----------------:|-----------------:|------------------:|------------------:|-------------------:|
@@ -93,6 +106,12 @@ Table: Comparison of fastest processing times (any leaf size) for all implemente
 
 Table: Best leaf sizes (fastest times). Note the differences for varying numbers of neighbors.
 
-![Create and query cKDTree for three k neighbors and leaf sizes. Creating the cKDTree does not show large variability, but querying is mostly dependent on number of k neighbors.  \label{Pozo_WestCanada_clg}](https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/Pozo_WestCanada_clg.png)
+<figure>
+    <a href="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/Pozo_WestCanada_clg.png"><img src="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/Pozo_WestCanada_clg.png"></a>
+    <figcaption>Create and query cKDTree for three k neighbors and leaf sizes. Creating the cKDTree does not show large variability, but querying is mostly dependent on number of k neighbors. </figcaption>
+</figure>
 
-![Create and query cKDTree for using 1 to 8 threads. Generating the cKDTree only slightly improves when increasing numbers of threads, but querying significantly improves for higher number threads.  \label{Pozo_WestCanada_clg_jobs}](https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/Pozo_WestCanada_clg_jobs.png)
+<figure>
+    <a href="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/Pozo_WestCanada_clg_jobs.png"><img src="https://github.com/UP-RS-ESP/LidarPC-KDTree/raw/master/docs/figs/Pozo_WestCanada_clg_jobs.png"></a>
+    <figcaption>Create and query cKDTree for using 1 to 8 threads. Generating the cKDTree only slightly improves when increasing numbers of threads, but querying significantly improves for higher number threads. </figcaption>
+</figure>
