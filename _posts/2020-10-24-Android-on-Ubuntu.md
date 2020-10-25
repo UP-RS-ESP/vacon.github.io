@@ -45,6 +45,15 @@ For drawing on sheets and PDFs, the [Xournal++](https://github.com/xournalpp/xou
 
 From your Android device use * (I didn't succeed in using the Samsung Webbrowser) or *iPAD's Safari* and log in to your device. When you are successfully logged in, select the application you want to work in (this could also be *gimp*) and start drawing!
 
+<p float="middle">
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"></a>
+<figcaption>Screenshot from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop.</figcaption>
+
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png"></a>
+<figcaption>Screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook).</figcaption>
+
+</p>
+
 <figure>
     <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"></a>
     <figcaption>Screenshot from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop.</figcaption>
@@ -54,4 +63,14 @@ From your Android device use * (I didn't succeed in using the Samsung Webbrowser
 <figure>
     <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png"></a>
     <figcaption>Screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook).</figcaption>
+</figure>
+
+<figure>
+    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write1.png"></a>
+    <figcaption>You can control BBB from the iPad/Android tablet.</figcaption>
+</figure>
+
+<figure>
+    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write2.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write2.png"></a>
+    <figcaption>Make sure to increase diseplay size to full screen. All icons and tools on the left-hand side can be controlled with the Stylus/Pencil from the tablet.</figcaption>
 </figure>
