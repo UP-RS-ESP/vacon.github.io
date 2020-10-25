@@ -16,6 +16,7 @@ toc_label: "PC-KDTree"
 ---
 
 This short entry describes a comparison of KDTree implementations for Lidar PointClouds (PC) and Structure-from-Motion (SfM) dataset.
+
 A more detailed analysis is found on **[Comparing Python KD-Tree Implementations with Focus on Point Cloud Processing]()** and the github repository **[LidarPC-KDTree](https://github.com/UP-RS-ESP/LidarPC-KDTree)**.
 
 # KDTree and KNN Algorithms
