@@ -43,19 +43,14 @@ When starting `weylus`, you should use a passphrase. Identify your IP - I found 
 # Running Weylus
 For drawing on sheets and PDFs, the [Xournal++](https://github.com/xournalpp/xournalpp) app comes in handy. It allows to annotate PDFs and images and has a variety of drawing options. Also, you can directly add LaTeX equations and you can combine input from a Stylus Pen with keyboard input.
 
-From your Android device use * (I didn't succeed in using the Samsung Webbrowser) or *iPAD's Safari* and log in to your device. When you are successfully logged in, select the application you want to work in (this could also be *gimp*) and start drawing!
+From your Android device use *Chrome* (I didn't succeed in using the Samsung Webbrowser) or *iPAD's Safari* and log in to your device. When you are successfully logged in, select the application you want to work in (this could also be *gimp*) and start drawing!
 
 <p float="middle">
-<figure>
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg" width="45%"/>
-<figcaption>Screenshot from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop.</figcaption>
-</figure>
-
-<figure>
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png" width="45%"/>
-<figcaption>Screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook).</figcaption>
-</figure>
+
 </p>
+Above screenshots on left is from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop. Right side shows screenshot from an iPad showing *xournal++* with edits on an image (copy and paste from a Jupyter Notebook).
 
 <figure>
     <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"></a>
