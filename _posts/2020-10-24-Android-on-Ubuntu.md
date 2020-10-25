@@ -23,7 +23,7 @@ Can you use your Samsung Galaxy or iPad as an input device / whiteboard for onli
 
 We are especially interested in a setup that also works with the online teaching environment [BBB (Big Blue Button)](https://bigbluebutton.org/). There are different commercial options available for iOS and Windows - but I am working on Ubuntu. In the past weeks, I have been searching for an easy and straight forward way to link an Ubuntu Desktop system with a touch-sensitive iPad or Samsung Galaxy - mostly for teaching purposes and as a white-board replacement.
 
-**Note that the iPad and Galaxy Note Series will not replace a professional graphics and drawing tablet. There are a low-cost solution, because most of us own a tablet.**
+**Note that the iPad and Galaxy Note Series will not replace a professional graphics and drawing tablet. This is a low-cost solution, because most of us own a tablet.**
 
 I found and looked at the following two options:
 
