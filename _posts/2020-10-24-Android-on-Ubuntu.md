@@ -45,16 +45,16 @@ For drawing on sheets and PDFs, the [Xournal++](https://github.com/xournalpp/xou
 
 From your Android device use * (I didn't succeed in using the Samsung Webbrowser) or *iPAD's Safari* and log in to your device. When you are successfully logged in, select the application you want to work in (this could also be *gimp*) and start drawing!
 
-| ![Screenshot](https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg){ width=45% } | ![AudioBlocks](https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png){ width=45% } |
-|:---:|:---:|
-| Screenshot from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop. | Screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook). |
-
 <p float="middle">
+<figure>
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg" width="45%"/>
 <figcaption>Screenshot from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop.</figcaption>
+</figure>
 
+<figure>
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png" width="45%"/>
 <figcaption>Screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook).</figcaption>
+</figure>
 </p>
 
 <figure>
