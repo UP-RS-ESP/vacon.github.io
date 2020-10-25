@@ -48,27 +48,12 @@ From your Android device use *Chrome* (I didn't succeed in using the Samsung Web
 <p float="middle">
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg" width="45%"/>
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png" width="45%"/>
-
 </p>
-Above screenshots on left is from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop. Right side shows screenshot from an iPad showing *xournal++* with edits on an image (copy and paste from a Jupyter Notebook).
-
-<figure>
-    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Android_screenshot.jpg"></a>
-    <figcaption>Screenshot from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop.</figcaption>
-</figure>
+*Above screenshots on left is from an Android Galaxy Note S6 at first login. You can select a specific application or your entire desktop. Right side shows screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook).*
 
 
-<figure>
-    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/apple_ipod_weylus_example.png"></a>
-    <figcaption>Screenshot from an iPad showing xournal++ with edits on an image (copy and paste from a Jupyter Notebook).</figcaption>
-</figure>
-
-<figure>
-    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write1.png"></a>
-    <figcaption>You can control BBB from the iPad/Android tablet.</figcaption>
-</figure>
-
-<figure>
-    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write2.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write2.png"></a>
-    <figcaption>Make sure to increase diseplay size to full screen. All icons and tools on the left-hand side can be controlled with the Stylus/Pencil from the tablet.</figcaption>
-</figure>
+<p float="middle">
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write1.png" width="45%"/>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write2.png" width="45%"/>
+</p>
+*Left side: You can control BBB from the iPad/Android tablet. Right side: Make sure to increase display size to full screen. All icons and tools on the left-hand side can be controlled with the Stylus/Pencil from the tablet. Screenshots taken with an iPad and Apple Pencil.*
