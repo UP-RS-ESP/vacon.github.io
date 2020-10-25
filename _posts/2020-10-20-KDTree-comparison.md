@@ -15,7 +15,8 @@ toc_label: "PC-KDTree"
   - cKDTree
 ---
 
-This short entry describes a comparison of KDTree implementations for Lidar PointClouds (PC) and Structure-from-Motion (SfM) dataset. A more detailed analysis is found on **[Comparing Python KD-Tree Implementations with Focus on Point Cloud Processing]()** and the github repository **[LidarPC-KDTree](https://github.com/UP-RS-ESP/LidarPC-KDTree)**.
+This short entry describes a comparison of KDTree implementations for Lidar PointClouds (PC) and Structure-from-Motion (SfM) dataset.
+A more detailed analysis is found on **[Comparing Python KD-Tree Implementations with Focus on Point Cloud Processing]()** and the github repository **[LidarPC-KDTree](https://github.com/UP-RS-ESP/LidarPC-KDTree)**.
 
 # KDTree and KNN Algorithms
 One of the core processing steps for irregular PC is to understand the neighborhood for each point (kNN - k-Nearest-Neighbors). This is often done using [KD Trees](https://en.wikipedia.org/wiki/K-d_tree). There exist myriad of implementations for various applications and KD Trees have become an important tool for Deep Learning that have been implemented in [kNN (k-nearest neighbor)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) algorithms. Many of the approaches have been optimized for multi-dimensional datasets (n>5 and up to 50). In the recent months and years, KD-Trees relying on [CUDA](https://en.wikipedia.org/wiki/CUDA) or [OpenCL](https://en.wikipedia.org/wiki/OpenCL) implementations have become more coming and easily approachable through Python or Matlab interfaces.

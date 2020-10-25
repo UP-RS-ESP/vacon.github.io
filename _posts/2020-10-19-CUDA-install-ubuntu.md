@@ -15,7 +15,8 @@ toc_label: "CUDA Installation"
   - NVIDIA
 ---
 
-CUDA processing has become an integral part of data-intensive processing. Installation is still cumbersome and changes when new versions become available. There are several resources available on the net that guide you through the installation procedure - all tailored at different purposes. First and foremost, you should look at the official [NVIDIA Documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html).
+CUDA processing has become an integral part of data-intensive processing. Installation is still cumbersome and changes when new versions become available.
+ There are several resources available on the net that guide you through the installation procedure - all tailored at different purposes. First and foremost, you should look at the official [NVIDIA Documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html).
 
 **The following installation procedure is tailored at Ubuntu 18.04 and 20.04.**
 
