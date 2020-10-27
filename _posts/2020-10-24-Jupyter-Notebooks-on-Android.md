@@ -15,7 +15,7 @@ toc_label: "Jupyter Notebooks on Android"
   - Galaxy
   - teaching
 ---
-Connect your keyboard to your tablet and get ready to run *Jupyter Notebooks* on Android systems.
+Connect your keyboard to your tablet and get ready to run *Jupyter Notebooks* on Android systems!
 
 Jupyter Notebooks provide a great learning and coding environment. For serious coding and data processing, you most likely would like to have access to powerful computing resources - not always provided by tablets. However, many times you are developing and would like to continue fine tuning and debugging existing code - that's where Jupyter Notebooks on tablets come in very handy. Here, we briefly describe setting up an environment on Android systems using PyDroid, but there are other options to run Notebooks, too.
 
@@ -25,7 +25,7 @@ Setup is easy and straightforward. On Android (here we use an Samsung Galaxy S6)
 
 <figure>
     <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/weylus1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Pydroid0_install.jpg"></a>
-    <figcaption>Get PyDroid 3 from the Play Store. </figcaption>
+    <figcaption>Get PyDroid 3 from the Play Store (here the German Play Store is shown). </figcaption>
 </figure>
 
 Next, you can start using *pip* to install packages for your coding experience, just like on a PC. Pydroid 3 comes with an interface that allows you to install packages by selecting *pip* in the menu. In addition to Jupyter Notebook, you should install all the packages you would like to use (*scipy*, *numpy*, *pandas*, ...)
@@ -35,9 +35,12 @@ Next, you can start using *pip* to install packages for your coding experience, 
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Pydroid2_pip_install_jupyter.jpg" width="45%"/>
 </p>
 
-You start *jupyter notebook* from the terminal from the menu (type `jupyter notebook`). You also should set a password for your notebooks or use the provided token to use other web browsers. An example Notebook running *pandas* is shown below.
+
+After successful installation, you start *jupyter notebook* from the terminal from the menu (type `jupyter notebook`). You also should set a password for your notebooks or use the provided token to use other web browsers. An example Notebook running *pandas* is shown below.
 
 <p float="middle">
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Pydroid3_run_jupyter.jpg" width="45%"/>
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Pydroid4_Pandas.jpg" width="45%"/>
 </p>
+
+**Happy coding!**
