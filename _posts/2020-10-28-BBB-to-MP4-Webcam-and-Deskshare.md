@@ -58,8 +58,8 @@ ffmpeg -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc
 ```
 
 
-<video controls>
-   <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="640" height="360">
+<video controls class="center">
+    <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="640" height="360">
 </video>
 
 
