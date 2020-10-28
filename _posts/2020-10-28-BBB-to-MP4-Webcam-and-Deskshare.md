@@ -47,7 +47,7 @@ ffmpeg -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner
 
 We also add the Institute of Geoscience logo to the upper left corner. We scale the (almost) squared logo to 100x100 pixels.
 ```
-ffmpeg -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" completed_ur_logo.mp4
+ffmpeg -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_ur_logo.mp4
 ```
 
 This file is now ready to be uploaded to a media server for further distribution!
@@ -57,12 +57,13 @@ This file is now ready to be uploaded to a media server for further distribution
 ffmpeg -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4
 ```
 
+
 <video controls>
    <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="640" height="360">
 </video>
 
 
-A Shell script combining these steps:
+# A Shell script combining these steps:
 ```bash
 #!/bin/sh
 # Convert the deskshare and webcam to a combined video stream including logo
