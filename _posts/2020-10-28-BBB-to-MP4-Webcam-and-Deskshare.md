@@ -67,7 +67,6 @@ This file is now ready to be uploaded to a media server for further distribution
 # Convert the deskshare and webcam to a combined video stream including logo
 # cd /var/bigbluebutton/published/presentation/
 meetingId=$1
-
 cd $meetingId
 
 # add webcam sound to deskshare
