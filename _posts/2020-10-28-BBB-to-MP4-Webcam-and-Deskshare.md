@@ -52,6 +52,10 @@ ffmpeg -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:
 
 This file is now ready to be uploaded to a media server for further distribution!
 
+<video muted autoplay loop>
+   <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="640" height="360">
+</video>
+
 A Shell script combining these steps:
 ```bash
 #!/bin/sh
@@ -68,7 +72,7 @@ ffmpeg -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
 ffmpeg -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
 
 # add logo in lower right corner (could be combined with previous command)
-ffmpeg -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" completed_afftdn_ll.mp4
+ffmpeg -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_afftdn_ll.mp4
 
 rm -fr deskshare_with_sound.mp4 webcams_sc4.mp4 completed_ur.mp4
 ```
