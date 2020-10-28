@@ -52,9 +52,15 @@ ffmpeg -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:
 
 This file is now ready to be uploaded to a media server for further distribution!
 
+**Note that the following video has been downscaled to 640x360 (from 1280x720) with ffmpeg**
+```
+ffmpeg -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4
+```
+
 <video muted autoplay loop>
    <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="640" height="360">
 </video>
+
 
 A Shell script combining these steps:
 ```bash
