@@ -65,6 +65,7 @@ This file is now ready to be uploaded to a media server for further distribution
 ```bash
 #!/bin/sh
 # Convert the deskshare and webcam to a combined video stream including logo
+# cd /var/bigbluebutton/published/presentation/
 meetingId=$1
 
 cd $meetingId
@@ -76,7 +77,7 @@ ffmpeg -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
 #add picture in picture
 ffmpeg -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
 
-# add logo in lower right corner (could be combined with previous command)
+# add logo in upper right corner (could be combined with previous command)
 ffmpeg -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_afftdn_ll.mp4
 
 rm -fr deskshare_with_sound.mp4 webcams_sc4.mp4 completed_ur.mp4
