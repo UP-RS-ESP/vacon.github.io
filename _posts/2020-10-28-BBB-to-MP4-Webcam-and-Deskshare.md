@@ -20,6 +20,8 @@ Similar to several other academic institutions, we are hosting our own [Big Blue
 
 The next steps are tailored towards combining shared desktops and webcameras and applying a FFT-based noise canceling and speech filter ([afftdn](https://ffmpeg.org/ffmpeg-filters.html#afftdn)). We experimented with different low- and high-pass filtering options, but found this to be most useful. If you have a particularly noisy audio stream, you may need to filter this manually or use [audacity](https://www.audacityteam.org/).
 
+These steps also allow you to convert existing recordings. If you plan to record new, high resolution recording, please look at [OBS](https://obsproject.com/).
+
 On the BBB server change to the directory that contains the processed and published recordings. These are usually stored in `/var/bigbluebutton/published/presentation/`. Change directory to the meeting id of the recording - these are usually long digits and number combinations that you see in the http address when playing the recording (e.g., *bda894a68f6d2aa38dc62dd788e19d357e17948c-1603807633429*.)
 
 First, extract audio from webcam stream (stored in *video/webcams.webm*), filter audio with *afftdn*, and combine with desktop stream (stored in *deskshare/deskshare.webm*). We convert the WEBM format to MP4.
@@ -49,3 +51,24 @@ ffmpeg -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:
 ```
 
 This file is now ready to be uploaded to a media server for further distribution!
+
+A Shell script combining these steps:
+```bash
+#!/bin/sh
+# Convert the deskshare and webcam to a combined video stream including logo
+meetingId=$1
+
+cd $meetingId
+
+# add webcam sound to deskshare
+ffmpeg -threads 4 -i video/webcams.webm -i deskshare/deskshare.webm -af afftdn deskshare_with_sound.mp4
+ffmpeg -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
+
+#add picture in picture
+ffmpeg -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
+
+# add logo in lower right corner (could be combined with previous command)
+ffmpeg -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" completed_afftdn_ll.mp4
+
+rm -fr deskshare_with_sound.mp4 webcams_sc4.mp4 completed_ur.mp4
+```
