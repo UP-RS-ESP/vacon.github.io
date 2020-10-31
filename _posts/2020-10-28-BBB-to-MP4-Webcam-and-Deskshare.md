@@ -56,14 +56,13 @@ This file is now ready to be uploaded to a media server for further distribution
 `ffmpeg -nostdin -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4`
 
 <div style="text-align:center;">
-<video width="330" height="270" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="320" height="180" frameborder="0" scrolling="no"  allowfullscreen></video>
+<video src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="320" height="180" frameborder="0" scrolling="no"  allowfullscreen></video>
 </div>
 
 
 **Here is a high-res link to a Media-UP recording of an entire lecture:**
 <div style="text-align:center;">
 <iframe width="330" height="270" src="https://mediaup.uni-potsdam.de/player?autostart=n&videoId=djJACa1J&captions=y&chapterId=0" frameborder="0" scrolling="no"  allowfullscreen></iframe>
-</iframe>
 </div>
 
 
