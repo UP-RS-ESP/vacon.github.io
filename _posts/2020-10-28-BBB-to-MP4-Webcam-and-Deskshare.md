@@ -56,7 +56,9 @@ This file is now ready to be uploaded to a media server for further distribution
 `ffmpeg -nostdin -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4`
 
 <div style="text-align:center;">
-<video src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="320" height="180" frameborder="0" scrolling="no"  allowfullscreen></video>
+<video width="320" height="240" controls>
+  <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="320" height="180" frameborder="0" scrolling="no"  allowfullscreen>
+</video>
 </div>
 
 
