@@ -26,7 +26,7 @@ On the BBB server change to the directory that contains the processed and publis
 
 First, extract audio from webcam stream (stored in *video/webcams.webm*), filter audio with *afftdn*, and combine with desktop stream (stored in *deskshare/deskshare.webm*). We convert the WEBM format to MP4.
 ```
-ffmpeg -threads 4 -i video/webcams.webm -i deskshare/deskshare.webm -af afftdn deskshare_with_sound.mp4
+ffmpeg -nostdin -threads 4 -i video/webcams.webm -i deskshare/deskshare.webm -af afftdn deskshare_with_sound.mp4
 ```
 
 Next, reduce size of video recording by 1/4 (scale by 4). This depends on your video resolution, we are currently using a resolution of
@@ -37,29 +37,31 @@ video_output_height: 480
 set in */usr/local/bigbluebutton/core/scripts/presentation.yml*.
 
 ```
-ffmpeg -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
+ffmpeg -nostdin -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
 ```
 
 Add scaled webcam stream and deskshare video and place webcam stream in upper right corner (often referred to as 'picture in picture'):
 ```
-ffmpeg -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
+ffmpeg -nostdin -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
 ```
 
 We also add the Institute of Geoscience logo to the upper left corner. We scale the (almost) squared logo to 100x100 pixels.
 ```
-ffmpeg -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_ur_logo.mp4
+ffmpeg -nostdin -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_ur_logo.mp4
 ```
 
 This file is now ready to be uploaded to a media server for further distribution!
 
 **Note that the following video has been downscaled to 640x360 (from 1280x720) with ffmpeg:**
-`ffmpeg -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4`
+`ffmpeg -nostdin -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4`
 
 
 <video controls class="center">
     <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="640" height="360">
 </video>
 
+**Here is a high-res link to a Media-UP recording of en entire lecture:**
+<iframe width="330" height="270" src="https://mediaup.uni-potsdam.de/player?autostart=n&videoId=hd3JdaeB&captions=y&chapterId=0" frameborder="0" scrolling="no"  allowfullscreen></iframe>
 
 # A Shell script combining these steps:
 ```bash
@@ -70,14 +72,14 @@ meetingId=$1
 cd $meetingId
 
 # add webcam sound to deskshare
-ffmpeg -threads 4 -i video/webcams.webm -i deskshare/deskshare.webm -af afftdn deskshare_with_sound.mp4
-ffmpeg -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
+ffmpeg -nostdin -threads 4 -i video/webcams.webm -i deskshare/deskshare.webm -af afftdn deskshare_with_sound.mp4
+ffmpeg -nostdin -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
 
 #add picture in picture
-ffmpeg -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
+ffmpeg -nostdin -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
 
 # add logo in upper right corner (could be combined with previous command)
-ffmpeg -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_afftdn_ll.mp4
+ffmpeg -nostdin -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_afftdn_ll.mp4
 
 rm -fr deskshare_with_sound.mp4 webcams_sc4.mp4 completed_ur.mp4
 ```
