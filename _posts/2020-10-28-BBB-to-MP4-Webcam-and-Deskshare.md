@@ -57,7 +57,6 @@ This file is now ready to be uploaded to a media server for further distribution
 
 <div style="text-align:center;">
 <iframe width="330" height="270" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="320" height="180" frameborder="0" scrolling="no"  allowfullscreen></iframe>
-</iframe>
 </div>
 
 
