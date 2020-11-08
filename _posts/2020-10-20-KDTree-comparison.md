@@ -6,9 +6,10 @@ permalink: /posts/2020/10/LidarPC-KDTree/
 author_profile: true
 author: "Bodo Bookhagen"
 read_time: false
-toc: true
 toc_label: "PC-KDTree"
--- tags:
+toc: true
+toc_sticky: true
+tags:
   - KDTree
   - Python
   - sklearn

@@ -26,7 +26,7 @@ First results from processing interferograms from [SAOCOM](https://en.wikipedia.
 
 These outputs here show processing of the sample data from [CONAE](https://www.argentina.gob.ar/ciencia/conae).
 Obtain sample data from [CONAE SAOCOM sample data download](https://catalogos.conae.gov.ar/catalogo/catalogoSatSaocomAdel.html). ISCE2.4 includes a reader for SAOCOM and allows to process the slc images (provided by CONAE). We rely on the Interferometric synthetic aperture radar Scientific Computing Environment (ISCE) environment, but processing will work with other InSAR processors as well.
-These specific example images are from the National Park El Leoncito (*Parque Nacional El Leoncito*) in the San Juan province.
+These specific example SAR images are from the National Park El Leoncito (*Parque Nacional El Leoncito*) in the San Juan province.
 
 
 ## Setup config and input files
@@ -38,7 +38,7 @@ We generate three files to control the ISCE-run of SAOCOM data:
 
 *You will need to adjust directories if you are planing to run this on your own ISCE instance.*
 
-**StripmapApp_SAOCOM.xml**:
+**StripmapApp_SAOCOM.xml:**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <insarApp>
@@ -70,7 +70,7 @@ We generate three files to control the ISCE-run of SAOCOM data:
 </insarApp>
 ```
 
-**reference_SAOCOM.xml**
+**reference_SAOCOM.xml:**
 ```xml
 <component name="reference">
     <property name="IMAGEFILE">
@@ -88,7 +88,7 @@ We generate three files to control the ISCE-run of SAOCOM data:
 </component>
 ```
 
-**secondary_SAOCOM.xml**:
+**secondary_SAOCOM.xml:**
 ```xml
 <component name="reference">
     <property name="IMAGEFILE">
@@ -126,7 +126,7 @@ stripmapApp.py --steps /home/bodo/Dropbox/Argentina/SAOCOM/stripmapApp_SAOCOM.xm
 ```
 
 ## Quick views of interferogram and coherence
-Use mdx.py to create a quick outputs of filtered, unwrapped topophase and coherence (filtered phsig).
+Use *mdx.py* to create a quick outputs of filtered, unwrapped topophase and coherence (filtered phsig).
 
 ```bash
 mdx.py -P interferogram/filt_topophase.unw.geo
@@ -140,7 +140,7 @@ convert -density 300 -fuzz 1% -trim SAOCOM_filt_topophase.unw.geo.ppm SAOCOM_fil
 </figure>
 
 
-Same for phsig.cor.geo:
+Same for *phsig.cor.geo*:
 ```bash
 mdx.py -P interferogram/phsig.cor.geo
 mv out.ppm SAOCOM_phsig.cor.geo.ppm
