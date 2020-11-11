@@ -59,3 +59,12 @@ From your Android device use *Chrome* (I didn't succeed in using the Samsung Web
 <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Weylus_BBB_write2.png" width="45%"/>
 </p>
 *Left side: You can control BBB from the iPad/Android tablet. Right side: Make sure to increase display size to full screen. All icons and tools on the left-hand side can be controlled with the Stylus/Pencil from the tablet. Screenshots taken with an iPad and Apple Pencil.*
+
+# Combing [Weylus](https://github.com/H-M-H/Weylus), [Xournal++](https://github.com/xournalpp/xournalpp), PDF presentations and [OBS](https://obsproject.com/)
+In a typical teaching environment and setting, you mix PDF/Powerpoint presentation and whiteboard usage. We are recording our PDF Presentations presented in a window with [OBS](https://obsproject.com/) and can switch to a different window when recording. This allows to activate the Xournal++ window when using the Android as whiteboard. It requires some clicking, but with some practice it goes smoothly and switches between presentation and whiteboards.
+
+<div style="text-align:center;">
+<video width="960" height="540" controls>
+  <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/RSE_WS20_L02_weylus_clip.mp4" type="video/mp4" width="960" height="540" frameborder="0" scrolling="no"  allowfullscreen>
+</video>
+</div>
