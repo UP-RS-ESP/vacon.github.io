@@ -1,7 +1,7 @@
 {% if site.comments.discourse.server %}
 {% capture canonical %}{% if site.permalink contains '.html' %}{{ page.url | absolute_url }}{% else %}{{ page.url | absolute_url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
 <script type="text/javascript">
-    DiscourseEmbed = { discourseUrl: discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/',
+    DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/',
                      discourseEmbedUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/' };
    (function () {
      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
