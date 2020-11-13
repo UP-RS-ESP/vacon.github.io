@@ -2,7 +2,7 @@
 title: 'Installing Miniconda'
 layout: archive
 date: 2018-12-26
-permalink: /posts/2018/12/conda-install/
+permalink: 
 author_profile: true
 author: "Bodo Bookhagen"
 classes: wide
