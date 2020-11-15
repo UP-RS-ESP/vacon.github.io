@@ -9,6 +9,10 @@ read_time: false
 toc_label: "PC-KDTree"
 toc: true
 toc_sticky: true
+comments:
+  provider: "discourse"
+  discourse:
+    server: discourse.up-rs-esp-3.geo.uni-potsdam.de
 tags:
   - KDTree
   - Python
