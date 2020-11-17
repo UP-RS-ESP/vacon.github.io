@@ -126,17 +126,8 @@ Table: Best leaf sizes (fastest times). Note the differences for varying numbers
     <figcaption>Create and query cKDTree for using 1 to 8 threads. Generating the cKDTree only slightly improves when increasing numbers of threads, but querying significantly improves for higher number threads. </figcaption>
 </figure>
 
-
-
-
-
-
-
-
-
-
-
->
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: '<link rel="canonical" href="https://up-rs-esp.github.io/KDTree-comparison_I/">' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </scrip
 
 
 
