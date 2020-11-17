@@ -70,3 +70,7 @@ In a typical teaching environment and setting, you mix PDF/Powerpoint presentati
   <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/RSE_WS20_L02_weylus_clip.mp4" type="video/mp4" width="960" height="540" frameborder="0" scrolling="no"  allowfullscreen>
 </video>
 </div>
+
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io//Android-as-Whiteboard_I/' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
+
