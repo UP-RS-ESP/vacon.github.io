@@ -8,7 +8,7 @@ date: 2018-11-13
 permalink: 
 toc: true
 toc_sticky: true
-toc_label: "Tes"
+toc_label: "
 header:
 read_time: false
 tags:
