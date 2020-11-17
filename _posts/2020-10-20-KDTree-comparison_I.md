@@ -10,7 +10,6 @@ toc_label: "PC-KDTree"
 header:
 read_time: false
 tags:
--- tags:
   - Ubuntu
   - Android
   - iPad

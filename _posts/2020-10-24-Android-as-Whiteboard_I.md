@@ -10,7 +10,6 @@ toc_label: "iPad and Android-as-Whiteboard"
 header:
 read_time: false
 tags:
--- tags:
   - Ubuntu
   - Android
   - iPad
