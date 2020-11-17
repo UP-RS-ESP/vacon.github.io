@@ -46,3 +46,11 @@ conda config --prepend channels defaults
 | DEM processing Python 3.8 | ```conda create -y -n DEM_py3 -c anaconda -c conda-forge -c defaults python=3.8 pip scipy pandas numpy matplotlib scikit-image gdal=3 ipython spyder statsmodels jupyter pyproj gmt=6*``` <br> Activate the environment ```conda activate DEM_py3``` <br> and install additional packages with ```conda install -y -c conda-forge richdem landlab``` |
 | CUDA 10.2 PointCloud Processing | ```conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults  ipython spyder python=3.8 rapids=0.16 cudatoolkit=10.2 cuspatial gdal=3 numpy scipy dask h5py pandas pytables hdf5 cython matplotlib tabulate scikit-learn pyflann cyflann scikit-image opencv ipywidgets scikit-learn laszip liblas``` <br> Activate the environment ```conda activate PC_cudf``` <br> and install additional packages with ```pip install laspy``` and tables ```pip install tables```|
 | CUDA 11.0 PointCloud Processing | ```conda create -y -n PC_cudf -c rapidsai-nightly -c nvidia -c anaconda -c conda-forge -c defaults  ipython spyder python=3.8 rapids=0.16 cudatoolkit=11.0 cuspatial gdal=3 numpy scipy dask h5py pandas pytables hdf5 cython matplotlib tabulate scikit-learn pyflann cyflann scikit-image opencv ipywidgets scikit-learn laszip liblas``` <br> Activate the environment ```conda activate PC_cudf``` <br> and install additional packages with ```pip install laspy``` and tables ```pip install tables```|
+
+
+
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io/conda/' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
+
+
+
