@@ -1,5 +1,3 @@
-2018-11-13-install_conda.md
-
 ---
 title: 'Install Miniconda'
 author: "Bodo Bookhagen"
