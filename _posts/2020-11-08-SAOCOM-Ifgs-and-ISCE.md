@@ -171,3 +171,9 @@ Using split-spectrum processing included in ISCE (see [paper by Heresh Fattahi e
     <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/iono_nondispersive.bil.unwCor.filt.geo.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/iono_nondispersive.bil.unwCor.filt.geo.jpg"></a>
     <figcaption>Ionospheric component (non-dispersive), unwrapped and filtered data. Color Scale equals to dispersive ionospheric component shown above.</figcaption>
 </figure>
+
+
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io//posts/2020/11/SAOCOM-Ifgs-and-ISCE/' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
+
+
