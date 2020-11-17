@@ -2,7 +2,7 @@
 title: 'Converting BBB recordings to MP4 with Webcam on Deskshare Movie'
 layout: archive
 date: 2020-10-28
-permalink: 
+permalink: /posts/2020/10/BBB-to-MP4-Webcam-and-Deskshare/
 author_profile: true
 author: "Bodo Bookhagen"
 read_time: false
