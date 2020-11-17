@@ -7,6 +7,7 @@ author_profile: true
 author: "Bodo Bookhagen"
 read_time: false
 toc: true
+toc_sticky: true
 toc_label: "Converting BBB recordings to MP4"
 -- tags:
   - BBB
