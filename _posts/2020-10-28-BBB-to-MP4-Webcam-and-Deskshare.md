@@ -7,7 +7,7 @@ author_profile: true
 author: "Bodo Bookhagen"
 read_time: false
 toc: true
-toc_label: "BBB recordings to MP4"
+toc_label: "Converting BBB recordings to MP4 with Webcam on Deskshare Movie"
 -- tags:
   - BBB
   - MP4
