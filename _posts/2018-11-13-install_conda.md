@@ -7,7 +7,7 @@ author_profile: true
 date: 2018-11-13
 permalink: 
 toc: true
-toc_sticky: true
+toc_sticky: false
 toc_label: "
 header:
 read_time: false
