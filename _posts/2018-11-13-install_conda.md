@@ -5,8 +5,8 @@ author_profile: true
 date: 2018-11-13
 permalink: 
 toc: true
-toc_sticky: 
-toc_label: "
+toc_sticky: true
+toc_label: "Install Miniconda"
 header:
 read_time: false
 tags:
