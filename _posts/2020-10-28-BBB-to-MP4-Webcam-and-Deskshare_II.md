@@ -89,3 +89,6 @@ ffmpeg -nostdin -i completed_ur.mp4 -i /var/bigbluebutton/published/presentation
 
 rm -fr deskshare_with_sound.mp4 webcams_sc4.mp4 completed_ur.mp4
 ```
+
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io/posts/2020/10/BBB-to-MP4-Webcam-and-Deskshare/' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
