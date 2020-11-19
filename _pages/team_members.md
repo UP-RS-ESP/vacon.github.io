@@ -72,7 +72,7 @@ PhD_students2:
   - image_path: /images/team_photo.png
     title: Sohini Bhattacharjee
     excerpt: 'CRN Erosion, Himalayan Sediment Transport'
-  - image_path: /images/Mohammad-MohseniAref.jpg
+  - image_path: /images/Mohammad-MohseniAref2.jpg
     title: Mohammad Mohseni Aref
     excerpt: 'Radar Interferometry (InSAR), GNSS'
 former_members1:
