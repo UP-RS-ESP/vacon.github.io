@@ -52,7 +52,7 @@ researchers3:
     excerpt: 'CRN, Thermochronology'
     url: ''
 PhD_students1:
-  - image_path: /images/team_photo.png
+  - image_path: /images/sofiaviotto.jpg
     alt: Sofia Viotto
     title: Sofia Viotto
     excerpt: 'DEM, Satellite Photogrammetry, InSAR'
