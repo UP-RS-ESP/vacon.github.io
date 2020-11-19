@@ -46,6 +46,11 @@ researchers3:
     title: Ben Purinton
     excerpt: 'SAR, Processing of satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
+  - image_path: /images/team_photo.jpg
+    alt: Konstanze Stuebner
+    title: Konstanze Stuebner
+    excerpt: 'CRN, Thermochronology'
+    url: ''
 PhD_students1:
   - image_path: /images/team_photo.png
     alt: Sofia Viotto
@@ -67,6 +72,9 @@ PhD_students2:
   - image_path: /images/team_photo.png
     title: Sohini Bhattacharjee
     excerpt: 'CRN Erosion, Himalayan Sediment Transport'
+  - image_path: /images/Mohammad-MohseniAref.jpg
+    title: Mohammad Mohseni Aref
+    excerpt: 'Radar Interferometry (InSAR), GNSS'
 former_members1:
   - image_path: /images/team_photo.png
     title: Fiona Clubb
