@@ -46,7 +46,7 @@ researchers3:
     title: Ben Purinton
     excerpt: 'SAR, Processing of satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
-  - image_path: /images/team_photo.jpg
+  - image_path: /images/konstanze2.jpg
     alt: Konstanze Stuebner
     title: Konstanze Stuebner
     excerpt: 'CRN, Thermochronology'
