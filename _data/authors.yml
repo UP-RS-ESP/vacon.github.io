@@ -1,6 +1,19 @@
 # /_data/authors.yml
 
 Stephanie Olen:
+  name        : "Bashini Mahaarachchi"
+  bio         : "MSc Student"
+  location    : "University of Potsdam"
+  avatar      : ""
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:mahaarachchi@uni-potsdam.de"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://github.com/Bashinim/"
+
+Stephanie Olen:
   name        : "Stephanie Olen"
   bio         : "Postdoctoral Researcher"
   location    : "University of Potsdam"
