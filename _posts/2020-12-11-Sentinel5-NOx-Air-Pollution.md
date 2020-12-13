@@ -1,16 +1,16 @@
 ---
-title: 'Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis'
+title: 'Causes of reduction in airborne NO2 and CO emissions in Europe during COVID-19 crisis'
 author: "Bashini Mahaarachchi"
 author_profile: true
 date: 2020-12-11
 permalink: /posts/2020/12/COVID-19-NOx-CO-emission-Europe/
 toc: true
 toc_sticky: true
-toc_label: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis"
+toc_label: "Causes of reduction in airborne NO2 and CO emissions in Europe during COVID-19 crisis"
 header:
 overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Bashini_Background.jpg
   overlay_filter: 0.3
-  caption: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis"
+  caption: "Causes of reduction in airborne NO2 and CO emissions in Europe during COVID-19 crisis"
 read_time: false
 tags:
   - Sentinel 5
