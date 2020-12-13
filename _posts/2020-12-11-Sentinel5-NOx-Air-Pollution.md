@@ -7,7 +7,7 @@ toc: true
 toc_sticky: true
 toc_label: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis"
 header:
-overlay_image: https://raw.githubusercontent.com/Bashinim/COVID19-EU/main/Cropped%20Images/Background.jpg
+overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Bashini_Background.jpg
   overlay_filter: 0.3
   caption: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis"
 read_time: false
