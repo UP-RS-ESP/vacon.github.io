@@ -3,6 +3,7 @@ title: 'Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europ
 author: "Bashini Mahaarachchi"
 supervisors: "Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith"
 date: 2020-12-10
+permalink: /posts/2020/12/COVID-19-NOx-CO-emission-Europe/
 toc: true
 toc_sticky: true
 toc_label: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis"
