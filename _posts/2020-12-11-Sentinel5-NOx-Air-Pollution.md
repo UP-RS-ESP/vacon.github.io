@@ -26,7 +26,7 @@ The most presumed causes of reduction in observed reduction in air pollution are
 - Road density in Europe
 - Vessel routes density in the Mediterranean Sea and the black sea
 
-This research was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.
+*This research was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.*
 
 ### Main air pollutants and their sources in Europe
 
