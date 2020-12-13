@@ -1,7 +1,6 @@
 ---
 title: 'Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis'
 author: "Bashini Mahaarachchi"
-layout: archive
 supervisors: "Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith"
 date: 2020-12-10
 toc: true
@@ -12,6 +11,13 @@ overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_post
   overlay_filter: 0.3
   caption: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during COVID-19 crisis"
 read_time: false
+tags:
+  - Sentinel 5
+  - NOx
+  - air pollution
+  - CO2
+  - COVID-19
+
 ---
 
 The most presumed causes of reduction in observed reduction in air pollution are reduction in surface traffic and people staying at home due to the travel bans imposed. In this analysis changes of NO<sub>2</sub> and CO emissions are compared against the three variables:
