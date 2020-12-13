@@ -10,7 +10,7 @@ toc_label: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in E
 header:
   overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/Bashini_Background.jpg
   overlay_filter: 0.3
-  caption: "Causes of reduction in airborne NO<sub>2</sub> and CO emissions in Europe during the COVID-19 crisis"
+  caption: "Conceptualized view of NO<sub>2</sub> emission trends in Europe during the COVID-19 crisis"
 read_time: false
 tags:
   - Sentinel 5
@@ -20,32 +20,39 @@ tags:
   - COVID-19
 ---
 
-The most presumed causes of reduction in observed reduction in air pollution are reduction in road traffic and people staying at home due to the travel bans imposed. In this analysis changes of NO<sub>2</sub> and CO emissions are compared against the three variables:
+Road traffic reduction during the spring 2020 lockdown caused significant NO<sub>2</sub> decrease.
 
-- The average population in Europe
-- Road density in Europe
-- Vessel routes density in the Mediterranean Sea and the black sea
+The most presumed causes of decrease in observed air pollution are reduction in road traffic and people staying at home due to the imposed travel bans. In this analysis, changes of NO<sub>2</sub> and CO emissions are compared against the three variables:
+
+- The average population in Europe;
+- Road density in Europe;
+- Vessel routes density in the Mediterranean Sea and the black sea.
 
 *This research was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.*
 
-### Main air pollutants and their sources in Europe
+# Main air pollutants and their sources in Europe
 
 <a href="https://www.eea.europa.eu/publications/air-quality-in-europe-2019">EEA’s Air Quality 2019 report </a> illustrates the total emissions of pollutants in the EU-28, indexed as a percentage of their value in the reference year 2000. This report further gives an overview of each sector’s contribution to total emissions for all chosen pollutants in the EU-28, for 2017.
 
+<center>
+<figure>
+<a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.2.1.jp?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.2.1.jpg?raw=true"></a> <figcaption>Trends in EU-28 emissions, 2000-2017 (as a % of 2000 levels): SO<sub>x</sub>, NO<sub>x</sub>, NH<sub>3</sub>, PM<sub>10</sub>, PM<sub>2.5</sub>, NMVOCs, CO, CH<sub>4</sub> and BC. Also for comparison EU-28 gross domestic product (GDP) is shown (GDP, expressed in chain linked volumes as a % of 2000 level. This shows that there were fewer emissions for each unit of GDP produced per year consecutively. Figure from <a href="https://www.eea.europa.eu/publications/air-quality-in-europe-2019">EEA’s Air Quality 2019 report </a>.</figcaption>
+</figure>
+</center>
 
-<a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.2.1.jp?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.2.1.jpg?raw=true"></a>
-    <figcaption>Trends in EU-28 emissions, 2000-2017 (as a % of 2000 levels): SO<sub>x</sub>, NO<sub>x</sub>, NH<sub>3</sub>, PM<sub>10</sub>, PM<sub>2.5</sub>, NMVOCs, CO, CH<sub>4</sub> and BC. Also for comparison EU-28 gross domestic product (GDP) is shown (GDP, expressed in chain linked volumes as a % of 2000 level. This shows that there were fewer emissions for each unit of GDP produced per year consecutively.  </figcaption>
-    </figure> </center>
-
+<center>
+<figure>
 <a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.2.2.jpg?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.2.2.jpg?raw=true"></a>
     <figcaption>Contribution to EU-28 emissions from the main source sectors in 2017 of SO<sub>x</sub>, NO<sub>x</sub>, primary PM<sub>10</sub>, primary
-PM<sub>2.5</sub>, NH<sub>3</sub>, NMVOCs, CO, BC and CH<sub>4</sub>. The road transport sector was the most significant contributor to total NO<sub>x</sub> (nitrogen oxides is a generic term for the mono-nitrogen oxides NO and NO<sub>2</sub>) emissions and the second largest contributor for NO<sub>2</sub> emissions was the energy production and distribution sector. The highest and 50% contributor to total CO emissions was the commercial, institutional and households sector and the second largest contributor to total CO emissions was the transport sector. </figcaption>
+PM<sub>2.5</sub>, NH<sub>3</sub>, NMVOCs, CO, BC and CH<sub>4</sub>. The road transport sector was the most significant contributor to total NO<sub>x</sub> (nitrogen oxides is a generic term for the mono-nitrogen oxides NO and NO<sub>2</sub>) emissions and the second largest contributor for NO<sub>2</sub> emissions was the energy production and distribution sector. The highest and 50% contributor to total CO emissions was the commercial, institutional and households sector and the second largest contributor to total CO emissions was the transport sector. Figure from <a href="https://www.eea.europa.eu/publications/air-quality-in-europe-2019">EEA’s Air Quality 2019 report </a></figcaption>
     </figure> </center>
 
-The contributions from different emission source sectors to air pollutant concentrations and air pollution impacts depend not only on the amount of pollutants emitted but also on the proximity to the source, emission/dispersion conditions and other factors such as topography. Emission sectors with low emission heights, such as traffic and household emissions, generally make larger contributions to surface concentrations and health impacts in urban areas than emissions from high stacks.
+The contributions from different emission source sectors to air pollutant concentrations and air pollution impacts depend not only on the amount of pollutants emitted, but also on the proximity to the source, emission/dispersion conditions and other factors such as topography. Emission sectors with low emission heights, such as traffic and household emissions, generally make larger contributions to surface concentrations and health impacts in urban areas than emissions from high stacks.
 
 
-### Processing candidate variables
+# Processing candidate variables
+
+## Population Density
 
 <center>
 <figure>
@@ -74,7 +81,7 @@ The number of roads passing through a 7 km radius from each of these points was 
 and spatial index, in python.
 
 ```bash
-#Defining radius as 7 km (7km ≈ 0.063063̇°).
+#Defining radius as 7 km (7km ≈ 0.06306°).
 Radius = 0.063063
 
 #Adding this buffer to all geolocation points (grided points)
@@ -107,18 +114,18 @@ considered geolocation point. Each distinctive route is identified by a unique �
     </figure> </center>
 
 
-### Processing air pollution variables
+# Processing air pollution variables
 
-In this analysis, the time between 1<sup>st</sup> of March 2020 to 31<sup>st</sup> of April 2020 is considered as the time where strict
-confinement policies were applied across Europe, thus as the <b>‘lock-down period’</b>.
+In this analysis, the time between 1<sup>st</sup> of March 2020 to 31<sup>st</sup> of April 2020 is the time where strict
+confinement policies were applied across Europe, and thus is considered as the <b>‘lock-down period’</b>.
 
-The following three variables are used to indicate the changes in  NO<sub>2</sub> and CO emissions. Data was preprocessed in Google Earth Engine (GEE) Code editor and further analysis was done with python.
+The following three variables are used to indicate the changes in  NO<sub>2</sub> and CO emissions. Data was preprocessed in Google Earth Engine (GEE) Code editor and further analysis was done with python:
 
-- Average NO<sub>2</sub> and CO emissions during Covid-19 in Europe
-- The slope of the time series change of NO<sub>2</sub> and CO emissions during the lock-down period
-- Percentage change of NO<sub>2</sub> and CO emissions during the lock-down period compared to the average values of the previous year in the same period
+- Average NO<sub>2</sub> and CO emissions during Covid-19 in Europe.
+- The slope of the time series change of NO<sub>2</sub> and CO emissions during the lock-down period.
+- Percentage change of NO<sub>2</sub> and CO emissions during the lock-down period compared to the average values of the previous year in the same period.
 
-Two videos below show the weekly average NO<sub>2</sub> and CO emissions from 1<sup>st</sup> of January to 31<sup>st</sup> of July 2020. Areas with no data values are displayed in black colour. Codes used to create the videos can be found here [<a href="https://code.earthengine.google.com/a968bd2c8a502ccba6a6af3dfc4f0eb6?noload=true">NO<sub>2</sub></a>,<a href="https://code.earthengine.google.com/c3e02c47cf15255a0f61baa9744fbe94?noload=true"> CO</a>].
+The two videos below show the weekly average NO<sub>2</sub> and CO emissions from 1<sup>st</sup> of January to 31<sup>st</sup> of July 2020. Areas with no data values are displayed in black colour. Codes used to create the videos can be found here [<a href="https://code.earthengine.google.com/a968bd2c8a502ccba6a6af3dfc4f0eb6?noload=true">NO<sub>2</sub></a>,<a href="https://code.earthengine.google.com/c3e02c47cf15255a0f61baa9744fbe94?noload=true"> CO</a>].
 
 <center>
 <figure>
@@ -139,22 +146,23 @@ for 2019 emissions. The emission volumes have dropped significantly compared to 
     </figure> </center>
 
 
+<center>
 <figure>
     <a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.5.jpg?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.5.jpg?raw=true"></a>
     <figcaption>Mean CO emission volumes during the lock-down period, during the previous two months and the same maps for 2019 emissions. The last two maps show the difference in CO mean values of the two periods in 2019 and 2020 respectively. Difference maps show reductions in Europe wide CO emissions in each following month. </figcaption>
     </figure> </center>
 
 
-<center><figure>
+<center> <figure>
     <a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.6.jpg?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.6.jpg?raw=true"></a>
-    <figcaption>The slope of NO<sub>2</sub> emission data during the lock-down period. Negative slopes indicate reductions in NO<sub>2</sub> emission volumes and positive slopes indicate
+    <figcaption>The change (trend or slope) of NO<sub>2</sub> emission data during the lock-down period. Negative slopes indicate reductions in NO<sub>2</sub> emission volumes and positive slopes indicate
 increases in NO<sub>2</sub> emission volumes. </figcaption>
     </figure> </center>
 
 
 <center><figure>
     <a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.7.jpg?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.7.jpg?raw=true"></a>
-    <figcaption>The slope of CO emission data during the lock-down period. Negative slopes indicate reductions in CO emission volumes and positive slopes indicate increases in CO emission volumes. </figcaption>
+    <figcaption>The change (trend or slope) of CO emission data during the lock-down period. Negative slopes indicate reductions in CO emission volumes and positive slopes indicate increases in CO emission volumes. </figcaption>
     </figure> </center>
 
 
@@ -187,7 +195,7 @@ coastal areas in the Mediterranean Sea indicate reductions in NO<sub>2</sub> emi
     <figcaption>Percentage change average of NO<sub>2</sub> and CO emission volumes over the vessel routes in the Mediterranean Sea and the Black Sea during the lock-down period compared to the previous year's same time period.</figcaption>
     </figure> </center>
 
-### Assessing the relationships
+# Assessing the relationships between the variables
 
 
 <center><figure>
@@ -203,7 +211,7 @@ reduction of NO<sub>2</sub> emissions during the lock-down period because the sl
 during the lock-down.
 
 
-### Time series analysis
+# Time series analysis
 
 <center><figure>
     <a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.28.jpg?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.28.jpg?raw=true"></a>
@@ -212,8 +220,7 @@ during the lock-down.
 
 <center><figure>
     <a href="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.30.jpg?raw=true"><img src="https://github.com/Bashinim/COVID19-EU/blob/main/Cropped%20Images/F.4.30.jpg?raw=true"></a>
-    <figcaption>NO<sub>2</sub> emission time series and the smoothened series change in Barcelona-Spain, Venice-Italy and ˙Istanbul-
-Turkey, and VD of these places. NO<sub>2</sub> emissions have dropped significantly during the lock-down period in all these places. Similar to the above figure, this drop has also started in mid March but it continues until the end of July with some irregular spikes in between.</figcaption>
+    <figcaption>NO<sub>2</sub> emission time series and the smoothened series change in Barcelona-Spain, Venice-Italy and Istanbul-Turkey, and VD of these places. NO<sub>2</sub> emissions have dropped significantly during the lock-down period in all these places. Similar to the above figure, this drop has also started in mid March but it continues until the end of July with some irregular spikes in between.</figcaption>
     </figure> </center>
 
 
@@ -224,18 +231,18 @@ Turkey, and VD of these places. NO<sub>2</sub> emissions have dropped significan
 
 
 
-### Key takeaways
+# Key takeaways
 
 
-- Road traffic reduction has been the primary cause of the reduction in NO<sub>2</sub> emissions during the lock-down period in Europe.
+- Road traffic reduction has been the primary cause of the decrease in NO<sub>2</sub> emissions during the lock-down period in Europe.
 
-- The places that have higher drops in NO<sub>2</sub> volumes during the confinement period have higher road, vessel and population densities.
+- The places that have higher decreases in NO<sub>2</sub> volumes during the confinement period have higher road, vessel, and population densities.
 
-- Road, vessel and population density data do not provide strong reasoning for the reduction in CO emissions due to two reasons:
+- Road, vessel, and population density data do not provide strong reasoning for the reduction in CO emissions due to several reasons:
 
 	1. CO is a highly dispersing gas, and therefore, it might not be a good approach to compare the geographical location of the sensed CO gas and its sources
 
-	1. People staying at home during lock-down could have created events that have both positive and negative effects on changes in CO emission levels.
+	2. People staying at home during lock-down could have created events that have both positive and negative effects on changes in CO emission levels.
 
 - It would add further insights to this analysis if the locations of the industries that contribute to a high level of NO<sub>2</sub> and CO emissions in Europe could be checked against the changes in CO and NO<sub>2</sub> emission levels in these locations during the lock-down period because 50% of the CO emissions and 8% of NO<sub>2</sub> emissions are coming from commercial
 institutions.
