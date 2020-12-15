@@ -2,8 +2,8 @@
 title: 'InSAR first results: Earthquake on Nov-30 2020 in NW Argentina, Central Andes'
 author: "Bodo Bookhagen"
 author_profile: true
-date: 2020-12-14
-permalink: /posts/2020/12/S1-NWArg-EQ-Nov30-2020/
+date: 2020-01-14
+permalink: /posts/2020/01/S1-NWArg-EQ-Nov30-2020/
 toc: true
 toc_sticky: true
 toc_label: "Earthquake NW Argentina"
