@@ -7,10 +7,6 @@ permalink: /posts/2021/01/TopoAsymmetry
 toc: true
 toc_sticky: true
 toc_label: 'Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale'
-header:
-  overlay_image: https://raw.githubusercontent.com/UP-RS-ESP/HillslopeAsymmetry/master/Figures/fig03a_NSAsymm_HighRes.png
-  overlay_filter: 0.3
-  caption: 'Global Topographic Asymmetry'
 read_time: false
 tags:
   - Topographic Asymmetry
@@ -29,7 +25,6 @@ In vegetated landscapes, higher vegetation cover on pole-facing terrain encourag
 In high elevation and cold environments, a different set of erosion processes play a role in the development of topographic asymmetry. Periglacial processes can encourage equator-steepening of topography via intense erosion on pole-facing slopes and headwall retreat. Pole-facing terrain in extremely cold environments remains frozen and stable for more of the year -- indeed, in permafrost landscapes, the differences in temperature amplitude between pole- and equator-facing slopes can be quite large. Freeze-thaw cycling also acts more forcefully on equator-facing slopes, primarily through enhancing solifluction, slumping, and modifying soil-water penetration and overland flow. In high-relief and tectonically active environments, hillslope-transport processes will thus remove more material on equator-facing slopes. Where material transport is high, for example in steep river valleys, this material may not lead to gentler slopes at higher erosion rates. Even where material transport is low, slumping and mass movement could lead to terrain with steep upper sections and shallow lower sections rather than a more gradual and smooth hillslope form as is typical in mid-latitude regions.
 
 
-
 **The key points to remember are that:**
 
 * Steep terrain has more unequal slopes
@@ -38,5 +33,5 @@ In high elevation and cold environments, a different set of erosion processes pl
 
 
 
-<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io//posts/2021/01/TopoAsymmetry/'};
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io/posts/2021/01/TopoAsymmetry/'};
 (function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
