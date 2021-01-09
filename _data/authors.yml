@@ -1,5 +1,18 @@
 # /_data/authors.yml
 
+Taylor Smith:
+  name        : "Taylor Smith"
+  bio         : "Postdoctoral Researcher"
+  location    : "University of Potsdam"
+  avatar      : "/images/smith.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:tasmith@uni-potsdam.de"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://tasmi.github.io/"
+
 Bashini Mahaarachchi:
   name        : "Bashini Mahaarachchi"
   bio         : "MSc Student"
