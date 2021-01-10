@@ -324,7 +324,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: single
-      author_profile: true
+      layout: wide
+      author_profile: false
       share: true
-      comments: true
+      comments: false
