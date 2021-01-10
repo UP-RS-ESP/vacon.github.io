@@ -25,7 +25,7 @@ We make the following main three conclusion:
 * High-elevation and low-temperature regions tend to have terrain steepened towards the equator
 
 
-**This research has been published as:**  *Smith, T., and Bookhagen, B. (2021). Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale. Journal of Geophysical Research: Earth Surface, 125, e2020JF005692. (https://doi.org/10.1029/2020JF005692)[https://doi.org/10.1029/2020JF005692]*
+**This research has been published as:**  *Smith, T., and Bookhagen, B. (2021). Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale. Journal of Geophysical Research: Earth Surface, 125, e2020JF005692. [https://doi.org/10.1029/2020JF005692](https://doi.org/10.1029/2020JF005692)*
 
 
 # Global Topographic Asymmetry Magnitudes
