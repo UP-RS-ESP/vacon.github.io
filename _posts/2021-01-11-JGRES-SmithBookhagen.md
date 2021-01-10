@@ -9,7 +9,7 @@ toc_sticky: true
 toc_label: 'Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale'
 read_time: false
 header:
-  overlay_image: https://raw.githubusercontent.com/UP-RS-ESP/up-rs-esp.github.io/master/_posts/images/fig03a_NSAsymm_HighRes.jpg
+  overlay_image: https://raw.githubusercontent.com/UP-RS-ESP/up-rs-esp.github.io/master/_posts/images/fig03a_NSAsymm_HighResc.jpg
   overlay_filter: 0.3
   caption: 'Global Topographic Asymmetry'
 tags:
