@@ -324,7 +324,7 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: wide
+      layout: splash
       author_profile: false
       share: true
       comments: false
