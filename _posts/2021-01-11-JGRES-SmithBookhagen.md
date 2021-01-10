@@ -7,10 +7,6 @@ permalink: /posts/2021/01/TopoAsymmetry
 toc: true
 toc_sticky: true
 toc_label: 'Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale'
-header:
-  overlay_image: https://raw.githubusercontent.com/UP-RS-ESP/up-rs-esp.github.io/master/_posts/images/fig03a_NSAsymm_HighResc.jpg
-  overlay_filter: 0.3
-  caption: 'Global Topographic North-South Asymmetry'
 read_time: false
 tags:
   - Topographic Asymmetry
@@ -126,7 +122,6 @@ In high elevation and cold environments, a different set of erosion processes pl
 * Steep terrain has more unequal slopes
 * Terrain facing towards the poles supports more vegetation, and is generally steeper
 * Low temperature regions often have steeper slopes facing the equator, where they receive more solar radiation
-
 
 
 <script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io/posts/2021/01/TopoAsymmetry/'};
