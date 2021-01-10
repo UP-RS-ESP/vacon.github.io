@@ -7,11 +7,11 @@ permalink: /posts/2021/01/TopoAsymmetry
 toc: true
 toc_sticky: true
 toc_label: 'Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale'
-read_time: false
 header:
   overlay_image: https://raw.githubusercontent.com/UP-RS-ESP/up-rs-esp.github.io/master/_posts/images/fig03a_NSAsymm_HighResc.jpg
   overlay_filter: 0.3
-  caption: 'Global Topographic Asymmetry'
+  caption: 'Global Topographic North-South Asymmetry'
+read_time: false
 tags:
   - Topographic Asymmetry
   - Vegetation Density
@@ -67,7 +67,7 @@ Using long-term MODIS data (2001-2020), we can count the number of days where da
 
 <center>
 <figure>
-<a href="https://raw.githubusercontent.com/UP-RS-ESP/HillslopeAsymmetry/master/Figures/Figure6B_FreezeThaw_NvsS.png"><img src="https://raw.githubusercontent.com/UP-RS-ESP/HillslopeAsymmetry/master/Figures/Figure6B_FreezeThaw_NvsS.png"></a>  <figcaption>Direction and magnitude of freeze-thaw cycle frequency asymmetries between north and south-facing slopes. These processes are both latitude and temperature dependent—there is not a clear north-south split over the equator, but rather multiple sign reversals across latitudes.</figcaption>
+<a href="https://raw.githubusercontent.com/UP-RS-ESP/HillslopeAsymmetry/master/Figures/fig06b_NSFreezeTHaw_Asym.png"><img src="https://raw.githubusercontent.com/UP-RS-ESP/HillslopeAsymmetry/master/Figures/fig06b_NSFreezeTHaw_Asym.png"></a>  <figcaption>Direction and magnitude of freeze-thaw cycle frequency asymmetries between north and south-facing slopes. These processes are both latitude and temperature dependent—there is not a clear north-south split over the equator, but rather multiple sign reversals across latitudes.</figcaption>
 </figure>
 </center>
 
