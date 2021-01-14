@@ -26,6 +26,15 @@ Olen, S. and Bookhagen, B. | 2020 | Applications of SAR interferometric coherenc
 Milewski, R., Chabrillat, S., Bookhagen, B. | 2020 | Analyses of Seasonal Salt Pan Crust Dynamic and their Climatic Drivers using Dense Landsat 8 Time-Series and Ground Data | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs12030474)  
 Stubert, L., Martín i Oliveras, A., Märker, M., Schernthanner, H., & Vogel, S. | 2020 |Viticulture in the Laetanian Region (Spain) during the Roman Period: Predictive Modelling and Geomatic Analysis | _Geosciences_ | [DOI](https://doi.org/10.3390/geosciences10060206)
 Coesfeld, J., Anderson, S. J., Baugh, K., Elvidge, C. D., Schernthanner, H., & Kyba, C.|2020| Variation of individual location radiance in VIIRS DNB monthly composite images| Remote Sensing|[DOI](https://www.doi.org/10.1080/01431161.2018.1463116)|
+| Savi, S., Tofelde, S., Wickert, A. D., Bufe, A., Schildgen, T., & Strecker, M. R. | 2020 | Interactions between main channels andtributary alluvial fans: channel adjustmentsand sediment-signal propagation | _Earth Surf. Dynam._ | [DOI](https://doi.org/10.5194/esurf-8-303-2020)
+Worthington, J.R., L. Ratschbacher, K. Stübner, J. Khan, N. Malz, S.
+Schneider, P.A. Kapp, J. Chapman, A. Stevens Goddard, H.L. Brooks, H.M.
+Lamadrid, M. Steele-MacInnis, D. Rutte, R. Jonckheere, J. Pfänder, B.R.
+Hacker, I. Oimahmadov, M. Gadoev | 2020 | The Alichur dome, South Pamir,
+western India–Asia collision zone: detailing the Neogene
+Shakhdara–Alichur syn-collisional gneiss-dome complex and connection to
+lithospheric processes. | Tectonics |
+http://dx.doi.org/10.1029/2019TC005735
  | **[2019]** | | |
 Merchel, S., Gartner, A., Beutner, S., Bookhagen, B., Chabilan, A. | 2019 | Attempts to understand potential deficiencies in chemical procedures for AMS: Cleaning and dissolving quartz for 10Be and 26Al analysis | _Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms_ |  [DOI](https://doi.org/10.1016/j.nimb.2019.02.007)
 Rheinwalt, A., Goswami, B., Bookhagen, B. | 2019 | A network-based flow accumulation algorithm for point clouds: Facet-Flow Networks (FFN) | _JGR Earth Surface_ | [DOI](https://doi.org/10.1029/2018JF004827)
@@ -38,7 +47,16 @@ Purinton, B., Bookhagen, B.  | 2019 | Introducing PebbleCounts: A grain-sizing t
 Weldeab, S., Rühlemann, C., Bookhagen, B., Pausata, F., Perez-Lua, F. | 2019 | Enhanced Himalayan glacial melting during YD and H1 recorded in the northern Bay of Bengal  | _G-Cubed_ | [DOI](https://doi.org/10.1029/2018GC008065)
 Brell, M., Segl, K., Guanter, L., Bookhagen, B.  | 2019 | 3D hyperspectral point cloud generation: fusing airborne laser scanning and hyperspectral imaging sensors for improved object-based information extraction  |  _ISPRS Journal of Photogrammetry and Remote Sensing_ |  [DOI](https://doi.org/10.1016/j.isprsjprs.2019.01.022)
 Boers, N., Goswami, B., Rheinwalt, A., Bookhagen, B., Hoskins, B., Kurths, J. | 2019 | Complex networks reveal global pattern of extreme-rainfall teleconnections | _nature_  |  [DOI](https://doi.org/10.1038/s41586-018-0872-x) [PDF](https://www.nature.com/articles/s41586-018-0872-x?ref=marketbulletin)
-Smith, T.T., Rheinwalt, A. and Bookhagen, B.  | 2019 | Determining the Optimal Grid Resolution for Topographic Analysis on an Airborne Lidar Dataset  | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-7-475-2019) [PDF](https://www.earth-surf-dynam.net/7/475/2019/esurf-7-475-2019.pdf) []()
+Smith, T.T., Rheinwalt, A. and Bookhagen, B.  | 2019 | Determining the Optimal Grid Resolution for Topographic Analysis on an Airborne Lidar Dataset  | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-7-475-2019) [PDF](https://www.earth-surf-dynam.net/7/475/2019/esurf-7-475-2019.pdf) 
+Bigot-Buschendorf, M., F. Mouthereau, L. Labrousse, C. Fillon, K.
+Stübner, M. Bernet | 2019 | Unravelling the thermal evolution of the
+Neruokpuk Formation in the British Mountains, North Yukon, Canada:
+Tectonic and orogenic implications. In: Piepjohn, K., Strauss, J.V.,
+Reinhardt, L., and McClelland, W.C., eds., Circum-Arctic Structural
+Events: Tectonic Evolution of the Arctic Margins and Trans-Arctic Links
+with Adjacent Orogens | Geological Society of America Special Paper 541
+| http://dx.doi.org/10.1130/2018.2541(26)
+
 | **[2018]**  |  |  |
 Purinton, B. and Bookhagen, B.  | 2018 | Measuring Decadal Vertical Land-level Changes from SRTM-C (2000) and TanDEM-X (~2015) in the South-Central Andes | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-6-971-2018) [PDF](https://www.earth-surf-dynam.net/6/971/2018/esurf-6-971-2018.pdf)
 Hoffmann, B., Bookhagen, B., Stephanie M. Olen, S.M., Barthold, F., Sachse, D. | 2018 | The effect of Indian Summer Monsoon rainfall on surface water δD values in the central Himalaya  | _Hydrological Processes_  |  [DOI](https://doi.org/10.1002/hyp.13281) [PDF](http://bodobookhagen.github.io/pdf/Meese18_Arun_stable_isotopes.pdf)

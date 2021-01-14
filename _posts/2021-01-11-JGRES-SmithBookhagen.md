@@ -18,7 +18,7 @@ tags:
 Neighboring terrain facing in different directions is not equally steep. This effect is caused by the complex interactions of geology, tectonics, vegetation, climate, and precipitation. Small differences in erosion processes lead to subtle variations in topographic form at the global scale.
 
 
-We make the following main three conclusion:
+We make the following main three conclusions:
 
 * Steep terrain has more unequal slopes
 * Pole-facing terrain is on average steeper than equator-facing terrain
@@ -70,7 +70,7 @@ Using long-term MODIS data (2001-2020), we can count the number of days where da
 
 Cold areas have more freeze-thaw cycling on equator-facing slopes, while warmer areas will have more on pole-facing slopes. In essence, the asymmetric action of freeze-thaw processes is highly dependent on average winter temperatures -- the highest asymmetries in freeze-thaw cycling are found in the mid-latitudes, where temperatures cycle above and below zero degrees more frequently. High elevations, for example in the Alps and on the Tibetan Plateau, also have large asymmetries in freeze-thaw cycling.
 
-## The Impact of Environment on Topographic Asymmetry
+## The Impact of Environmental Factors on Topographic Asymmetry
 
 Insolation strongly influences land-surface temperature, which in turn impacts vegetation by controlling soil-water content, and cryospheric processes by driving both diurnal and seasonal temperature cycles, controlling frost cracking intensity, and modifying snow cover. It is clear from the global data that vegetation generally enhances poleward-steepening of terrain, and that low temperatures enhance equator-steepening.
 
