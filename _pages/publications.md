@@ -45,15 +45,7 @@ Weldeab, S., Rühlemann, C., Bookhagen, B., Pausata, F., Perez-Lua, F. | 2019 | 
 Brell, M., Segl, K., Guanter, L., Bookhagen, B.  | 2019 | 3D hyperspectral point cloud generation: fusing airborne laser scanning and hyperspectral imaging sensors for improved object-based information extraction  |  _ISPRS Journal of Photogrammetry and Remote Sensing_ |  [DOI](https://doi.org/10.1016/j.isprsjprs.2019.01.022)
 Boers, N., Goswami, B., Rheinwalt, A., Bookhagen, B., Hoskins, B., Kurths, J. | 2019 | Complex networks reveal global pattern of extreme-rainfall teleconnections | _nature_  |  [DOI](https://doi.org/10.1038/s41586-018-0872-x) [PDF](https://www.nature.com/articles/s41586-018-0872-x?ref=marketbulletin)
 Smith, T.T., Rheinwalt, A. and Bookhagen, B.  | 2019 | Determining the Optimal Grid Resolution for Topographic Analysis on an Airborne Lidar Dataset  | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-7-475-2019) [PDF](https://www.earth-surf-dynam.net/7/475/2019/esurf-7-475-2019.pdf)
-Bigot-Buschendorf, M., F. Mouthereau, L. Labrousse, C. Fillon, K.
-Stübner, M. Bernet | 2019 | Unravelling the thermal evolution of the
-Neruokpuk Formation in the British Mountains, North Yukon, Canada:
-Tectonic and orogenic implications. In: Piepjohn, K., Strauss, J.V.,
-Reinhardt, L., and McClelland, W.C., eds., Circum-Arctic Structural
-Events: Tectonic Evolution of the Arctic Margins and Trans-Arctic Links
-with Adjacent Orogens | Geological Society of America Special Paper 541
-| http://dx.doi.org/10.1130/2018.2541(26)
-
+Bigot-Buschendorf, M., F. Mouthereau, L. Labrousse, C. Fillon, K. Stübner, M. Bernet | 2019 | Unravelling the thermal evolution of the Neruokpuk Formation in the British Mountains, North Yukon, Canada: Tectonic and orogenic implications. In: Piepjohn, K., Strauss, J.V., Reinhardt, L., and McClelland, W.C., eds., Circum-Arctic Structural Events: Tectonic Evolution of the Arctic Margins and Trans-Arctic Links with Adjacent Orogens | _Geological Society of America Special Paper 541_ | [DOI](http://dx.doi.org/10.1130/2018.2541(26))
 | **[2018]**  |  |  |
 Purinton, B. and Bookhagen, B.  | 2018 | Measuring Decadal Vertical Land-level Changes from SRTM-C (2000) and TanDEM-X (~2015) in the South-Central Andes | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-6-971-2018) [PDF](https://www.earth-surf-dynam.net/6/971/2018/esurf-6-971-2018.pdf)
 Hoffmann, B., Bookhagen, B., Stephanie M. Olen, S.M., Barthold, F., Sachse, D. | 2018 | The effect of Indian Summer Monsoon rainfall on surface water δD values in the central Himalaya  | _Hydrological Processes_  |  [DOI](https://doi.org/10.1002/hyp.13281) [PDF](http://bodobookhagen.github.io/pdf/Meese18_Arun_stable_isotopes.pdf)
