@@ -13,10 +13,14 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 ## Peer reviewed journal articles
 
 | Author(s) | Year | Title | _Journal_ | DOI
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
-| **[2021]** | | |
-Smith, T.T. and Bookhagen, B. | 2021 | Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale | _JGR Earth Surface_ | [DOI](https://doi.org/10.1029/2020JF005692)
-| **[2020]** | | |
+| :--- | :---: | --- | :---: | :---:
+| **[2021]** | | | |
+Tofelde, S., Bernhardt, A., Guerit, L. & Romans, B. | 2021 | Times associated with source-to-sink propagation of environmental signals during landscape transience | _Frontiers in Earth Science_ | 9, 227. doi: 10.3389/feart.2021.628315 | [DOI](https://www.frontiersin.org/articles/10.3389/feart.2021.628315/full)
+Smith, T.T., Rheinwalt, A., Bookhagen, B. | 2021 | Topography and Climate in the Upper Indus Basin: Mapping Elevation-Snow Cover Relationships | _Science of the Total Environment_ | [DOI](STOTEN-D-21-03144R2)*
+Olivotos, S., Niedermann, S., Flügel, T., Mouslopoulou, V., Merchel, S., Cotterill, F., Bookhagen, B., Gärtner, A., Georg Rugel, G., Scharf, A., Nadeau, M.-J., Braucher, R., Seiler, M. | in press | Quaternary landscape evolution in a tectonically active rift basin (paleo-lake Mweru, south-central Africa) | _Geomorphology_ | [DOI]( GEOMOR-9528R3 )
+Stuebner, K., Bookhagen, B., Gadoev, M., Merchel, S., Lachner, J. | in press | Unravelling the Pleistocene glacial history of the Pamir Mountains, Central Asia | _Quaternary Science Reviews_ | [DOI]( JQSR-D-20-00592R1 )
+Smith, T.T. and Bookhagen, B. | 2021 | Climatic and Biotic Controls on Topographic Asymmetry at the Global Scale | _JGR Earth Surface_ | [DOI](https://doi.org/10.1029/2020JF005692)*|
+**[2020]** | | |
 Castino, F., Bookhagen, B., de la Torre, A. | 2020 | Atmospheric dynamics of extreme discharge events from 1979 to 2016 in the southern Central Andes Climate Dynamics  |  _Climate Dynamics_ | [DOI](https://doi.org/10.1007/s00382-020-05458-1)
 van der Veen, I., Peterse, F., Davenport, J., Meese, B.,  Bookhagen, B., France-Lanord, C., Kahmen, A., Hassenruck-Gudipati, H.J., Gajurel, A.P., Strecker, M.R., Sachse, D. | 2020 | Validation and calibration of soil <delta>2H and brGDGTs along (E-W) and strike (N-S) of the Himalayan climatic gradient | _Geochimica et Cosmochimica Acta_ | [DOI](https://doi.org/10.1016/j.gca.2020.09.014)
 Smith, T.T., Bookhagen, B. | 2020 | Assessing multi-temporal snow-volume trends in High Mountain Asia from 1987-2016 using high-resolution passive microwave data | _frontiers in Earth Sciences_ | [DOI](https://doi.org/10.3389/feart.2020.559175)
@@ -26,15 +30,8 @@ Olen, S. and Bookhagen, B. | 2020 | Applications of SAR interferometric coherenc
 Milewski, R., Chabrillat, S., Bookhagen, B. | 2020 | Analyses of Seasonal Salt Pan Crust Dynamic and their Climatic Drivers using Dense Landsat 8 Time-Series and Ground Data | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs12030474)  
 Stubert, L., Martín i Oliveras, A., Märker, M., Schernthanner, H., & Vogel, S. | 2020 |Viticulture in the Laetanian Region (Spain) during the Roman Period: Predictive Modelling and Geomatic Analysis | _Geosciences_ | [DOI](https://doi.org/10.3390/geosciences10060206)
 Coesfeld, J., Anderson, S. J., Baugh, K., Elvidge, C. D., Schernthanner, H., & Kyba, C.|2020| Variation of individual location radiance in VIIRS DNB monthly composite images| Remote Sensing|[DOI](https://www.doi.org/10.1080/01431161.2018.1463116)|
-| Savi, S., Tofelde, S., Wickert, A. D., Bufe, A., Schildgen, T., & Strecker, M. R. | 2020 | Interactions between main channels andtributary alluvial fans: channel adjustmentsand sediment-signal propagation | _Earth Surf. Dynam._ | [DOI](https://doi.org/10.5194/esurf-8-303-2020)
-Worthington, J.R., L. Ratschbacher, K. Stübner, J. Khan, N. Malz, S.
-Schneider, P.A. Kapp, J. Chapman, A. Stevens Goddard, H.L. Brooks, H.M.
-Lamadrid, M. Steele-MacInnis, D. Rutte, R. Jonckheere, J. Pfänder, B.R.
-Hacker, I. Oimahmadov, M. Gadoev | 2020 | The Alichur dome, South Pamir,
-western India–Asia collision zone: detailing the Neogene
-Shakhdara–Alichur syn-collisional gneiss-dome complex and connection to
-lithospheric processes. | Tectonics |
-http://dx.doi.org/10.1029/2019TC005735
+Savi, S., Tofelde, S., Wickert, A. D., Bufe, A., Schildgen, T., & Strecker, M. R. | 2020 | Interactions between main channels andtributary alluvial fans: channel adjustmentsand sediment-signal propagation | _Earth Surf. Dynam._ | [DOI](https://doi.org/10.5194/esurf-8-303-2020)
+Worthington, J.R., L. Ratschbacher, K. Stübner, J. Khan, N. Malz, S. Schneider, P.A. Kapp, J. Chapman, A. Stevens Goddard, H.L. Brooks, H.M. Lamadrid, M. Steele-MacInnis, D. Rutte, R. Jonckheere, J. Pfänder, B.R. Hacker, I. Oimahmadov, M. Gadoev | 2020 | The Alichur dome, South Pamir, western India–Asia collision zone: detailing the Neogene Shakhdara–Alichur syn-collisional gneiss-dome complex and connection to lithospheric processes. | _Tectonics_ | [DOI](http://dx.doi.org/10.1029/2019TC005735)
  | **[2019]** | | |
 Merchel, S., Gartner, A., Beutner, S., Bookhagen, B., Chabilan, A. | 2019 | Attempts to understand potential deficiencies in chemical procedures for AMS: Cleaning and dissolving quartz for 10Be and 26Al analysis | _Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms_ |  [DOI](https://doi.org/10.1016/j.nimb.2019.02.007)
 Rheinwalt, A., Goswami, B., Bookhagen, B. | 2019 | A network-based flow accumulation algorithm for point clouds: Facet-Flow Networks (FFN) | _JGR Earth Surface_ | [DOI](https://doi.org/10.1029/2018JF004827)
@@ -47,7 +44,7 @@ Purinton, B., Bookhagen, B.  | 2019 | Introducing PebbleCounts: A grain-sizing t
 Weldeab, S., Rühlemann, C., Bookhagen, B., Pausata, F., Perez-Lua, F. | 2019 | Enhanced Himalayan glacial melting during YD and H1 recorded in the northern Bay of Bengal  | _G-Cubed_ | [DOI](https://doi.org/10.1029/2018GC008065)
 Brell, M., Segl, K., Guanter, L., Bookhagen, B.  | 2019 | 3D hyperspectral point cloud generation: fusing airborne laser scanning and hyperspectral imaging sensors for improved object-based information extraction  |  _ISPRS Journal of Photogrammetry and Remote Sensing_ |  [DOI](https://doi.org/10.1016/j.isprsjprs.2019.01.022)
 Boers, N., Goswami, B., Rheinwalt, A., Bookhagen, B., Hoskins, B., Kurths, J. | 2019 | Complex networks reveal global pattern of extreme-rainfall teleconnections | _nature_  |  [DOI](https://doi.org/10.1038/s41586-018-0872-x) [PDF](https://www.nature.com/articles/s41586-018-0872-x?ref=marketbulletin)
-Smith, T.T., Rheinwalt, A. and Bookhagen, B.  | 2019 | Determining the Optimal Grid Resolution for Topographic Analysis on an Airborne Lidar Dataset  | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-7-475-2019) [PDF](https://www.earth-surf-dynam.net/7/475/2019/esurf-7-475-2019.pdf) 
+Smith, T.T., Rheinwalt, A. and Bookhagen, B.  | 2019 | Determining the Optimal Grid Resolution for Topographic Analysis on an Airborne Lidar Dataset  | _Earth Surf. Dynam._  |  [DOI](https://doi.org/10.5194/esurf-7-475-2019) [PDF](https://www.earth-surf-dynam.net/7/475/2019/esurf-7-475-2019.pdf)
 Bigot-Buschendorf, M., F. Mouthereau, L. Labrousse, C. Fillon, K.
 Stübner, M. Bernet | 2019 | Unravelling the thermal evolution of the
 Neruokpuk Formation in the British Mountains, North Yukon, Canada:
