@@ -12,10 +12,10 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 
 ## Peer reviewed journal articles
 
-| Author(s) | Year | Title | _Journal_ | DOI
+Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | **[2021]** | | | |
-Tofelde, S., Bernhardt, A., Guerit, L. & Romans, B. | 2021 | Times associated with source-to-sink propagation of environmental signals during landscape transience | _Frontiers in Earth Science_ | 9, 227. doi: 10.3389/feart.2021.628315 | [DOI](https://www.frontiersin.org/articles/10.3389/feart.2021.628315/full)
+Tofelde, S., Bernhardt, A., Guerit, L. & Romans, B. | 2021 | Times associated with source-to-sink propagation of environmental signals during landscape transience | _Frontiers in Earth Science_  | [DOI](https://www.frontiersin.org/articles/10.3389/feart.2021.628315/full)
 Smith, T.T., Rheinwalt, A., Bookhagen, B. | 2021 | Topography and Climate in the Upper Indus Basin: Mapping Elevation-Snow Cover Relationships | _Science of the Total Environment_ | [DOI](STOTEN-D-21-03144R2)*
 Olivotos, S., Niedermann, S., Flügel, T., Mouslopoulou, V., Merchel, S., Cotterill, F., Bookhagen, B., Gärtner, A., Georg Rugel, G., Scharf, A., Nadeau, M.-J., Braucher, R., Seiler, M. | in press | Quaternary landscape evolution in a tectonically active rift basin (paleo-lake Mweru, south-central Africa) | _Geomorphology_ | [DOI]( GEOMOR-9528R3 )
 Stuebner, K., Bookhagen, B., Gadoev, M., Merchel, S., Lachner, J. | in press | Unravelling the Pleistocene glacial history of the Pamir Mountains, Central Asia | _Quaternary Science Reviews_ | [DOI]( JQSR-D-20-00592R1 )
