@@ -12,7 +12,7 @@ There are several open theses topics that interested students can work on. Pleas
 ## List of advised MSc thesis in reversed chronological order
 
 | Author | *Title* | Department and Degree | Additional information and PDF link (if available) |
-|:----:|-------|:---:|
+|:----:|-------|:---:|:---:|
 | **[2021]** | | | |
 | Kittipon Wutthimetheekul | *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 |  Anna Rosner | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | Institute of Geosciences, MSc Geoscience | |
