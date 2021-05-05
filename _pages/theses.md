@@ -44,7 +44,6 @@ There are several open theses topics that interested students can work on. Pleas
 | *Developing Open Source and Cross-Plattform Offline Maps on iOS and Android Devices* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
 | *Impact of autonomous driving on the structure of logistic networks: A model-based spatial analysis* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
 | *Webbasierte raum-zeitliche Visualisierung von Clubstandorten in Berlin nach 1990* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
-
 | **[2017]** | | | |
 | *Spatiotemporal patterns and driving factors of lake size variability since 1985, Central Andean Plateau, South America* | Institute of Geosciences, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Masterarbeit_NicolasWerner_25-11-2016.pdf) |
 | *Precision and Accuracy Assessment of glacier elevation changes from TanDEM-X data for the Batura glacier, Karakoram Himalaya* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
