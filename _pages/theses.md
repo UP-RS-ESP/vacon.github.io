@@ -18,6 +18,7 @@ There are several open theses topics that interested students can work on. Pleas
 | *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | Institute of Geosciences, MSc Geoscience | |
 | *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc Remote Sensing, Geoinformation and Visualization | |
+| Resting site selection of female springbok (Antidorcas marsupialis) in a predator rich savanna landscape: insights from GPS tracking and remote sensing data | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation |
 | **[2020]** | | | |
 | *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | *Applications of pointcloud and full-waveform Lidar data for object detection* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
