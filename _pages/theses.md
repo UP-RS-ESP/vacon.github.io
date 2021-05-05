@@ -17,8 +17,7 @@ There are several open theses topics that interested students can work on. Pleas
 | Milena Wöller | *Settlement and urban area detection from medium resolution satellite imagery* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | Kittipon Wutthimetheekul | *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 |  Anna Rosner | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | Institute of Geosciences, MSc Geoscience | |
-|  Toni Schmidt | *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc Remote Sensing, Geoinformation and
-Visualization | |
+|  Toni Schmidt | *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc Remote Sensing, Geoinformation and Visualization | |
 | **[2020]** | | | |
 |  Ifeyani Okaro | *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 |  Philipp Jordan | *Applications of pointcloud and full-waveform Lidar data for object detection* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
