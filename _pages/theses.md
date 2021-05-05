@@ -14,6 +14,7 @@ There are several open theses topics that interested students can work on. Pleas
 | Author | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----:|-------|:---:|:---:|
 | **[2021]** | | | |
+| Milena Wöller | *Settlement and urban area detection from medium resolution satellite imagery* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | Kittipon Wutthimetheekul | *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 |  Anna Rosner | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | Institute of Geosciences, MSc Geoscience | |
 |  Toni Schmidt | *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc Remote Sensing, Geoinformation and
@@ -26,6 +27,7 @@ Visualization | |
 |  Felix Keßler | *Near-real time detection of lake ice using Sentinel-1 data* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Mastersthesis_FelixKessler.pdf) |
 |  Sascha Rabinowitsch | *Die Ermittlung von Genauigkeiten und Anwendungsszenarios für fernerkundlich erhobene Punktwolken am Beispiel des Campus Golm* | Institute of Geosciences, MSc Geowissenschaften | |
 |  Kristian Kragiel | *Terrestrial lidar scanning and point cloud classification of the „Neues Palais“, University of Potsdam* | Institute of Geosciences, MSc Geowissenschaften | |
+|  Janine Tiegel-Lindenkron  | *Webbasierte multitemporale Klimavisualisierung am Beispiel von Niederschlag im Raum Berlin-Brandenburg* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
 | **[2019]** | | | |
 |  Elena Lefler | *Klassifikation der Seen auf dem Hochland von Tibet mittels Google Earth Engine* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
 | Mohammad Zarch | *Ground Deformation Monitoring in Mining Areas on the Central Andean Plateau (Puna, Argentina) Using Sentinel-1 Data* | Institute of Geodesy and Geoinformation Science, TU Berlin | |
@@ -33,11 +35,17 @@ Visualization | |
 | Frederic Brieger | *Derivation of Biophysical Metrics for NE-Siberian Biomes using UAV-Based Photogrammetric Point Clouds* | Institute of Geosciences, MSc Geowissenschaften | [MSc thesis published in *remote sensing*](https://www.mdpi.com/2072-4292/11/12/1447) |
 |  Nicole Mätzing | *Untersuchungen der organischen Kohlenstoffspezies im Grundwasser des Wasserwerks Potsdam-Rehbrücke in Bezug zu den geologischen, technischen und klimatischen Rahmenbedingungen* | Institute of Geosciences, MSc Geowissenschaften | |
 |  Steffen Wellegehausen | *Quality assessment of structure from motion point clouds from river pebbles* | Institute of Environmental Sciences and Geography, MSc Geoökologie | |
+|  Robert Münchhagen | *Entwicklung und Umsetzung eines Visualisierungskonzeptes für ein webbasiertes Campus-Navigationssystem für mobile Endgeräte* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
 |  Maximilian Semler | *Kartierung von Bergstürzen und Massenbewegungen in den Nordwestargentinischen Anden mit SAR Kohärenzmessungen* | Institute of Geosciences, MSc Geowissenschaften | |
 | **[2018]** | | | |
 |  Bastian Thumm | *Die Verknüpfung von Fußgängerdistanzen und Distanzen des öffentlichen Personennahverkehrs als Optimierung von lagebezogenen Immobilienbewertungen* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
 |  Lisa Dieck | *Evaluating groundwater sustainability of mining activities in the Niger basin*  | Institute of Geosciences, MSc Geowissenschaften | |
 |  René Mania | *Dome growth during the 2016-2017 eruption sequence at Bezymianny volcano, Kamchatka, measured by high-resolution TerraSAR-X and photogrammetric data* | Institute of Geosciences, MSc Geowissenschaften | |
+|  Christoph Lambio  | *Developing Open Source and Cross-Plattform Offline Maps on iOS and Android Devices* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
+|  Erik Lohmann  | *Impact of autonomous driving on the structure of logistic networks: A model-based spatial analysis* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
+|  Sascha Ziegler | *ebbasierte raum-zeitliche Visualisierung von Clubstandorten in Berlin nach 1990* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
+
+
 | **[2017]** | | | |
 | Nicolas Werner | *Spatiotemporal patterns and driving factors of lake size variability since 1985, Central Andean Plateau, South America* | Institute of Geosciences, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Masterarbeit_NicolasWerner_25-11-2016.pdf) |
 | Björn Tobias Broschag | *Precision and Accuracy Assessment of glacier elevation changes from TanDEM-X data for the Batura glacier, Karakoram Himalaya* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
