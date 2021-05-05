@@ -46,11 +46,9 @@ researchers3:
     title: Ben Purinton
     excerpt: 'SAR, Processing of satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
-  - image_path: /images/konstanze2.jpg
-    alt: Konstanze Stuebner
-    title: Konstanze Stuebner
-    excerpt: 'CRN, Thermochronology'
-    url: ''
+  - image_path: /images/team_photo.png
+    title: ''
+    excerpt: ''
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
     alt: Sofia Viotto
@@ -83,9 +81,11 @@ former_members1:
     alt: Fabiana Castino
     title: Fabiana Castino
     excerpt: Hydrology and meteorology of the Central Andes
-  - image_path: /images/team_photo.png
-    title: ''
-    excerpt: ''
+  - image_path: /images/konstanze2.jpg
+    alt: Konstanze Stuebner
+    title: Konstanze Stuebner
+    excerpt: 'CRN, Thermochronology'
+    url: ''
 ---
 
 # Researchers
@@ -106,4 +106,4 @@ former_members1:
 
 # Past Members
 
-Dr. Fabiana Castino, Dr. Fiona Clubb, Dr. Frank Günther
+Dr. Fabiana Castino, Dr. Fiona Clubb, Dr. Frank Günther, Dr. Konstanze Stuebner

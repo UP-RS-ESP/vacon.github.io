@@ -328,3 +328,11 @@ defaults:
       author_profile: false
       share: true
       comments: false
+  # _theses
+  - scope:
+      path: ""
+      type: theses
+    values:
+      layout: single
+      author_profile: true
+      share: true
