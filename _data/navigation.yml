@@ -6,14 +6,15 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Codes"
-    url: /codes/
-
   - title: "Blog Posts"
     url: /year-archive/
 
   - title: "BSc and MSc Theses"
     url: /theses/
+
+  - title: "Codes"
+    url: /codes/
+
 
   # - title: "Sample Posts"
   #   url: /year-archive/
