@@ -9,8 +9,11 @@ main:
   - title: "Codes"
     url: /codes/
 
-  - title: "Blog Posts and Tutorials"
+  - title: "Blog Posts"
     url: /year-archive/
+
+  - title: "BSc and MSc Theses"
+    url: /theses/
 
   # - title: "Sample Posts"
   #   url: /year-archive/
