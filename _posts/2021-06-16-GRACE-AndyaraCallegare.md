@@ -27,7 +27,7 @@ The El Nino-Southern Oscillation (ENSO) is the dominant interannual variability 
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"></a><figcaption>Figure 1: The familiar ENSO concept in a cartoons, illustrating the subsurface (thermocline) surface (SSTA, SLP,and near-surface winds) andatmospheric convection conditions commonly associated with (left) La Niña, (center) ENSO-neutral, and (right) El Niño states. From <a href="https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective">Chiodi & Harrison (2015)</figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"></a><figcaption>Figure 1: The familiar ENSO concept in a cartoons, illustrating the subsurface (thermocline) surface (SSTA, SLP,and near-surface winds) andatmospheric convection conditions commonly associated with (left) La Niña, (center) ENSO-neutral, and (right) El Niño states. From <a href="https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective">Chiodi & Harrison (2015)</a>.</figcaption>
 </figure>
 </center>
 
@@ -35,7 +35,7 @@ Muñoz et al., 2016, describes the effects of this system in Latin Americas (Fig
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"></a><figcaption>Figure 2: El Niño (left) and La Niña (right) rainfall impacts in Latin America and the Caribbean. From <a href="https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission"> Muñoz et al. (2016) </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"></a><figcaption>Figure 2: El Niño (left) and La Niña (right) rainfall impacts in Latin America and the Caribbean. From <a href="https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission"> Muñoz et al. (2016)</a>. </figcaption>
 </figure>
 </center>
 
@@ -58,7 +58,7 @@ The ONI tracks the running 3-month average sea surface temperatures in the east-
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"></a><figcaption>Figure 3: Location of the Niño regions for measuring sea surface temperature in the eastern and central tropical Pacific Ocean. The sea surface temperature in the Niño3.4 region, spanning from 120˚W to 170˚W longitude, when averaged over a 3-month period, forms NOAA’s official Oceanic Niño Index (the ONI). NOAA Climate.gov image by Fiona Martin. Figure from <a href="https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index"> Dahlman, L. (2016) </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"></a><figcaption>Figure 3: Location of the Niño regions for measuring sea surface temperature in the eastern and central tropical Pacific Ocean. The sea surface temperature in the Niño3.4 region, spanning from 120˚W to 170˚W longitude, when averaged over a 3-month period, forms NOAA’s official Oceanic Niño Index (the ONI). NOAA Climate.gov image by Fiona Martin. Figure from <a href="https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index"> Dahlman, L. (2016)</a>. </figcaption>
 </figure>
 </center>
 
