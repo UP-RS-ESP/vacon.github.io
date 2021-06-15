@@ -27,7 +27,7 @@ The El Nino-Southern Oscillation (ENSO) is the dominant interannual variability 
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"></a><figcaption>Figure 1: The familiar ENSO concept in a cartoons, illustrating the subsurface (thermocline) surface (SSTA, SLP,and near-surface winds) andatmospheric convection conditions commonly associated with (left) La Niña, (center) ENSO-neutral, and (right) El Niño states. From <a href="https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective">Chiodi & Harrison (2015)</a>.</figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"></a><figcaption>Figure 1: The familiar ENSO concept in a cartoons, illustrating the subsurface (thermocline) surface (SSTA, SLP,and near-surface winds) and atmospheric convection conditions commonly associated with (left) La Niña, (center) ENSO-neutral, and (right) El Niño states. From <a href="https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective">Chiodi & Harrison (2015)</a>. </figcaption>
 </figure>
 </center>
 
@@ -42,17 +42,17 @@ Muñoz et al., 2016, describes the effects of this system in Latin Americas (Fig
 Since precipitation is an important component in hydrological and climate change studies (Jia et al., 2020) and anomalies of GRACE TWS have a close relationship with precipitation, Abelen et. al, 2015 concluded that it tends to be shifted by a few months in the La Plata Basin. It is expected to see a relationship between strong ENSO events, both positive and negative, reflected in TWS. This internship seeks out to give insight into the following questions:
 
 
-- **What are the seasonal patterns of TWS?**
+- *What are the seasonal patterns of TWS?*
 
-- **Can GRACE TWS be fit into a simple sine model?**
+- *Can GRACE TWS be fit into a simple sine model?*
 
-- **Is there a relationship between ENSO and TWS?**
+- *Is there a relationship between ENSO and TWS?*
 
-### This internship was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.
+**This internship was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.**
 
 # ONI
 
-The Oceanic Niño Index (ONI) is NOAA's primary indicator for monitoring El Niño and La Niña, which are opposite phases of the climate pattern called the El Niño-Southern Oscillation, or “ENSO” for short. NOAA considers El Niño conditions to be present when the Oceanic Niño Index is +0.5 or higher, indicating the east-central tropical Pacific is significantly warmer than usual. La Niña conditions exist when the Oceanic Niño Index is -0.5 or lower, indicating the region is cooler than usual. The dataset is available at https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt
+The Oceanic Niño Index (ONI) is NOAA's primary indicator for monitoring El Niño and La Niña, which are opposite phases of the climate pattern called the El Niño-Southern Oscillation, or “ENSO” for short. NOAA considers El Niño conditions to be present when the Oceanic Niño Index is +0.5 or higher, indicating the east-central tropical Pacific is significantly warmer than usual. La Niña conditions exist when the Oceanic Niño Index is -0.5 or lower, indicating the region is cooler than usual. The data set is available at [https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt](https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt).
 
 The ONI tracks the running 3-month average sea surface temperatures in the east-central tropical Pacific between 120°-170°W. This area is called the Niño 3.4 region, and its shown in Figure 3.
 
@@ -150,11 +150,11 @@ The above graphs have a few interesting features:
 With this knowledge some decisions for the further steps were made:
 
 - the final solution will be the mean of the 3 centres'
-- the dataset it's going to be fit into a sine model, because this will allow to fill in the gap between the months without data in 2017-2018.
+- the data set it's going to be fit into a sine model, because this will allow to fill in the gap between the months without data in 2017-2018.
 
 # Study Area
 The study area comprehends the 2 biggest major river basins from South America, Amazon and Rio de La Plata, shown in Figure 7. The geometry was extracted from the WMO Basins 3rd, revised and extended edition 2020, available at [https://www.bafg.de/GRDC/EN/02_srvcs/22_gslrs/223_WMO/wmo_regions_node.html#doc2763412bodyText7](https://www.bafg.de/GRDC/EN/02_srvcs/22_gslrs/223_WMO/wmo_regions_node.html#doc2763412bodyText7.).
-Amazon has approximately 4.9 M km$^2$, followed by Rio de La Plata with 3.0 M km$^2$.
+Amazon has approximately 4.9 M km<sup>2</sup>, followed by Rio de La Plata with 3.0 M km<sup>2</sup>.
 
 <center>
 <figure>
@@ -171,7 +171,7 @@ Using python 3.8 it was possible to fit GRACE TWS into the following models:
 from scipy.signal import find_peaks
 from lmfit.model import Model
 
- # find amplitude
+# find amplitude
 positive_peaks_idx = find_peaks(obs)[0]
 neagtive_peaks_idx = find_peaks(-obs)[0]
 
@@ -179,18 +179,18 @@ amplitudes =[]
 for i in range(0,len(positive_peaks_idx)):
     amplitudes.append(obs[positive_peaks_idx[i]] - obs[neagtive_peaks_idx[i]])
 
- # fit sine
+# fit sine
 def mysine(x, amp, freq, shift):
     return amp * np.sin(x*freq + shift)
 
- # define x and y
+# define x and y
 x = dates
 y = obs
 
- # initialize model
+# initialize model
 model = Model(mysine)
 
- # initial guess
+# initial guess
 params = model.make_params(amp=np.mean(amplitudes), freq=1/2, shift=0)
 params['shift'].max = 10
 params['shift'].min = -10
@@ -214,7 +214,7 @@ yyy = result.init_fit
 from statsmodels.tsa.seasonal import seasonal_decompose
 
 # decompose
-# model is additive because the aplitude is the same
+# model is additive because the amplitude is the same
 # period is 12 because we are interested interannual variability
 SD = seasonal_decompose(obs, model='additive', period=12)
 
