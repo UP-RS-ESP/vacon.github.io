@@ -19,13 +19,15 @@ tags:
   - South America
 ---
 
+Changes in global Total Water Storage (TWS) can be measured with satellites sensitive to gravity acceleration: *Gravity Recovery and Climate Experiment* (*GRACE*) and its successor the *Gravity Recovery and Climate Experiment-Follow-On* (*GRACE-FO*)
+
 In South America is no abundant network of in-situ hydrometeorologic stations, but over the last decades, an increased number of remote-sensing sensors showed an unprecedented view of the region. The unique *Gravity Recovery and Climate Experiment* (*GRACE*) and its successor the *Gravity Recovery and Climate Experiment-Follow-On* (*GRACE-FO*) have been orbiting the earth since 2002 and use gravity to map water masses and their changes. Its variable Total Water Storage (TWS) change is defined as changes in water stored on the surface (e.g., lakes and reservoirs, rivers, and snow water equivalent), over the entire soil profile, and in groundwater (Long et al., 2015).
 
 The El Nino-Southern Oscillation (ENSO) is the dominant interannual variability of Earth’s climate system and plays a central role in global climate prediction. Outlooks of ENSO and its impacts often follow a two-tier approach: predicting ENSO sea surface temperature anomaly in tropical Pacific and then predicting its global impacts (Lin & Qian, 2019). El Niño and La Niña events denote sea-surface temperature (SST) conditions in the tropical Pacific that are, respectively, warmer and colder than average (McPhaden et al., 2006), as seen in Figure 1 by Chiodi & Harrison, 2015.
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"></a><figcaption>Figure 1: The familiar ENSO concept in a cartoons, illustrating the subsurface (thermocline) surface (SSTA, SLP,and near-surface winds) andatmospheric convection conditions commonly associated with (left) La Niña, (center) ENSO-neutral, and (right) El Niño states. From <a href="https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective">Chiodi & Harrison (2015)</a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_01.png?raw=true"></a><figcaption>Figure 1: The familiar ENSO concept in a cartoons, illustrating the subsurface (thermocline) surface (SSTA, SLP,and near-surface winds) andatmospheric convection conditions commonly associated with (left) La Niña, (center) ENSO-neutral, and (right) El Niño states. From <a href="https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective">Chiodi & Harrison (2015)</figcaption>
 </figure>
 </center>
 
@@ -33,7 +35,7 @@ Muñoz et al., 2016, describes the effects of this system in Latin Americas (Fig
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"></a><figcaption>Figure 2: El Niño (left) and La Niña (right) rainfall impacts in Latin America and the Caribbean. From <a href="https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission"> Muñoz et al. (2016) </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_02.png?raw=true"></a><figcaption>Figure 2: El Niño (left) and La Niña (right) rainfall impacts in Latin America and the Caribbean. From <a href="https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission"> Muñoz et al. (2016) </figcaption>
 </figure>
 </center>
 
@@ -46,7 +48,7 @@ Since precipitation is an important component in hydrological and climate change
 
 - **Is there a relationship between ENSO and TWS?**
 
-This internship was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.
+### This internship was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.
 
 # ONI
 
@@ -56,7 +58,7 @@ The ONI tracks the running 3-month average sea surface temperatures in the east-
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"></a><figcaption>Figure 3: Location of the Niño regions for measuring sea surface temperature in the eastern and central tropical Pacific Ocean. The sea surface temperature in the Niño3.4 region, spanning from 120˚W to 170˚W longitude, when averaged over a 3-month period, forms NOAA’s official Oceanic Niño Index (the ONI). NOAA Climate.gov image by Fiona Martin. Figure from <a href="https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index"> Dahlman, L. (2016) </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_03.png?raw=true"></a><figcaption>Figure 3: Location of the Niño regions for measuring sea surface temperature in the eastern and central tropical Pacific Ocean. The sea surface temperature in the Niño3.4 region, spanning from 120˚W to 170˚W longitude, when averaged over a 3-month period, forms NOAA’s official Oceanic Niño Index (the ONI). NOAA Climate.gov image by Fiona Martin. Figure from <a href="https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index"> Dahlman, L. (2016) </figcaption>
 </figure>
 </center>
 
@@ -117,7 +119,7 @@ Positive episodes have a higher amplitude and shorter length compared with the p
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_04.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_04.png?raw=true"></a><figcaption>Figure 4: Oceanic Niño Index from 1950 to 2021 and its most intense El Nino (red) and La Nina (blue) episodes, the colour transparency is related to the intensity of the episodes, intense episodes are more opaque. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_04.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_04.png?raw=true"></a><figcaption>Figure 4: Oceanic Niño Index from 1950 to 2021 and its most intense El Nino (red) and La Nina (blue) episodes, the colour transparency is related to the intensity of the episodes, intense episodes are more opaque. </figcaption>
 </figure>
 </center>
 
@@ -128,13 +130,13 @@ A spatial sum for the area inside of the shapefile (and individual geometries) w
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"></a><figcaption>Figure 5: GRACE's global total water storage change for the different processing centers (CSR, JPL, and GFZ). </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"></a><figcaption>Figure 5: GRACE's global total water storage change for the different processing centers (CSR, JPL, and GFZ). </figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"></a><figcaption>Figure 6: GRACE's global total water storage change difference from processing centers (CSR, JPL, and GFZ). </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"></a><figcaption>Figure 6: GRACE's global total water storage change difference from processing centers (CSR, JPL, and GFZ). </figcaption>
 </figure>
 </center>
 
@@ -156,19 +158,20 @@ Amazon has approximately 4.9 M km$^2$, followed by Rio de La Plata with 3.0 M km
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"></a><figcaption>Figure 7: Major river basins in South America, with Amazon and Rio de La Plata highlighted. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"></a><figcaption>Figure 7: Major river basins in South America, with Amazon and Rio de La Plata highlighted. </figcaption>
 </figure>
 </center>
 
 # Models
 Using python 3.8 it was possible to fit GRACE TWS into the following models:
 
-- Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT)
+### Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT)
+
 ```python
 from scipy.signal import find_peaks
 from lmfit.model import Model
 
-# find amplitude
+ # find amplitude
 positive_peaks_idx = find_peaks(obs)[0]
 neagtive_peaks_idx = find_peaks(-obs)[0]
 
@@ -176,18 +179,18 @@ amplitudes =[]
 for i in range(0,len(positive_peaks_idx)):
     amplitudes.append(obs[positive_peaks_idx[i]] - obs[neagtive_peaks_idx[i]])
 
-# fit sine
+ # fit sine
 def mysine(x, amp, freq, shift):
     return amp * np.sin(x*freq + shift)
 
-# define x and y
+ # define x and y
 x = dates
 y = obs
 
-# initialize model
+ # initialize model
 model = Model(mysine)
 
-# initial guess
+ # initial guess
 params = model.make_params(amp=np.mean(amplitudes), freq=1/2, shift=0)
 params['shift'].max = 10
 params['shift'].min = -10
@@ -197,15 +200,16 @@ params['freq'].min = 1/10
 params['freq'].max = 2
 
 result = model.fit(y, params, x=x)
-# result
+ # result
 yy = result.best_fit
 print(result.fit_report())
 
-# inital guess
+ # inital guess
 yyy = result.init_fit
 ```
 
-- Seasonal Decompose using moving averages
+### Seasonal Decomposition using moving averages
+
 ```python
 from statsmodels.tsa.seasonal import seasonal_decompose
 
@@ -218,9 +222,10 @@ SD_seasonal = SD.seasonal # seasonal signal
 SD_trend = SD.trend # trend signal
 SD_resid = SD.resid # residue
 ```
+
 This function will return seasonal, trend, and residual signals. Adding then will reconstruct the original observation.
 
-- Seasonal-Trend decomposition using LOESS
+### Seasonal-Trend decomposition using LOESS
 ```python
 from statsmodels.tsa.seasonal import STL as STL_decompose
 seasonal = 12 + ((12 % 2) == 0)  # Ensure odd
@@ -248,7 +253,7 @@ overall all models converge to similar patterns.
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"></a><figcaption>Figure 8: Amazon Seasonal. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"></a><figcaption>Figure 8: Amazon Seasonal. </figcaption>
 </figure>
 </center>
 
@@ -264,7 +269,7 @@ The interannual seasonality described by the trend is also in agreement between 
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"></a><figcaption>Figure 9: Amazon Trend. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"></a><figcaption>Figure 9: Amazon Trend. </figcaption>
 </figure>
 </center>
 
@@ -277,7 +282,7 @@ The models have a lower correlation, between 0.56 and 0.57. And the frequency is
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"></a><figcaption>Figure 10: La Plata Seasonal. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"></a><figcaption>Figure 10: La Plata Seasonal. </figcaption>
 </figure>
 </center>
 
@@ -293,7 +298,7 @@ The interannual seasonality is in agreement between all models (Figure 11).
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"></a><figcaption>Figure 11: La Plata Trend. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"></a><figcaption>Figure 11: La Plata Trend. </figcaption>
 </figure>
 </center>
 
@@ -301,7 +306,7 @@ The interannual seasonality is in agreement between all models (Figure 11).
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"></a><figcaption>Figure 12: ONI x trend. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"></a><figcaption>Figure 12: ONI x trend. </figcaption>
 </figure>
 </center>
 
@@ -313,7 +318,7 @@ Although ENSO episodes are determined from a threshold of 0.5 (-0.5) for El Nino
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"></a><figcaption>Figure 13: ONI x derived slope. </a></figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"></a><figcaption>Figure 13: ONI x derived slope. </figcaption>
 </figure>
 </center>
 
@@ -335,26 +340,26 @@ A simple comparison between the computed trend and ONI was not precise in pointi
 All models are capable of representing GRACE's TWS signal, and the slope of the trend is useful in identifying ENSO episodes, albeit it should be used carefully and more refinement in the method is needed.
 
 # References
-Abelen, S., Seitz, F., Abarca-del-Rio, R., & Güntner, A. (2015). Droughts and floods in the La Plata basin in soil moisture data and GRACE. Remote Sensing, 7(6), 7324-7349. https://mediatum.ub.tum.de/doc/1323693/file.pdf
+Abelen, S., Seitz, F., Abarca-del-Rio, R., & Güntner, A. (2015). Droughts and floods in the La Plata basin in soil moisture data and GRACE. Remote Sensing, 7(6), 7324-7349. [https://mediatum.ub.tum.de/doc/1323693/file.pdf](https://mediatum.ub.tum.de/doc/1323693/file.pdf)
 
-Alexander, M. A., Bladé, I., Newman, M., Lanzante, J. R., Lau, N. C., & Scott, J. D. (2002). The atmospheric bridge: The influence of ENSO teleconnections on air–sea interaction over the global oceans. Journal of climate, 15(16), 2205-2231. https://www.researchgate.net/profile/Matthew-Newman-7/publication/241092472_The_Atmospheric_Bridge_The_Influence_of_ENSO_Teleconnections_on_Air-Sea_Interaction_over_the_Global_Oceans/links/02e7e528e3c9ba9707000000/The-Atmospheric-Bridge-The-Influence-of-ENSO-Teleconnections-on-Air-Sea-Interaction-over-the-Global-Oceans.pdf
+Alexander, M. A., Bladé, I., Newman, M., Lanzante, J. R., Lau, N. C., & Scott, J. D. (2002). The atmospheric bridge: The influence of ENSO teleconnections on air–sea interaction over the global oceans. Journal of climate, 15(16), 2205-2231. [https://www.researchgate.net/profile/Matthew-Newman-7/publication/241092472_The_Atmospheric_Bridge_The_Influence_of_ENSO_Teleconnections_on_Air-Sea_Interaction_over_the_Global_Oceans/links/02e7e528e3c9ba9707000000/The-Atmospheric-Bridge-The-Influence-of-ENSO-Teleconnections-on-Air-Sea-Interaction-over-the-Global-Oceans.pdf](https://www.researchgate.net/profile/Matthew-Newman-7/publication/241092472_The_Atmospheric_Bridge_The_Influence_of_ENSO_Teleconnections_on_Air-Sea_Interaction_over_the_Global_Oceans/links/02e7e528e3c9ba9707000000/The-Atmospheric-Bridge-The-Influence-of-ENSO-Teleconnections-on-Air-Sea-Interaction-over-the-Global-Oceans.pdf)
 
-Cai, W., McPhaden, M. J., Grimm, A. M., Rodrigues, R. R., Taschetto, A. S., Garreaud, R. D., ... & Vera, C. (2020). Climate impacts of the El Niño–Southern Oscillation on South America. Nature Reviews Earth & Environment, 1(4), 215-231. https://par.nsf.gov/servlets/purl/10187393
+Cai, W., McPhaden, M. J., Grimm, A. M., Rodrigues, R. R., Taschetto, A. S., Garreaud, R. D., ... & Vera, C. (2020). Climate impacts of the El Niño–Southern Oscillation on South America. Nature Reviews Earth & Environment, 1(4), 215-231. [https://par.nsf.gov/servlets/purl/10187393](https://par.nsf.gov/servlets/purl/10187393)
 
-Chiodi, A. M., & Harrison, D. E. (2015). Global seasonal precipitation anomalies robustly associated with El Niño and La Niña events—An OLR perspective. Journal of Climate, 28(15), 6133-6159. https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective
+Chiodi, A. M., & Harrison, D. E. (2015). Global seasonal precipitation anomalies robustly associated with El Niño and La Niña events—An OLR perspective. Journal of Climate, 28(15), 6133-6159. [https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective](https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective)
 
-Dahlman, L. (2016). Climate Variability: Oceanic Niño Index. https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index
+Dahlman, L. (2016). Climate Variability: Oceanic Niño Index. [https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index](https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index)
 
-Hasan, E., Tarhule, A., Hong, Y., & Moore, B. (2019). Assessment of physical water scarcity in Africa using GRACE and TRMM satellite data. Remote Sensing, 11(8), 904. https://pdfs.semanticscholar.org/c240/58013bdb5fb671adeaa2d94ff8289734dc76.pdf
+Hasan, E., Tarhule, A., Hong, Y., & Moore, B. (2019). Assessment of physical water scarcity in Africa using GRACE and TRMM satellite data. Remote Sensing, 11(8), 904. [https://pdfs.semanticscholar.org/c240/58013bdb5fb671adeaa2d94ff8289734dc76.pdf](https://pdfs.semanticscholar.org/c240/58013bdb5fb671adeaa2d94ff8289734dc76.pdf)
 
-Jia, Y., Lei, H., Yang, H., & Hu, Q. (2020). Terrestrial Water Storage Change Retrieved by GRACE and Its Implication in the Tibetan Plateau: Estimating Areal Precipitation in Ungauged Region. Remote Sensing, 12(19), 3129. https://www.researchgate.net/profile/Hanbo-Yang-4/publication/345491380_Terrestrial_Water_Storage_Change_Retrieved_by_GRACE_and_Its_Implication_in_the_Tibetan_Plateau_Estimating_Areal_Precipitation_in_Ungauged_Region/links/5fb4da2545851518fdb0947b/Terrestrial-Water-Storage-Change-Retrieved-by-GRACE-and-Its-Implication-in-the-Tibetan-Plateau-Estimating-Areal-Precipitation-in-Ungauged-Region.pdf
+Jia, Y., Lei, H., Yang, H., & Hu, Q. (2020). Terrestrial Water Storage Change Retrieved by GRACE and Its Implication in the Tibetan Plateau: Estimating Areal Precipitation in Ungauged Region. Remote Sensing, 12(19), 3129. [https://www.researchgate.net/profile/Hanbo-Yang-4/publication/345491380_Terrestrial_Water_Storage_Change_Retrieved_by_GRACE_and_Its_Implication_in_the_Tibetan_Plateau_Estimating_Areal_Precipitation_in_Ungauged_Region/links/5fb4da2545851518fdb0947b/Terrestrial-Water-Storage-Change-Retrieved-by-GRACE-and-Its-Implication-in-the-Tibetan-Plateau-Estimating-Areal-Precipitation-in-Ungauged-Region.pdf](https://www.researchgate.net/profile/Hanbo-Yang-4/publication/345491380_Terrestrial_Water_Storage_Change_Retrieved_by_GRACE_and_Its_Implication_in_the_Tibetan_Plateau_Estimating_Areal_Precipitation_in_Ungauged_Region/links/5fb4da2545851518fdb0947b/Terrestrial-Water-Storage-Change-Retrieved-by-GRACE-and-Its-Implication-in-the-Tibetan-Plateau-Estimating-Areal-Precipitation-in-Ungauged-Region.pdf)
 
-Lin, J., & Qian, T. (2019). A new picture of the Global impacts of el nino-Southern oscillation. Scientific reports, 9(1), 1-7. https://www.researchgate.net/publication/337543775_A_New_Picture_of_the_Global_Impacts_of_El_Nino-Southern_Oscillation
+Lin, J., & Qian, T. (2019). A new picture of the Global impacts of el nino-Southern oscillation. Scientific reports, 9(1), 1-7. [https://www.researchgate.net/publication/337543775_A_New_Picture_of_the_Global_Impacts_of_El_Nino-Southern_Oscillation](https://www.researchgate.net/publication/337543775_A_New_Picture_of_the_Global_Impacts_of_El_Nino-Southern_Oscillation)
 
-Long, D., Longuevergne, L., & Scanlon, B. R. (2015). Global analysis of approaches for deriving total water storage changes from GRACE satellites. Water Resour. Res, 51, 3. https://hal-insu.archives-ouvertes.fr/insu-01137851/document
+Long, D., Longuevergne, L., & Scanlon, B. R. (2015). Global analysis of approaches for deriving total water storage changes from GRACE satellites. Water Resour. Res, 51, 3. [https://hal-insu.archives-ouvertes.fr/insu-01137851/document](https://hal-insu.archives-ouvertes.fr/insu-01137851/document)
 
-Muñoz, Á. G., Thomson, M. C., Goddard, L. M., & Aldighieri, S. (2016). The Latin American and Caribbean climate landscape for ZIKV transmission. https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission
+Muñoz, Á. G., Thomson, M. C., Goddard, L. M., & Aldighieri, S. (2016). The Latin American and Caribbean climate landscape for ZIKV transmission. [https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission](https://www.researchgate.net/publication/303471112_The_Latin_American_and_Caribbean_Climate_Landscape_for_ZIKV_Transmission)
 
-Ni, S., Chen, J., Wilson, C. R., Li, J., Hu, X., & Fu, R. (2018). Global terrestrial water storage changes and connections to ENSO events. Surveys in Geophysics, 39(1), 1-22. https://www.researchgate.net/profile/Shengnan-Ni-2/publication/318665950_Global_Terrestrial_Water_Storage_Changes_and_Connections_to_ENSO_Events/links/5be4e8e692851c6b27b12924/Global-Terrestrial-Water-Storage-Changes-and-Connections-to-ENSO-Events.pdf
+Ni, S., Chen, J., Wilson, C. R., Li, J., Hu, X., & Fu, R. (2018). Global terrestrial water storage changes and connections to ENSO events. Surveys in Geophysics, 39(1), 1-22. [https://www.researchgate.net/profile/Shengnan-Ni-2/publication/318665950_Global_Terrestrial_Water_Storage_Changes_and_Connections_to_ENSO_Events/links/5be4e8e692851c6b27b12924/Global-Terrestrial-Water-Storage-Changes-and-Connections-to-ENSO-Events.pdf](https://www.researchgate.net/profile/Shengnan-Ni-2/publication/318665950_Global_Terrestrial_Water_Storage_Changes_and_Connections_to_ENSO_Events/links/5be4e8e692851c6b27b12924/Global-Terrestrial-Water-Storage-Changes-and-Connections-to-ENSO-Events.pdf)
 
-Phillips, T., Nerem, R. S., Fox‐Kemper, B., Famiglietti, J. S., & Rajagopalan, B. (2012). The influence of ENSO on global terrestrial water storage using GRACE. Geophysical Research Letters, 39(16). https://escholarship.org/uc/item/9p53g2p8
+Phillips, T., Nerem, R. S., Fox‐Kemper, B., Famiglietti, J. S., & Rajagopalan, B. (2012). The influence of ENSO on global terrestrial water storage using GRACE. Geophysical Research Letters, 39(16). [https://escholarship.org/uc/item/9p53g2p8](https://escholarship.org/uc/item/9p53g2p8)
