@@ -3,12 +3,12 @@ title: 'Detecting ENSO events using GRACE satellites in South America'
 author: "Andyara Callegare"
 author_profile: true
 date: 2021-06-15
-permalink: TBD
+permalink: /posts/2021/06/GRACE
 toc: true
 toc_sticky: true
 toc_label: "Detecting ENSO events using GRACE satellites in South America"
 header:
-  overlay_image: TBD
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png
   overlay_filter: 0.3
   caption: "Detecting ENSO events using GRACE satellites in South America"
 read_time: false
@@ -19,7 +19,7 @@ tags:
   - South America
 ---
 
-Changes in global Total Water Storage (TWS) can be measured with satellites sensitive to gravity acceleration: *Gravity Recovery and Climate Experiment* (*GRACE*) and its successor the *Gravity Recovery and Climate Experiment-Follow-On* (*GRACE-FO*)
+Changes in global Total Water Storage (TWS) can be measured with satellites sensitive to gravity acceleration using the *Gravity Recovery and Climate Experiment* (*GRACE*) and its successor the *Gravity Recovery and Climate Experiment-Follow-On* (*GRACE-FO*). Here is an example research study from South America.
 
 In South America is no abundant network of in-situ hydrometeorologic stations, but over the last decades, an increased number of remote-sensing sensors showed an unprecedented view of the region. The unique *Gravity Recovery and Climate Experiment* (*GRACE*) and its successor the *Gravity Recovery and Climate Experiment-Follow-On* (*GRACE-FO*) have been orbiting the earth since 2002 and use gravity to map water masses and their changes. Its variable Total Water Storage (TWS) change is defined as changes in water stored on the surface (e.g., lakes and reservoirs, rivers, and snow water equivalent), over the entire soil profile, and in groundwater (Long et al., 2015).
 
