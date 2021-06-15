@@ -50,7 +50,7 @@ Since precipitation is an important component in hydrological and climate change
 
 **This internship was supervised by Prof. Dr. Bodo Bookhagen and Dr. Taylor Smith.**
 
-# ONI
+# Oceanic Niño Index (ONI)
 
 The Oceanic Niño Index (ONI) is NOAA's primary indicator for monitoring El Niño and La Niña, which are opposite phases of the climate pattern called the El Niño-Southern Oscillation, or “ENSO” for short. NOAA considers El Niño conditions to be present when the Oceanic Niño Index is +0.5 or higher, indicating the east-central tropical Pacific is significantly warmer than usual. La Niña conditions exist when the Oceanic Niño Index is -0.5 or lower, indicating the region is cooler than usual. The data set is available at [https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt](https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt).
 
@@ -65,7 +65,7 @@ The ONI tracks the running 3-month average sea surface temperatures in the east-
 The most intense months recorded events - or both El Nino and La Nina - are described in the tables bellow.
 
 
-### El Niño
+## El Niño
 
 | Date       | Anomaly   |
 |------------|-----------|
@@ -89,7 +89,7 @@ For El Nino the most intense 10 months have SST anomalies ranging from 2.18 to 2
 3. And the third one has its peak in 2015-12, values above 0.5 started in 2014-10 and were continuously above this threshold until 2016-04, 19 months in total. The 7th to 10th highest values were registered during this episode.
 
 
-### La Niña
+## La Niña
 
 | Date       | Anomaly   |
 |------------|-----------|
@@ -165,7 +165,7 @@ Amazon has approximately 4.9 M km<sup>2</sup>, followed by Rio de La Plata with 
 # Models
 Using python 3.8 it was possible to fit GRACE TWS into the following models:
 
-### Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT)
+## Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT)
 
 ```python
 from scipy.signal import find_peaks
@@ -208,7 +208,7 @@ print(result.fit_report())
 yyy = result.init_fit
 ```
 
-### Seasonal Decomposition using moving averages
+## Seasonal Decomposition using moving averages
 
 ```python
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -225,7 +225,7 @@ SD_resid = SD.resid # residue
 
 This function will return seasonal, trend, and residual signals. Adding then will reconstruct the original observation.
 
-### Seasonal-Trend decomposition using LOESS
+## Seasonal-Trend decomposition using LOESS
 ```python
 from statsmodels.tsa.seasonal import STL as STL_decompose
 seasonal = 12 + ((12 % 2) == 0)  # Ensure odd
