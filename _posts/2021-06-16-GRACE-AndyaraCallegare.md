@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Detecting ENSO events using GRACE satellites in South America"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/banner.jpg
   overlay_filter: 0.3
   caption: "Detecting ENSO events using GRACE satellites in South America"
 read_time: false
