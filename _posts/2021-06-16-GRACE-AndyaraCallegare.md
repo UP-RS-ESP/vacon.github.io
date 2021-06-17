@@ -346,7 +346,8 @@ Alexander, M. A., Bladé, I., Newman, M., Lanzante, J. R., Lau, N. C., & Scott, 
 
 Cai, W., McPhaden, M. J., Grimm, A. M., Rodrigues, R. R., Taschetto, A. S., Garreaud, R. D., ... & Vera, C. (2020). Climate impacts of the El Niño–Southern Oscillation on South America. Nature Reviews Earth & Environment, 1(4), 215-231. [https://par.nsf.gov/servlets/purl/10187393](https://par.nsf.gov/servlets/purl/10187393)
 
-Chiodi, A. M., & Harrison, D. E. (2015). Global seasonal precipitation anomalies robustly associated with El Niño and La Niña events—An OLR perspective. Journal of Climate, 28(15), 6133-6159. [https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective](https://www.researchgate.net/publication/277901561_Global_seasonal_precipitation_anomalies_robustly_associated_with_El_Nino_and_La_Nina_events_-_an_OLR_perspective)
+Chiodi, A. M., & Harrison, D. E. (2015). Global seasonal precipitation anomalies robustly associated with El Niño and La Niña events—An OLR perspective. Journal of Climate, 28(15), 6133-6159. [https://journals.ametsoc.org/view/journals/clim/28/15/jcli-d-14-00387.1.xml](https://journals.ametsoc.org/view/journals/clim/28/15/jcli-d-14-00387.1.xml)
+
 
 Dahlman, L. (2016). Climate Variability: Oceanic Niño Index. [https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index](https://www.climate.gov/news-features/understanding-climate/climate-variability-oceanic-ni%C3%B1o-index)
 
