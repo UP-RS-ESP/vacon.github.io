@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Detecting ENSO events using GRACE satellites in South America"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/banner.jpg
   overlay_filter: 0.3
   caption: "Detecting ENSO events using GRACE satellites in South America"
 read_time: false
@@ -130,13 +130,13 @@ A spatial sum for the area inside of the shapefile (and individual geometries) w
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"></a><figcaption>Figure 5: GRACE's global total water storage change for the different processing centers (CSR, JPL, and GFZ). </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_05.png?raw=true"></a><figcaption>Figure 5: GRACE's global total water storage change for the different processing centers (CSR, JPL, and GFZ). The period without data is highlighted in grey. </figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"></a><figcaption>Figure 6: GRACE's global total water storage change difference from processing centers (CSR, JPL, and GFZ). </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_06.png?raw=true"></a><figcaption>Figure 6: GRACE's global total water storage change difference from processing centers (CSR, JPL, and GFZ). The period without data is highlighted in grey. </figcaption>
 </figure>
 </center>
 
@@ -158,7 +158,7 @@ Amazon has approximately 4.9 M km<sup>2</sup>, followed by Rio de La Plata with 
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"></a><figcaption>Figure 7: Major river basins in South America, with Amazon and Rio de La Plata highlighted. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"></a><figcaption>Figure 7: Major river basins in South America, with Amazon and Rio de La Plata containing GRACE's TWS for Dezember 2015. Amazon (La Plata) is the upper (lower) Basin. On this date there's an El Niño happening, and TWS is reflecting the expected behaviour, with the Amazon (La Plata) Basin having a negative (positive) anomaly, meaning that it is drier (wetter) than usual. </figcaption>
 </figure>
 </center>
 
@@ -253,7 +253,7 @@ overall all models converge to similar patterns.
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"></a><figcaption>Figure 8: Amazon Seasonal. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_08.png?raw=true"></a><figcaption>Figure 8: Seasonal Signal for the Amazon Basin. 1st row is Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT) initial guess, 2nd row is LMFIT model, 3rd row is the seasonal signal from the Seasonal Decomposition using moving averages (SD), 4th row is the seasonal signal from Seasonal-Trend decomposition using LOESS (STL), 5th row is the seasonal signal from STL robust. For all rows, the observed signal is in black. </figcaption>
 </figure>
 </center>
 
@@ -269,7 +269,7 @@ The interannual seasonality described by the trend is also in agreement between 
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"></a><figcaption>Figure 9: Amazon Trend. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png?raw=true"></a><figcaption>Figure 9: Interannual trend for the Amazon Basin. Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT) was estimated by subtracting the observation from the model and applying a moving average of 12 months. Seasonal Decomposition using moving averages (SD), Seasonal-Trend decomposition using LOESS (STL), and STL robust are extracted directly from the models' trend signal. </figcaption>
 </figure>
 </center>
 
@@ -282,7 +282,7 @@ The models have a lower correlation, between 0.56 and 0.57. And the frequency is
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"></a><figcaption>Figure 10: La Plata Seasonal. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_10.png?raw=true"></a><figcaption>Figure 10: Seasonal Signal for the La Plata Basin. 1st row is Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT) initial guess, 2nd row is LMFIT model, 3rd row is the seasonal signal from the Seasonal Decomposition using moving averages (SD), 4th row is the seasonal signal from Seasonal-Trend decomposition using LOESS (STL), 5th row is the seasonal signal from STL robust. For all rows, the observed signal is in black. </figcaption>
 </figure>
 </center>
 
@@ -298,7 +298,7 @@ The interannual seasonality is in agreement between all models (Figure 11).
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"></a><figcaption>Figure 11: La Plata Trend. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_11.png?raw=true"></a><figcaption>Figure 11: Interannual trend for the La Plata Basin. Non-Linear Least-Squares Minimization and Curve-Fitting (LMFIT) was estimated by subtracting the observation from the model and applying a moving average of 12 months. Seasonal Decomposition using moving averages (SD), Seasonal-Trend decomposition using LOESS (STL), and STL robust are extracted directly from the models' trend signal. </figcaption>
 </figure>
 </center>
 
@@ -306,7 +306,7 @@ The interannual seasonality is in agreement between all models (Figure 11).
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"></a><figcaption>Figure 12: ONI x trend. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_12.png?raw=true"></a><figcaption>Figure 12: Oceanic Niño Index (ONI) in Celcius and the average interannual trends for Amazon and La Plata Basins in meters. Highlighted are the ENSO events, El Niño in red and La Niña in Blue. </figcaption>
 </figure>
 </center>
 
@@ -318,7 +318,7 @@ Although ENSO episodes are determined from a threshold of 0.5 (-0.5) for El Nino
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"></a><figcaption>Figure 13: ONI x derived slope. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_13.png?raw=true"></a><figcaption>Figure 13: Oceanic Niño Index (ONI) in Celcius and derived slope from the average interannual trends for Amazon and La Plata Basins in meters. For each row, ENSO events are highlighted, El Niño in red and La Niña in Blue. For ONI the threshold is 0.5 (-0.5) Celcius for El Niño (La Niña). For The Amazon Basin the threshold is 1.5 (-1.5) meters for El Niño (La Niña). And for La Plata Basin the threshold is 0.75 (-0.75) meters for El Niño (La Niña). </figcaption>
 </figure>
 </center>
 
