@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Detecting ENSO events using GRACE satellites in South America"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/banner.jpg
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_09.png
   overlay_filter: 0.3
   caption: "Detecting ENSO events using GRACE satellites in South America"
 read_time: false
@@ -158,7 +158,7 @@ Amazon has approximately 4.9 M km<sup>2</sup>, followed by Rio de La Plata with 
 
 <center>
 <figure>
-<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Fig_07.png?raw=true"></a><figcaption>Figure 7: Major river basins in South America, with Amazon and Rio de La Plata containing GRACE's TWS for Dezember 2015. Amazon (La Plata) is the upper (lower) Basin. On this date there's an El Niño happening, and TWS is reflecting the expected behaviour, with the Amazon (La Plata) Basin having a negative (positive) anomaly, meaning that it is drier (wetter) than usual. </figcaption>
+<a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Figure_07_new.png?raw=true"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/GRACE_figs/Figure_07_new.png?raw=true"></a><figcaption>Figure 7: Major river basins in South America, with Amazon and Rio de La Plata containing GRACE's TWS for Dezember 2015. Amazon (La Plata) is the upper (lower) Basin. On this date there's an El Niño happening, and TWS is reflecting the expected behaviour, with the Amazon (La Plata) Basin having a negative (positive) anomaly, meaning that it is drier (wetter) than usual. </figcaption>
 </figure>
 </center>
 
