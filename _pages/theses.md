@@ -14,11 +14,13 @@ There are several open theses topics that interested students can work on. Pleas
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----:|-------|:---:|:---:|
 | **[2021]** | | |
+| *Spatial Modeling of Mini-Grid Solar Systems For Health Facilities and Surrounding Communities In Ghana* |  Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | *Settlement and urban area detection from medium resolution satellite imagery* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
+| *Namibian rangelands in transition: A large-scale dynamic savanna vegetation model* | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
 | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | Institute of Geosciences, MSc Geoscience | |
 | *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc Remote Sensing, Geoinformation and Visualization | |
-| Resting site selection of female springbok (Antidorcas marsupialis) in a predator rich savanna landscape: insights from GPS tracking and remote sensing data | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation |
+| Resting site selection of female springbok (Antidorcas marsupialis) in a predator rich savanna landscape: insights from GPS tracking and remote sensing data | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
 | **[2020]** | | |
 | *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
 | *Applications of pointcloud and full-waveform Lidar data for object detection* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
@@ -77,5 +79,5 @@ There are several open theses topics that interested students can work on. Pleas
 | *Bestimmung der Flussaufschotterung in Nord/West-Argentinien mittels digitaler Geländemodelle* | Institute of Geosciences, BSc Geowissenschaften |
 | *Deciphering seasonal vegetation gradients along a topographic transect in NW Argentina* | Institute of Environmental Sciences and Geography, BSc Geoökologie |
 | *Remote Sensing Based Classification of Geologic Units oft he Puna Plateau in NW Argentina* | Institute of Geosciences, BSc Geowissenschaften |
-| **[2015]** | | 
+| **[2015]** | |
 | *Analyzing Cosmogenic Nuclides for Surface Dating and Determination of Geomorphological Process Rates* | Institute of Geosciences, BSc Geowissenschaften |
