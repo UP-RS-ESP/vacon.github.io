@@ -15,6 +15,7 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | **[2021]** | | | |
+Purinton, B. and Bookhagen, B. | 2021 | Tracking Downstream Variability in Large Grain-Size Distributions in the South-Central Andes | _JGR Earth Surface_ | [DOI](http://dx.doi.org/10.1029/2021JF006260)
 Tofelde, S., Bernhardt, A., Guerit, L. & Romans, B. | 2021 | Times associated with source-to-sink propagation of environmental signals during landscape transience | _Frontiers in Earth Science_  | [DOI](https://www.frontiersin.org/articles/10.3389/feart.2021.628315/full)
 Smith, T.T., Rheinwalt, A., Bookhagen, B. | 2021 | Topography and Climate in the Upper Indus Basin: Mapping Elevation-Snow Cover Relationships | _Science of the Total Environment_ | [DOI](STOTEN-D-21-03144R2) [PDF](http://bodobookhagen.github.io/pdf/Smith21_UpperIndusSnow_Accepted.pdf)
 Olivotos, S., Niedermann, S., Flügel, T., Mouslopoulou, V., Merchel, S., Cotterill, F., Bookhagen, B., Gärtner, A., Georg Rugel, G., Scharf, A., Nadeau, M.-J., Braucher, R., Seiler, M. | 2021 | Quaternary landscape evolution in a tectonically active rift basin (paleo-lake Mweru, south-central Africa) | _Geomorphology_ | [DOI](https://doi.org/10.1016/j.geomorph.2021.107669)
