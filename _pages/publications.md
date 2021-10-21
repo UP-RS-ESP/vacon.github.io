@@ -15,6 +15,8 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | **[2021]** | | | |
+Purinton, B. and Bookhagen, B. | 2021 | Beyond vertical point accuracy: Assessing inter-pixel consistency in 30 m global DEMs for the arid Central Andes | _Frontiers in Earth Sciences_ | [DOI](http://dx.doi.org/10.3389/feart.2021.758606)
+Ramezani Ziarani, M., Bookhagen, B., Schmidt, T., Wickert, J., de la Torre, A., Deng, Z. and  Calori, A. | 2021 | A Model for the Relationship between Rainfall, GNSS-Derived Integrated Water Vapour, and CAPE in the Eastern Central Andes | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs13183788) [PDF](https://www.mdpi.com/2072-4292/13/18/3788/pdf)
 Purinton, B. and Bookhagen, B. | 2021 | Tracking Downstream Variability in Large Grain-Size Distributions in the South-Central Andes | _JGR Earth Surface_ | [DOI](http://dx.doi.org/10.1029/2021JF006260)
 Tofelde, S., Bernhardt, A., Guerit, L. & Romans, B. | 2021 | Times associated with source-to-sink propagation of environmental signals during landscape transience | _Frontiers in Earth Science_  | [DOI](https://www.frontiersin.org/articles/10.3389/feart.2021.628315/full)
 Smith, T.T., Rheinwalt, A., Bookhagen, B. | 2021 | Topography and Climate in the Upper Indus Basin: Mapping Elevation-Snow Cover Relationships | _Science of the Total Environment_ | [DOI](STOTEN-D-21-03144R2) [PDF](http://bodobookhagen.github.io/pdf/Smith21_UpperIndusSnow_Accepted.pdf)
