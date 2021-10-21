@@ -22,7 +22,7 @@ There are several open theses topics that interested students can work on. Pleas
 | *Namibian rangelands in transition: A large-scale dynamic savanna vegetation model* | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
 | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | IoG, MSc Geoscience | |
 | *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | IoG, MSc RSIV | |
-| Resting site selection of female springbok (Antidorcas marsupialis) in a predator rich savanna landscape: insights from GPS tracking and remote sensing data | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
+| *Resting site selection of female springbok (Antidorcas marsupialis) in a predator rich savanna landscape: insights from GPS tracking and remote sensing data* | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
 | **[2020]** | | |
 | *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | IoG, MSc RSIV | |
 | *Applications of pointcloud and full-waveform Lidar data for object detection* | IoG, MSc RSIV | |
