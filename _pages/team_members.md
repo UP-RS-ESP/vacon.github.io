@@ -41,6 +41,7 @@ researchers3:
   - image_path: /images/team_photo.png
     title: 'Manudeo Singh'
     excerpt: 'Floodplain, UAV'
+
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
     alt: Sofia Viotto
@@ -116,9 +117,12 @@ former_members1:
 
 {% include feature_row id="PhD_students2" type=center%}
 
-# MSc and BSc Students
+# MSc Students
 
 {% include feature_row id="MSc_students1" type=center%}
+
+# BSc Students
+
 
 # Past Members
 
