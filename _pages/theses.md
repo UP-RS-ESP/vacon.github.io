@@ -1,9 +1,8 @@
 ---
-layout: splash
 title: 'Advising of BSc and MSc theses'
-read_time: false
 permalink: /theses/
 author_profile: false
+layout: splash
 ---
 # Looking for a thesis?
 There are several open theses topics that interested students can work on. Please contact [Bodo Bookhagen](mailto:bodo.bookhagen@uni-potsdam.de) if you would like to pursue this.
