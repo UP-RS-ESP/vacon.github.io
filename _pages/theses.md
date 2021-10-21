@@ -12,6 +12,7 @@ There are several open theses topics that interested students can work on. Pleas
 
 - MSc RSIV: MSc Remote Sensing, geoInformation, and Visualization
 - IoG: Institute of Geoscience
+- IoEES: Institute of Earth and Environmental Sciences
 
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----:|-------|:---:|:---:|
@@ -26,34 +27,34 @@ There are several open theses topics that interested students can work on. Pleas
 | **[2020]** | | |
 | *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | IoG, MSc RSIV | |
 | *Applications of pointcloud and full-waveform Lidar data for object detection* | IoG, MSc RSIV | |
-| *Eine Zeitreihenanalyse der Vegetationsänderung in den Anden von 1998 bis 2014* | IoG, MSc Geoinformation und Visualisierung |  |
+| *Eine Zeitreihenanalyse der Vegetationsänderung in den Anden von 1998 bis 2014* | IoEES, MSc Geoinformation und Visualisierung |  |
 | *Generating high-resolution DEMs from tri-stereo satellite imagery: A geomorphologic case study in the Quebrada del Toro, NW Argentina* | IoG, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/ArianeMueting_MSc_lr.pdf) |
 | *Near-real time detection of lake ice using Sentinel-1 data* | IoG, MSc RSIV | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Mastersthesis_FelixKessler.pdf) |
-| *Die Ermittlung von Genauigkeiten und Anwendungsszenarios für fernerkundlich erhobene Punktwolken am Beispiel des Campus Golm* | IoG, MSc Geowissenschaften | |
+| *Die Ermittlung von Genauigkeiten und Anwendungsszenarios für fernerkundlich erhobene Punktwolken am Beispiel des Campus Golm* | IoEES, MSc Geowissenschaften | |
 | *Terrestrial lidar scanning and point cloud classification of the „Neues Palais“, University of Potsdam* | IoG, MSc Geowissenschaften | |
-| *Webbasierte multitemporale Klimavisualisierung am Beispiel von Niederschlag im Raum Berlin-Brandenburg* | IoG, MSc Geoinformation und Visualisierung | |
+| *Webbasierte multitemporale Klimavisualisierung am Beispiel von Niederschlag im Raum Berlin-Brandenburg* | IoEES, MSc Geoinformation und Visualisierung | |
 | **[2019]** | | |
-| *Klassifikation der Seen auf dem Hochland von Tibet mittels Google Earth Engine* | IoG, MSc Geoinformation und Visualisierung | |
+| *Klassifikation der Seen auf dem Hochland von Tibet mittels Google Earth Engine* | IoEES, MSc Geoinformation und Visualisierung | |
 | *Ground Deformation Monitoring in Mining Areas on the Central Andean Plateau (Puna, Argentina) Using Sentinel-1 Data* | Institute of Geodesy and Geoinformation Science, TU Berlin | |
-| *Mapping bedfast and floating thermokarst lake ice and determining lake depth using Sentinel 1 Synthetic Aperture Radar Remote Sensing on the west shore of Hudson Bay, Canada and Prudhoe Bay, Alaska* | Institute of Environmental Sciences and Geography, MSc Geoökologie | |
+| *Mapping bedfast and floating thermokarst lake ice and determining lake depth using Sentinel 1 Synthetic Aperture Radar Remote Sensing on the west shore of Hudson Bay, Canada and Prudhoe Bay, Alaska* | IoEES, MSc Geoökologie | |
 | *Derivation of Biophysical Metrics for NE-Siberian Biomes using UAV-Based Photogrammetric Point Clouds* | IoG, MSc Geowissenschaften | [MSc thesis published in *remote sensing*](https://www.mdpi.com/2072-4292/11/12/1447) |
 | *Untersuchungen der organischen Kohlenstoffspezies im Grundwasser des Wasserwerks Potsdam-Rehbrücke in Bezug zu den geologischen, technischen und klimatischen Rahmenbedingungen* | IoG, MSc Geowissenschaften | |
-| *Quality assessment of structure from motion point clouds from river pebbles* | Institute of Environmental Sciences and Geography, MSc Geoökologie | |
-| *Entwicklung und Umsetzung eines Visualisierungskonzeptes für ein webbasiertes Campus-Navigationssystem für mobile Endgeräte* | IoG, MSc Geoinformation und Visualisierung | |
+| *Quality assessment of structure from motion point clouds from river pebbles* | IoEES, MSc Geoökologie | |
+| *Entwicklung und Umsetzung eines Visualisierungskonzeptes für ein webbasiertes Campus-Navigationssystem für mobile Endgeräte* | IoEES, MSc Geoinformation und Visualisierung | |
 | *Kartierung von Bergstürzen und Massenbewegungen in den Nordwestargentinischen Anden mit SAR Kohärenzmessungen* | IoG, MSc Geowissenschaften | |
 | **[2018]** | | | |
 | *Die Verknüpfung von Fußgängerdistanzen und Distanzen des öffentlichen Personennahverkehrs als Optimierung von lagebezogenen Immobilienbewertungen* | IoG, MSc Geoinformation und Visualisierung | |
 | *Evaluating groundwater sustainability of mining activities in the Niger basin*  | IoG, MSc Geowissenschaften | |
 | *Dome growth during the 2016-2017 eruption sequence at Bezymianny volcano, Kamchatka, measured by high-resolution TerraSAR-X and photogrammetric data* | IoG, MSc Geowissenschaften | |
-| *Developing Open Source and Cross-Plattform Offline Maps on iOS and Android Devices* | IoG, MSc Geoinformation und Visualisierung | |
-| *Impact of autonomous driving on the structure of logistic networks: A model-based spatial analysis* | IoG, MSc Geoinformation und Visualisierung | |
+| *Developing Open Source and Cross-Plattform Offline Maps on iOS and Android Devices* | IoEES, MSc Geoinformation und Visualisierung | |
+| *Impact of autonomous driving on the structure of logistic networks: A model-based spatial analysis* | IoEES, MSc Geoinformation und Visualisierung | |
 | **[2017]** | | |
 | *Spatiotemporal patterns and driving factors of lake size variability since 1985, Central Andean Plateau, South America* | IoG, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Masterarbeit_NicolasWerner_25-11-2016.pdf) |
 | *Precision and Accuracy Assessment of glacier elevation changes from TanDEM-X data for the Batura glacier, Karakoram Himalaya* | IoG, MSc Geoinformation und Visualisierung | |
-| *OpenStreetMap als Grundlage für eine (semi-) automatisierte Generierung von Trainingsgebieten bei der Klassifizierung von Fernerkundungsdaten* | IoG, MSc Geoinformation und Visualisierung | |
+| *OpenStreetMap als Grundlage für eine (semi-) automatisierte Generierung von Trainingsgebieten bei der Klassifizierung von Fernerkundungsdaten* | IoEES, MSc Geoinformation und Visualisierung | |
 | *From weather to climate: constraints for ecological models in Southern Africa* | Institute of Biochemistry and Biology, MSc Biology | |
-| *Teilautomatisierte urbane Gebäudeinventur mittels Fernerkundungsmethoden* | IoG, MSc Geoinformation und Visualisierung | |
-| *Möglichkeiten und Grenzen der objektbasierten Bildanalyse historischer panchromatischer Luftbilder am Beispiel der Abgrenzung urbaner Flächen in Potsdam* | IoG, MSc Geoinformation und Visualisierung | |
+| *Teilautomatisierte urbane Gebäudeinventur mittels Fernerkundungsmethoden* | IoEES, MSc Geoinformation und Visualisierung | |
+| *Möglichkeiten und Grenzen der objektbasierten Bildanalyse historischer panchromatischer Luftbilder am Beispiel der Abgrenzung urbaner Flächen in Potsdam* | IoEES, MSc Geoinformation und Visualisierung | |
 | *Locality-based Clustering of Large Complex Networks for Climate Studies* | Hasso Plattner Institut, University of Potsdam | |
 | *Migrationsanalyse des Untergrundes mittels zweidimensionaler Kreuzkorrelation der Catamarca-Provinz in NW Argentinien, basierend auf zeitlich varianten Daten differenter Fernerkundungssysteme* | IoG, MSc Geowissenschaften |
 | **[2016]** | | |
