@@ -65,6 +65,19 @@ PhD_students2:
   - image_path: /images/Mohammad-MohseniAref2.jpg
     title: Mohammad Mohseni Aref
     excerpt: 'Radar Interferometry (InSAR), GNSS'
+
+MSc_students1:
+  - image_path: /images/Bashini_new_image2.jpg
+    alt: Bashini Mahaarachchi
+    title: Bashini Mahaarachchi
+    excerpt: 'Machine Learning and Image classification'
+  - image_path: /images/team_photo.png
+    title: Ananya Panday
+    excerpt: 'Stereophotogrammetry, Structure-from-Motion, Digital Elevation Models'
+  - image_path: /images/team_photo.png
+    title: Debayan Chatterjee
+    excerpt: 'UAV point clouds, Digital Elevation Models'
+
 former_members1:
   - image_path: /images/team_photo.png
     title: Fiona Clubb
@@ -104,6 +117,8 @@ former_members1:
 {% include feature_row id="PhD_students2" type=center%}
 
 # MSc and BSc Students
+
+{% include feature_row id="MSc_students1" type=center%}
 
 # Past Members
 
