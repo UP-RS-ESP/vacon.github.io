@@ -10,23 +10,24 @@ classes: wide
 There are several open theses topics that interested students can work on. Please contact [Bodo Bookhagen](mailto:bodo.bookhagen@uni-potsdam.de) if you would like to pursue this.
 
 ## List of advised MSc thesis in reversed chronological order
+Abbreviation MSc RSIV: MSc RSIV
 
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----:|-------|:---:|:---:|
 | **[2021]** | | |
-| *Spatial Modeling of Mini-Grid Solar Systems For Health Facilities and Surrounding Communities In Ghana* |  Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
-| *Settlement and urban area detection from medium resolution satellite imagery* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
-| *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
+| *Spatial Modeling of Mini-Grid Solar Systems For Health Facilities and Surrounding Communities In Ghana* |  Institute of Geosciences, MSc RSIV | |
+| *Settlement and urban area detection from medium resolution satellite imagery* | Institute of Geosciences, MSc RSIV | |
+| *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | Institute of Geosciences, MSc RSIV | |
 | *Namibian rangelands in transition: A large-scale dynamic savanna vegetation model* | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
 | *Dating glacial moraines on the volcanic Complex Quevar in NW Argentina using the cosmogenic nuclides 26Al, 10Be, and 21Ne* | Institute of Geosciences, MSc Geoscience | |
-| *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc Remote Sensing, Geoinformation and Visualization | |
+| *Theoretical Potential of Former, Present, and Hypothetical Optical Spaceborne Sensors for the Differentiation of Plastics Using Hyperspectral Analyses* | Institute of Geosciences, MSc RSIV | |
 | Resting site selection of female springbok (Antidorcas marsupialis) in a predator rich savanna landscape: insights from GPS tracking and remote sensing data | Institute of Biochemistry and Biology, MSc Ecology, Evolution, and Conservation | |
 | **[2020]** | | |
-| *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
-| *Applications of pointcloud and full-waveform Lidar data for object detection* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | |
+| *The Sixth Sense of White Storks - Towards an E2E Service for Locust Threat Alarms* | Institute of Geosciences, MSc RSIV | |
+| *Applications of pointcloud and full-waveform Lidar data for object detection* | Institute of Geosciences, MSc RSIV | |
 | *Eine Zeitreihenanalyse der Vegetationsänderung in den Anden von 1998 bis 2014* | Institute of Geosciences, MSc Geoinformation und Visualisierung |  |
 | *Generating high-resolution DEMs from tri-stereo satellite imagery: A geomorphologic case study in the Quebrada del Toro, NW Argentina* | Institute of Geosciences, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/ArianeMueting_MSc_lr.pdf) |
-| *Near-real time detection of lake ice using Sentinel-1 data* | Institute of Geosciences, MSc Remote Sensing, geoInformation, and Visualization | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Mastersthesis_FelixKessler.pdf) |
+| *Near-real time detection of lake ice using Sentinel-1 data* | Institute of Geosciences, MSc RSIV | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/Mastersthesis_FelixKessler.pdf) |
 | *Die Ermittlung von Genauigkeiten und Anwendungsszenarios für fernerkundlich erhobene Punktwolken am Beispiel des Campus Golm* | Institute of Geosciences, MSc Geowissenschaften | |
 | *Terrestrial lidar scanning and point cloud classification of the „Neues Palais“, University of Potsdam* | Institute of Geosciences, MSc Geowissenschaften | |
 | *Webbasierte multitemporale Klimavisualisierung am Beispiel von Niederschlag im Raum Berlin-Brandenburg* | Institute of Geosciences, MSc Geoinformation und Visualisierung | |
