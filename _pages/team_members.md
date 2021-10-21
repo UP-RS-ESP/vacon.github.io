@@ -71,7 +71,7 @@ MSc_students1:
   - image_path: /images/Bashini_new_image2.jpg
     alt: Bashini Mahaarachchi
     title: Bashini Mahaarachchi
-    excerpt: 'Machine Learning and Image classification'
+    excerpt: 'Spatial analysis, machine learning and computer vision'
   - image_path: /images/team_photo.png
     title: Ananya Panday
     excerpt: 'Stereophotogrammetry, Structure-from-Motion, Digital Elevation Models'
