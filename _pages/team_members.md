@@ -72,10 +72,10 @@ MSc_students1:
     alt: Bashini Mahaarachchi
     title: Bashini Mahaarachchi
     excerpt: 'Spatial analysis, machine learning and computer vision'
-  - image_path: /images/team_photo.png
-    title: Ananya Panday
+  - image_path: /images/AnanyaPandey_Pic.jpeg
+    title: Ananya Pandey
     excerpt: 'Stereophotogrammetry, Structure-from-Motion, Digital Elevation Models'
-  - image_path: /images/team_photo.png
+  - image_path: /images/DebayanChatterjee_Pic.jpg
     title: Debayan Chatterjee
     excerpt: 'UAV point clouds, Digital Elevation Models'
 
