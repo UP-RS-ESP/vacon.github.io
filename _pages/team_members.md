@@ -38,15 +38,15 @@ researchers2:
     excerpt: 'SAR, Processing of satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
 researchers3:
-  - image_path: /images/team_photo.png
+  - image_path: /images/ManudeoSingh.jpg
     title: 'Manudeo Singh'
-    excerpt: 'Floodplain, UAV'
+    excerpt: 'Floodplain Evolution, Hydraulic Connectivity, UAV'
 
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
     alt: Sofia Viotto
     title: Sofia Viotto
-    excerpt: 'DEM, Satellite Photogrammetry, InSAR'
+    excerpt: 'DEM, InSAR, Satellite Photogrammetry'
   - image_path: /images/team_photo.png
     alt: Nikolas  Antonoglou
     title: Nikolaos Antonoglou
@@ -68,7 +68,7 @@ PhD_students2:
     excerpt: 'Radar Interferometry (InSAR), GNSS'
 
 MSc_students1:
-  - image_path: /images/Bashini_new_image2.jpg
+  - image_path: /images/Bashini_new_image.jpg
     alt: Bashini Mahaarachchi
     title: Bashini Mahaarachchi
     excerpt: 'Spatial analysis, machine learning and computer vision'
