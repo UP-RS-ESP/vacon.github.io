@@ -26,15 +26,6 @@ researchers2:
     title: Taylor Smith
     excerpt: 'Passive Microwave Remote Sensing, Big Data Analytics'
     url: 'https://tasmi.github.io/'
-  - image_path: /images/olen.png
-    alt: Stephanie Olen
-    title: Stephanie Olen
-    excerpt: 'Earth Surface Processes, CRN Erosion, SAR'
-  - image_path: /images/traxl.jpg
-    title: Dominik Traxl
-    excerpt: 'Complex networks, Time series analysis'
-    url: 'https://github.com/dominiktraxl'
-researchers3:
   - image_path: /images/tofelde.jpg
     alt: Stefanie Tofelde
     title: Stefanie Tofelde
@@ -46,9 +37,10 @@ researchers3:
     title: Ben Purinton
     excerpt: 'SAR, Processing of satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
+researchers3:
   - image_path: /images/team_photo.png
-    title: ''
-    excerpt: ''
+    title: 'Manudeo Singh'
+    excerpt: 'Floodplain, UAV'
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
     alt: Sofia Viotto
@@ -86,6 +78,15 @@ former_members1:
     title: Konstanze Stuebner
     excerpt: 'CRN, Thermochronology'
     url: ''
+  - image_path: /images/olen.png
+    alt: Stephanie Olen
+    title: Stephanie Olen
+    excerpt: 'Earth Surface Processes, CRN Erosion, SAR'
+  - image_path: /images/traxl.jpg
+    title: Dominik Traxl
+    excerpt: 'Complex networks, Time series analysis'
+    url: 'https://github.com/dominiktraxl'
+
 ---
 
 # Researchers
@@ -106,4 +107,12 @@ former_members1:
 
 # Past Members
 
-Dr. Fabiana Castino, Dr. Fiona Clubb, Dr. Frank Günther, Dr. Konstanze Stuebner
+- Dr. Dominik Traxl (now researcher at PIK)
+- Dr. Stephanie Olen (now editor at nature sustainability)
+- Dr. Fabiana Castino (now with Deutscher Wetterdienst)
+- Dr. Ramezani Ziarani (now researcher at KIT)
+- Dr. Fiona Clubb (now Asst. Professor at Durham University)
+- Dr. Frank Günther (now independent researcher)
+- Dr. Konstanze Stuebner (now with HZDR Dresden-Rossendorf)
+- Dr. Bedartha Goswami (now Asst. Professor at University of Tuebingen)
+- Lisa Luna (now PhD student at UP)
