@@ -18,7 +18,7 @@ researchers1:
     url: 'https://github.com/rheinwalt'
   - image_path: /images/schernthanner.jpg
     title: Harald Schernthanner
-    excerpt: 'GIS and spatial analysis, Computer Lab Technician'
+    excerpt: 'GIS and Spatial Analysis, Computer Lab Technician'
     url: 'https://schernthanner.de/'
 researchers2:
   - image_path: /images/smith.jpg
@@ -35,7 +35,7 @@ researchers2:
   - image_path: /images/purinton.jpg
     alt: Ben Purinton
     title: Ben Purinton
-    excerpt: 'SAR, Processing of satellite Remote Sensing Data'
+    excerpt: 'SAR, Processing of Satellite Remote Sensing Data'
     url: 'https://bpurinton.github.io/'
 researchers3:
   - image_path: /images/ManudeoSingh.jpg
@@ -71,13 +71,19 @@ MSc_students1:
   - image_path: /images/Bashini_new_image.jpg
     alt: Bashini Mahaarachchi
     title: Bashini Mahaarachchi
-    excerpt: 'Spatial analysis, machine learning and computer vision'
+    excerpt: 'Spatial Analysis, Machine Learning and Computer Vision'
   - image_path: /images/AnanyaPandey_Pic.jpeg
     title: Ananya Pandey
     excerpt: 'Stereophotogrammetry, Structure-from-Motion, Digital Elevation Models'
   - image_path: /images/DebayanChatterjee_Pic.jpg
     title: Debayan Chatterjee
-    excerpt: 'UAV point clouds, Digital Elevation Models'
+    excerpt: 'UAV Point Clouds, Digital Elevation Models'
+
+MSc_students1:
+  - image_path: /images/MaxHess.jpeg
+    alt: Max Hess
+    title: Max Hess
+    excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
 
 former_members1:
   - image_path: /images/team_photo.png

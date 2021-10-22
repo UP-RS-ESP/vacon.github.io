@@ -15,7 +15,7 @@ There are several open theses topics that interested students can work on. Pleas
 - IoEES: Institute of Earth and Environmental Sciences
 
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
-|:----:|-------|:---:|:---:|
+|:----|-------|:---:|:---:|
 | **[2021]** | | |
 | *Spatial Modeling of Mini-Grid Solar Systems For Health Facilities and Surrounding Communities In Ghana* |  IoG, MSc RSIV | |
 | *Settlement and urban area detection from medium resolution satellite imagery* | IoG, MSc RSIV | |
@@ -61,26 +61,26 @@ There are several open theses topics that interested students can work on. Pleas
 | *Along strike variation of active fault arrays and their effect on landscape morphology in the northwestern Himalaya* | IoG, MSc Geowissenschaften |  [MSc thesis published in *Lithosphere*](https://pubs.geoscienceworld.org/gsa/lithosphere/article/538472/fault-activity-tectonic-segmentation-and) |
 | *Landscape response to alternating wet and dry seasons observed by remotely sensed data in the Chew Bahir basin, Ethiopia* | IoG, MSc Geowissenschaften | |
 | *A glacial chronology and cosmogenic nuclide cross-calibration from the central southern Andean Plateau (Puna, 24S)* | IoG, MSc Geowissenschaften |  [MSc thesis published in *Earth and Planetary Science Letters*](https://www.sciencedirect.com/science/article/abs/pii/S0012821X18304400) |
-| Validation of Digital Elevation Models (DEMs) & Derived Geomorphic Metrics on the Southern Central Andean Plateau* | IoG, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/BP_msc_thesis_final.pdf) [MSc thesis published in *Earth Surface Dynamics*](https://www.earth-surf-dynam.net/5/211/2017/) |
+| *Validation of Digital Elevation Models (DEMs) & Derived Geomorphic Metrics on the Southern Central Andean Plateau* | IoG, MSc Geowissenschaften | [PDF of MSc thesis](http://bodobookhagen.github.io/pdf/BP_msc_thesis_final.pdf) [MSc thesis published in *Earth Surface Dynamics*](https://www.earth-surf-dynam.net/5/211/2017/) |
 | *Untersuchungen der Flussbreite mittels hochauflösender Satelliten- und Luftbilder und Implikationen für die Geologie und Tektonik der NW Argentinischen Anden (Salta Provinz)* | IoG, MSc Geowissenschaften |
 | *Kartierung der Gletscherflächen, Schneelinien und Permafrostgebiete in den Zentralanden über die letzten 30 Jahre mittels fernerkundlicher Methoden* | IoG, MSc Geowissenschaften |
 
 ## List of advised BSc thesis in reversed chronological order
 
 | *Title* | Department and Degree |
-|:---:|:----------|
+|:---|:----------|
 | **[2020]** | |
 | *Topography of the Jasmund Cliff coast (Ruegen) - a quantitative analysis* | IoG, BSc Geowissenschaften |
 | **[2019]** | |
 | *Sediment-grain size changes along the Quebrada del Toro River in NW Argentina* | IoG, BSc Geowissenschaften |
-| *Veränderungen in der Landbedeckung der Mu Us Wüste* | Institute of Environmental Sciences and Geography, BSc Geoökologie |
-| *Fernerkundliche Erfassung von Gewässerqualität in Brandenburg mit Landsat 8 OLI/TIRS und Sentinel-2 MSI Sensoren* | Institute of Environmental Sciences and Geography, BSc Geoökologie |
+| *Veränderungen in der Landbedeckung der Mu Us Wüste* | IoEES, BSc Geoökologie |
+| *Fernerkundliche Erfassung von Gewässerqualität in Brandenburg mit Landsat 8 OLI/TIRS und Sentinel-2 MSI Sensoren* | IoEES, BSc Geoökologie |
 | **[2018]** | |
 | *Detektierung und Kartierung von Methanquellen in eisbedeckten Seen mittels hochauflösender Fernerkundung* | IoG, BSc Geowissenschaften |
 | *Classification and spectral unmixing of remote sensing data for the Batura Glacier, Karakoram* | IoG, BSc Geowissenschaften |
 | **[2016]** | | | |
 | *Bestimmung der Flussaufschotterung in Nord/West-Argentinien mittels digitaler Geländemodelle* | IoG, BSc Geowissenschaften |
-| *Deciphering seasonal vegetation gradients along a topographic transect in NW Argentina* | Institute of Environmental Sciences and Geography, BSc Geoökologie |
+| *Deciphering seasonal vegetation gradients along a topographic transect in NW Argentina* | IoEES, BSc Geoökologie |
 | *Remote Sensing Based Classification of Geologic Units oft he Puna Plateau in NW Argentina* | IoG, BSc Geowissenschaften |
 | **[2015]** | |
 | *Analyzing Cosmogenic Nuclides for Surface Dating and Determination of Geomorphological Process Rates* | IoG, BSc Geowissenschaften |
