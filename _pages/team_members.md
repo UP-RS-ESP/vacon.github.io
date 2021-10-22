@@ -79,7 +79,7 @@ MSc_students1:
     title: Debayan Chatterjee
     excerpt: 'UAV Point Clouds, Digital Elevation Models'
 
-MSc_students1:
+MSc_students2:
   - image_path: /images/MaxHess.jpeg
     alt: Max Hess
     title: Max Hess
@@ -126,6 +126,8 @@ former_members1:
 # MSc Students
 
 {% include feature_row id="MSc_students1" type=center%}
+
+{% include feature_row id="MSc_students2" type=center%}
 
 # BSc Students
 
