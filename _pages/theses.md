@@ -17,6 +17,9 @@ There are several open theses topics that interested students can work on. Pleas
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----|-------|:---:|:---:|
 | **[2021]** | | |
+| *Canopy height estimation of the Namibian Savanna Forest with ICESat-2 and GEDI missions* | IoG, MSc RSIV | |
+| *Exploiting high-resolution InSAR Rate Maps to the Fullest: Fault Slip, Landslides and Groundwater Changes in Northeastern Afghanistan* | IoG, MSc RSIV | |
+| *Tree detection and tree species identification from dense LiDAR point cloud for Sanssouci Park in Potsdam, Germany* | IoESG, MSc Geoecology | |
 | *Spatial Modeling of Mini-Grid Solar Systems For Health Facilities and Surrounding Communities In Ghana* |  IoG, MSc RSIV | |
 | *Settlement and urban area detection from medium resolution satellite imagery* | IoG, MSc RSIV | |
 | *Detection and analysis of flooding areas by using Sentinal-1 data in a part of the lower Chao-phraya river basin (Thailand)* | IoG, MSc RSIV | |
