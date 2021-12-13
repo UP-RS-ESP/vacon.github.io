@@ -60,7 +60,7 @@ PhD_students2:
     alt: Julia Artel
     title: Julia Artel
     excerpt: Cosmogenic Radionuclides
-  - image_path: /images/team_photo.png
+  - image_path: /images/SohiniB.jpg
     title: Sohini Bhattacharjee
     excerpt: 'CRN Erosion, Himalayan Sediment Transport'
   - image_path: /images/Mohammad-MohseniAref2.jpg
