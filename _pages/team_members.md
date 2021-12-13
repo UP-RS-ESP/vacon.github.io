@@ -84,6 +84,10 @@ MSc_students2:
     alt: Max Hess
     title: Max Hess
     excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
+  - image_path: /images/Russell_Team_Photo_Potsdam.jpg
+    alt: Samuel Russe
+    title: Max Hess
+    excerpt: 'UAV and Dinosaur mapping in Tanzania, Digital Elevation Models'
 
 former_members1:
   - image_path: /images/team_photo.png
