@@ -17,6 +17,8 @@ There are several open theses topics that interested students can work on. Pleas
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----|-------|:---:|:---:|
 | **[2021]** | | |
+| *Slow-moving landslide detection in the western Himalaya using Sentinel-1 radar time series* | IoG, MSc RSIV | |
+| *Reconstructing ground surfaces from full waveform Lidar data* | IoG, MSc RSIV | |
 | *Canopy height estimation of the Namibian Savanna Forest with ICESat-2 and GEDI missions* | IoG, MSc RSIV | |
 | *Exploiting high-resolution InSAR Rate Maps to the Fullest: Fault Slip, Landslides and Groundwater Changes in Northeastern Afghanistan* | IoG, MSc RSIV | |
 | *Tree detection and tree species identification from dense LiDAR point cloud for Sanssouci Park in Potsdam, Germany* | IoESG, MSc Geoecology | |
