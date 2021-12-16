@@ -144,4 +144,5 @@ former_members1:
 - Dr. Frank Günther (now independent researcher)
 - Dr. Konstanze Stuebner (now with HZDR Dresden-Rossendorf)
 - Dr. Bedartha Goswami (now Asst. Professor at University of Tuebingen)
+- Dr. Lucia Tyrallova (now coordinating international study programs at UP/FH Potsdam)
 - Lisa Luna (now PhD student at UP)
