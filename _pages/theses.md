@@ -17,6 +17,7 @@ There are several open theses topics that interested students can work on. Pleas
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----|-------|:---:|:---:|
 | **[2021]** | | |
+| *Quantifying landscape-evolution rates across the Argentinean Puna Plateau using geochemical methods* | IoG, MSc Geoscience | |
 | *Slow-moving landslide detection in the western Himalaya using Sentinel-1 radar time series* | IoG, MSc RSIV | |
 | *Reconstructing ground surfaces from full waveform Lidar data* | IoG, MSc RSIV | |
 | *Canopy height estimation of the Namibian Savanna Forest with ICESat-2 and GEDI missions* | IoG, MSc RSIV | |
