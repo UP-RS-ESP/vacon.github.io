@@ -15,10 +15,10 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | **[2022]** | | | |
-T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | 2022 | "Reliability of Resilience Estimation based on Multi-Instrument Time Series" | _Earth System Dynamics Discuss [preprint]_ | [DOI](https://doi.org/10.5194/esd-2022-41) 
-T Smith, D Traxl, and N Boers. | 2022 | "Empirical evidence for recent global shifts in vegetation resilience." _Nature Climate Change_ | [DOI](https://www.nature.com/articles/s41558-022-01352-2)
-R Hering, M Hauptfleisch, M Jago, T Smith, S Kramer-Schadt, J Stiegler, and N Blaum. | 2022 | ``Don't stop me now: Managed fence gaps could allow migratory ungulates to track dynamic resources and reduce fence related energy loss." | _Frontiers in Ecology and Evolution_ | [DOI](https://doi.org/10.3389/fevo.2022.907079)
-F Atmani, B Bookhagen, T Smith. | 2022 | "Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars" | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14122928)
+T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | 2022 | Reliability of Resilience Estimation based on Multi-Instrument Time Series | _Earth System Dynamics Discussions [preprint]_ | [DOI](https://doi.org/10.5194/esd-2022-41) 
+T Smith, D Traxl, and N Boers. | 2022 | Empirical evidence for recent global shifts in vegetation resilience | _Nature Climate Change_ | [DOI](https://www.nature.com/articles/s41558-022-01352-2)
+R Hering, M Hauptfleisch, M Jago, T Smith, S Kramer-Schadt, J Stiegler, and N Blaum. | 2022 | Don't stop me now: Managed fence gaps could allow migratory ungulates to track dynamic resources and reduce fence related energy loss | _Frontiers in Ecology and Evolution_ | [DOI](https://doi.org/10.3389/fevo.2022.907079)
+F Atmani, B Bookhagen, T Smith. | 2022 | Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14122928)
 | **[2021]** | | | |
 Dey, S., Bookhagen, B., Rasmus C. Thiede, R.C., Wittmann, H., Chauhan, N., Jain, V., Strecker, M.R. | 2021 | Impact of Late Pleistocene climate variability on paleo-erosion rates in the western Himalaya  | _Earth and Planetary Science Letters_ |  [DOI](https://doi.org/10.1016/j.epsl.2021.117326) [PDF](http://bodobookhagen.github.io/pdf/Dey21_EPSL.pdf)
 Mueting, A., Bookhagen, B., and  Strecker, M.R. | 2021 | Identification of Debris-Flow Channels Using High-Resolution Topographic Data: A Case Study in the Quebrada del Toro, NW Argentina | _JGR Earth Surface_ | [DOI](https://doi.org/10.1029/2021JF006330)
