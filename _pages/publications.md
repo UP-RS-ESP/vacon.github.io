@@ -13,9 +13,9 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 ## Peer reviewed journal articles
 
 Author(s) | Year | Title | _Journal_ | DOI
-| :--- | :---: | --- | :---: | :---: |
-| **[2022]** | | | |
+| :--- | :---: | --- | :---: | :---: 
 
+| **[2022]** | | | |
 T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | 2022 | "Reliability of Resilience Estimation based on Multi-Instrument Time Series" | _Earth System Dynamics Discuss [preprint]_ | [DOI](https://doi.org/10.5194/esd-2022-41) 
 T Smith, D Traxl, and N Boers. | 2022 | "Empirical evidence for recent global shifts in vegetation resilience." _Nature Climate Change_ | [DOI](https://www.nature.com/articles/s41558-022-01352-2)
 R Hering, M Hauptfleisch, M Jago, T Smith, S Kramer-Schadt, J Stiegler, and N Blaum. | 2022 | ``Don't stop me now: Managed fence gaps could allow migratory ungulates to track dynamic resources and reduce fence related energy loss." | _Frontiers in Ecology and Evolution_ | [DOI](https://doi.org/10.3389/fevo.2022.907079)
