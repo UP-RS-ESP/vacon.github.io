@@ -13,7 +13,7 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 ## Peer reviewed journal articles
 
 Author(s) | Year | Title | _Journal_ | DOI
-| :--- | :---: | --- | :---: | :---: 
+| :--- | :---: | --- | :---: | :---: |
 
 | **[2022]** | | | |
 T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | 2022 | "Reliability of Resilience Estimation based on Multi-Instrument Time Series" | _Earth System Dynamics Discuss [preprint]_ | [DOI](https://doi.org/10.5194/esd-2022-41) 
