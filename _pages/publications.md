@@ -15,7 +15,7 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2023]** | | |
-Alexander R.Cobb, A.R., Dommain, R., Sukri, R.S., Metali, F. Bookhagen, B., Harvey, F., Tang, H. |  2023 | Improved terrain estimation from spaceborne lidar in tropical peatlands using spatial filtering | _Science of Remote Sensing_ | [DOI](https://doi.org/10.1016/j.srs.2022.100074)
+Cobb, A.R., Dommain, R., Sukri, R.S., Metali, F. Bookhagen, B., Harvey, F., Tang, H. |  2023 | Improved terrain estimation from spaceborne lidar in tropical peatlands using spatial filtering | _Science of Remote Sensing_ | [DOI](https://doi.org/10.1016/j.srs.2022.100074)
 Purinton, B. Mueting, A., Bookhagen, B. | 2023 | Image Texture as Quality Indicator for Optical DEM Generation: Geomorphic Applications in the Arid Central Andes | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15010085)
 | | **[2022]** | | |
 Antonoglou, N., Balidakis, K., Wickert, J., Dick, G., de la Torre, A., Bookhagen, B. | 2022 | Water-Vapour Monitoring from Ground-Based GNSS Observations in Northwestern Argentina | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14215427)
@@ -23,9 +23,10 @@ Bhattacharjee, S., Bookhagen, B., Sinha, R. | 2022 | Sediment-transport rates fr
 Regmi, S. and Bookhagen, B. | 2022 | The spatial pattern of extreme precipitation from 40 years of gauge data in the central Himalaya | _Weather and Climate Extremes_ | [DOI](https://www.sciencedirect.com/science/article/pii/S2212094722000524?via%3Dihub)
 Peña, C., Metzger, S., Heidbach, O., Bedford, J., Bookhagen, B., Moreno, M., Onno Oncken, O., Cotton, F. | 2022 | Role of Poroelasticity During the Early Postseismic Deformation of the 2010 Maule Megathrust Earthquake | _Geophysical Research Letters_ | [DOI](https://doi.org/10.1029/2022GL098144)
 Erbello, A., Melnick, D., Zeilinger, G., Bookhagen, B., Pingel, H., Strecker, M.R. | 2022 |  Geomorphic expression of a tectonically active rift transfer zone in Southern Ethiopia | _Geomorphology_ | [DOI](https://www.sciencedirect.com/science/article/abs/pii/S0169555X22000551)
-T Smith, D Traxl, and N Boers. | 2022 | Empirical evidence for recent global shifts in vegetation resilience | _Nature Climate Change_ | [DOI](https://www.nature.com/articles/s41558-022-01352-2)
-R Hering, M Hauptfleisch, M Jago, T Smith, S Kramer-Schadt, J Stiegler, and N Blaum. | 2022 | Don't stop me now: Managed fence gaps could allow migratory ungulates to track dynamic resources and reduce fence related energy loss | _Frontiers in Ecology and Evolution_ | [DOI](https://doi.org/10.3389/fevo.2022.907079)
-F Atmani, B Bookhagen, T Smith. | 2022 | Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14122928)
+Smith, T., Traxl, D., Boers, N. | 2022 | Empirical evidence for recent global shifts in vegetation resilience | _Nature Climate Change_ | [DOI](https://www.nature.com/articles/s41558-022-01352-2)
+Hering, R., Hauptfleisch, M., Jago, M., Smith, T., Kramer-Schadt, S., Stiegler, J., Blaum, N. | 2022 | Don't stop me now: Managed fence gaps could allow migratory ungulates to track dynamic resources and reduce fence related energy loss | _Frontiers in Ecology and Evolution_ | [DOI](https://doi.org/10.3389/fevo.2022.907079)
+Atmani, F., Bookhagen, B., Smith. T | 2022 | Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14122928)
+Tofelde, S., Bufe, A., Turowski, J. M. |2022| Hillslope sediment supply limits alluvial valley width | AGU Advances | [DOI](https://doi.org/10.1029/2021AV000641)
 | **[2021]** | | | |
 Dey, S., Bookhagen, B., Rasmus C. Thiede, R.C., Wittmann, H., Chauhan, N., Jain, V., Strecker, M.R. | 2021 | Impact of Late Pleistocene climate variability on paleo-erosion rates in the western Himalaya  | _Earth and Planetary Science Letters_ |  [DOI](https://doi.org/10.1016/j.epsl.2021.117326) [PDF](http://bodobookhagen.github.io/pdf/Dey21_EPSL.pdf)
 Mueting, A., Bookhagen, B., and  Strecker, M.R. | 2021 | Identification of Debris-Flow Channels Using High-Resolution Topographic Data: A Case Study in the Quebrada del Toro, NW Argentina | _JGR Earth Surface_ | [DOI](https://doi.org/10.1029/2021JF006330)
