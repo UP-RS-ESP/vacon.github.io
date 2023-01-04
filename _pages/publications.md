@@ -14,8 +14,15 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
-| **[2022]** | | | |
-T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | 2022 | Reliability of Resilience Estimation based on Multi-Instrument Time Series | _Earth System Dynamics Discussions [preprint]_ | [DOI](https://doi.org/10.5194/esd-2022-41) 
+| | **[2023]** | | |
+Alexander R.Cobb, A.R., Dommain, R., Sukri, R.S., Metali, F. Bookhagen, B., Harvey, F., Tang, H. |  2023 | Improved terrain estimation from spaceborne lidar in tropical peatlands using spatial filtering | _Science of Remote Sensing_ | [DOI](https://doi.org/10.1016/j.srs.2022.100074)
+Purinton, B. Mueting, A., Bookhagen, B. | 2023 | Image Texture as Quality Indicator for Optical DEM Generation: Geomorphic Applications in the Arid Central Andes | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15010085)
+| | **[2022]** | | |
+Antonoglou, N., Balidakis, K., Wickert, J., Dick, G., de la Torre, A., Bookhagen, B. | Water-Vapour Monitoring from Ground-Based GNSS Observations in Northwestern Argentina | 2022 | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14215427)
+Bhattacharjee, S., Bookhagen, B., Sinha, R. | 2022 | Sediment-transport rates from decadal to millennial timescales across the Indo-Gangetic Plain: Impacts of tectonics, climatic processes, and vegetation cover | _Earth Science Review_ | [DOI](https://doi.org/10.1016/j.earscirev.2022.104165)
+Regmi, S. and Bookhagen, B. | 2022 | The spatial pattern of extreme precipitation from 40 years of gauge data in the central Himalaya | _Weather and Climate Extremes_ | [DOI](https://www.sciencedirect.com/science/article/pii/S2212094722000524?via%3Dihub)
+Peña, C., Metzger, S., Heidbach, O., Bedford, J., Bookhagen, B., Moreno, M., Onno Oncken, O., Cotton, F. | Role of Poroelasticity During the Early Postseismic Deformation of the 2010 Maule Megathrust Earthquake | _Geophysical Research Letters_ | [DOI](https://doi.org/10.1029/2022GL098144)
+Erbello, A., Melnick, D., Zeilinger, G., Bookhagen, B., Pingel, H., Strecker, M.R. | 2022 |  Geomorphic expression of a tectonically active rift transfer zone in Southern Ethiopia | _Geomorphology_ | [DOI](https://www.sciencedirect.com/science/article/abs/pii/S0169555X22000551)
 T Smith, D Traxl, and N Boers. | 2022 | Empirical evidence for recent global shifts in vegetation resilience | _Nature Climate Change_ | [DOI](https://www.nature.com/articles/s41558-022-01352-2)
 R Hering, M Hauptfleisch, M Jago, T Smith, S Kramer-Schadt, J Stiegler, and N Blaum. | 2022 | Don't stop me now: Managed fence gaps could allow migratory ungulates to track dynamic resources and reduce fence related energy loss | _Frontiers in Ecology and Evolution_ | [DOI](https://doi.org/10.3389/fevo.2022.907079)
 F Atmani, B Bookhagen, T Smith. | 2022 | Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs14122928)
