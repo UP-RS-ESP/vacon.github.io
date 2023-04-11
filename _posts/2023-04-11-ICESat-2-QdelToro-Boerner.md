@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 header:
-  overlay_image: 
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/header.jpg  
   overlay_filter: 0.3
   caption: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 read_time: false
@@ -23,7 +23,7 @@ tags:
 
 # The ICESat-2 mission
 
-The retrieval of high resolution ground profiles is of great importance for the analysis of geomorphological processes such as flow processes ([A. Mueting, B. Bookhagen, and M. R. Strecker, 2021](#sources)) and serves as the basis for research on river flow gradient analysis ([Scherer et al., 2022](#sources)) or aboveground biomass estimation ([Atmani, Bodo Bookhagen, and Smith, 2022](#sources)). The digital elevation models (DEMs) used for such analyses can be derived through different methods, such as stereophotogrammetry with passively acquired data or active methods like radar (radio detection and ranging) and lidar (light detection and ranging). Lidar derived products in particular can reach high spatial resolutions ([Neuenschwander and Pitts, 2019](#sources)) and are usually acquired from the air or space for DEM generation. 
+The retrieval of high resolution ground profiles is of great importance for the analysis of geomorphological processes such as flow processes ([Mueting, Bookhagen, and Strecker, 2021](#sources)) and serves as the basis for research on river flow gradient analysis ([Scherer et al., 2022](#sources)) or aboveground biomass estimation ([Atmani, Bookhagen, and Smith, 2022](#sources)). The digital elevation models (DEMs) used for such analyses can be derived through different methods, such as stereophotogrammetry with passively acquired data or active methods like radar (radio detection and ranging) and lidar (light detection and ranging). Lidar derived products in particular can reach high spatial resolutions ([Neuenschwander and Pitts, 2019](#sources)) and are usually acquired from the air or space for DEM generation. 
 
 One such spaceborne mission that operates with lidar is ICESat-2 with an identically-named satellite that has the "Advanced Topographic Laser Altimeter System" (ATLAS) instrument onboard. ICESat-2's objective is to measure and help map the elevation of clouds and ice and land surfaces globally and monitor vegetation height. 
 The laser of ICESat-2 is split into six beams in three pairs, which are approximately 3.3 kilometers apart across-track, the beams of each pair are 90 meters apart. Each pair has a stronger left beam and a weaker right beam with each beam having a footprint of 17 m diameter with a 0.7 m sampling interval ([Neuenschwander and Pitts, 2019](#sources)). 
@@ -37,12 +37,12 @@ Given the necessity for high resolution ground profiles and the promising 70 cen
 
 # Study Area
 
-The study area of this internship consists of the Quebrada del Toro and the Río Capilla catchment west of it, both located in the Toro basin in the Eastern Cordillera of northwestern Argentina in the Central Andes. Figure 1 shows the topography and location of the study area.  The Toro basin is located between the Puna-Altiplano Plateau in the west and the foreland in the east, near the city of Salta ([A. Mueting, B. Bookhagen, and M. R. Strecker, 2021; Hilley and Manfred R. Strecker, 2005](#sources)). 
-The Quebrada del Toro is characterized by high relief with deep incision ([A. Mueting, B. Bookhagen, and M. R. Strecker, 2021](#sources)). In the northernmost part of the study area, elevation is 3,500 m a.s.l. in the mountains and 2,700 m in the valleys. The central part of the study site shows the highest elevation with up to 4,180 m a.s.l. and the narrow, steep valley of Río Toro that incises the landscape ([A. Mueting, B. Bookhagen, and M. R. Strecker, 2021](#sources)). The basin outlet in the forelands in the southern part of the study area shows elevations of 1,450 m a.s.l.
+The study area of this internship consists of the Quebrada del Toro and the Río Capilla catchment west of it, both located in the Toro basin in the Eastern Cordillera of northwestern Argentina in the Central Andes. Figure 1 shows the topography and location of the study area.  The Toro basin is located between the Puna-Altiplano Plateau in the west and the foreland in the east, near the city of Salta ([Mueting, Bookhagen, and Strecker, 2021; Hilley and Strecker, 2005](#sources)). 
+The Quebrada del Toro is characterized by high relief with deep incision ([Mueting, Bookhagen, and Strecker, 2021](#sources)). In the northernmost part of the study area, elevation is 3,500 m a.s.l. in the mountains and 2,700 m in the valleys. The central part of the study site shows the highest elevation with up to 4,180 m a.s.l. and the narrow, steep valley of Río Toro that incises the landscape ([Mueting, Bookhagen, and Strecker, 2021](#sources)). The basin outlet in the forelands in the southern part of the study area shows elevations of 1,450 m a.s.l.
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/qdt_map_dem2.png" width="100%" height="70%"><figcaption>Figure 1: Map of the Quebrada del Toro and Río Capilla catchment. The area of interest is outlined in white. The background GLO-30 DEM shows the geoid based elevation in the area. The six ICESat-2 beams are displayed by signal photons. The location of the study area is displayed red in the inset map with the ETOPO5 DEM in the background.</figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/qdt_map_dem2.png" width="100%" height="70%"><figcaption>Figure 1: Map of the Quebrada del Toro and Río Capilla catchment. The area of interest is outlined in white. The background GLO-30 DEM shows the geoid based elevation in the area. The six ICESat-2 beams are displayed by signal photons. The location of the study area is displayed red in the inset map with the ETOPO5 DEM in the background.</figcaption>
 </figure>
 </center>
 
@@ -55,14 +55,14 @@ Each of the six ICESat-2 beams was extracted and then filtered for signal photon
 The distribution of photon confidence along the track can be seen in Figure 2.  
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/photon_dist.png" width="100%" height="80%"><figcaption>Figure 2: Distribution of photon confidence flags for beam GT1L, plotted along the distance of the track against the photon height. Photons of low, medium, and high confidence are labeled signal photons to be used for the analysis. </figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/photon_dist.png" width="100%" height="80%"><figcaption>Figure 2: Distribution of photon confidence flags for beam GT1L, plotted along the distance of the track against the photon height. Photons of low, medium, and high confidence are labeled signal photons to be used for the analysis. </figcaption>
 </figure>
 </center>
 
 
 Validation data was used in the form of DEMs. Three DEMs were used with the addition of a global geoid dataset to correct for different height coordinate reference systems. 
 
-The first DEM used was the Quebrada del Toro 3m DEM, which was created in [A. Mueting, B. Bookhagen, and M. R. Strecker, 2021](#sources) from tri-stereo SPOT-7 satellite data. The DEM file was derived from [Zenodo](https://zenodo.org/record/5653779) and has a accuracy of 0.051 ± 1.915 m, but covers a smaller extent than the study area. Its vertical coordinate system is WGS84 ([A. Mueting, B. Bookhagen, and M. R. Strecker, 2021](#sources)). 
+The first DEM used was the Quebrada del Toro 3m DEM, which was created in [Mueting, Bookhagen, and Strecker, 2021](#sources) from tri-stereo SPOT-7 satellite data. The DEM file was derived from [Zenodo](https://zenodo.org/record/5653779) and has a accuracy of 0.051 ± 1.915 m, but covers a smaller extent than the study area. Its vertical coordinate system is WGS84 ([Mueting, Bookhagen, and Strecker, 2021](#sources)). 
 
 Another high-resolution DEM was the Salta Sector 5.1 DEM by the Instituto Geográfico Nacional of Argentina with a spatial resolution of 5 meters. Its vertical reference system is the Sistema de Referencia Vertical Nacional del año 1971 (SRVN71), which is relative to the localized tide gauge measured in Mar del Plata, Argentina ([Instituto Geográfico Nacional, 2023](#sources)).
 
@@ -86,13 +86,13 @@ A ratio threshold was chosen experimentally. Figure 4 shows the ratio and ratio 
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/eva12.png" width="90%" height="70%"><figcaption>Figure 3: Magnitude and ratio of eigenvalues 1 and 2 for all neighborhood sizes. </figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/eva12.png" width="90%" height="70%"><figcaption>Figure 3: Magnitude and ratio of eigenvalues 1 and 2 for all neighborhood sizes. </figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/evaratio.png" width="90%" height="70%"><figcaption>Figure 4: Using eigenvalue ratio (neighborhood size: 100) and a threshold of 50 for ground photon retrieval. The photons that have a eigenvalue ratio above that threshold do not represent ground photons well.</figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/evaratio.png" width="90%" height="70%"><figcaption>Figure 4: Using eigenvalue ratio (neighborhood size: 100) and a threshold of 50 for ground photon retrieval. The photons that have a eigenvalue ratio above that threshold do not represent ground photons well.</figcaption>
 </figure>
 </center>
 
@@ -189,7 +189,7 @@ As Figure 5 shows that the center beam pair the ground photons and corresponding
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/DEM_Swath2.png" width="48%" /><img src="ICESat-2-QdelToro-Boerner-figures/DEM_Swath3.png" width="48%" /><figcaption>Figure 5: Ground photons and DEM values of strong (left) and weak (right) center (GT2L and GT2R) beams. The right beam shows surface features that are neither present in the left beam nor the DEMs.</figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/DEM_Swath2.png" width="48%" /><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/DEM_Swath3.png" width="48%" /><figcaption>Figure 5: Ground photons and DEM values of strong (left) and weak (right) center (GT2L and GT2R) beams. The right beam shows surface features that are neither present in the left beam nor the DEMs.</figcaption>
 </figure>
 </center>
 
@@ -201,13 +201,13 @@ In the weaker beams, the distribution of residuals is different. The range of re
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/residuals_dems.png" width="100%" height="80%"><figcaption>Figure 6: Residuals of ground photons and DEMs, left side: distribution along the track, right side: density histograms </figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/residuals_dems.png" width="100%" height="80%"><figcaption>Figure 6: Residuals of ground photons and DEMs, left side: distribution along the track, right side: density histograms </figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-ICESat-2-QdelToro-Boerner-ICESat-2-QdelToro-Boerner-figures/profiles_gt1l.png" width="100%" height="80%"><figcaption>Figure 7: Ground approximation with different approaches: polynomial fitting, locally weighted scatterplot smoothing (LOWESS), Kalman filtering, ATL08 data (DRAGANN algorithm), and DEMs for GT1L. RMSE was calculated for the full beam. </figcaption>
+<img src="ICESat-2-QdelToro-Boerner-ICESat-2-QdelToro-Boerner-https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/profiles_gt1l.png" width="100%" height="80%"><figcaption>Figure 7: Ground approximation with different approaches: polynomial fitting, locally weighted scatterplot smoothing (LOWESS), Kalman filtering, ATL08 data (DRAGANN algorithm), and DEMs for GT1L. RMSE was calculated for the full beam. </figcaption>
 </figure>
 </center>
 
@@ -217,7 +217,7 @@ The LOWESS method and Kalman filter were plotted against the photons and DEMs as
 
 <center>
 <figure>
-<img src="ICESat-2-QdelToro-Boerner-figures/profiles_gt1r.png" width="100%" height="80%"><figcaption>Figure 8: Ground approximation with different approaches: polynomial fitting, locally weighted scatterplot smoothing (LOWESS), Kalman filtering, ATL08 data (DRAGANN algorithm), and DEMs for GT1R. RMSE was calculated for the full beam. </figcaption>
+<img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/profiles_gt1r.png" width="100%" height="80%"><figcaption>Figure 8: Ground approximation with different approaches: polynomial fitting, locally weighted scatterplot smoothing (LOWESS), Kalman filtering, ATL08 data (DRAGANN algorithm), and DEMs for GT1R. RMSE was calculated for the full beam. </figcaption>
 </figure>
 </center>
 
