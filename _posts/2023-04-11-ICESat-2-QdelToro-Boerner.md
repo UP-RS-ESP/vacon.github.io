@@ -1,9 +1,9 @@
 ---
 title: 'Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina'
-author: "Franziska Börner"
+author: "Franziska Boerner"
 author_profile: true
 date: 2023-04-11
-permalink: 
+permalink: /posts/2023/04/ICESat-2
 toc: true
 toc_sticky: true
 toc_label: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
