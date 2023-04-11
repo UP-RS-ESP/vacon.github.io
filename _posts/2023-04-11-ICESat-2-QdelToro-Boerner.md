@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/header.jpg  
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/header.jpg  
   overlay_filter: 0.3
   caption: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 read_time: false
