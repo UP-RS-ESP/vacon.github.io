@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ICESat-2-QdelToro-Boerner-figures/header_1280.jpg  
+  overlay_image:
   overlay_filter: 0.3
   caption: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 read_time: false
@@ -226,7 +226,7 @@ While the Kalman filter interpolates data gaps with a "staircase effect" and the
 
 As Table 1 shows, the results of the RMSE on the residuals followed the same pattern as described here for GT1L and GT1R, only for GT2R the RMSE of LOWESS and the Kalman filter is almost identical. 
 
-<center>
+
 Table 1: RMSE in [m] for residuals between each beam's ground photons and the ground approximation from the respective method 
 
 | Beam | Polyfit | LOWESS | Kalman |
@@ -237,7 +237,7 @@ Table 1: RMSE in [m] for residuals between each beam's ground photons and the gr
 | GT2R | 10.64   | 9.81   | 9.81   |
 | GT3L | 2.99    | 1.98   | 1.33   |
 | GT3R | 9.48    | 7.30   | 7.41   |
-</center>
+
 
 # Assessments of Results
 
