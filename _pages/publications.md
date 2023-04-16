@@ -15,6 +15,7 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2023]** | | |
+Fisher, G.B., Luna, L.V., Amidon, W.H., Burbank, D.W., Stap, L.B., Bookhagen, B., Godard, V., Oskin, M.E., Alonso, R.N., Tuenger, E., Lourens, L.J. | 2023 | Milankovitch-paced erosion in the southern Central Andes | _nature communications_ | [DOI](https://doi.org/10.1038/s41467-023-36022-0)
 Cobb, A.R., Dommain, R., Sukri, R.S., Metali, F. Bookhagen, B., Harvey, F., Tang, H. |  2023 | Improved terrain estimation from spaceborne lidar in tropical peatlands using spatial filtering | _Science of Remote Sensing_ | [DOI](https://doi.org/10.1016/j.srs.2022.100074)
 Purinton, B. Mueting, A., Bookhagen, B. | 2023 | Image Texture as Quality Indicator for Optical DEM Generation: Geomorphic Applications in the Arid Central Andes | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15010085)
 Viotto, S., Toyos, G., Bookhagen, B. | 2023 | An assessment of the effects of DEM quality and spatial resolution on a model for mapping lahar inundation areas at volcán Copahue (Argentina & Chile) | _Journal of South American Earth Sciences_ | [DOI](https://doi.org/10.1016/j.jsames.2022.104138)

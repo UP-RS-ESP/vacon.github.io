@@ -16,6 +16,12 @@ There are several open theses topics that interested students can work on. Pleas
 
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----|-------|:---:|:---:|
+| **[2023]** | | |
+| - | |
+| **[2022]** | | |
+| The Application of UAV and Satellite Data to Map Palaeontological Sample Sites | IoG, MSc RSIV |
+| Training Data Sensitivity Analysis for Multispectral LiDAR Data for Land Use/ Land Cover (LULC) Classifications of Varying Complexity | IoG, MSc RSIV |
+|Emission of Greenhouse Gases And Air Pollutants From Forest Fires in Nepal During 2001-2020 | IoG, MSc RSIV |
 | **[2021]** | | |
 | *Quantifying landscape-evolution rates across the Argentinean Puna Plateau using geochemical methods* | IoG, MSc Geoscience | |
 | *Slow-moving landslide detection in the western Himalaya using Sentinel-1 radar time series* | IoG, MSc RSIV | |

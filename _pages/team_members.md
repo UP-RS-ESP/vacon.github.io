@@ -55,6 +55,7 @@ PhD_students1:
     title: Ariane Mueting
     excerpt: 'Digital Elevation Models, Satellite Photogrammetry'
     url: 'https://arimue.github.io/'
+PhD_students2:
   - image_path: /images/artel.jpg
     alt: Julia Artel
     title: Julia Artel
@@ -98,6 +99,8 @@ MSc_students2:
 
 {% include feature_row id="PhD_students1" type=center%}
 
+{% include feature_row id="PhD_students2" type=center%}
+
 # MSc Students
 
 {% include feature_row id="MSc_students1" type=center%}
@@ -115,7 +118,7 @@ MSc_students2:
 - Dr. Ramezani Ziarani (now researcher at KIT)
 - Dr. Fiona Clubb (now Asst. Professor at Durham University)
 - Dr. Frank Günther (now independent researcher)
-- Dr. Konstanze Stuebner (now with HZDR Dresden-Rossendorf)
+- Dr. Konstanze Stübner (now with HZDR Dresden-Rossendorf)
 - Dr. Bedartha Goswami (now Asst. Professor at University of Tuebingen)
 - Dr. Lucia Tyrallova (now coordinating international study programs at UP/FH Potsdam)
 - Lisa Luna (now PhD student at UP)
