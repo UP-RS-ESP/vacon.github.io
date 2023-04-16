@@ -13,20 +13,19 @@ header:
   caption: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 read_time: false
 tags:
-  - ICESat-2
+  - ICESat-2 ATL03
   - spaceborne lidar
   - ground profile extraction
   - Quebrada del Toro
-  - ATL03
   - polynomial fitting
 ---
 
 The ICESat-2 mission provides new potential to observe geomorphic processes with a step size of 70 cm. Here is an application of a custom filtering approach to determine ground points from the high-resolution ATL03 product from the Central Andes.
 
 
-The retrieval of high resolution ground profiles is of great importance for the analysis of geomorphological processes such as flow processes ([Mueting, Bookhagen, and Strecker, 2021](#sources)) and serves as the basis for research on river flow gradient analysis ([Scherer et al., 2022](#sources)) or aboveground biomass estimation ([Atmani, Bookhagen, and Smith, 2022](#sources)). The digital elevation models (DEMs) used for such analyses can be derived through different methods, such as stereophotogrammetry with passively acquired data or active methods like radar (radio detection and ranging) and lidar (light detection and ranging). Lidar derived products in particular can reach high spatial resolutions ([Neuenschwander and Pitts, 2019](#sources)) and are usually acquired from the air or space for DEM generation.
-
 # The ICESat-2 mission
+
+The retrieval of high resolution ground profiles is of great importance for the analysis of geomorphological processes such as flow processes ([Mueting, Bookhagen, and Strecker, 2021](#sources)) and serves as the basis for research on river flow gradient analysis ([Scherer et al., 2022](#sources)) or aboveground biomass estimation ([Atmani, Bookhagen, and Smith, 2022](#sources)). The digital elevation models (DEMs) used for such analyses can be derived through different methods, such as stereophotogrammetry with passively acquired data or active methods like radar (radio detection and ranging) and lidar (light detection and ranging). Lidar derived products in particular can reach high spatial resolutions ([Neuenschwander and Pitts, 2019](#sources)) and are usually acquired from the air or space for DEM generation.
 
 One such spaceborne mission that operates with lidar is ICESat-2 with an identically-named satellite that has the "Advanced Topographic Laser Altimeter System" (ATLAS) instrument onboard. ICESat-2's objective is to measure and help map the elevation of clouds and ice and land surfaces globally and monitor vegetation height.
 The laser of ICESat-2 is split into six beams in three pairs, which are approximately 3.3 kilometers apart across-track, the beams of each pair are 90 meters apart. Each pair has a stronger left beam and a weaker right beam with each beam having a footprint of 17 m diameter with a 0.7 m sampling interval ([Neuenschwander and Pitts, 2019](#sources)).
