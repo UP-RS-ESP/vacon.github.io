@@ -32,15 +32,15 @@ researchers2:
     excerpt: 'Earth Surface Processes, CRN Erosion, Analog Sediment Modeling'
     url: >-
       http://www.geo.uni-potsdam.de/mitarbeiterdetails/show/771/Stefanie_Tofelde.html
-  - image_path: /images/purinton.jpg
-    alt: Ben Purinton
-    title: Ben Purinton
-    excerpt: 'SAR, Processing of Satellite Remote Sensing Data'
+  - image_path: /images/carlospena.jpg
+    alt: Carlos Peña
+    title: Carlos Peña
+    excerpt: 'Earthquake Deformation, Subduction Zones, InSAR'
     url: 'https://bpurinton.github.io/'
 researchers3:
   - image_path: /images/ManudeoSingh.jpg
     title: 'Manudeo Singh'
-    excerpt: 'Floodplain Evolution, Hydraulic Connectivity, UAV'
+    excerpt: 'InSAR, Floodplain Evolution, Hydraulic Connectivity, UAV'
 
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
@@ -48,9 +48,9 @@ PhD_students1:
     title: Sofia Viotto
     excerpt: 'DEM, InSAR, Satellite Photogrammetry'
   - image_path: /images/team_photo.png
-    alt: Nikolas  Antonoglou
-    title: Nikolaos Antonoglou
-    excerpt: GNSS Remote Sensing
+    alt: Valentina Armeni
+    title: Valentina Armeni
+    excerpt: 'Vulcanology, UAV, Airphoto Photogrammetry'
   - image_path: /images/mueting.jpg
     title: Ariane Mueting
     excerpt: 'Digital Elevation Models, Satellite Photogrammetry'
@@ -80,36 +80,14 @@ MSc_students1:
     excerpt: 'UAV Point Clouds, Digital Elevation Models'
 
 MSc_students2:
-  - image_path: /images/MaxHess.jpeg
-    alt: Max Hess
-    title: Max Hess
+  - image_path: /images/franziskaboerner.jpg
+    alt: Franziska Boerner
+    title: Franziska Boerner
     excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
-  - image_path: /images/Russell_Team_Photo_Potsdam.jpg
-    alt: Samuel Russell
-    title: Samuel Russell
-    excerpt: 'UAV and Dinosaur mapping in Tanzania, Digital Elevation Models'
-
-former_members1:
-  - image_path: /images/team_photo.png
-    title: Fiona Clubb
-    excerpt: DEM Analysis
-  - image_path: /images/team_photo.png
-    alt: Fabiana Castino
-    title: Fabiana Castino
-    excerpt: Hydrology and meteorology of the Central Andes
-  - image_path: /images/konstanze2.jpg
-    alt: Konstanze Stuebner
-    title: Konstanze Stuebner
-    excerpt: 'CRN, Thermochronology'
-    url: ''
-  - image_path: /images/olen.png
-    alt: Stephanie Olen
-    title: Stephanie Olen
-    excerpt: 'Earth Surface Processes, CRN Erosion, SAR'
-  - image_path: /images/traxl.jpg
-    title: Dominik Traxl
-    excerpt: 'Complex networks, Time series analysis'
-    url: 'https://github.com/dominiktraxl'
+  - image_path: /images/Kremer.jpg
+    alt: Luis Kremer
+    title: Luis Kremer
+    excerpt: 'Terrestrial Lidar (TLS) and Point Clouds'
 
 ---
 
@@ -135,7 +113,8 @@ former_members1:
 
 
 # Past Members
-
+- Nikolaos  Antonoglou (now with German Aerospace Center , DLR)
+- Dr. Ben Purinton (now independent researcher)
 - Dr. Dominik Traxl (now researcher at PIK)
 - Dr. Stephanie Olen (now editor at nature sustainability)
 - Dr. Fabiana Castino (now with Deutscher Wetterdienst)
@@ -146,3 +125,7 @@ former_members1:
 - Dr. Bedartha Goswami (now Asst. Professor at University of Tuebingen)
 - Dr. Lucia Tyrallova (now coordinating international study programs at UP/FH Potsdam)
 - Lisa Luna (now PhD student at UP)
+
+# Past MSc Students
+- Samuel Russell
+- Bashini Mahaarachchi
