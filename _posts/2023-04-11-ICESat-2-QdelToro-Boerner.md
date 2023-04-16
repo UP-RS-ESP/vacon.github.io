@@ -29,7 +29,7 @@ The retrieval of high resolution ground profiles is of great importance for the 
 
 One such spaceborne mission that operates with lidar is ICESat-2 with an identically-named satellite that has the "Advanced Topographic Laser Altimeter System" (ATLAS) instrument onboard. ICESat-2's objective is to measure and help map the elevation of clouds and ice and land surfaces globally and monitor vegetation height.
 The laser of ICESat-2 is split into six beams in three pairs, which are approximately 3.3 kilometers apart across-track, the beams of each pair are 90 meters apart. Each pair has a stronger left beam and a weaker right beam with each beam having a footprint of 17 m diameter with a 0.7 m sampling interval ([Neuenschwander and Pitts, 2019](#sources)).
-ICESat-2's data  products comes in different processing levels with varying features. The level 2 data product “Global Geolocated Photon Data” (ATL03) features all recorded photons, containing information on latitude, longitude, height, surface type and signal confidence. An ICESat-2 product that has global terrain height available is the level 3b “Global Geolocated Photon Data” (ATL08) but it has a fixed downsampled spatial resolution of 100 meters ([National Snow and Ice Data Center, 2023](#sources)). For detailed analyses on landscapes with large changes in relief over small areas, this resolution is too coarse.
+ICESat-2's data  products comes in different processing levels with varying features. The level 2 data product "Global Geolocated Photon Data" (ATL03) features all recorded photons, containing information on latitude, longitude, height, surface type and signal confidence. An ICESat-2 product that has global terrain height available is the level 3b "Global Geolocated Photon Data" (ATL08) but it has a fixed downsampled spatial resolution of 100 meters ([National Snow and Ice Data Center, 2023](#sources)). For detailed analyses on landscapes with large changes in relief over small areas, this resolution is too coarse.
 
 Given the necessity for high resolution ground profiles and the promising 70 centimeter sampling interval of ICESat-2 data in the ATL03 product, this raises the following research question:
 
@@ -264,31 +264,31 @@ For future research, one objective could be to test LOWESS and Kalman on not-res
 
 # Sources
 
-Mueting, A., Bookhagen, B., and Strecker, M. R. (2021). “Identification of Debris-Flow Channels Using High-Resolution Topographic Data: A Case Study in the Quebrada Del Toro, NW Argentina”. In: Journal of Geophysical Research: Earth Surface 126(12). DOI: 10.1029/2021JF006330.
+Mueting, A., Bookhagen, B., and Strecker, M. R. (2021). "Identification of Debris-Flow Channels Using High-Resolution Topographic Data: A Case Study in the Quebrada Del Toro, NW Argentina". In: Journal of Geophysical Research: Earth Surface 126(12). DOI: 10.1029/2021JF006330.
 
-Scherer, Daniel et al. (2022). “ICESat-2 Based River Surface Slope and Its Impact on Water Level Time Series From Satellite Altimetry”. In: Water Resources Research 58(11). DOI:10.1029/2022WR032842.
+Scherer, Daniel et al. (2022). "ICESat-2 Based River Surface Slope and Its Impact on Water Level Time Series From Satellite Altimetry". In: Water Resources Research 58(11). DOI:10.1029/2022WR032842.
 
-Atmani, Farid, Bookhagen, Bodo, and Smith, Taylor (2022). “Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars”. In: Remote Sensing 14(12). DOI: 10.3390/rs14122928.
+Atmani, Farid, Bookhagen, Bodo, and Smith, Taylor (2022). "Measuring Vegetation Heights and Their Seasonal Changes in the Western Namibian Savanna Using Spaceborne Lidars". In: Remote Sensing 14(12). DOI: 10.3390/rs14122928.
 
-Neuenschwander, Amy and Pitts, Katherine (2019). “The ATL08 Land and Vegetation Product for the ICESat-2 Mission”. In: Remote Sensing of Environment 221. DOI: 10.1016/j.rse.2018.11.005.
+Neuenschwander, Amy and Pitts, Katherine (2019). "The ATL08 Land and Vegetation Product for the ICESat-2 Mission". In: Remote Sensing of Environment 221. DOI: 10.1016/j.rse.2018.11.005.
 
-National Snow and Ice Data Center (2023). ICESat-2 Product Overviews. URL: https://nsidc.org/data/icesat-2/products (visited on 15/2/2022).
+National Snow and Ice Data Center (2023). ICESat-2 Product Overviews. URL: https://nsidc.org/data/icesat-2/products
 
-Hilley, George E. and Strecker, Manfred R. (2005). “Processes of Oscillatory Basin Filling and Excavation in a Tectonically Active Orogen: Quebrada Del Toro Basin, NW Argentina”. In: Geological Society of America Bulletin 117(7). DOI: 10.1130/B25602.1.
+Hilley, George E. and Strecker, Manfred R. (2005). "Processes of Oscillatory Basin Filling and Excavation in a Tectonically Active Orogen: Quebrada Del Toro Basin, NW Argentina". In: Geological Society of America Bulletin 117(7). DOI: 10.1130/B25602.1.
 
-Instituto Geográfico Nacional (2023). Consultas Frecuentes. URL: https://www.ign.gob.ar/NuestrasActividades/Geodesia/Nivelacion/faq (visited on 7/3/2023).
+Instituto Geográfico Nacional (2023). Consultas Frecuentes. URL: https://www.ign.gob.ar/NuestrasActividades/Geodesia/Nivelacion/faq
 
 European Space Agency (2022). Copernicus Digital Elevation Model. URL: https://doi.org/10.5270/ESA-c5d3d65.
 
-Agisoft (2023). Global Geoid Models. URL: https://www.agisoft.com/downloads/geoids/(visited on 27/1/2023).
+Agisoft (2023). Global Geoid Models. URL: https://www.agisoft.com/downloads/geoids/
 
-Dittrich, André, Weinmann, Martin, and Hinz, Stefan (2017). “Analytical and Numerical Investigations on the Accuracy and Robustness of Geometric Features Extracted from 3D Point Cloud Data”. In: ISPRS Journal of Photogrammetry and Remote Sensing 126. DOI:10.1016/j.isprsjprs.2017.02.012.
+Dittrich, André, Weinmann, Martin, and Hinz, Stefan (2017). "Analytical and Numerical Investigations on the Accuracy and Robustness of Geometric Features Extracted from 3D Point Cloud Data". In: ISPRS Journal of Photogrammetry and Remote Sensing 126. DOI:10.1016/j.isprsjprs.2017.02.012.
 
 NumPy Developers (2023). Numpy.Polynomial.Polynomial.
-Polynomial.Fit. URL: https://numpy.org/doc/stable/reference/generated/numpy.polynomial.polynomial.polyfit.html (visited on 7/3/2023).
+Polynomial.Fit. URL: https://numpy.org/doc/stable/reference/generated/numpy.polynomial.polynomial.polyfit.html
 
-statsmodels (2023). Statsmodels.Nonparametric.Smoothers_lowess.Lowess. URL: https://www.statsmodels.org/dev/generated/statsmodels.nonparametric.smoothers_lowess.lowess.html (visited on 24/3/2023).
+statsmodels (2023). Statsmodels.Nonparametric.Smoothers_lowess.Lowess. URL: https://www.statsmodels.org/dev/generated/statsmodels.nonparametric.smoothers_lowess.lowess.html
 
-Daniel Duckworth (2023). Kalman Filter User’s Guide. URL: https://pykalman.github.io/#kalman-filter-user-s-guide (visited on 24/3/2023).
+Daniel Duckworth (2023). Kalman Filter User’s Guide. URL: https://pykalman.github.io/#kalman-filter-user-s-guide
 
-Alex Becker (2023). Kalman Filter In One Dimension. URL: https://www.kalmanfilter.net/kalman1d.html (visited on 24/3/2023).
+Alex Becker (2023). Kalman Filter In One Dimension. URL: https://www.kalmanfilter.net/kalman1d.html
