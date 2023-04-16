@@ -55,7 +55,6 @@ PhD_students1:
     title: Ariane Mueting
     excerpt: 'Digital Elevation Models, Satellite Photogrammetry'
     url: 'https://arimue.github.io/'
-PhD_students2:
   - image_path: /images/artel.jpg
     alt: Julia Artel
     title: Julia Artel
@@ -98,8 +97,6 @@ MSc_students2:
 # PhD Students
 
 {% include feature_row id="PhD_students1" type=center%}
-
-{% include feature_row id="PhD_students2" type=center%}
 
 # MSc Students
 
