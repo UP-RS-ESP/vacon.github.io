@@ -4,7 +4,7 @@ Franziska Boerner:
   name        : "Franziska Börner"
   bio         : "MSc Student"
   location    : "University of Potsdam"
-  avatar      : "/images/profile_picture_boerner.jpg"
+  avatar      : "/images/franziskaboerner.jpg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -19,7 +19,7 @@ Andyara Callegare:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:oliveiracallegare@uni-potsdam.de"
-  
+
 Taylor Smith:
   name        : "Taylor Smith"
   bio         : "Postdoctoral Researcher"
