@@ -20,7 +20,9 @@ tags:
   - polynomial fitting
 ---
 
-The ICESat-2 mission provides new potential to observe geomorphic processes with a step size of 70 cm. Here is an application of a custom filtering approach to determine ground points from the high-resolution ATL03 product from the Central Andes.
+The *ICESat-2* mission provides new potential to observe geomorphic processes with a step size of 70 cm. Here is an application of a custom filtering approach to determine ground points from the high-resolution ATL03 product from the Central Andes.
+
+
 
 
 # The ICESat-2 mission
