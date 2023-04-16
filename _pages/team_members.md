@@ -47,7 +47,7 @@ PhD_students1:
     alt: Sofia Viotto
     title: Sofia Viotto
     excerpt: 'DEM, InSAR, Satellite Photogrammetry'
-  - image_path: /images/team_photo.png
+  - image_path: /images/Valentina.jpg
     alt: Valentina Armeni
     title: Valentina Armeni
     excerpt: 'Vulcanology, UAV, Airphoto Photogrammetry'
