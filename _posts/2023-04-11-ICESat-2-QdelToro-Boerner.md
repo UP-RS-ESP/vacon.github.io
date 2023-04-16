@@ -8,7 +8,7 @@ toc: true
 toc_sticky: false
 toc_label: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 header:
-  overlay_image:
+  overlay_image: /posts/ICESat-2-QdelToro-Boerner-figures/head_1280.jpg
   overlay_filter: 0.3
   caption: "Geometric-based filtering of ICESat-2 ATL03 data for ground-profile retrieval in the Quebrada del Toro, Argentina"
 read_time: false
@@ -20,6 +20,8 @@ tags:
   - ATL03
   - polynomial fitting
 ---
+
+The ICESat-2 mission provides new potential to observe geomorphic processes with a step size of 70 cm. Here is an application of a custom filtering approach to determine ground points from the high-resolution ATL03 product from the Central Andes.
 
 # The ICESat-2 mission
 
@@ -34,6 +36,9 @@ Given the necessity for high resolution ground profiles and the promising 70 cen
 *What are useful filtering steps to extract ground profiles from ICESat-2 ATL03 data and what accuracy can be achieved?*
 
 **This internship was supervised by Prof. Dr. Bodo Bookhagen.**
+
+**The Jupyter Notebooks containing more detailed information on the analysis and *numba* steps are available on github:
+[https://github.com/UP-RS-ESP/ICESat-2_QdelToro](https://github.com/UP-RS-ESP/ICESat-2_QdelToro)
 
 # Study Area
 
