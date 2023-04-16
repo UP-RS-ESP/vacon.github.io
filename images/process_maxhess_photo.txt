@@ -1,1 +1,1 @@
-convert -crop 2300x2300+200+100 -density 300 -quality 100 -resize 500x500 MaxHess.jpeg hess.jpg
+convert -crop 2400x2400+200+100 -density 300 -quality 100 -resize 500x500 MaxHess.jpeg hess.jpg

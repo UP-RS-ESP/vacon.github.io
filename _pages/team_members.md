@@ -76,7 +76,7 @@ MSc_students1:
     excerpt: 'UAV Point Clouds, Digital Elevation Models'
 
 MSc_students2:
-  - image_path: /images/franziskaboerner.jpg
+  - image_path: /images/boerner.jpg
     alt: Franziska Boerner
     title: Franziska Boerner
     excerpt: 'Spaceborne Lidar, Point Cloud Analysis'
