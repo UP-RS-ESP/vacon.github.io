@@ -32,7 +32,7 @@ researchers2:
     excerpt: 'Earth Surface Processes, CRN Erosion, Analog Sediment Modeling'
     url: >-
       http://www.geo.uni-potsdam.de/mitarbeiterdetails/show/771/Stefanie_Tofelde.html
-  - image_path: /images/carlospena.jpg
+  - image_path: /images/team_photo.png
     alt: Carlos Peña
     title: Carlos Peña
     excerpt: 'Earthquake Deformation, Subduction Zones, InSAR'
@@ -60,18 +60,14 @@ PhD_students2:
     alt: Julia Artel
     title: Julia Artel
     excerpt: Cosmogenic Radionuclides
-  - image_path: /images/SohiniB.jpg
-    title: Sohini Bhattacharjee
-    excerpt: 'CRN Erosion, Himalayan Sediment Transport'
   - image_path: /images/Mohammad-MohseniAref2.jpg
     title: Mohammad Mohseni Aref
     excerpt: 'Radar Interferometry (InSAR), GNSS'
+  - image_path: images/MaxHess.jpeg
+    title: Max Hess
+    excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
 
 MSc_students1:
-  - image_path: /images/Bashini_new_image.jpg
-    alt: Bashini Mahaarachchi
-    title: Bashini Mahaarachchi
-    excerpt: 'Spatial Analysis, Machine Learning and Computer Vision'
   - image_path: /images/AnanyaPandey_Pic.jpeg
     title: Ananya Pandey
     excerpt: 'Stereophotogrammetry, Structure-from-Motion, Digital Elevation Models'
@@ -83,8 +79,8 @@ MSc_students2:
   - image_path: /images/franziskaboerner.jpg
     alt: Franziska Boerner
     title: Franziska Boerner
-    excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
-  - image_path: /images/Kremer.jpg
+    excerpt: 'Spaceborne Lidar, Point Cloud Analysis'
+  - image_path: /images/team_photo.png
     alt: Luis Kremer
     title: Luis Kremer
     excerpt: 'Terrestrial Lidar (TLS) and Point Clouds'
@@ -114,6 +110,7 @@ MSc_students2:
 
 # Past Members
 - Nikolaos  Antonoglou (now with German Aerospace Center , DLR)
+- Sohini Bhattacharjee (now research at IITK)
 - Dr. Ben Purinton (now independent researcher)
 - Dr. Dominik Traxl (now researcher at PIK)
 - Dr. Stephanie Olen (now editor at nature sustainability)
