@@ -63,7 +63,7 @@ PhD_students2:
   - image_path: /images/Mohammad-MohseniAref2.jpg
     title: Mohammad Mohseni Aref
     excerpt: 'Radar Interferometry (InSAR), GNSS'
-  - image_path: images/MaxHess.jpeg
+  - image_path: images/hess.jpg
     title: Max Hess
     excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
 
