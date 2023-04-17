@@ -32,7 +32,7 @@ researchers2:
     excerpt: 'Earth Surface Processes, CRN Erosion, Analog Sediment Modeling'
     url: >-
       http://www.geo.uni-potsdam.de/mitarbeiterdetails/show/771/Stefanie_Tofelde.html
-  - image_path: /images/team_photo.png
+  - image_path: /images/carlosp.jpg
     alt: Carlos Peña
     title: Carlos Peña
     excerpt: 'Earthquake Deformation, Subduction Zones, InSAR'
