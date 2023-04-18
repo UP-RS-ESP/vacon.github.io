@@ -80,7 +80,7 @@ MSc_students2:
     alt: Franziska Boerner
     title: Franziska Boerner
     excerpt: 'Spaceborne Lidar, Point Cloud Analysis'
-  - image_path: /images/team_photo.png
+  - image_path: /images/LuisKremer.jpg
     alt: Luis Kremer
     title: Luis Kremer
     excerpt: 'Terrestrial Lidar (TLS) and Point Clouds'
