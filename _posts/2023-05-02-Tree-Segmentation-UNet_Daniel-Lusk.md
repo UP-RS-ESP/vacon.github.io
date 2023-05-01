@@ -8,38 +8,17 @@ toc: true
 toc_sticky: true
 toc_label: "Understanding weight maps and label manipulation in tree detection from high-resolution orthophotos with U-Net"
 header:
-  overlay_image: "./images/banner.png"
+  overlay_image: "https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/banner.png"
   overlay_filter: 0.3
   caption: "Understanding weight maps and label manipulation in tree detection from high-resolution orthophotos with U-Net"
 read_time: false
 tags:
+  - machine learning
   - CNN
   - U-Net
   - tree detection
   - orthophotos
 ---
-
-<style>
-  figure {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  figcaption {
-    font-size: 90%;
-    text-align: center;
-  }
-  img {
-    max-width: 600px;
-  }
-
-  .best-row {
-    background: #ededf0;
-  }
-
-  .best {
-    font-weight: bold;
-  }
-</style>
 
 Fine individiual tree crown delineation can be achieved from RGB + NIR orthophotos using CNN-based semantic segmentation with weighted losses, but how do different weight maps perform, and how does manipulation of training label sets affect this?
 
