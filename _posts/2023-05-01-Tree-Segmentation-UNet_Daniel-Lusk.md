@@ -2,7 +2,7 @@
 title: "Understanding weight maps and label manipulation in tree detection from high-resolution orthophotos with U-Net"
 author: "Daniel Lusk"
 author_profile: true
-date: 2023-05-02
+date: 2023-05-01
 permalink: /posts/2023/05/weight-maps-label-manipulation-tree-detection-unet
 toc: true
 toc_sticky: true
