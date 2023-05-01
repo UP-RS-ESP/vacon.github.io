@@ -40,7 +40,7 @@ In this exploration, aerial orthophotos of the city of Berlin, Germany are used 
 True aerial orthophotos of Berlin were acquired by the Berlin Office of Cartography and Geodesy in daylight hours in the summer of 2020 with a spatial resolution of 0.2 m and a positional accuracy of +/- 0.4 m [^10][^11]. The data used for this study consists of red, green, blue (RGB), and near-infrared (NIR) bands, and were sourced from the TrueDOP20RGB and TrueDOP20CIR datasets available for download on Geoportal Berlin (FIS-Broker). Overall, four 1-km<sup>2</sup> tiles and one 0.5-km<sup>2</sup> tile were obtained from Geoportal Berlin for a total extent of 4.5-km<sup>2</sup> (Figure 2).
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/overview.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/overview.png">
   <figcaption><b>Figure 2.</b> Overview of study area (Berlin, Germany). Training tiles are outlined in blue, and the test/validation tile is outlined in green.</figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ To ensure the model predictions were validated on a more reliable label set, the
 In total, the training label set consisted of 7,359 trees, and the validation/test label set contained 1,193 trees.
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/hand-vs-auto-labels.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/hand-vs-auto-labels.png">
   <figcaption><b>Figure 3.</b> Examples of semi-automated training labels and hand-drawn validation/test labels. Note the blockiness of the training labels, as well as the small segment of building classified as a tree.</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ In total, the training label set consisted of 7,359 trees, and the validation/te
 To explore the effect of training the models on labels that did not include the tree canopy edges (as opposed to discouraging the learning of the borders using weighting schemes), eroded training and validation sets were generated from the semi-automated label sets. These labels are referred to as “ERODED”. Label erosion was performed with a 1x1 kernel using scikit-image’s simple morphological erosion method (Figure 4) [^13].
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/orig-vs-eroded-labels.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/orig-vs-eroded-labels.png">
   <figcaption><b>Figure 4.</b> Non-eroded (ORIG) and eroded (ERODED) label sets.</figcaption>
 </figure>
 
@@ -148,7 +148,7 @@ def calculate_ronneberger_weights(labels, wc=None, w0 = 10, sigma = 5):
 ```
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/weight_maps.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/weight_maps.png">
   <figcaption><b>Figure 5.</b>  Comparison of weight map types. Labels have been adjusted to appear darker than the background solely for visualization purposes, and during training labels + background were set to 1. Note that the borders in BORD10 are all 10, though they may appear continuous on some displays.</figcaption>
 </figure>
 
@@ -250,12 +250,12 @@ At this point, the resulting labels still represented the exact extent of origin
 To determine the optimal combination of minimum distance and morphological manipulation, tree count absolute error (TCAE) and binary IoU (bIoU) were calculated for all combinations, and the optimal values were used for final ensemble predictions (Figures 6 and 7). TCAE was calculated as $$\frac{\lvert y_{true} - y_{pred} \rvert}{y_{true}} \cdot 100$$.
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/min-dist_by_abs-tree-error-pct.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/min-dist_by_abs-tree-error-pct.png">
   <figcaption><b>Figure 5.</b> TCAE as minimum distance for local maxima selection increases.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/morph_vs_biou.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/morph_vs_biou.png">
   <figcaption><b>Figure 7.</b> Effect of label set (during training) and morphological adjustment (applied to trained model predictions) on overall bIoU. Values for “no erosion” and “eroded” represent the bIoU of unmodified predictions compared to the ORIG and ERODED label sets, respectively, while “best dist chull” and “best dist dilated” refer to bIoUs of predictions that have first had watershed segmentation applied using their optimal distances and have then had convex hull and region-growing (dilation) operations applied, respectively.</figcaption>
 </figure>
 
@@ -278,7 +278,7 @@ The highest bIoU was produced by ORIG + ALL1, which was expected as there were n
 TCAE only provides a shallow sense of quality of the instance segmentation, however, and may be indicative of the real relationship between the predicted trees and their observed counterparts. To better understand this relationship, the distribution of predicted trees by their area was compared with the observed (true) tree area distribution and Kolmogorov-Smirnov test (KS-Test) $$p$$-value significances were computed (Figure 8).
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/tree_area_hist.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/tree_area_hist.png">
   <figcaption><b>Figure 8.</b> Tree area distributions of predictions (“y_pred”) overlaid with the observed distribution (“y_true”). Purple indicates overlapping bars, and <em>p</em>-values indicate the possibility of rejecting the NULL hypothesis that the two histograms do not come from the same distribution.</figcaption>
 </figure>
 
@@ -289,12 +289,12 @@ Here it can be seen that, of the highest performers, ERODED + BORD10 produces th
 Further visual inspection of the ensemble predictions suggests that this difference is perhaps more significant than the higher bIoU and lower TCAE of ORIG + BOUNDS10, as the trees of ERODED + BORD10 appears more appropriately segmented (Figures 9 and 10).
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/best_preds_abserr.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/best_preds_abserr.png">
   <figcaption><b>Figure 9.</b> Visual plots of ensemble predictions overlaid on a sample of the original RGB image. Y_True indicates the observed test labels.</figcaption>
 </figure>
 
 <figure>
-  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/full_prediction.png"></img>
+  <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/full_prediction.png">
   <figcaption><b>Figure 10.</b> Comparison of true labels (y_true) with full tile output of the ERODED + BORD10 ensemble.</figcaption>
 </figure>
 
