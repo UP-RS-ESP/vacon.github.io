@@ -10,7 +10,7 @@ toc_label: "Understanding weight maps and label manipulation in tree detection f
 header:
   overlay_image: "https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/banner.png"
   overlay_filter: 0.3
-  caption: "Understanding weight maps and label manipulation in tree detection from high-resolution orthophotos with U-Net"
+  caption: "U-Net based tree detection using eroded labels and border weight maps"
 read_time: false
 tags:
   - machine learning
@@ -24,20 +24,20 @@ Fine individiual tree crown delineation can be achieved from RGB + NIR orthophot
 
 # Introduction
 
-Convolutional neural networks (CNN) have been used in vegetation remote sensing for years, and are an especially popular choice for image classification tasks [^1]$$^,$$[^2]. Fully convolutional neural networks (FCNN) such as U-Net, in particular, are currently considered best-in-class when it comes to image segmentation as their output is of the same resolution as their inputs, providing pixel-by-pixel classification, and have seen growing popularity in remote sensing image segmentation [^3][^4][^5][^6]. Not only are FCNNs like U-Net effective at semantic segmentation—the process of classifying an image pixel-by-pixel, but not identifying distinct objects—others, such as Mask R-CNN, are capable of performing instance segmentation—the classification of not only pixels but also of objects (Figure 1) [^7][^8][^9]. However, while instance segmentation architectures can be powerful for tasks like tree detection, their architectures are often deep and multi-faceted and can require the optimization of a multitude of different hyperparameters. U-Net, on the other hand, is lightweight and simple to implement, with few hyperparameters, and is therefore an appealing option for researchers wishing to perform image segmentation while minimizing model tuning.
+Convolutional neural networks (CNN) have been used in vegetation remote sensing for years, and are an especially popular choice for image classification tasks [^1]$$^,$$[^2]. Fully convolutional neural networks (FCNN) such as U-Net, in particular, are currently considered best-in-class when it comes to image segmentation as their output is of the same resolution as their inputs, providing pixel-by-pixel classification, and have seen growing popularity in remote sensing image segmentation [^3]$$^,$$[^4]$$^,$$[^5]$$^,$$[^6]. Not only are FCNNs like U-Net effective at semantic segmentation—the process of classifying an image pixel-by-pixel, but not identifying distinct objects—others, such as Mask R-CNN, are capable of performing instance segmentation—the classification of not only pixels but also of objects (Figure 1) [^7]$$^,$$[^8]$$^,$$[^9]. However, while instance segmentation architectures can be powerful for tasks like tree detection, their architectures are often deep and multi-faceted and can require the optimization of a multitude of different hyperparameters. U-Net, on the other hand, is lightweight and simple to implement, with few hyperparameters, and is therefore an appealing option for researchers wishing to perform image segmentation while minimizing model tuning.
 
 <figure>
   <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/semantic-vs-instance.png">
   <figcaption><b>Figure 1.</b> A comparison of semantic segmentation (e.g. the output of architectures like U-Net) and instance segmentation.</figcaption>
 </figure>
 
-The problem remains, however, that U-Net can only perform semantic segmentation, i.e. it cannot provide object detection, and so additional methods are needed to process the semantically classified output into individual objects. Weight maps, for example, can be used to focus special attention on the boundaries between objects in order to train the model to be more conservative with class predictions in those regions, as has been done to achieve cell segmentation in medical images[^3]. The semantic output can then be segmented algorithmically to identify individual objects. This same approach has been applied successfully by Brandt, *et al*. (2020) and Mugabowindekwe *et al*. (2022) to remote sensing imagery for tree detection [^5][^6]. To achieve this, the authors utilized weight maps corresponding to the boundaries of tree crowns during training to reduce the connectivity of neighboring trees in the semantic output and then performed several morphological operations on the resulting semantic output, such as circle fitting and region growing to recover the “missing” pixels. This ensemble process (training with weight maps + morphological post-processing) can prove difficult with imagery of dense forests in which tree crowns border each other on all sides, however, and deeper understanding of the influence of training schemes and post-processing methods may be useful in improving tree detection from optical remote sensing imagery.
+The problem remains, however, that U-Net can only perform semantic segmentation, i.e. it cannot provide object detection, and so additional methods are needed to process the semantically classified output into individual objects. Weight maps, for example, can be used to focus special attention on the boundaries between objects in order to train the model to be more conservative with class predictions in those regions, as has been done to achieve cell segmentation in medical images[^3]. The semantic output can then be segmented algorithmically to identify individual objects. This same approach has been applied successfully by Brandt, *et al*. (2020) and Mugabowindekwe *et al*. (2022) to remote sensing imagery for tree detection [^5]$$^,$$[^6]. To achieve this, the authors utilized weight maps corresponding to the boundaries of tree crowns during training to reduce the connectivity of neighboring trees in the semantic output and then performed several morphological operations on the resulting semantic output, such as circle fitting and region growing to recover the “missing” pixels. This ensemble process (training with weight maps + morphological post-processing) can prove difficult with imagery of dense forests in which tree crowns border each other on all sides, however, and deeper understanding of the influence of training schemes and post-processing methods may be useful in improving tree detection from optical remote sensing imagery.
 
 In this exploration, aerial orthophotos of the city of Berlin, Germany are used in the training of seven U-Net-based models. We seek to answer three questions: i) which weight map types should be used; ii) what is the effect of training a model on eroded (shrunken) labels compared to unmodified labels; and iii) which post-processing operations are most effective in isolating individual trees from semantic output.
 
 # Methods
 ## Study site and data acquisition
-True aerial orthophotos of Berlin were acquired by the Berlin Office of Cartography and Geodesy in daylight hours in the summer of 2020 with a spatial resolution of 0.2 m and a positional accuracy of +/- 0.4 m [^10][^11]. The data used for this study consists of red, green, blue (RGB), and near-infrared (NIR) bands, and were sourced from the TrueDOP20RGB and TrueDOP20CIR datasets available for download on Geoportal Berlin (FIS-Broker). Overall, four 1-km<sup>2</sup> tiles and one 0.5-km<sup>2</sup> tile were obtained from Geoportal Berlin for a total extent of 4.5-km<sup>2</sup> (Figure 2).
+True aerial orthophotos of Berlin were acquired by the Berlin Office of Cartography and Geodesy in daylight hours in the summer of 2020 with a spatial resolution of 0.2 m and a positional accuracy of +/- 0.4 m [^10]$$^,$$[^11]. The data used for this study consists of red, green, blue (RGB), and near-infrared (NIR) bands, and were sourced from the TrueDOP20RGB and TrueDOP20CIR datasets available for download on Geoportal Berlin (FIS-Broker). Overall, four 1-km<sup>2</sup> tiles and one 0.5-km<sup>2</sup> tile were obtained from Geoportal Berlin for a total extent of 4.5-km<sup>2</sup> (Figure 2).
 
 <figure>
   <img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/Tree_Segmentation_images/overview.png">
@@ -50,7 +50,7 @@ To generate canopy height maps (CHM) for semi-automated label generation prior t
 
 *Normalization and NDVI*
 
-All band values for RGB and NIR were scaled to 0-1, and NDVI was calculated for all images using the formula $\frac{NIR - Red}{NIR + Red}$. NDVI values were then also normalized to 0-1 to ensure consistency of data ranges.
+All band values for RGB and NIR were scaled to 0-1, and NDVI was calculated for all images using the formula $$\frac{NIR - Red}{NIR + Red}$$. NDVI values were then also normalized to 0-1 to ensure consistency of data ranges.
 
 ## Label generation
 
@@ -266,9 +266,87 @@ To determine the optimal combination of minimum distance and morphological manip
 To test the efficacy of the above methodology, in addition to assessing core model performance statistics, the influence of four key components was examined: i) whether models were trained on original or eroded label sets; ii) weight map type; iii) minimum distance threshold for local maxima calculation; and iv) convex hull and dilation. The best model/post-processing ensembles were then identified based on tree count absolute error (TCAE), tree area distributions, and overall bIoU (Table 1).
 
 <figure>
-<table border="1" class="dataframe">  <thead>    <tr class="best-row" style="text-align: right;">      <th>Label Set</th>      <th>Weights</th>      <th>Best Min-Dist</th>      <th>Best Morph</th>      <th>bIoU</th>      <th>Tree Absolute Error</th>      <th>KS-Test <em>p</em></th>    </tr>  </thead>  <tbody>    <tr>      <td>ORIG</td>      <td>RONNN</td>      <td>3</td>      <td>dilated</td>      <td>0.740</td>      <td>18.52%</td>      <td>0.639</td>    </tr>    <tr class="best-row">      <td>ORIG</td>      <td>BOUNDS10</td>      <td>5</td>      <td>chull</td>      <td>0.799</td>      <td class="best">1.84%</td>      <td>0.942</td>    </tr>    <tr>      <td>ORIG</td>      <td>BORD10</td>      <td>5</td>      <td>original</td>      <td>0.798</td>      <td>6.12%</td>      <td>0.104</td>    </tr>    <tr class="best-row">      <td>ORIG</td>      <td>ALL1</td>      <td>5</td>      <td>chull</td>      <td class="best">0.801</td>      <td>4.44%</td>      <td>0.855</td>    </tr>    <tr>      <td>ERODED</td>      <td>BOUNDS10</td>      <td>5</td>      <td>chull</td>      <td>0.777</td>      <td>4.69%</td>      <td>0.501</td>    </tr>    <tr class="best-row">      <td>ERODED</td>      <td>BORD10</td>      <td>9</td>      <td>dilated</td>      <td>0.797</td>      <td>2.85%</td>      <td class="best">0.954</td>    </tr>    <tr>      <td>ERODED</td>      <td>ALL1</td>      <td>7</td>      <td>chull</td>      <td>0.781</td>      <td>5.62%</td>      <td>0.933</td>    </tr>  </tbody></table>
+  <table class="dataframe" style="display: inline-table;">
+    <thead>
+      <tr class="best-row" style="text-align: right;">
+        <th>Label Set</th>
+        <th>Weights</th>
+        <th>Best Min-Dist</th>
+        <th>Best Morph</th>
+        <th>bIoU</th>
+        <th>Tree Absolute Error</th>
+        <th>KS-Test <em>p</em></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ORIG</td>
+        <td>RONNN</td>
+        <td>3</td>
+        <td>dilated</td>
+        <td>0.740</td>
+        <td>18.52%</td>
+        <td>0.639</td>
+      </tr>
+      <tr class="best-row">
+        <td>ORIG</td>
+        <td>BOUNDS10</td>
+        <td>5</td>
+        <td>chull</td>
+        <td>0.799</td>
+        <td class="best"><b>1.84%</b></td>
+        <td>0.942</td>
+      </tr>
+      <tr>
+        <td>ORIG</td>
+        <td>BORD10</td>
+        <td>5</td>
+        <td>original</td>
+        <td>0.798</td>
+        <td>6.12%</td>
+        <td>0.104</td>
+      </tr>
+      <tr class="best-row">
+        <td>ORIG</td>
+        <td>ALL1</td>
+        <td>5</td>
+        <td>chull</td>
+        <td class="best"><b>0.801</b></td>
+        <td>4.44%</td>
+        <td>0.855</td>
+      </tr>
+      <tr>
+        <td>ERODED</td>
+        <td>BOUNDS10</td>
+        <td>5</td>
+        <td>chull</td>
+        <td>0.777</td>
+        <td>4.69%</td>
+        <td>0.501</td>
+      </tr>
+      <tr class="best-row">
+        <td>ERODED</td>
+        <td>BORD10</td>
+        <td>9</td>
+        <td>dilated</td>
+        <td>0.797</td>
+        <td>2.85%</td>
+        <td class="best"><b>0.954</b></td>
+      </tr>
+      <tr>
+        <td>ERODED</td>
+        <td>ALL1</td>
+        <td>7</td>
+        <td>chull</td>
+        <td>0.781</td>
+        <td>5.62%</td>
+        <td>0.933</td>
+      </tr>
+    </tbody>
+  </table>
 
-<figcaption><b>Table 1.</b> Core model + post-processing ensemble statistics. Best Min-Dist refers to the minimum distance used for determining local maxima prior to watershed segmentation, Best Morph is the morphological operations which provided the greatest bIoU (performed after watershed segmentation with Best Min-Dist, and bIoU, Tree [Count] Absolute Error, and KS-Test <em>p</em>-values were calculated from the resulting instance segmentation. In this case, higher KS-Test <em>p</em>-values are better as they suggest a closer relationship between the observed tree area distribution and the predicted distribution.</figcaption>
+
+  <figcaption><b>Table 1.</b> Core model + post-processing ensemble statistics. Best Min-Dist refers to the minimum distance used for determining local maxima prior to watershed segmentation, Best Morph is the morphological operations which provided the greatest bIoU (performed after watershed segmentation with Best Min-Dist, and bIoU, Tree [Count] Absolute Error, and KS-Test <em>p</em>-values were calculated from the resulting instance segmentation. In this case, higher KS-Test <em>p</em>-values are better as they suggest a closer relationship between the observed tree area distribution and the predicted distribution.</figcaption>
 </figure>
 
 The highest bIoU was produced by ORIG + ALL1, which was expected as there were no penalties for predictions at tree borders. ORIG + BOUNDS10 had the lowest TCAE, and ERODED + BORD10 had the highest tree area distribution similarity. The poorest performances came from ORIG + RONNN and ORIG + BORD10. In all but one case, implementing at least the convex hull operation improved bIoU, while, of the models trained on ERODED label sets only the BORD10 weight map predictions benefited from dilation. This is understandable, as pixels classified as “border” pixels are closer to the center of mass of the tree than the boundaries, therefore allowing for greater separation between tree pixel clusters than boundary pixels.
@@ -300,7 +378,7 @@ Further visual inspection of the ensemble predictions suggests that this differe
 
 # Discussion and conclusions
 
-Overall, the above exploration suggests that training a model on eroded labels with border (not boundary) weights may be able to produce better ensemble segmentation results than with the original label set and thresholded boundary weights, as has been done in previous tree detection attempts [^5][^6]. Further, convex hull transformation (at the least) followed by label dilation can produce prediction output with nearly identical coverage of tree pixels while still allowing for accurate instance segmentation of U-Net-generated semantic segmentation output. The model trained on eroded labels with border weights and modified with both convex hull and dilation transformations was ultimately able to produce instance segmentation with a resulting bIoU only 0.004 less than the unweighted model trained on uneroded labels (0.797 compared to 0.801).
+Overall, the above exploration suggests that training a model on eroded labels with border (not boundary) weights may be able to produce better ensemble segmentation results than with the original label set and thresholded boundary weights, as has been done in previous tree detection attempts [^5]$$^,$$[^6]. Further, convex hull transformation (at the least) followed by label dilation can produce prediction output with nearly identical coverage of tree pixels while still allowing for accurate instance segmentation of U-Net-generated semantic segmentation output. The model trained on eroded labels with border weights and modified with both convex hull and dilation transformations was ultimately able to produce instance segmentation with a resulting bIoU only 0.004 less than the unweighted model trained on uneroded labels (0.797 compared to 0.801).
 
 That said, this preliminary investigation could be improved in several ways. First, K-fold cross-validation was not performed during model training, and so model resilience is not reflected here. Additionally, the training labels generated semi-automatically contain many errors and some instances of unrealistic tree segmentation, and the use of the same set of higher-quality labels, all drawn from the same geographic location, for both validation and testing can be problematic when evaluating model performance as it is unlikely to result in a well-generalized model. Furthermore, the validation/test label set was generated in patches, which led to sometimes mis-matched or truncated labels when trees spanned the borders of multiple tiles. These latter issues are matters of time and labor, however, and could be resolved with investment in higher-quality label sets across broader swaths of Berlin. With these issues in mind, however, the resulting model performance remained surprisingly accurate, and it is likely that resolving them would result in even better tree detection.
 
