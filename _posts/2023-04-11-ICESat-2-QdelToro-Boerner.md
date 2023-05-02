@@ -37,7 +37,7 @@ Given the necessity for high resolution ground profiles and the promising 70 cen
 
 **This internship was supervised by Prof. Dr. Bodo Bookhagen.**
 
-**The Jupyter Notebooks containing more detailed information on the analysis and *numba* steps are available on github:
+**The Jupyter Notebooks containing more detailed information on the analysis and numba steps are available on github:**
 [https://github.com/UP-RS-ESP/ICESat-2_QdelToro](https://github.com/UP-RS-ESP/ICESat-2_QdelToro)
 
 # Study Area
