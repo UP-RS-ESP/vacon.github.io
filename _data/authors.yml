@@ -4,11 +4,11 @@ Daniel Lusk:
   name        : "Daniel Lusk"
   bio         : "MSc Student"
   location    : "University of Potsdam"
-  avatar      : "/images/DanielLusK.jpeg"
+  avatar      : "/images/DanielLusk.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:.lusk@uni-potsdam.de"
+      url: "mailto:lusk@uni-potsdam.de"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://github.com/dluks"
