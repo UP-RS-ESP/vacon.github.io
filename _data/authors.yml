@@ -13,6 +13,15 @@ Daniel Lusk:
       icon: "fas fa-fw fa-link"
       url: "https://github.com/dluks"
 
+Luis Kremer:
+  name        : "Luis Kremer"
+  bio         : "MSc Student"
+  location    : "University of Potsdam"
+  avatar      : "/images/LuisKremer.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:luis.kremer@uni-potsdam.de"
 
 Franziska Boerner:
   name        : "Franziska Boerner"
