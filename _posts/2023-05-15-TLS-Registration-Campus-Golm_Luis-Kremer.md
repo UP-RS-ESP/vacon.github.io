@@ -20,20 +20,18 @@ tags:
   - ICP
 ---
 
-In the last two decades, Terrestrial Laser Scanning (TLS) has gained increasing importance as a ground-based remote sensing technique for measuring three-dimensional (3-D) spaces using Light Detection and Ranging (lidar). But registering and aligning scans has remained a challenge and this article explores different options to align a large (n=155 scan positions) dataset.
+In the last two decades, Terrestrial Laser Scanning (TLS) has gained increasing importance as a ground-based remote sensing technique for measuring three-dimensional (3-D) spaces using Light Detection and Ranging (lidar). But registering and aligning multiple scans has remained a challenge and this article explores different options for a large (n=222 scan positions) dataset.
 
 # Introduction
+In the last two decades, Terrestrial Laser Scanning (TLS) has gained increasing importance as a ground-based remote sensing technique for measuring three-dimensional (3-D) spaces using Light Detection and Ranging (LiDAR). TLS has a wide range of applications, from architecture and engineering to forest inventory for determining biomass, stem volume, or biodiversity (Liang et al., 2016). The fundamental mechanism of many TLS systems is based on measuring the differences in time between the emitted and reflected laser pulses, which usually have wavelengths between 0.5 and 1.5 µm (Pfeifer & Briese, 2007). By using the runtime of a laser pulse, a 3-D representation (x, y, z) of the environment can be generated. Modern scanners are capable of scanning the surroundings with laser pulse repetition rates that exceed 1 MHz, resulting in point clouds that consist of millions of points with millimeter-scale precision.
 
-In the last two decades, Terrestrial Laser Scanning (TLS) has gained increasing importance as a ground-based remote sensing technique for measuring three-dimensional (3-D) spaces using Light Detection and Ranging (LiDAR). TLS has a wide range of applications, from architecture and engineering to forest inventory for determining biomass, stem volume, or biodiversity (Liang et al., 2016). The fundamental mechanism of many TLS systems is based on measuring the differences in time between the emitted and reflected laser pulses, which usually have wavelengths between 0.5 and 1.5 µm (Pfeifer & Briese, 2007). By using the runtime of a laser pulse, a 3-D representation (x, y, z) of the environment can then be generated. Modern scanners are capable of scanning the surroundings with laser pulse repetition rates that exceed 1 MHz, resulting in point clouds that consist of millions of points with millimeter-scale precision.
+Unlike airborne laser scanning point clouds, terrestrial laser scanning point clouds consist of individual data acquisitions, which must be merged to obtain full coverage of the study area. However, merging multiple point clouds can be a challenging process that requires precise alignment to avoid errors and ensure features are accurately represented. To prevent misalignment of scans during data acquisition, terrestrial laser scanners are usually equipped with a GNSS antenna for the x, y, and z location of the scanner and an Inertial Measurement Unit (IMU) for measuring the orientation and acceleration of the scanner with respect to the ground (Lillesand et al., 2015). However, this concept is limited when the GNSS signal is weak (e.g., near dense vegetation), the IMU is biased across scans (e.g., due to abrupt movements or long walking distances with the scanner), or the overlap between scans is too small. When these limitations occur together, they can significantly shift the resulting point clouds beyond the limit of the scanner's onboard alignment capabilities. In cases of misalignment after the data acquisition, post-processing steps must be performed to re-align all individual scan positions. To address the alignment issues of point clouds, the Iterative Closest Point (ICP) algorithm has been established in the last three decades (Besl & McKay, 1992; Chen & Medioni, 1992).
 
-Unlike airborne laser scanning point clouds, terrestrial laser scanning point clouds consist of individual data acquisitions, which must be merged to obtain full coverage of the study area. However, merging multiple point clouds can be a challenging process that requires precise alignment to avoid errors and ensure features are accurately represented. To prevent misalignment of scans during data acquisition, terrestrial laser scanners are usually equipped with a GNSS antenna for the x, y, and z location of the scanner and an Inertial Measurement Unit (IMU) for measuring the orientation of the scanner with respect to the ground (Lillesand et al., 2015). However, this concept is limited when the GNSS signal is weak (e.g., near dense vegetation), the IMU is biased across scans (e.g., due to abrupt movements or long walking distances with the scanner), or the overlap between scans is too small. When these limitations occur together, they can significantly shift the resulting point clouds beyond the limit of the scanner's onboard alignment capabilities. In cases of misalignment after the data acquisition, post-processing steps must be performed to re-align all individual scan positions. To address the alignment issues of point clouds, the Iterative Closest Point (ICP) algorithm has been established in the last three decades (Besl & McKay, 1992; Chen & Medioni, 1992).
-
-In the summer of 2022, we collected TLS data from the entire Golm campus at the University of Potsdam using the RIEGL VZ-400i terrestrial laser scanner. The objective was to create a precise 3-D model of the campus that can be used as a reference for future point cloud comparison work. Due to time constraints and safety reasons, we were unable to use a Differential GNSS base station for signal corrections as it always requires a line-of-sight connection with the scanner. We obtained over 200 individual scans, but a significant number were unaligned and required post-processing. Therefore, our objective for this project was to systematically align these scans to construct a comprehensive 3-D model of the Golm campus. We aim to highlight potential processing challenges and provide insights on how to avoid them. The three research questions that we address in this project are: 1) which methods can be used to systematically align multiple point clouds from terrestrial laser scans, 2) which is the most suitable variant of the ICP algorithm for aligning the scans?, and 3) how does the sampling pattern impact alignment performance?
+In the summer of 2022, we collected TLS data from the entire Golm campus at the University of Potsdam using the RIEGL VZ-400i terrestrial laser scanner. The objective was to create a precise 3-D model of the campus that can be used as a reference for future point cloud comparison work. Due to time constraints and safety reasons, we were unable to use a Differential GNSS base station for signal corrections as it always requires a line-of-sight connection with the scanner. We obtained over 200 individual scans, but a significant number were unaligned and required post-processing. Therefore, our objective for this project was to systematically align these scans to construct a comprehensive 3-D model of the Golm campus. We aim to highlight potential processing challenges and provide insights on how to avoid them. The three research questions that we address in this project are: 1) which methods can be used to systematically align multiple point clouds from terrestrial laser scans; 2) which is the most suitable variant of the ICP algorithm for aligning the scans?; and 3) how does the sampling pattern impact alignment performance?
 
 
 
 # Study area
-
 TLS data was collected from the Golm campus at the University of Potsdam from August 22 to August 25, 2022 (Figure 1). A total of 222 scan positions were acquired across the campus, with a balance between short distances to ensure adequate overlap and limiting the number of scans given the large area covered (~0.16 km<sup>2</sup>). The average distance between consecutive scan positions was 33.67 m (Figure 2), although there were variations with a standard deviation of 26.78 m. The large distances (> 75 m) seen in Figure 2 were due to the scanner being relocated to a new position.
 
 
@@ -52,12 +50,10 @@ TLS data was collected from the Golm campus at the University of Potsdam from Au
 
 
 # Validity of the raw data
-
 To analyze the validity of the more than 200 individual scans acquired in our project, the degree of noise within scans and the consistency of the initial scan alignment across the entire study area were first examined. This information was critical in determining the next steps in data processing, such as noise removal and registration of scans, which will be discussed in more detail in the following chapters.
 
 
 ## Noise
-
 One of the advantages of TLS is that a high density of points can be captured per scan. In our case, around 10 million points per scan were obtained for most of the scans. However, the high point density can also result in the presence of noisy points in the point cloud, which can pose a challenge in data processing and analysis. One of the main causes of noise in our scans was reflection issues caused by windows. Due to the double bounce effect of the laser reflecting off a window and an object back to the scanner, the object (e.g., trees or building facades) is projected behind the window and may be misplaced in the point cloud after merging multiple scans (Figure 3). To avoid problems with the alignment of overlapping point clouds, these noise artifacts had to be removed.
 
 
@@ -69,7 +65,6 @@ One of the advantages of TLS is that a high density of points can be captured pe
 
 
 ## Alignment consistency
-
 Figure 4 shows the bird's eye view of all merged individual point clouds immediately after the data collection and thus the starting point of our 3-D model of the Golm campus. Individual point clouds were preprocessed after the acquisition, including subsampling, tree removal, and noise reduction (see methods for more details). Upon initial inspection of the 3-D visualization, it is evident that building facades are stacked, particularly in the central area of the campus. Even without zooming in, it is apparent that some scans were not accurately positioned or aligned with the scanner's onboard processing platform. This impression is further confirmed by looking at building 27/29 of the campus from a different perspective (Figure 5). Several scans appear to be distorted and protruding into the courtyard.  
 
 <center>
@@ -101,15 +96,13 @@ The upper plot in Figure 6 should ideally show bright pixels along the x-axis, m
 Visual inspection and cloud-to-cloud distance analysis indicate that the source data are unsuitable for direct use. To create a 3-D model of the Golm campus, individual alignment of the scans was required. The next chapter addresses this topic in detail, followed by the methods used for alignment.
 
 
-
 # Point cloud registration
-
 As each scan in a TLS campaign has its local coordinate system, accurate registration methods are necessary to create a homogeneous data set in the same coordinate system with seamless overlapping areas of point clouds (Grant et al., 2013). During the registration, algorithms seek a suitable transformation that minimizes the distance between two overlapping point clouds. The output of the registration algorithm is a transformation matrix that represents operations such as translation, rotation, and scaling of the point cloud coordinates.
 
 Significant advances have been made in the development of registration algorithms, and a general workflow consisting of coarse global registration of scans, followed by local refinement, has been established (Zhou et al., 2016). As coarse and fine registration form the fundamental building blocks of this project, an explanation of both concepts will be provided in the following section.
 
-## Global registration
 
+## Global registration
 Prior to fine registration, global registration is performed, which does not require pre-alignment of point clouds. Several algorithms are available for global registration, of which RANSAC (Random Sample Consensus) is a widely used method (Zhou et al., 2016). The RANSAC algorithm is an iterative process that randomly selects a user-defined number of points in one point cloud and searches for their correspondence in the other point cloud. The transformation is estimated and evaluated based on criteria such as the distance correspondence between the two point clouds (Dung et al., 2013). This process is repeated until convergence. The search for correspondence in the point cloud that needs to be aligned (source point cloud) can require a significant number of iterations. To accelerate this process, Fast Point Feature Histograms (FPFH) are calculated (Rusu et al., 2009). FPFH describe the local geometry of a point and its neighboring points. This descriptor enables the RANSAC algorithm to search for nearest neighbors based on the FPFH, thus speeding up the correspondence search. This global registration method is implemented in the Python package `Open3D`.
 
 Besides the automatic global registration mentioned above, global registration can also be performed manually using software such as `CloudCompare`. User can select a set of matching points (at least three) in both the target (reference) and source point clouds. Based on this correspondence, the transformation of the source point cloud is calculated.
@@ -144,12 +137,10 @@ Pulli (1999) emphasize the advantages of the point-to-plane method compared to t
 
 
 # Methods
-
-Due to alignment issues during acquisition, as indicated in the section "alignment consistency" it was not possible to directly merge the raw point clouds from each scan to obtain a 3-D model of the Golm campus. To address the research questions, different alignment approaches and algorithms were applied. Analysis steps, necessary data preprocessing, and evaluation metrics of the results are described below.
+Due to alignment issues during acquisition, as indicated in the section "alignment consistency" it was not possible to directly merge the raw point clouds from each scan to obtain a 3-D model of the Golm campus. To address the research questions, different alignment approaches and algorithms were applied. Analysis steps, necessary data pre-processing, and evaluation metrics of the results are described below.
 
 
 ## Analysis
-
 Since fine registration requires pre-aligned point clouds, the scans with a median cloud-to-cloud distance of more than 10 cm were removed (a total of 38 scans; see Figure 6). The RANSAC global registration approach and manual point pair selection were then applied to roughly align the 38 excluded ones to the remaining scans. Two separate alignment approaches were subsequently performed using both variants of the ICP algorithm.
 
 1. For the first approach, a `loop closure method` was implemented by starting with the first scan and aligning the second scan to the first scan. The aligned scans were merged, and the iterative process was continued by moving on to the next scan until all 222 scans were aligned and merged. To ensure a systematic approach, scans were aligned in a serpentine pattern, starting in the eastern part of the campus and continuing until the first loop was closed in the western part. Subsequently, all other scans between this serpentine pattern were aligned to the framework of the first aligned scans, resulting in the closure of the loop several times. This approach was repeated for both point-to-point and point-to-plane variants of ICP to compare their performance.
@@ -162,7 +153,7 @@ The analyses were performed using Python 3.9, utilizing two primary packages: `l
 
 ## Data preparation
 
-Each TLS scan consists of about 10 million data points. Processing such a large amount of data has a significant impact on the computation time. Therefore, each scan was subject to the following preprocessing steps prior to analysis:
+Each TLS scan consists of about 10 million data points. Processing such a large amount of data has a significant impact on the computation time. Therefore, each scan was subject to the following pre-processing steps prior to analysis:
 
 
 **1. Subsampling to 10 centimeters**
@@ -184,8 +175,8 @@ The Golm campus contains both planar objects such as building facades and street
 The computation of the geometric feature `planarity` can be summarized as described by Dittrich et al. (2017):
 
 1. The 3D covariance matrix based on the point's neighborhood is calculated using a fixed radius (e.g., 1 m)
-2. The eigenvectors ($e_{1}$, $e_{2}$, $e_{3}$) and eigenvalues ($\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$) of the 3D covariance matrix are calculated
-3. `Planarity` is determined considering the three eigenvalues ($\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$): on a planar surface eigenvalues $\lambda_{1}$ and $\lambda_{2}$ are larger than $\lambda_{3}$. Therefore, `planarity` ($P_{\lambda}$) is calculated based on the following ratio:
+2. The eigenvectors ($$e_{1}$$, $$e_{2}$$, $$e_{3}$$) and eigenvalues ($$\lambda_{1}$$, $$\lambda_{2}$$, $$\lambda_{3}$$) of the 3D covariance matrix are calculated
+3. `Planarity` is determined considering the three eigenvalues ($$\lambda_{1}$$, $$\lambda_{2}$$, $$\lambda_{3}$$): on a planar surface eigenvalues $$\lambda_{1}$$ and $$\lambda_{2}$$ are larger than $$\lambda_{3}$$. Therefore, `planarity` ($$P_{\lambda}$$) is calculated based on the following ratio:
 $$  P_{\lambda} = \frac{\lambda_{2} - \lambda_{3}}{\lambda_{1}}$$
 
 For the analysis, a `planarity` threshold of 0.7 was selected. The value was arbitrarily chosen but led to reasonable filtering results as shown in Figure 7. As an example, Figure 7a displays the original point cloud data, while Figure 7b shows the results of the data after the data preparation stages.
@@ -200,7 +191,6 @@ For the analysis, a `planarity` threshold of 0.7 was selected. The value was arb
 
 
 ## Evaluation metrics
-
 Three metrics were used in this project to evaluate the quality of the alignment for both ICP variants and alignment methods.
 
 
@@ -223,15 +213,12 @@ $$ dRMS(A,B)=\sqrt{\frac{1}{n}\sum_{i=1}^{n}\left ( \left \| a_{i}-b_{j} \right 
 
 where:
 
-- $a_{i}$ is the point in the source point cloud corresponding to $b_{j}$ in the target point cloud
-- and $n$ the number of points in $A$
+- $$a_{i}$$ is the point in the source point cloud corresponding to $$b_{j}$$ in the target point cloud $$n$$ the number of points in $$A$$
 
 
 
 # Results
-
 ## Global alignment
-
 The automated approach using the RANSAC algorithm supported by FPFH was initially attempted for alignment but was later discarded due to significant runtime issues and the inability to achieve convergence. Especially in the part of Figure 5, the algorithm was not able to come up with a satisfactory solution for the fine registration. Therefore, the manual approach was applied, which involved selecting corresponding point pairs in the target and source point clouds, resulting in successful alignment, as shown in Figure 8. However, some parts of the campus were still misaligned, indicated by sudden changes in surface roughness (Figure 8).
 
 
@@ -240,7 +227,6 @@ The automated approach using the RANSAC algorithm supported by FPFH was initiall
 <a href="08_Building2729_surfaceroughness.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/08_Building2729_surfaceroughness.png"></a><figcaption>Figure 8: Building 27/29 after global alignment, showing well-represented building walls. However, surface roughness exceeding 20 cm (yellow areas) reveals misalignment of scans in the z-direction.   </a> </figcaption>
 </figure>
 </center>
-
 
 
 ## Fine registration
@@ -300,7 +286,6 @@ The final 3-D model of the Golm campus was created using the registered data fro
 
 
 # Discussion and conclusion
-
 ## Loop closure vs. ALS reference approach
 
 The loop closure approach has been shown to achieve accurate results in the x- and y-directions but reveals issues in the z-direction. This can be attributed to slight alignment errors that propagate through the point cloud. These errors become evident when closing the loops and are even larger when the overlap between the scans is not given.
@@ -311,7 +296,6 @@ For future work, a combination of the loop closure and ALS reference approaches 
 
 
 ## Point-to-point vs. point-to-plane ICP
-
 Given the conditions of this project, the point-to-point ICP algorithm outperformed the point-to-plane ICP algorithm and resulted in an overall improvement of the registered data compared to the raw data. Considering the significant number of scans that were misaligned after the data acquisition, the point-to-point algorithm was able to refine the registration with an accuracy of centimeters to millimeters. The removal of non-planar and slightly moving features, such as leaves or branches, proved to be beneficial for the algorithm. This is because the point-to-point variant of the ICP algorithm aims to find identical points in two different point clouds, making it more effective to use only man-made features that are consistent across the scans.
 
 While the point-to-point variant yielded superior results, the point-to-plane variant underperformed and even deteriorated the raw data alignment. This result was unexpected given that the point-to-plane variant is commonly regarded as more realistic due to the challenge of identifying identical points in two distinct point clouds. The inaccurate outcomes of the point-to-plane algorithm can be attributed to two main factors:
@@ -329,7 +313,6 @@ While the point-to-point variant yielded superior results, the point-to-plane va
 
 
 ## Impact of the TLS sampling pattern on alignment performance
-
 The RIEGL VZ-400i and other similar scanners are equipped with onboard alignment capabilities, which can eliminate the need for post-processing alignment if a suitable sampling pattern is employed. However, as mentioned in the introduction, the scanner's alignment capabilities are limited when either the GNSS or IMU system is not performing as expected, often due to factors such as weak signal strength, large distances between scans, or the absence of re-initialization at the last scan position after the scanner is turned off. The combined effect of these factors can lead to the alignment issues encountered after the data acquisition in this project.
 
 While this project demonstrated that misalignment issues in a large data set with over 200 scans can be resolved through global alignment and refined alignment using ICP, these processing steps can be avoided or simplified with consistent TLS sampling. Two crucial aspects to consider are short distances (10-20 m) between scans and a consistent sampling pattern in which each scan has a follow-up scan and no location is scanned more than once. Short distance ensures adequate overlap of point clouds from different scans, enabling matching of the same objects during alignment. A consistent scan pattern is essential for proper alignment of subsequent scans, as jumping back and forth between scans can disrupt onboard alignment and potentially lead to misalignment. Keeping these considerations in mind when conducting TLS scanning can help streamline the alignment process and ensure obtaining an accurate 3-D model.
@@ -337,7 +320,6 @@ While this project demonstrated that misalignment issues in a large data set wit
 
 
 # Important takeaways of the TLS project
-
 - A consistent TLS sampling pattern with each scan having at least two close-by neighboring scans should be followed to ensure reliable on-board registration for the RIEGL VZ-400i scanner
 - Short distances (10-20 m) between scans to provide enough overlap can facilitate point cloud registration tasks
 - The combination of global and fine registration through the ICP algorithm is able of addressing large misalignments even between scans with little overlap
