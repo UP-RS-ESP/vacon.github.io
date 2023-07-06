@@ -18,6 +18,8 @@ tags:
   - Point Clouds
 ---
 
+Collection of full-waveform terrestrial LiDAR data poses unique challenges during data acquisition and generates data with useful extra attributes. The scanning process and resulting data are described here for a dataset collected at the University of Potsdam Golm campus in August, 2022.
+
 Terrestrial Laser Scanning (TLS) has applications in natural sciences such as in forestry, where common applications include estimation of above-ground biomass (Gonzales, et al., 2017), and estimation of biophysical parameters (Calders, et al., 2018). Natural hazards such as coastal retreat, glacier movement, lava flows, and landslides can also be monitored with TLS (Jones and Hobbs, 2021). Applications also include infrastructure monitoring including detecting cracks in concrete (Turkan, et al., 2018) and monitoring bridge displacement (Erdélyi, et al., 2020).
 
 The aims of this internship was to create a point cloud of the University of Potsdam Golm campus using a terrestrial laser scanner. This blog describes data acquisition and extra attributes.
