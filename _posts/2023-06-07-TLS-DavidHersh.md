@@ -26,6 +26,8 @@ The aims of this internship was to create a point cloud of the University of Pot
 
 *This internship was supervised by Prof. Dr. Bodo Bookhagen*
 
+Dr. Benjamin Brede is thanked for providing the Riegl Lidar instrument and for converting the data from the proprietary Riegl format to laz files.
+
 # Scanning Process
 
 Scans were collected from August 22nd to 25th, 2022 using a Riegl VZ-400i scanner. Scan positions were chosen according to the trade-off between time limitations and a complete coverage of the campus. Each scan required approximately 60 seconds to turn 360 degrees, after which the scanner was moved to the next scan position. The distance between scan positions was chosen to be around 30 meters. The Riegl scanner has a real-time viewer which shows the current scan position in purple and previous scans in blue, as well as varying surface brightness to indicate coverage.
