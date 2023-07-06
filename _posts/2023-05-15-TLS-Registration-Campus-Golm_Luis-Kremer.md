@@ -22,6 +22,7 @@ tags:
 
 In the last two decades, Terrestrial Laser Scanning (TLS) has gained increasing importance as a ground-based remote sensing technique for measuring three-dimensional (3-D) spaces using Light Detection and Ranging (lidar). But registering and aligning multiple scans has remained a challenge and this article explores different options for a large (n=222 scan positions) dataset.
 
+
 # Introduction
 In the last two decades, Terrestrial Laser Scanning (TLS) has gained increasing importance as a ground-based remote sensing technique for measuring three-dimensional (3-D) spaces using Light Detection and Ranging (LiDAR). TLS has a wide range of applications, from architecture and engineering to forest inventory for determining biomass, stem volume, or biodiversity (Liang et al., 2016). The fundamental mechanism of many TLS systems is based on measuring the differences in time between the emitted and reflected laser pulses, which usually have wavelengths between 0.5 and 1.5 µm (Pfeifer & Briese, 2007). By using the runtime of a laser pulse, a 3-D representation (x, y, z) of the environment can be generated. Modern scanners are capable of scanning the surroundings with laser pulse repetition rates that exceed 1 MHz, resulting in point clouds that consist of millions of points with millimeter-scale precision.
 
@@ -29,6 +30,9 @@ Unlike airborne laser scanning point clouds, terrestrial laser scanning point cl
 
 In the summer of 2022, we collected TLS data from the entire Golm campus at the University of Potsdam using the RIEGL VZ-400i terrestrial laser scanner. The objective was to create a precise 3-D model of the campus that can be used as a reference for future point cloud comparison work. Due to time constraints and safety reasons, we were unable to use a Differential GNSS base station for signal corrections as it always requires a line-of-sight connection with the scanner. We obtained over 200 individual scans, but a significant number were unaligned and required post-processing. Therefore, our objective for this project was to systematically align these scans to construct a comprehensive 3-D model of the Golm campus. We aim to highlight potential processing challenges and provide insights on how to avoid them. The three research questions that we address in this project are: 1) which methods can be used to systematically align multiple point clouds from terrestrial laser scans; 2) which is the most suitable variant of the ICP algorithm for aligning the scans?; and 3) how does the sampling pattern impact alignment performance?
 
+*This internship was supervised by Prof. Dr. Bodo Bookhagen.*
+
+**A web-based view (potree) of the combined TLS data (downsampled to 25 cm) is available [here](https://up-rs-esp.uni-potsdam.de/golm25cm_ortho_rgb_all_black/golm25_cm_RGB_ortho_all_black.html)**
 
 
 # Study area
@@ -37,14 +41,14 @@ TLS data was collected from the Golm campus at the University of Potsdam from Au
 
 <center>
 <figure>
-<a href="01_ScansPositions.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/01_ScansPositions.png" width="80%" height="80%" ></a><figcaption>Figure 1: Map showing the individual scan positions, with the lines indicating consecutive scans. The lines for the courtyard in the center of the image have been omitted for clarity. </a> </figcaption>
+<a href="01_ScansPositions.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/01_ScansPositions.png" width="80%" height="80%" ></a><figcaption>Figure 1: Map showing the individual scan positions, with the lines indicating consecutive scans. The lines for the courtyard in the center of the image have been omitted for clarity. </figcaption>
 </figure>
 </center>
 
 
 <center>
 <figure>
-<a href="02_ScanDistances.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/02_ScanDistances.png"></a><figcaption>Figure 2: Barplot showing the scan-to-scan distances. Each bar in the plot represents the distance between two consecutive scans. For example, a bar at position 1 indicates the distance between scan 01 and scan 02. </a> </figcaption>
+<a href="02_ScanDistances.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/02_ScanDistances.png"></a><figcaption>Figure 2: Barplot showing the scan-to-scan distances. Each bar in the plot represents the distance between two consecutive scans. For example, a bar at position 1 indicates the distance between scan 01 and scan 02.</figcaption>
 </figure>
 </center>
 
@@ -59,7 +63,7 @@ One of the advantages of TLS is that a high density of points can be captured pe
 
 <center>
 <figure>
-<a href="03_Noise.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/03_Noise.png"></a><figcaption>Figure 3: Merged full resolution scans including noise. The long stripes of points demonstrate the susceptibility of TLS data to window reflections of the laser. In the lower and upper middle parts, reflections are projected onto the street. </a> </figcaption>
+<a href="03_Noise.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/03_Noise.png"></a><figcaption>Figure 3: Merged full resolution scans including noise. The long stripes of points demonstrate the susceptibility of TLS data to window reflections of the laser. In the lower and upper middle parts, reflections are projected onto the street. </figcaption>
 </figure>
 </center>
 
@@ -69,14 +73,14 @@ Figure 4 shows the bird's eye view of all merged individual point clouds immedia
 
 <center>
 <figure>
-<a href="04_RawData_Misalignment.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/04_RawData_Misalignment.png"></a><figcaption>Figure 4: Bird's eye view of all merged individual point clouds after data acquisition. Particularly large errors in the initial alignment are visible in the center of the image (building 27/29). </a> </figcaption>
+<a href="04_RawData_Misalignment.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/04_RawData_Misalignment.png"></a><figcaption>Figure 4: Bird's eye view of all merged individual point clouds after data acquisition. Particularly large errors in the initial alignment are visible in the center of the image (building 27/29). </figcaption>
 </figure>
 </center>
 
 
 <center>
 <figure>
-<a href="05_RawData_Misalignment_Building2729.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/05_RawData_Misalignment_Building2729.png"></a><figcaption>Figure 5: Full resolution data of building 27/29, showing significant misalignment of scans </a> </figcaption>
+<a href="05_RawData_Misalignment_Building2729.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/05_RawData_Misalignment_Building2729.png"></a><figcaption>Figure 5: Full resolution data of building 27/29, showing significant misalignment of scans </figcaption>
 </figure>
 </center>
 
@@ -88,7 +92,7 @@ The upper plot in Figure 6 should ideally show bright pixels along the x-axis, m
 
 <center>
 <figure>
-<a href="06_RawData_cloudtocloud_distance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/06_RawData_cloudtocloud_distance.png"></a><figcaption>Figure 6: The upper plot displays the minimum distance between every point in the 222 scans and its closest neighbor in any other scan. The distance values of the points are binned and represented by dark color (few points) and bright color (many points at that distance). The lower plot shows the median cloud-to-cloud distance for each scan, which is calculated by taking the minimum distances of all points in a scan and calculating the median value. </a> </figcaption>
+<a href="06_RawData_cloudtocloud_distance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/06_RawData_cloudtocloud_distance.png"></a><figcaption>Figure 6: The upper plot displays the minimum distance between every point in the 222 scans and its closest neighbor in any other scan. The distance values of the points are binned and represented by dark color (few points) and bright color (many points at that distance). The lower plot shows the median cloud-to-cloud distance for each scan, which is calculated by taking the minimum distances of all points in a scan and calculating the median value. </figcaption>
 </figure>
 </center>
 
@@ -184,7 +188,7 @@ For the analysis, a `planarity` threshold of 0.7 was selected. The value was arb
 
 <center>
 <figure>
-<a href="07_TLS_processing_before_after.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/07_TLS_processing_before_after.png"></a><figcaption>Figure 7: Example of data preparation. Figure A displays the original point cloud data with all features included, while Figure B shows the subsampled and non-planarity filtered point cloud data. </a> </figcaption>
+<a href="07_TLS_processing_before_after.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/07_TLS_processing_before_after.png"></a><figcaption>Figure 7: Example of data preparation. Figure A displays the original point cloud data with all features included, while Figure B shows the subsampled and non-planarity filtered point cloud data. </figcaption>
 </figure>
 </center>
 
@@ -224,7 +228,7 @@ The automated approach using the RANSAC algorithm supported by FPFH was initiall
 
 <center>
 <figure>
-<a href="08_Building2729_surfaceroughness.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/08_Building2729_surfaceroughness.png"></a><figcaption>Figure 8: Building 27/29 after global alignment, showing well-represented building walls. However, surface roughness exceeding 20 cm (yellow areas) reveals misalignment of scans in the z-direction.   </a> </figcaption>
+<a href="08_Building2729_surfaceroughness.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/08_Building2729_surfaceroughness.png"></a><figcaption>Figure 8: Building 27/29 after global alignment, showing well-represented building walls. However, surface roughness exceeding 20 cm (yellow areas) reveals misalignment of scans in the z-direction.  </figcaption>
 </figure>
 </center>
 
@@ -240,7 +244,7 @@ On the other hand, the point-to-plane ICP variant's alignment performance was ov
 
 <center>
 <figure>
-<a href="09_LoopClosure_Barplot.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/09_LoopClosure_Barplot.png"></a><figcaption>Figure 9: Comparison of results of the loop closure approach: (A) Point-to-point variant leads to an overall good alignment result. The bars sticking out are aligned scans, however, with poor overlap and thus increased value; (B) In contrast, the point-to-plane variant showed significant misalignment for many scans, with over 80 scans having a median cloud-to-cloud distance greater than 10 cm. </a> </figcaption>
+<a href="09_LoopClosure_Barplot.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/09_LoopClosure_Barplot.png"></a><figcaption>Figure 9: Comparison of results of the loop closure approach: (A) Point-to-point variant leads to an overall good alignment result. The bars sticking out are aligned scans, however, with poor overlap and thus increased value; (B) In contrast, the point-to-plane variant showed significant misalignment for many scans, with over 80 scans having a median cloud-to-cloud distance greater than 10 cm. </figcaption>
 </figure>
 </center>
 
@@ -255,7 +259,7 @@ The point-to-plane ICP variant performed better compared to the loop closure app
 
 <center>
 <figure>
-<a href="10_ALSReference_Barplot.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/10_ALSReference_Barplot.png"></a><figcaption>Figure 10: Comparison of results of the ALS reference approach: (A) Point-to-point variant shows misalignment only for individual scans, particularly scan 180-200 where building walls are poorly represented; (B) Point-to-plane variant shows misalignment for more scans, with five scans having a median cloud-to-cloud distance greater than 1 m. </a> </figcaption>
+<a href="10_ALSReference_Barplot.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/10_ALSReference_Barplot.png"></a><figcaption>Figure 10: Comparison of results of the ALS reference approach: (A) Point-to-point variant shows misalignment only for individual scans, particularly scan 180-200 where building walls are poorly represented; (B) Point-to-plane variant shows misalignment for more scans, with five scans having a median cloud-to-cloud distance greater than 1 m. </figcaption>
 </figure>
 </center>
 
@@ -279,7 +283,7 @@ The final 3-D model of the Golm campus was created using the registered data fro
 
 <center>
 <figure>
-<a href="11_final_viz_golm.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/11_final_viz_golm.png"></a><figcaption>Figure 11: Final 3-D model of the Golm campus at the University of Potsdam </a> </figcaption>
+<a href="11_final_viz_golm.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/11_final_viz_golm.png"></a><figcaption>Figure 11: Final 3-D model of the Golm campus at the University of Potsdam </figcaption>
 </figure>
 </center>
 
@@ -307,7 +311,7 @@ While the point-to-point variant yielded superior results, the point-to-plane va
 
 <center>
 <figure>
-<a href="12_Normal_orientation.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/12_Normal_orientation.png"></a><figcaption>Figure 12: Figure A is showing a point cloud with three walls and their computed normals in Figure B </a> </figcaption>
+<a href="12_Normal_orientation.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_Golm_images/12_Normal_orientation.png"></a><figcaption>Figure 12: Figure A is showing a point cloud with three walls and their computed normals in Figure B </figcaption>
 </figure>
 </center>
 

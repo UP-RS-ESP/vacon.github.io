@@ -35,7 +35,7 @@ Given the necessity for high resolution ground profiles and the promising 70 cen
 
 *What are useful filtering steps to extract ground profiles from ICESat-2 ATL03 data and what accuracy can be achieved?*
 
-**This internship was supervised by Prof. Dr. Bodo Bookhagen.**
+*This internship was supervised by Prof. Dr. Bodo Bookhagen.*
 
 **The Jupyter Notebooks containing more detailed information on the analysis and numba steps are available on github:**
 [https://github.com/UP-RS-ESP/ICESat-2_QdelToro](https://github.com/UP-RS-ESP/ICESat-2_QdelToro)

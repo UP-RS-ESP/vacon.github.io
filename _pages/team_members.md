@@ -26,17 +26,6 @@ researchers2:
     title: Taylor Smith
     excerpt: 'Passive Microwave Remote Sensing, Big Data Analytics'
     url: 'https://tasmi.github.io/'
-  - image_path: /images/tofelde.jpg
-    alt: Stefanie Tofelde
-    title: Stefanie Tofelde
-    excerpt: 'Earth Surface Processes, CRN Erosion, Analog Sediment Modeling'
-    url: >-
-      http://www.geo.uni-potsdam.de/mitarbeiterdetails/show/771/Stefanie_Tofelde.html
-  - image_path: /images/carlosp.jpg
-    alt: Carlos Peña
-    title: Carlos Peña
-    excerpt: 'Earthquake Deformation, Subduction Zones, InSAR'
-    url: 'https://bpurinton.github.io/'
 researchers3:
   - image_path: /images/ManudeoSingh.jpg
     title: 'Manudeo Singh'
@@ -56,9 +45,9 @@ PhD_students1:
     excerpt: 'Digital Elevation Models, Satellite Photogrammetry'
     url: 'https://arimue.github.io/'
 PhD_students2:
-  - image_path: /images/artel.jpg
-    alt: Julia Artel
-    title: Julia Artel
+  - image_path: /images/rosner.jpg
+    alt: Anna Rosner
+    title: Anna Rosner
     excerpt: Cosmogenic Radionuclides
   - image_path: /images/Mohammad-MohseniAref2.jpg
     title: Mohammad Mohseni Aref
@@ -109,19 +98,22 @@ MSc_students2:
 
 
 # Past Members
-- Nikolaos  Antonoglou (now with German Aerospace Center , DLR)
-- Sohini Bhattacharjee (now research at IITK)
-- Dr. Ben Purinton (now independent researcher)
+- Dr. Carlos Peña (now at University of RU Bochum)
+- Dr. Stefanie Tofelde (now at FU Berlin)
+- Nikolaos Antonoglou (now with German Aerospace Center, DLR)
+- Julia Artel (now chemist at private company in Berlin)
+- Dr. Sohini Bhattacharjee (now researcher at University of Kiel)
+- Dr. Ben Purinton (now at the University of Chicago and independent researcher)
 - Dr. Dominik Traxl (now researcher at PIK)
 - Dr. Stephanie Olen (now editor at nature sustainability)
-- Dr. Fabiana Castino (now with Deutscher Wetterdienst)
+- Dr. Fabiana Castino (now with DWD - Deutscher Wetterdienst)
 - Dr. Ramezani Ziarani (now researcher at KIT)
 - Dr. Fiona Clubb (now Asst. Professor at Durham University)
 - Dr. Frank Günther (now independent researcher)
 - Dr. Konstanze Stübner (now with HZDR Dresden-Rossendorf)
 - Dr. Bedartha Goswami (now Asst. Professor at University of Tuebingen)
 - Dr. Lucia Tyrallova (now coordinating international study programs at UP/FH Potsdam)
-- Lisa Luna (now PhD student at UP)
+- Dr. Lisa Luna (now at USGS)
 
 # Past MSc Students
 - Samuel Russell
