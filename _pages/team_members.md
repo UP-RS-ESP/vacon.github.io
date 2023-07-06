@@ -24,7 +24,7 @@ researchers2:
   - image_path: /images/smith.jpg
     alt: Taylor Smith
     title: Taylor Smith
-    excerpt: 'Passive Microwave Remote Sensing, Big Data Analytics'
+    excerpt: 'Snow and Vegetation Remote Sensing, Passive Microwaves, Big Data Analytics'
     url: 'https://tasmi.github.io/'
   - image_path: /images/ManudeoSingh.jpg
     title: 'Manudeo Singh'
@@ -98,17 +98,17 @@ MSc_students2:
 # Past Members
 - Dr. Carlos Peña (now at University of RU Bochum)
 - Dr. Stefanie Tofelde (now at FU Berlin)
-- Nikolaos Antonoglou (now with German Aerospace Center, DLR)
+- Nikolaos Antonoglou (now at German Aerospace Center, DLR)
 - Julia Artel (now chemist at private company in Berlin)
 - Dr. Sohini Bhattacharjee (now researcher at University of Kiel)
 - Dr. Ben Purinton (now at the University of Chicago and independent researcher)
 - Dr. Dominik Traxl (now researcher at PIK)
 - Dr. Stephanie Olen (now editor at nature sustainability)
-- Dr. Fabiana Castino (now with DWD - Deutscher Wetterdienst)
+- Dr. Fabiana Castino (now at DWD - Deutscher Wetterdienst)
 - Dr. Ramezani Ziarani (now researcher at KIT)
 - Dr. Fiona Clubb (now Asst. Professor at Durham University)
 - Dr. Frank Günther (now independent researcher)
-- Dr. Konstanze Stübner (now with HZDR Dresden-Rossendorf)
+- Dr. Konstanze Stübner (now at HZDR Dresden-Rossendorf)
 - Dr. Bedartha Goswami (now Asst. Professor at University of Tuebingen)
 - Dr. Lucia Tyrallova (now coordinating international study programs at UP/FH Potsdam)
 - Dr. Lisa Luna (now at USGS)

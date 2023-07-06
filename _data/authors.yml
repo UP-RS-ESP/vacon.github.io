@@ -13,6 +13,16 @@ Daniel Lusk:
       icon: "fas fa-fw fa-link"
       url: "https://github.com/dluks"
 
+David Hersh:
+  name        : "David Hersh"
+  bio         : "MSc Student"
+  location    : "University of Potsdam"
+  avatar      : "/images/notyet.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:david.hersh@uni-potsdam.de"
+
 Luis Kremer:
   name        : "Luis Kremer"
   bio         : "MSc Student"
