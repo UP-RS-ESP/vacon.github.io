@@ -26,7 +26,6 @@ researchers2:
     title: Taylor Smith
     excerpt: 'Passive Microwave Remote Sensing, Big Data Analytics'
     url: 'https://tasmi.github.io/'
-researchers3:
   - image_path: /images/ManudeoSingh.jpg
     title: 'Manudeo Singh'
     excerpt: 'InSAR, Floodplain Evolution, Hydraulic Connectivity, UAV'
@@ -63,13 +62,12 @@ MSc_students1:
   - image_path: /images/DebayanChatterjee_Pic.jpg
     title: Debayan Chatterjee
     excerpt: 'UAV Point Clouds, Digital Elevation Models'
-
-MSc_students2:
   - image_path: /images/boerner.jpg
     alt: Franziska Boerner
     title: Franziska Boerner
     excerpt: 'Spaceborne Lidar, Point Cloud Analysis'
-  - image_path: /images/LuisKremer.jpg
+MSc_students2:
+  - image_path: /images/LuisKremer2.jpg
     alt: Luis Kremer
     title: Luis Kremer
     excerpt: 'Terrestrial Lidar (TLS) and Point Clouds'
