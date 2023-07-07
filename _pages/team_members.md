@@ -71,6 +71,10 @@ MSc_students2:
     alt: Luis Kremer
     title: Luis Kremer
     excerpt: 'Terrestrial Lidar (TLS) and Point Clouds'
+  - image_path: /images/Yagublu_Fuad_UP2.jpg
+    alt: Fuad Yagublu
+    title: Fuad Yagublu
+    excerpt: 'Structure from Motion, Stereo Cameras'
 
 ---
 
