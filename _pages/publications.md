@@ -15,6 +15,8 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2023]** | | |
+Bhattacharjee, S., **Bookhagen, B.**, Sinha, R., Wieser, A., Marchhart, O. | 2023 | 26Al and 10 Be concentrations from alluvial drill cores across the Indo-Gangetic plain reveal multimillion-year sediment-transport lag times | _Earth and Planetary Science Letters_ | [DOI](https://doi.org/10.1016/j.epsl.2023.118318)
+Sarkar, D., Sinha, R., **Bookhagen, B.** | 2023 | Towards a Guideline for UAV-Based Data Acquisition for Geomorphic Applications | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15143692) [PDF](https://www.mdpi.com/2072-4292/15/14/3692/pdf)
 Fisher, G.B., Luna, L.V., Amidon, W.H., Burbank, D.W., Stap, L.B., Bookhagen, B., Godard, V., Oskin, M.E., Alonso, R.N., Tuenger, E., Lourens, L.J. | 2023 | Milankovitch-paced erosion in the southern Central Andes | _nature communications_ | [DOI](https://doi.org/10.1038/s41467-023-36022-0)
 Cobb, A.R., Dommain, R., Sukri, R.S., Metali, F. Bookhagen, B., Harvey, F., Tang, H. |  2023 | Improved terrain estimation from spaceborne lidar in tropical peatlands using spatial filtering | _Science of Remote Sensing_ | [DOI](https://doi.org/10.1016/j.srs.2022.100074)
 Purinton, B. Mueting, A., Bookhagen, B. | 2023 | Image Texture as Quality Indicator for Optical DEM Generation: Geomorphic Applications in the Arid Central Andes | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15010085)
