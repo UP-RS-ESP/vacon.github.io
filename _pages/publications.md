@@ -15,7 +15,8 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2023]** | | |
-T Schmidt, T Kuester, T Smith, and M Bochow | 2023 | Potential of Optical Spaceborne Sensors for the Differentiation of Plastics in the Environment | _Remote Sensing_ [DOI](https://doi.org/10.3390/rs15082020)
+T Smith and N Boers | 2023 | Reliability of Vegetation Resilience Estimates Depends on Biomass Density | _Nature Ecology and Evolution_ | [DOI](https://www.nature.com/articles/s41559-023-02194-7)
+T Schmidt, T Kuester, T Smith, and M Bochow | 2023 | Potential of Optical Spaceborne Sensors for the Differentiation of Plastics in the Environment | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15082020)
 T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | Reliability of Resilience Estimation based on Multi-Instrument Time Series | _Earth System Dynamics_ | [DOI](https://doi.org/10.5194/esd-14-173-2023). 
 T Smith and N Boers | Global vegetation resilience linked to water availability and variability | _Nature Communications_ | [DOI](https://doi.org/10.1038/s41467-023-36207-7)
 Bhattacharjee, S., Bookhagen, B., Sinha, R., Wieser, A., Marchhart, O. | 2023 | 26Al and 10 Be concentrations from alluvial drill cores across the Indo-Gangetic plain reveal multimillion-year sediment-transport lag times | _Earth and Planetary Science Letters_ | [DOI](https://doi.org/10.1016/j.epsl.2023.118318)
