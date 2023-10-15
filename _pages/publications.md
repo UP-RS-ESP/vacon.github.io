@@ -16,7 +16,7 @@ Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2023]** | | |
 Stübner, K., Gadoev, M., Rugel, G., Lachner, J., Bookhagen, B. | 2023 | Three Pleistocene glacial advances and a warm episode during MIS-3: Towards a more complete glacial history of the Pamir Mountains, | _Quaternary Science Advances_ | [DOI]()
-Pingel, H., Alonso, R.N. Bookhagen, B., Cottle, J.M., Mulch, A., Rohrmann, A., Strecker, M.R. | Miocene surface uplift and orogenic evolution of the southern Andean Plateau (central Puna), northwestern Argentina | _PNAS_ | [DOI](https://doi.org/10.1073/pnas.2303964120)
+Pingel, H., Alonso, R.N. Bookhagen, B., Cottle, J.M., Mulch, A., Rohrmann, A., Strecker, M.R. | 2023 | Miocene surface uplift and orogenic evolution of the southern Andean Plateau (central Puna), northwestern Argentina | _PNAS_ | [DOI](https://doi.org/10.1073/pnas.2303964120)
 T Smith and N Boers | 2023 | Reliability of Vegetation Resilience Estimates Depends on Biomass Density | _Nature Ecology and Evolution_ | [DOI](https://doi.org/10.1038/s41559-023-02194-7)
 T Schmidt, T Kuester, T Smith, and M Bochow | 2023 | Potential of Optical Spaceborne Sensors for the Differentiation of Plastics in the Environment | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15082020)
 T Smith, R.-M. Zotta, C. A. Boulton, T. M. Lenton, W. Dorigo, and N. Boers | 2023 | Reliability of Resilience Estimation based on Multi-Instrument Time Series | _Earth System Dynamics_ | [DOI](https://doi.org/10.5194/esd-14-173-2023)
