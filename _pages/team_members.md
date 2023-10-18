@@ -44,7 +44,7 @@ PhD_students1:
     excerpt: 'Digital Elevation Models, Satellite Photogrammetry'
     url: 'https://arimue.github.io/'
 PhD_students2:
-  - image_path: /images/rosner.jpg
+  - image_path: /images/AnnaRosner.jpg
     alt: Anna Rosner
     title: Anna Rosner
     excerpt: Cosmogenic Radionuclides
