@@ -75,7 +75,10 @@ MSc_students2:
     alt: Fuad Yagublu
     title: Fuad Yagublu
     excerpt: 'Structure from Motion, Stereo Cameras'
-
+  - image_path: /images/sebastian.jpg
+    alt: Juan Sebastian Valencia Velasquez
+    title: Juan Sebastian Valencia Velasquez
+    excerpt: 'DEM differencing, Andes'
 ---
 
 # Researchers
