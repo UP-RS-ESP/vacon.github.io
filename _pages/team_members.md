@@ -106,6 +106,7 @@ MSc_students3:
 
 {% include feature_row id="MSc_students2" type=center%}
 
+{% include feature_row id="MSc_students3" type=center%}
 
 # Past Members
 - Dr. Carlos Peña (now at University of RU Bochum)
