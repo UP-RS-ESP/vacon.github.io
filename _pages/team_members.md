@@ -70,7 +70,7 @@ MSc_students2:
   - image_path: /images/LuisKremer2.jpg
     alt: Luis Kremer
     title: Luis Kremer
-    excerpt: 'Terrestrial Lidar (TLS) and Point Clouds'
+    excerpt: 'Terrestrial Lidar (TLS) and Point Cloud segmentation'
   - image_path: /images/Yagublu_Fuad_UP2.jpg
     alt: Fuad Yagublu
     title: Fuad Yagublu
@@ -79,6 +79,11 @@ MSc_students2:
     alt: Juan Sebastian Valencia Velasquez
     title: Juan Sebastian Valencia Velasquez
     excerpt: 'DEM differencing, Andes'
+MSc_students3:
+  - image_path: /images/Hersh.jpg
+    alt: David Hersh
+    title: David Hersh
+    excerpt: 'Terrestrial Lidar (TLS) and Vegetation detection'
 ---
 
 # Researchers
