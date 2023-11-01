@@ -85,16 +85,14 @@ For each scanline (Figure 4), a two-step segmentation process was implemented. F
 
 In the second segmentation step, the segments generated in the previous stage underwent further processing based on differences in slope. For each consecutive pair of points within a segment, the slope was calculated. For a number of $n$ points within a segment the slope calculation can be expressed as:
 
-$$
-\[ d_i = \\sqrt{\\left| (x\_{2i} - x\_{1i})^2 \\right| + \\left| (y\_{2i} - y\_{1i})^2 \\right| + \\left| (z\_{2i} - z\_{1i})^2 \\right| }\]
+$$\[ d_i = \\sqrt{\\left| (x\_{2i} - x\_{1i})^2 \\right| + \\left| (y\_{2i} - y\_{1i})^2 \\right| + \\left| (z\_{2i} - z\_{1i})^2 \\right| }\]$$
 
-\[ m\_{\\text{deg}, i} = \\arctan \\left( \\frac{z\_{1i} - z\_{2i}}{d_i} \\right) \]
-$$
+$$\[ m\_{\\text{deg}, i} = \\arctan \\left( \\frac{z\_{1i} - z\_{2i}}{d_i} \\right) \]$$
 where:
 
-- $i$ ranges from 1 to $n$-1
-- $d\_{i}$ is the 3D distance between each of the $n$-1 consecutive point pairs ((x\_{1i}, y\_{1i}, z\_{1i})) and ((x\_{2i}, y\_{2i}, z\_{2i}))
-- (m\_{\\text{deg}, i}) is the slope between each of the n-1 consecutive point pairs in degrees
+- $$i$$ ranges from 1 to $$n-1$$
+- $$d\_{i}$$ is the 3D distance between each of the $$n-1$$ consecutive point pairs $$((x\_{1i}, y\_{1i}, z\_{1i})) and ((x\_{2i}, y\_{2i}, z\_{2i}))$$
+- $$(m\_{\\text{deg}, i})$$ is the slope between each of the $$n-1$$ consecutive point pairs in degrees
 
 Similarly to the previous segmentation stage, for each computed slope value, the difference in slope between successive pairs was calculated. If the difference exceeded a certain slope threshold, the segment was further divided (Figure 6). For this work, a slope threshold of 25 degrees was chosen.
 
