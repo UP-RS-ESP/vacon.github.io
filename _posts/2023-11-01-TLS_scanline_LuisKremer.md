@@ -85,9 +85,12 @@ For each scanline (Figure 4), a two-step segmentation process was implemented. F
 
 In the second segmentation step, the segments generated in the previous stage underwent further processing based on differences in slope. For each consecutive pair of points within a segment, the slope was calculated. For a number of $$n$$ points within a segment the slope calculation can be expressed as:
 
-$$[ d_i = \sqrt{\left| (x_{2i} - x_{1i})^2 \right| + \left| (y_{2i} - y_{1i})^2 \right| + \\left| (z_{2i} - z_{1i})^2 \right| }]$$
+$$d_i = \sqrt{\left| (x_{2i} - x_{1i})^2 \right| + \left| (y_{2i} - y_{1i})^2 \right| + \left| (z_{2i} - z_{1i})^2 \right| }$$
 
-$$[ m_{\text{deg}, i} = \arctan \left( \frac{z_{1i} - z_{2i}}{d_i} \right) ]$$
+and
+
+$$m_{\text{deg}, i} = \arctan \left( \frac{z_{1i} - z_{2i}}{d_i} \right)$$
+
 where:
 
 - $$i$$ ranges from 1 to $$n-1$$
