@@ -21,6 +21,8 @@ tags:
   - random forest
 ---
 
+Dense point clouds generated from Terrestrial Lidar Scanner pose a challenge to classification algorithm because of their large data amounts. Here a scanline segmentation approach for phase-based lidar scanner is presented that will allow to apply common classification algorithms.
+
 # Introduction
 
 3D data acquired from devices like laser scanners are commonly shown as point clouds (PCDs). Classifying point clouds with supervised machine learning algorithms can have two fundamental challenges: 1) the amount of data is large and lead to computationally expensive calculation that may exceed the capabilities of current GPUs; and 2) unlike gridded 2D data (e.g., images or digital elevation models), raw point clouds are irregularly shaped and unstructured, making it challenging to apply conventional 2D machine learning methods (Hu et al., 2020; Su et al., 2018; Thomas et al., 2019).
