@@ -89,12 +89,12 @@ $$d_i = \sqrt{\left| (x_{2i} - x_{1i})^2 \right| + \left| (y_{2i} - y_{1i})^2 \r
 
 and
 
-$$m_{\text{deg}, i} = \arctan \left( \frac{z_{1i} - z_{2i}}{d_i} \right)$$
+$$m_{\text{deg}, i} = \frac{180°}{\pi} \times \arctan \left( \frac{z_{1i} - z_{2i}}{d_i} \right)$$
 
 where:
 
 - $$i$$ ranges from 1 to $$n-1$$
-- $$d_{i}$$ is the 3D distance between each of the $$n-1$$ consecutive point pairs: $$((x_{1i}, y_{1i}, z_{1i}))$$ and $$((x_{2i}, y_{2i}, z_{2i}))$$
+- $$d_{i}$$ is the 3D distance between each of the $$n-1$$ consecutive point pairs: $$(x_{1i}, y_{1i}, z_{1i})$$ and $$(x_{2i}, y_{2i}, z_{2i})$$
 - $$(m_{\text{deg}, i})$$ is the slope between each of the $$n-1$$ consecutive point pairs in degrees
 
 Similarly to the previous segmentation stage, for each computed slope value, the difference in slope between successive pairs was calculated. If the difference exceeded a certain slope threshold, the segment was further divided (Figure 6). For this work, a slope threshold of 25 degrees was chosen.
