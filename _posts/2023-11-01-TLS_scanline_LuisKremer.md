@@ -47,7 +47,7 @@ Ten TLS scans of an oak tree were acquired on the campus of the University of Po
 
 ## Scanline extraction
 
-Point clouds can be described by either using the commonly encountered Cartesian coordinates ($$x$$, $$y$$, $$z$$) or spherical coordinates. In spherical coordinates, a point vector is described by the radial coordinate $$r$$ (distance from the scanner to the point), the vertical angle $$theta$$ (angle with respect to the z-axis) and the horizontal angle $$phi$$ (angle with respect to the x-y axis).
+Point clouds can be described by either using the commonly encountered Cartesian coordinates ($$x$$, $$y$$, $$z$$) or spherical coordinates. In spherical coordinates, a point vector is described by the radial coordinate $$r$$ (distance from the scanner to the point), the vertical angle $$\theta$$ (angle with respect to the z-axis) and the horizontal angle $$\phi$$ (angle with respect to the x-y axis).
 
 A TLS scans the environment in discrete scanlines that are closely spaced (Figure 2b). Points along a scanline have either similar vertical angles (vertical scanline) or similar horizontal angles (horizontal scanline). In this work, we focus on points with similar horizontal angles to extract the scanlines.
 
@@ -69,7 +69,7 @@ Steps are identified by calculating the difference between consecutive points in
 
 ## Scanline segmentation
 
-For each scanline (Figure 4), a two-step segmentation process was implemented. First, the radial distance differences (RDD; x-axis of Figure 4a) of consecutive point pairs were calculated on the sorted and extracted scanline. For example, the differences in $r$ across the scanline are large (Figure 4a) when there is a gap between two groups of points. Whenever the difference exceeded a predetermined threshold, the scanline was divided at that point, creating a new segment (Figure 5). A RDD threshold value of 0.4 m was selected for this work. For the specific scanline shown in Figure 5, the segmentation based on radial distance differences resulted in 21 segments.
+For each scanline (Figure 4), a two-step segmentation process was implemented. First, the radial distance differences (RDD; x-axis of Figure 4a) of consecutive point pairs were calculated on the sorted and extracted scanline. For example, the differences in $$r$$ across the scanline are large (Figure 4a) when there is a gap between two groups of points. Whenever the difference exceeded a predetermined threshold, the scanline was divided at that point, creating a new segment (Figure 5). A RDD threshold value of 0.4 m was selected for this work. For the specific scanline shown in Figure 5, the segmentation based on radial distance differences resulted in 21 segments.
 
 <center>
 <figure>
@@ -120,10 +120,10 @@ During this process, 12 attributes characterizing the segment were calculated an
 - Green
 - Blue
 - Intensity
-- Rho ($r$)
-- Height ($z$)
+- Rho ($$r$$)
+- Height ($$z$$)
 
-Thus, along with the x-y-z coordinates, every centroid was represented by an array in the form of a row with 15 columns (1, 15). With a total of $n$ segments resulting from the segmentation process, the final subsampled point cloud array had the shape ($n$, 15) (Figure 8).
+Thus, along with the x-y-z coordinates, every centroid was represented by an array in the form of a row with 15 columns (1, 15). With a total of $$n$$ segments resulting from the segmentation process, the final subsampled point cloud array had the shape ($$n$$, 15) (Figure 8).
 
 <center>
 <figure>
