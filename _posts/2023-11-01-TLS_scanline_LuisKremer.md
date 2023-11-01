@@ -87,7 +87,7 @@ In the second segmentation step, the segments generated in the previous stage un
 
 $$\[ d_i = \\sqrt{\\left| (x\_{2i} - x\_{1i})^2 \\right| + \\left| (y\_{2i} - y\_{1i})^2 \\right| + \\left| (z\_{2i} - z\_{1i})^2 \\right| }\]$$
 
-$$\[ m\_{\\text{deg}, i} = \\arctan \\left( \\frac{z\_{1i} - z\_{2i}}{d_i} \\right) \]$$
+$$\[ m\_{\\text{deg}, i} = \arctan \left( \frac{z\_{1i} - z\_{2i}}{d_i} \right) \]$$
 where:
 
 - $$i$$ ranges from 1 to $$n-1$$
