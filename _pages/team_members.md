@@ -84,7 +84,7 @@ MSc_students3:
     alt: David Hersh
     title: David Hersh
     excerpt: 'Terrestrial Lidar (TLS) and Vegetation detection'
-  - image_path: /images/Safa_Khan.jepg
+  - image_path: /images/Safa_Khan.jpeg
     alt: Safa Khan
     title: Safa Khan
     excerpt: 'Airborne Lidar data, UAV acquisition, and point-cloud classification'
