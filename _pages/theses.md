@@ -17,11 +17,16 @@ There are several open theses topics that interested students can work on. Pleas
 | *Title* | Department and Degree | Additional information and PDF link (if available) |
 |:----|-------|:---:|:---:|
 | **[2023]** | | |
-| - | |
+| *Point Clouds from multi-camera setup: Application in the Geosciences* | IoG, MSc RSIV |
+| *Identify the animal pathways using a convolutional neural network* | IoG, MSc RSIV |
+| *Use of spaceborne lidar and radar data to analyze the vegetation cover in the Namibian Savannah* | IoG, MSc RSIV |
+| *Flood Mapping Using Synthetic Apterture Radar Data and Deep Learning* | IoG, MSc RSIV |
+| *Potential of Sentinel-1 time series for the assessment of maize and wheat phenology* | IoG, MSc RSIV |
+| *Assessing the capabilities of Sentinel-2 time series for the monitoring of urban tree vitality* | IoG, MSc RSIV |
 | **[2022]** | | |
-| The Application of UAV and Satellite Data to Map Palaeontological Sample Sites | IoG, MSc RSIV |
-| Training Data Sensitivity Analysis for Multispectral LiDAR Data for Land Use/ Land Cover (LULC) Classifications of Varying Complexity | IoG, MSc RSIV |
-|Emission of Greenhouse Gases And Air Pollutants From Forest Fires in Nepal During 2001-2020 | IoG, MSc RSIV |
+| *The Application of UAV and Satellite Data to Map Palaeontological Sample Sites* | IoG, MSc RSIV |
+| *Training Data Sensitivity Analysis for Multispectral LiDAR Data for Land Use/ Land Cover (LULC) Classifications of Varying Complexity* | IoG, MSc RSIV |
+| *Emission of Greenhouse Gases And Air Pollutants From Forest Fires in Nepal During 2001-2020* | IoG, MSc RSIV |
 | **[2021]** | | |
 | *Quantifying landscape-evolution rates across the Argentinean Puna Plateau using geochemical methods* | IoG, MSc Geoscience | |
 | *Slow-moving landslide detection in the western Himalaya using Sentinel-1 radar time series* | IoG, MSc RSIV | |

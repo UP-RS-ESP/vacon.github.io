@@ -26,9 +26,6 @@ researchers2:
     title: Taylor Smith
     excerpt: 'Snow and Vegetation Remote Sensing, Passive Microwaves, Big Data Analytics'
     url: 'https://tasmi.github.io/'
-  - image_path: /images/ManudeoSingh.jpg
-    title: 'Manudeo Singh'
-    excerpt: 'InSAR, Floodplain Evolution, Hydraulic Connectivity, UAV'
 
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
@@ -56,17 +53,10 @@ PhD_students2:
     excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
 
 MSc_students1:
-  - image_path: /images/AnanyaPandey_Pic.jpeg
-    title: Ananya Pandey
-    excerpt: 'Stereophotogrammetry, Structure-from-Motion, Digital Elevation Models'
-  - image_path: /images/DebayanChatterjee_Pic.jpg
-    title: Debayan Chatterjee
-    excerpt: 'UAV Point Clouds, Digital Elevation Models'
   - image_path: /images/boerner.jpg
     alt: Franziska Boerner
     title: Franziska Boerner
     excerpt: 'Spaceborne Lidar, Point Cloud Analysis'
-MSc_students2:
   - image_path: /images/LuisKremer2.jpg
     alt: Luis Kremer
     title: Luis Kremer
@@ -75,11 +65,11 @@ MSc_students2:
     alt: Fuad Yagublu
     title: Fuad Yagublu
     excerpt: 'Structure from Motion, Stereo Cameras'
+MSc_students2:
   - image_path: /images/sebastian.jpg
     alt: Juan Sebastian Valencia Velasquez
     title: Juan Sebastian Valencia Velasquez
     excerpt: 'DEM differencing, Andes'
-MSc_students3:
   - image_path: /images/Hersh.jpg
     alt: David Hersh
     title: David Hersh
@@ -110,9 +100,8 @@ MSc_students3:
 
 {% include feature_row id="MSc_students2" type=center%}
 
-{% include feature_row id="MSc_students3" type=center%}
-
 # Past Members
+- Dr. Manudeo Singh (now Newton fellow at Aberystwyth University, UK)
 - Dr. Carlos Peña (now at University of RU Bochum)
 - Dr. Stefanie Tofelde (now at FU Berlin)
 - Nikolaos Antonoglou (now at German Aerospace Center, DLR)
