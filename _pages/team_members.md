@@ -26,6 +26,12 @@ researchers2:
     title: Taylor Smith
     excerpt: 'Snow and Vegetation Remote Sensing, Passive Microwaves, Big Data Analytics'
     url: 'https://tasmi.github.io/'
+  - image_path: /images/Patyniak.jpg
+    alt: Magda Patyniak
+    title: Magda Patyniak
+    excerpt: 'Paleoseismicity, Tectonic Geomorphology, Cosmogenic Nuclides'
+    url: 'https://www.researchgate.net/profile/Magda-Patyniak'
+
 
 PhD_students1:
   - image_path: /images/sofiaviotto2.jpg
