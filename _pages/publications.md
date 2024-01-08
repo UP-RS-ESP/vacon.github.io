@@ -14,8 +14,11 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
+| | **[2024]** | | |
+T M Lenton, J F Abrams, A Bartsch, S Bathiany, C A Boulton, J E Buxton, A Conversi, A M Cunliffe, S Hebden, T Lavergne, B Poulter, A Shepherd, T Smith, D Swingedouw, R Winkelmann, and N Boers. | 2024 | Remotely sensing potential climate change tipping points across scales | _Nature Communications_ | [DOI](https://doi.org/10.1038/s41467-023-44609-w)
 | | **[2023]** | | |
-Stübner, K., Gadoev, M., Rugel, G., Lachner, J., Bookhagen, B. | 2023 | Three Pleistocene glacial advances and a warm episode during MIS-3: Towards a more complete glacial history of the Pamir Mountains, | _Quaternary Science Advances_ | [DOI]()
+Y Yang, Q You, T Smith, R Kelly, and S Kang | 2023 | Spatiotemporal dipole variations of spring snowmelt over Eurasia | _Atmospheric Research_ | [DOI](https://doi.org/10.1016/j.atmosres.2023.107042)
+Stübner, K., Gadoev, M., Rugel, G., Lachner, J., Bookhagen, B. | 2023 | Three Pleistocene glacial advances and a warm episode during MIS-3: Towards a more complete glacial history of the Pamir Mountains | _Quaternary Science Advances_ | [DOI]()
 Pingel, H., Alonso, R.N., Bookhagen, B., Cottle, J.M., Mulch, A., Rohrmann, A., Strecker, M.R. | 2023 | Miocene surface uplift and orogenic evolution of the southern Andean Plateau (central Puna), northwestern Argentina | _PNAS_ | [DOI](https://doi.org/10.1073/pnas.2303964120)
 T Smith and N Boers | 2023 | Reliability of Vegetation Resilience Estimates Depends on Biomass Density | _Nature Ecology and Evolution_ | [DOI](https://doi.org/10.1038/s41559-023-02194-7)
 T Schmidt, T Kuester, T Smith, and M Bochow | 2023 | Potential of Optical Spaceborne Sensors for the Differentiation of Plastics in the Environment | _Remote Sensing_ | [DOI](https://doi.org/10.3390/rs15082020)
