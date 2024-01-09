@@ -16,6 +16,7 @@ Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2024]** | | |
 T M Lenton, J F Abrams, A Bartsch, S Bathiany, C A Boulton, J E Buxton, A Conversi, A M Cunliffe, S Hebden, T Lavergne, B Poulter, A Shepherd, T Smith, D Swingedouw, R Winkelmann, and N Boers | 2024 | Remotely sensing potential climate change tipping points across scales | _Nature Communications_ | [DOI](https://doi.org/10.1038/s41467-023-44609-w)
+K Geißler, N Blaum, G von Maltitz, T Smith, B Bookhagen, H Wanke, M Hipondoka, E Hamunyelae, D Lohmann, D U Lüdtke, M Mbidzo, M Rauchecker, R Hering, K Irob, B Tietjen, A Marquart, F V Skhosana, T Herkenrath and S Uugulu | 2024 | Biodiversity and Ecosystem Functions in Southern African Savanna Rangelands: Threats, Impacts and Solutions. In: von Maltitz, G.P., et al. Sustainability of Southern African Ecosystems under Global Change. | _Ecological Studies_ | [DOI](https://doi.org/10.1007/978-3-031-10948-5_15)
 | | **[2023]** | | |
 Y Yang, Q You, T Smith, R Kelly, and S Kang | 2023 | Spatiotemporal dipole variations of spring snowmelt over Eurasia | _Atmospheric Research_ | [DOI](https://doi.org/10.1016/j.atmosres.2023.107042)
 K Stübner, M Gadoev, G Rugel, J Lachner, and B Bookhagen | 2023 | Three Pleistocene glacial advances and a warm episode during MIS-3: Towards a more complete glacial history of the Pamir Mountains | _Quaternary Science Advances_ | [DOI]()
