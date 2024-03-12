@@ -58,23 +58,23 @@ The work is divided into two sections. The first section discusses the basic ste
 
 A high-resolution DEM can be generated using ASP by analyzing stereo images taken from different viewpoints. These images captured from slightly different angles help to create depth perception and reconstruct the spatial structure of the observed terrain. ASP provides a range of stereo-matching algorithms and predefined parameters designed for creating a DEM. Some of the tools that ASP offers for DEM generation are described below.
 
-- Bundle Adjustment
+### Bundle Adjustment
 
   Error in satellite position and orientation can affect the accuracy of a DEM created using ASP. These errors can be corrected using a pre-processing step called bundle adjustment. Bundle adjustment helps 
   minimize the error between the estimated pixel locations of 3D objects and their actual positions in the captured images -  ensuring consistency among observations of a single ground feature across multiple 
   images.
   
-- Stereo Correlation
+### Stereo Correlation
 
   Correlation is the most important process within ASP. Stereo correlation matches the neighborhood of each pixel in the left image to a similar neighborhood in the right image. It works on a pair of overlapping 
   stereo images from corresponding cameras and creates a point cloud that can be converted to a DEM.
 
-- Point Cloud Alignment
+### Point Cloud Alignment
 
   An existing ground truth, such as a DEM, can be used to rectify imperfectly calibrated camera intrinsic parameters. This significantly reduces distortions in the resulting DEMs which closely align with the 
   ground truth. This work uses Copernicus 30m DEM for point cloud alignment. The resultant transformation matrix can also be used as a part of the bundle adjustment step for robust spatial coherence. 
 
-- Map-projection
+### Map-projection
 
   The stereo correlation process can fail if the two images are very different – if the cameras have very different perspectives, the terrain has very steep portions. This results in large disparity values and 
   3D terrains with noise or missing values. ASP deals with this issue with the implantation of map-projection – the left and the right images can be projected onto a low-resolution smooth terrain without holes. 
@@ -131,7 +131,7 @@ The following parameters have been explored to compare DEM quality:
   (iii) *More-Global Matching* Algorithm (MGM): The MGM algorithm is similar to the SGM algorithm with a few extra operations per pixel. It gives higher-quality results by removing the streaking artifacts of 
          SGM. MGM produces qualitatively and quantitatively denser results than SGM with little computation overhead (Facciolo et al., 2015). 
    
-- Using Map-projected images vs Using Original Images
+### Using Map-projected images vs Using Original Images
 
 - Different Image Pairs
   
@@ -155,7 +155,7 @@ The following parameters have been explored to compare DEM quality:
 
 ## Choice of Stereo-matching Algorithms
 
--  Hillshade of the DEMs Overlain by Elevation Values
+###  Hillshade of the DEMs Overlain by Elevation Values
 
    In Figure 3, the MGM DEM (C) has the least holes, and the BM DEM (A) has the most holes. On a closer inspection (zooming in on the DEMs), it can also be seen that the MGM and the SGM DEMs are smoother when 
    compared to the BM DEM. Overall, the MGM DEM produces the least number of artifacts.
@@ -167,7 +167,7 @@ The following parameters have been explored to compare DEM quality:
    </center>
   
 
--  Intersection Errors of the DEMs
+###  Intersection Errors of the DEMs
 
    The intersection error plot, which is used in this study as a relative measurement of the accuracy of a DEM, also reveals lower overall intersection errors for the SGM and the MGM DEM (which are comparable), 
    and higher intersection error for the BM DEM.
@@ -180,7 +180,7 @@ The following parameters have been explored to compare DEM quality:
    </figure>
    </center>
   
--  A Zoomed-in Perspective
+###  A Zoomed-in Perspective
 
    The most jagged portion of the anticline is selected to look at the performance of the different stereo-matching algorithms in more difficult terrain scenarios.
 
@@ -214,7 +214,7 @@ The following parameters have been explored to compare DEM quality:
 
 ## Map-projecting the Original Images 
 
-- Intersection Error of the DEMs
+### Intersection Error of the DEMs
 
   The DEM created using map-projected images has a lower overall intersection error than the one created using original images.
 
@@ -225,7 +225,7 @@ The following parameters have been explored to compare DEM quality:
   </figure>
   </center>
 
-- Hillshade and Intersection Error Map of a Zoomed-in Area of the Anticline
+### Hillshade and Intersection Error Map of a Zoomed-in Area of the Anticline
 
   The hillshade of the DEM created using map-projected images has fewer artifacts and is relatively smoother.
 
@@ -239,7 +239,7 @@ The following parameters have been explored to compare DEM quality:
 
 ## Choice of Image Pairs 
 
-- Intersection Error of the DEMs
+### Intersection Error of the DEMs
 
   The intersection error of the DEM created using the oblique image pair, AC, is the highest. However, it appears that for this image pair, there are larger intersection errors in the very jagged portions which 
   might have contributed to the overall higher intersection errors (see below for intersection error maps). The other not-so-jagged portions (which constitute a larger area than a few jagged belts) have lower 
@@ -265,7 +265,7 @@ The following parameters have been explored to compare DEM quality:
   </center>
   
 
-- Hillshade and Intersection Error Map of Areas with Gentler Slopes
+### Hillshade and Intersection Error Map of Areas with Gentler Slopes
 
   The areas that do not have very steep slopes are resolved better using oblique images A and C. The hillshade is smoother.
 
@@ -278,7 +278,7 @@ The following parameters have been explored to compare DEM quality:
 
 ## Choice of Correlation Kernel and Sub-pixel Kernel Size 
 
-- Intersection Error of the DEMs
+### Intersection Error of the DEMs
 
   The subpixel kernel sets the correlation kernel size in units of pixels. The intersection error of the DEM created using a correlation kernel size of 9, and a sub-pixel kernel size of 21 is the lowest.
 
@@ -290,7 +290,7 @@ The following parameters have been explored to compare DEM quality:
   </center>
   
 
-- Hillshade and Intersection Error Map of a Zoomed-in Area of the Anticline
+### Hillshade and Intersection Error Map of a Zoomed-in Area of the Anticline
 
   Based on a visual inspection, the DEM created using a kernel size 21x21 is the smoothest.
 
@@ -382,11 +382,4 @@ Hirschmüller, H. (2008). Stereo processing by semiglobal matching and mutual in
 Shean, D. E., Joughin, I. R., Dutrieux, P., Smith, B. E., and Berthier, E. (2019). Ice shelf basal melt rates from a high-resolution digital elevation model (dem) record for Pine Island Glacier, Antarctica. The Cryosphere, 13(10):2633–2656.
 
 Strecker, M. R., Hilley, G. E., Bookhagen, B., & Sobel, E. R. (2012). Structural, geomorphic, and depositional characteristics of contiguous and broken foreland basins: Examples from the eastern flanks of the Central Andes in Bolivia and NW Argentina. Tectonics of Sedimentary Basins, edited, pp. 508–521.
-
-
-
-
-
-
-
 
