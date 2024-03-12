@@ -22,11 +22,14 @@ tags:
 ---
 On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwestern Colombia. This work investigates landslide velocities and spatial patterns of deformation through repeated UAV flights.  
 
+
+# Introduction
+
 Landslides are natural disasters that can have devastating impacts on human communities and infrastructure. Similar to other natural hazards, their severity can increase due to cascading effects and can be exacerbated by recent global climate changes. Moreover, larger landslides can result in diverse forms of damage and casualties. To address these challenges, advanced technologies such as UAV-based photogrammetry and lidar are used to rapidly and cost-efficiently assess large landslides. However, the precise georeferencing, co-registration, and alignment of UAV surveys collected from different devices with varying resolutions, flight conditions and flight heights as well as varying areal coverage present significant challenges for data analysis. To tackle these challenges, this work explores different methods to ensure accuracy in the pre-processing of this type of data.
 
 *This internship was supervised by Prof. Dr. Bodo Bookhagen.*
 
-# Introduction
+# The Rosas-Cauco Landslide
 
 On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwestern Colombia (refer to @fig-sarea). This event caused extensive damage to the communities of La Soledad, Santa Clara, Párraga Viejo, and Chontaduro, resulting in the destruction of at least 150 homes and a significant portion of the Pan-American highway, which connects southern Colombia to the rest of the country. Inhabitants of the region reported their initial observations of instability on January 4th when they noticed small cracks with lengths ranging from 20 cm to 30 cm forming in the crown area near the Alfonso Córdoba school. However, it was not until the period between the afternoon of January 9th and the morning of January 10th that the landslide's progression became starkly evident, leaving distinct markings on both the crown and flanks of the movement. Following this significant event, the landslide exhibited continuous and substantial activity until January 18th. By January 10th, the area affected by the mass movement had expanded to 64.72 hectares, and it further increased to 87.16 hectares by January 13th, ultimately reaching 89.12 hectares by January 18th.
 
