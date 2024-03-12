@@ -20,6 +20,7 @@ tags:
   - point cloud registration
   - ICP
 ---
+
 On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwestern Colombia. This work investigates landslide velocities and spatial patterns of deformation through repeated UAV flights.  
 
 
@@ -50,7 +51,7 @@ The study area is situated within the western range of the Colombian Andes, a re
 
 As depicted in Figure @fig-sarea, the area has a historical record of being affected by landslides of varying magnitudes. However, the Rosas landslide, which is the focal point of our study, stands out as the largest landslide identified in the surrounding region since 1990.
 
-**Geological setting**
+## Geological setting
 
 The geological setting of the study area is profoundly influenced by its location within the Northern Andes, where the convergence of three tectonic plates—the Nazca, Caribbean, and South American plates—gives rise to active N-NE faulting within the Andean block. This convergence, with the Nazca plate moving eastward relative to northwestern South America at a rate of 6 cm/yr, leads to the formation of the Colombia-Trench to the west and the mountain range of the Colombian Andes @pulido2003seismotectonics. Within the Colombian Andes, three distinct mountain ranges—the Western, Central, and Eastern Cordillera—converge southward into a unified range, shaped by deformation and faulting resulting from the interaction of these tectonic plates @taboada2000geodynamics. The study area, encompassing the upper Patía River basin, is situated at the southern Colombian Andes' convergence point between the Western and Central Cordilleras. Here, the Western Cordillera rises dramatically from the Pacific Coastal Plain on its western flank, while to the east, it is separated from the Central Cordillera by the Cauca-Patia valleys spanning a distance of approximately 500 km. The Cauca-Patia valley, resembling a graben-like structure, is characterized by an asymmetric tilt and is filled with Tertiary-Quaternary continental clastics and volcanics. Bounded by the Cauca fault zone to the west and the Romeral fault zone to the east, this depression effectively separates the oceanic Western Cordillera from the ancient crystalline Central Cordillera (@fig-geomap).
 
@@ -137,7 +138,7 @@ In this study we adopted the workflow implemented in Agisoft Metashape, describe
 
 Sixteen distinct chunks were produced by importing photographs from selected flights (refer to Table @tbl-chunks), of which five met key selection criteria: a sufficient quantity of photographs, high image quality characterized by proper exposure and sharpness, and extensive coverage of the landslide area. This careful selection was necessary as some flights were tasked with monitoring more restricted sectors of the mass movement, targeting specific areas such as the crown or the Pan-American Highway. For comprehensive area coverage and improved model resolution during that timeframe, photographs from January 18th and 19th were merged in one single chunk.
 
- table
+
 | Chunks       | Cameras | Points    | Markers    | Processed |
 |--------------|---------|-----------|------------|-----------|
 | 1/14/2023    | 1491    | 880,613   | 19 markers | X         |
@@ -157,7 +158,7 @@ Sixteen distinct chunks were produced by importing photographs from selected fli
 | 3/30/2023    | 328     | 327,605   |            |           |
 | 5/18/2023    | 333     | 243,261   |            |           |
 
-: Point clouds generated in *Agisoft* {#tbl-chunks}
+*Point clouds generated in *Agisoft* {#tbl-chunks}*
 
 
 ## Photos alignment and filtering
@@ -196,14 +197,14 @@ Following the download of raw data from the Trimble receiver, the post-processin
 
 As depicted in @fig-gnssgraf, both the resulting horizontal and vertical standard deviations are below 0.656 meters, with mean values of 0.26 and 0.14 meters, respectively. Achieving accuracy at the centimeter level indicates favorable results. However, a metric of quality provided by Grafnav offers additional insight. This metric assigns values as follows:
 
--   Quality 1: Represents a fixed integer solution with excellent satellite geometry.
--   Quality 2-3: Indicates either fixed integers with marginal geometry or converging float solutions.
--   Quality 4-5: Suggests qualities akin to those of DGPS.
--   Quality 6: Represents a coarse acquisition (C/A) only solution.
+  -   Quality 1: Represents a fixed integer solution with excellent satellite geometry.
+  -   Quality 2-3: Indicates either fixed integers with marginal geometry or converging float solutions.
+  -   Quality 4-5: Suggests qualities akin to those of DGPS.
+  -   Quality 6: Represents a coarse acquisition (C/A) only solution.
 
 The majority of solutions fall within the quality range of 2-3, with one solution (marker 1) exhibiting a very good quality of 1 and another (marker 10) displaying a poor quality of 6. All solutions showed satisfactory results and were subsequently utilized in the following step, which involvs the precise alignment of point clouds based on markers.
 
- table
+
 | **Date**  | GPSTime | **Easting** | **Northing** | **H-Ell** | **H-MSL** | **Q** | SDHoriz | **SDHeigh (m)** | **Marker** |
 |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | 8/09/2023 | 32:23.0 | 302995,460  | 248590,161   | 1514963   | 1486998   | 1     | 0,016   | 0,028           | 1          |
@@ -228,7 +229,7 @@ The majority of solutions fall within the quality range of 2-3, with one solutio
 | 8/11/2023 | 30:58.0 | 301364,741  | 246498,245   | 1300102   | 1272211   | 4     | 0,364   | 0,259           | 20         |
 | 8/11/2023 | 34:20.0 | 301586,893  | 247430,776   | 1319567   | 1291696   | 5     | 0,604   | 0,323           | 27         |
 
-: GNSS data corrected in Grafnav {#tbl-gnss}
+*GNSS data corrected in Grafnav {#tbl-gnss}*
 
 
 ## Chunk alignment
@@ -305,7 +306,7 @@ In @tbl-distance, a comprehensive overview of the effectiveness of various regis
 | After global alaignment |       145.26       |             3.75            |
 |        After ICP        |          -         |             2.41            |
 
-: Hausdorff and Modified Hausdorff distance calculated throughout the registration process {#tbl-distance}
+*Hausdorff and Modified Hausdorff distance calculated throughout the registration process {#tbl-distance}*
 
 
 # Key project insights
