@@ -1,5 +1,15 @@
 # /_data/authors.yml
 
+Ananya Pandey:
+  name        : "Ananya Pandey"
+  bio         : "MSc Student"
+  location    : "University of Potsdam"
+  avatar      : "/images/AnanyaPandey_Pic.jpeg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:ananya.pandey@uni-potsdam.Pandey"
+
 Daniel Lusk:
   name        : "Daniel Lusk"
   bio         : "MSc Student"
