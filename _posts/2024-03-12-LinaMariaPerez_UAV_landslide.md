@@ -1,17 +1,16 @@
 ---
 page-layout: full
-title-block-banner: 19-02-PC.png
-title: '[Structure from Motion Application for Landslide Characterization and Monitoring]{style="color:black;"}'
-subtitle: 'The 2023 Rosas Landslide Case Study, Cauca Colombia'
+title: 'Structure from Motion Application for Landslide Characterization and Monitoring'
 author: "Lina Pérez"
+toc_label: 'Structure from Motion Application for Landslide Characterization and Monitoring'
 author_profile: true
-date: 2024-03-01
+date: 2024-03-12
 toc: true
 toc_sticky: true
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezTLS_scanline_LuisKremer/00_cover_img.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezi/19-02-PC.png
   overlay_filter: 0.3
-  caption: "Segmented and subsampled point clouds representing an oak tree on the campus of the University of Potsdam"
+  caption: 'The 2023 Rosas Landslide Case Study, Cauca Colombia'
 fig-cap-location: bottom
 read_time: false
 tags:
