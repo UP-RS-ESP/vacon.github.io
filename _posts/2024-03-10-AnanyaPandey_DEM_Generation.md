@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Generation of high-resolution digital topography of a rugged anticline using SPOT-6 satellite images and the NASA Ames Stereo Pipeline"
 header:
-  overlay_image:
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/AnanyaPandey_figs/Figure_3.png 
   overlay_filter: 0.3
   caption: "Rugged Anticline in the arid intermontane Calchaquí Valley, Eastern Cordillera, NW Argentina"
 read_time: false
