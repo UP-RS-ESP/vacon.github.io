@@ -1,22 +1,22 @@
 ---
-title: "Structure from Motion Application for Landslide Characterization and Monitoring"
-author: "Lina Pérez"
-toc_label: "Structure from Motion Application for Landslide Characterization and Monitoring"
+title: 'Structure from Motion Application for Landslide Characterization and Monitoring'
+author: "Lina Perez"
 author_profile: true
-date: 2024-03-12
+date: 2024-03-11
 toc: true
 toc_sticky: true
+toc_label: "Generation of high-resolution digital topography of a rugged anticline using SPOT-6 satellite images and the NASA Ames Stereo Pipeline"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/19-02-PC.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/AnanyaPandey_figs/Figure_3.png 
   overlay_filter: 0.3
-  caption: "The 2023 Rosas Landslide Case Study, Cauca Colombia"
+  caption: "Rugged Anticline in the arid intermontane Calchaquí Valley, Eastern Cordillera, NW Argentina"
 read_time: false
 tags:
-  - UAV
-  - landslides
-  - point cloud 
-  - point cloud registration
-  - ICP
+  - digital topography
+  - SPOT-6
+  - stereophotogrammetry
+  - NASA Ames Stereo Pipeline
+  - Calchaquí Valley
 ---
 
 On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwestern Colombia. This work investigates landslide velocities and spatial patterns of deformation through repeated UAV flights.
@@ -119,7 +119,7 @@ Furthermore, noteworthy is the close proximity of the landslide's crown to the '
 
 <center>
 <figure>
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezgeolandslide.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/geolandslide.png"/></a>
 <figcaption>Figure 7: Geological surface units and main fault in the landslide site. Sourced from SGC (2020)</figcaption>
 </figure>
 </center>
@@ -132,7 +132,7 @@ An important observation to highlight is that within the last 20 years of record
 
 <center>
 <figure>
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezmonthlyPre.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/monthlyPre.png"/></a>
 <figcaption>Figure 8: Visualization of total monthly rainfall at the Parraga meteorological station spanning the past 20 years. Blue bars represent months with rainfall above the mean, while green bars denote months with precipitation below the mean.</figcaption>
 </figure>
 </center>
@@ -141,7 +141,7 @@ In the other hand, the daily time series recorded at the Párraga station exhibi
 
 <center>
 <figure>
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezDailyRainfall.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/DailyRainfall.png"/></a>
 <figcaption>Figure 9: Total daily and accumulated rainfall at the Parraga meteorological station.</figcaption>
 </figure>
 </center>
@@ -194,7 +194,7 @@ In each chunk, the photographs underwent an alignment process with the accuracy 
 
 <center>
 <figure>
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezcovariance.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/covariance.png"/></a>
 <figcaption>Figure 10: Tie point covariances obtained after filtering</figcaption>
 </figure>
 </center>
@@ -205,7 +205,7 @@ For all chosen chunks, a dense 3D point cloud was constructed employing high-qua
 
 <center>
 <figure>
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezdenseall.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/denseall.png"/></a>
 <figcaption>Figure 11: Dense point cloud generated for 14/01/2023 survey</figcaption>
 </figure>
 </center>
@@ -361,7 +361,7 @@ In Table 3, a comprehensive overview of the effectiveness of various registratio
 
 # References
 
-Agisoft. (2023). Metashape professional 2.0 user manual. Retrieved from [https://www.agisoft.com/pdf/metashape-pro\\\_2\\\_0\\\_en.pdf](https://www.agisoft.com/pdf/metashape-pro_2_0_en.pdf){.uri}
+Agisoft. (2023). Metashape professional 2.0 user manual. Retrieved from [https://www.agisoft.com/pdf/metashape-pro\\\_2\\\_0\\\_en.pdf](https://www.agisoft.com/pdf/metashape-pro_2_0_en.pdf)
 
 Besl, P. J., & McKay, N. D. (1992). Method for registration of 3-d shapes. Sensor Fusion IV: Control Paradigms and Data Structures, 1611, 586–606.
 
