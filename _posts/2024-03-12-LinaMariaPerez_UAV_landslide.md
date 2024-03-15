@@ -357,7 +357,7 @@ In Table 3, a comprehensive overview of the effectiveness of various registratio
 
 # References
 
-Agisoft. (2023). Metashape professional 2.0 user manual. Retrieved from [https://www.agisoft.com/pdf/metashape-pro\\\_2\\\_0\\\_en.pdf](https://www.agisoft.com/pdf/metashape-pro_2_0_en.pdf)
+Agisoft. (2023). Metashape professional 2.0 user manual. Retrieved from [https://www.agisoft.com/pdf/metashape-pro\\_2\\_0\\_en.pdf](https://www.agisoft.com/pdf/metashape-pro_2_0_en.pdf)
 
 Besl, P. J., & McKay, N. D. (1992). Method for registration of 3-d shapes. Sensor Fusion IV: Control Paradigms and Data Structures, 1611, 586–606.
 
