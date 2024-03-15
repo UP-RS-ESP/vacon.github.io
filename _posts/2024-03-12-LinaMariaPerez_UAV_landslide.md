@@ -56,7 +56,7 @@ The geological setting of the study area is profoundly influenced by its locatio
 <center>
 <figure>
 <a href="UAV_landslide_figs_PerezGELOGY.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/GELOGY.jpg"/></a>
-<figcaption>Figure 2: Geological map of the study area. Sourced from @sgc2020</figcaption>
+<figcaption>Figure 2: Geological map of the study area. Sourced from SGC (2020). </figcaption>
 </figure>
 </center>
 
@@ -68,7 +68,7 @@ The Rosas mass movement, situated within the micro-basin of Chontaduro creek, is
 <center>
 <figure>
 <a href="UAV_landslide_figs_Perezlandslide1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/landslide1.png"/></a>
-<figcaption>Figure 3: Panoramic view of Rosas landslide. Sourced from SGC (2023)</figcaption>
+<figcaption>Figure 3: Panoramic view of Rosas landslide. Sourced from SGC (2023).</figcaption>
 </figure>
 </center>
 
@@ -91,7 +91,7 @@ In the microbasin of Chontaduro creek, a geological sequence unfolds, comprising
 <center>
 <figure>
 <a href="UAV_landslide_figs_PerezSlide4.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/Slide4.jpg"/></a>
-<figcaption>Figure 5: Lithological sequence and unit details observed at the crown of the landslide</figcaption>
+<figcaption>Figure 5: Lithological sequence and unit details observed at the crown of the landslide.</figcaption>
 </figure>
 </center>
 
@@ -116,7 +116,7 @@ Furthermore, noteworthy is the close proximity of the landslide's crown to the '
 <center>
 <figure>
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/geolandslide.png"/></a>
-<figcaption>Figure 7: Geological surface units and main fault in the landslide site. Sourced from SGC (2020)</figcaption>
+<figcaption>Figure 7: Geological surface units and main fault in the landslide site. Sourced from SGC (2020).</figcaption>
 </figure>
 </center>
 
@@ -182,7 +182,7 @@ Sixteen distinct chunks were produced by importing photographs from selected fli
 | 3/30/2023    | 328     | 327,605   |            |           |
 | 5/18/2023    | 333     | 243,261   |            |           |
 
-*Table 1: Point clouds generated in Agisoft*
+*Table 1: Point clouds generated in Agisoft.*
 
 ## Photos alignment and filtering
 
@@ -191,7 +191,7 @@ In each chunk, the photographs underwent an alignment process with the accuracy 
 <center>
 <figure>
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/covariance.png"/></a>
-<figcaption>Figure 10: Tie point covariances obtained after filtering</figcaption>
+<figcaption>Figure 10: Tie point covariances obtained after filtering.</figcaption>
 </figure>
 </center>
 
@@ -266,7 +266,7 @@ The majority of solutions fall within the quality range of 2-3, with one solutio
 | 8/11/2023 | 30:58.0 | 301364,741  | 246498,245   | 1300102   | 1272211   | 4     | 0,364   | 0,259           | 20         |
 | 8/11/2023 | 34:20.0 | 301586,893  | 247430,776   | 1319567   | 1291696   | 5     | 0,604   | 0,323           | 27         |
 
-*Table 2: GNSS data corrected in Grafnav*
+*Table 2: GNSS data corrected in Grafnav.*
 
 ## Chunk alignment
 
@@ -343,8 +343,8 @@ In Table 3, a comprehensive overview of the effectiveness of various registratio
 
 |                         | Hausdorff Distance | Modified Hausdorff Distance |
 |-------------------------|:------------------:|:---------------------------:|
-| Before globar alignment |       154.51       |         3.312067224         |
-| After global alaignment |       145.26       |            3.75             |
+| Before global alignment |       154.51       |         3.312067224         |
+| After global alignment  |       145.26       |            3.75             |
 | After ICP               |         \-         |            2.41             |
 
 *Table 3: Hausdorff and Modified Hausdorff distance calculated throughout the registration process*
