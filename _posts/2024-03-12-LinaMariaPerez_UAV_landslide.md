@@ -7,6 +7,10 @@ toc: true
 toc_sticky: true
 toc_label: "Structure from Motion Application for Landslide Characterization and Monitoring"
 read_time: false
+header:
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/19-02-PC.jpg
+  overlay_filter: 0.3
+  caption: "The 2023 Rosas Landslide Case Study, Cauca Colombia"
 tags:
   - UAV
   - landslides
