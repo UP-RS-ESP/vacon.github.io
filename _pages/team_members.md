@@ -59,10 +59,11 @@ PhD_students2:
     excerpt: 'Point Clouds Classification, Complex Networks, Spatial Analysis'
 
 MSc_students1:
-  - image_path: /images/boerner.jpg
-    alt: Franziska Boerner
-    title: Franziska Boerner
-    excerpt: 'Spaceborne Lidar, Point Cloud Analysis'
+  - image_path: /images/LinaMariaPerez2.jpg
+    alt: Lina Maria Peréz
+    title: Lina Maria Peréz
+    excerpt: 'UAV, Landslide mapping, point clouds'
+    url: 'https://linmaria.github.io/LintheMoment/projects/'
   - image_path: /images/LuisKremer2.jpg
     alt: Luis Kremer
     title: Luis Kremer
@@ -128,3 +129,4 @@ MSc_students2:
 # Past MSc Students
 - Samuel Russell
 - Bashini Mahaarachchi
+- Franziska Boerner
