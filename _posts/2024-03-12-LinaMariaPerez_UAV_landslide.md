@@ -1,16 +1,16 @@
 ---
 page-layout: full
-title: 'Structure from Motion Application for Landslide Characterization and Monitoring'
+title: "Structure from Motion Application for Landslide Characterization and Monitoring"
 author: "Lina Pérez"
-toc_label: 'Structure from Motion Application for Landslide Characterization and Monitoring'
+toc_label: "Structure from Motion Application for Landslide Characterization and Monitoring"
 author_profile: true
 date: 2024-03-12
 toc: true
 toc_sticky: true
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezi/19-02-PC.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perez/19-02-PC.png
   overlay_filter: 0.3
-  caption: 'The 2023 Rosas Landslide Case Study, Cauca Colombia'
+  caption: "The 2023 Rosas Landslide Case Study, Cauca Colombia"
 fig-cap-location: bottom
 read_time: false
 tags:
@@ -23,11 +23,13 @@ tags:
 
 On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwestern Colombia. This work investigates landslide velocities and spatial patterns of deformation through repeated UAV flights.
 
+
 # Introduction
 
 Landslides are natural disasters that can have devastating impacts on human communities and infrastructure. Similar to other natural hazards, their severity can increase due to cascading effects and can be exacerbated by recent global climate changes. Moreover, larger landslides can result in diverse forms of damage and casualties. To address these challenges, advanced technologies such as UAV-based photogrammetry and lidar are used to rapidly and cost-efficiently assess large landslides. However, the precise georeferencing, co-registration, and alignment of UAV surveys collected from different devices with varying resolutions, flight conditions and flight heights as well as varying areal coverage present significant challenges for data analysis. To tackle these challenges, this work explores different methods to ensure accuracy in the pre-processing of this type of data.
 
 *This internship was supervised by Prof. Dr. Bodo Bookhagen.*
+
 
 # The Rosas-Cauco Landslide
 
@@ -42,15 +44,10 @@ Furthermore, recent advances in photogrammetric image processing and computer vi
 The Rosas landslide occurred in the rural district of La Soledad, located within the municipality of Rosas-Cauca, situated in the southwestern region of Colombia. This region lies within the Patía Valley intercordilleran depression, nestled between the Western Cordillera and the Central Cordillera of Colombia. The primary drainage network affected is that of the Chontaduro creek, a tributary of the Esmita River, which is part of the upper Patía River basin (refer to Figure 1).
 
 <center>
-
 <figure>
-
-<a href="UAV_landslide_figs_PerezRosasStudArea.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezRosasStudArea.jpg"/></a>
-
+<a href="UAV_landslide_figs_PerezRosasStudArea.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezRosasStudArea.jpg"/></a>
 <figcaption>Figure 1: Shaded relief map of study area, showing major rivers, towns and a multi-temporal landslide inventory, sourced from SGC (2020)</figcaption>
-
 </figure>
-
 </center>
 
 The study area is situated within the western range of the Colombian Andes, a region characterized by its susceptibility to landslides. This vulnerability arises from a combination of factors including steep terrain, adverse weather conditions, and the presence of soils derived from volcanic deposits originating from the Sotará volcanic complex. A comprehensive study conducted by the Geological Survey of Colombia-SGC (SGC, 2020), examined the development and distribution of landslide in the region. Their investigation identified a total of 273 landslide events occurring within the municipality of Rosas during the period spanning from 1990 to 2019. Of these occurrences, five were deemed severe, leading to tragic casualties, substantial economic losses, and considerable damage to critical infrastructure.
@@ -65,7 +62,7 @@ The geological setting of the study area is profoundly influenced by its locatio
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezGELOGY.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezGELOGY.jpg"/></a>
+<a href="UAV_landslide_figs_PerezGELOGY.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezGELOGY.jpg"/></a>
 
 <figcaption>Figure 2: Geological map of the study area. Sourced from @sgc2020</figcaption>
 
@@ -81,7 +78,7 @@ The Rosas mass movement, situated within the micro-basin of Chontaduro creek, is
 
 <figure>
 
-<a href="UAV_landslide_figs_Perezlandslide1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezlandslide1.png"/></a>
+<a href="UAV_landslide_figs_Perezlandslide1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezlandslide1.png"/></a>
 
 <figcaption>Figure 3: Panoramic view of Rosas landslide. Sourced from SGC (2023)</figcaption>
 
@@ -95,7 +92,7 @@ The landslide displays distinct patterns of movement and failure mechanisms acro
 
 <figure>
 
-<a href="UAV_landslide_figs_Perezlandslide-detail.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezlandslide-detail.jpg"/></a>
+<a href="UAV_landslide_figs_Perezlandslide-detail.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezlandslide-detail.jpg"/></a>
 
 <figcaption>Figure 4: Identifiable characteristics across the crown, body, and toe of the landslide: 1) A curved concave rupture surface creating a scarp measuring up to 20 meters in height. 2) Presence of tilted blocks, subsidence, and formation of cracks. 3) Occurrence of translational slides and debris flows.</figcaption>
 
@@ -113,7 +110,7 @@ In the microbasin of Chontaduro creek, a geological sequence unfolds, comprising
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezSlide4.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezSlide4.jpg"/></a>
+<a href="UAV_landslide_figs_PerezSlide4.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezSlide4.jpg"/></a>
 
 <figcaption>Figure 5: Lithological sequence and unit details observed at the crown of the landslide</figcaption>
 
@@ -132,7 +129,7 @@ The scarp of the crown provided a clear view of the sequential arrangement of ma
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezSlide3.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezSlide3.jpg"/></a>
+<a href="UAV_landslide_figs_PerezSlide3.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezSlide3.jpg"/></a>
 
 <figcaption>Figure 6: Panoramic view of landslide crown scarp. Blue dashed line depicting the water horizon</figcaption>
 
@@ -148,7 +145,7 @@ Furthermore, noteworthy is the close proximity of the landslide's crown to the '
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"/></a>
 
 <figcaption>Figure 7: Geological surface units and main fault in the landslide site. Sourced from SGC (2020)</figcaption>
 
@@ -166,7 +163,7 @@ An important observation to highlight is that within the last 20 years of record
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"/></a>
 
 <figcaption>Figure 8: Visualization of total monthly rainfall at the Parraga meteorological station spanning the past 20 years. Blue bars represent months with rainfall above the mean, while green bars denote months with precipitation below the mean.</figcaption>
 
@@ -180,7 +177,7 @@ In the other hand, the daily time series recorded at the Párraga station exhibi
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"/></a>
 
 <figcaption>Figure 9: Total daily and accumulated rainfall at the Parraga meteorological station.</figcaption>
 
@@ -237,7 +234,7 @@ In each chunk, the photographs underwent an alignment process with the accuracy 
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"/></a>
 
 <figcaption>Figure 10: Tie point covariances obtained after filtering</figcaption>
 
@@ -253,7 +250,7 @@ For all chosen chunks, a dense 3D point cloud was constructed employing high-qua
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"/></a>
+<a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"/></a>
 
 <figcaption>Figure 11: Dense point cloud generated for 14/01/2023 survey</figcaption>
 
@@ -269,7 +266,7 @@ To accurately reference the point clouds, a series of natural markers were estab
 
 <figure>
 
-<a href="UAV_landslide_figs_Perezmarker12.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezmarker12.png"/></a>
+<a href="UAV_landslide_figs_Perezmarker12.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezmarker12.png"/></a>
 
 <figcaption>Figure 12: Example of a marker defined</figcaption>
 
@@ -281,7 +278,7 @@ To accurately reference the point clouds, a series of natural markers were estab
 
 <figure>
 
-<a href="UAV_landslide_figs_Perezmarkers.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezmarkers.png"/></a>
+<a href="UAV_landslide_figs_Perezmarkers.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezmarkers.png"/></a>
 
 <figcaption>Figure 13: Markers defined. Green points represent the markers defined and recorded during field work</figcaption>
 
@@ -295,7 +292,7 @@ Following the download of raw data from the Trimble receiver, the post-processin
 
 <figure>
 
-<a href="UAV_landslide_figs_PerezGNSS_grafnav.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_PerezGNSS_grafnav.png"/></a>
+<a href="UAV_landslide_figs_PerezGNSS_grafnav.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezGNSS_grafnav.png"/></a>
 
 <figcaption>Figure 14: Points depict the resulting standard deviation for horizontal and height measurements, while bars illustrate a quality metric established by GrafNav.</figcaption>
 
@@ -358,7 +355,7 @@ Subsequently, pre-registration steps were performed on these stable area point c
 
 <figure>
 
-<a href="UAV_landslide_figs_Perezinitialdistance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezinitialdistance.png"/></a>
+<a href="UAV_landslide_figs_Perezinitialdistance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezinitialdistance.png"/></a>
 
 <figcaption>Figure 15: Nearest neighbor distances between both point clouds.</figcaption>
 
@@ -378,7 +375,7 @@ In essence, these refined alignment techniques enable the accurate registration 
 
 <figure>
 
-<a href="UAV_landslide_figs_Perezglobalregistration.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezglobalregistration.png"/></a>
+<a href="UAV_landslide_figs_Perezglobalregistration.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezglobalregistration.png"/></a>
 
 <figcaption>Figure 16: Nearest neighbor distances between both point clouds before and after global registration.</figcaption>
 
@@ -413,15 +410,10 @@ The `registration_icp` function of *Open3D* aligns both stable-area point clouds
 As depicted in Figure 17, the final registration demonstrates excellent performance, with mean distances smaller than 50 centimeters. Subsequently, the final transformation matrix derived from this registration is applied to the full dataset, encompassing both stable and landslide areas.
 
 <center>
-
 <figure>
-
-<a href="UAV_landslide_figs_Perezfinalregistration.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perezfinalregistration.png"/></a>
-
+<a href="UAV_landslide_figs_Perezfinalregistration.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezfinalregistration.png"/></a>
 <figcaption>Figure 17: Nearest neighbor distances between both point clouds before and after global registration and ICP registration.</figcaption>
-
 </figure>
-
 </center>
 
 In @tbl-distance, a comprehensive overview of the effectiveness of various registration methods in enhancing the alignment of point clouds is provided. By meticulously examining the metrics presented in the table, including distances between corresponding points before and after registration, the impact of each method on the alignment quality becomes evident.
