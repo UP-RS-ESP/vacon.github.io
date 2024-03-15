@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 toc_label: "Climate Data Collection and Analysis, Kathmandu, Feb 26-27 2024"
 header:
-  overlay_image: https://github.com/tasmi/Workshop_Kathmandu_Feb2024/blob/97909bec9c8ce2ed33ba14c548e7cfff546c6f57/Exercises/Images/Group_photo_lr.jpg
+  overlay_image: https://raw.githubusercontent.com/tasmi/Workshop_Kathmandu_Feb2024/97909bec9c8ce2ed33ba14c548e7cfff546c6f57/Exercises/Images/Group_photo_lr.jpg
   overlay_filter: 0.3
   caption: "Workshop Participants, Kathmandu"
 read_time: false
