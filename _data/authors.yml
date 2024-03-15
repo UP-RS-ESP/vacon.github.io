@@ -1,5 +1,18 @@
 # /_data/authors.yml
 
+Lina Maria Perez:
+  name        : "Lina Maria Perez"
+  bio         : "MSc Student"
+  location    : "University of Potsdam"
+  avatar      : "/images/LinaMariaPerez2.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:lina.maria.perez.garcia@uni-potsdam.de"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://linmaria.github.io/LintheMoment"
+
 Ananya Pandey:
   name        : "Ananya Pandey"
   bio         : "MSc Student"
@@ -8,7 +21,7 @@ Ananya Pandey:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:ananya.pandey@uni-potsdam.Pandey"
+      url: "mailto:ananya.pandey@uni-potsdam.de"
 
 Daniel Lusk:
   name        : "Daniel Lusk"
