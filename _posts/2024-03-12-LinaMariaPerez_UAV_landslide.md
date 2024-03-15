@@ -1,22 +1,22 @@
 ---
-title: "Structure from Motion Application for Landslide Characterization and Monitoring"
-author: "Lina Pérez"
-toc_label: "Structure from Motion Application for Landslide Characterization and Monitoring"
+title: 'Structure from Motion Application for Landslide Characterization and Monitoring'
+author: "Lina Perez"
 author_profile: true
-date: 2024-03-12
+date: 2024-03-11
 toc: true
 toc_sticky: true
+toc_label: "Generation of high-resolution digital topography of a rugged anticline using SPOT-6 satellite images and the NASA Ames Stereo Pipeline"
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/19-02-PC.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/AnanyaPandey_figs/Figure_3.png 
   overlay_filter: 0.3
-  caption: "The 2023 Rosas Landslide Case Study, Cauca Colombia"
+  caption: "Rugged Anticline in the arid intermontane Calchaquí Valley, Eastern Cordillera, NW Argentina"
 read_time: false
 tags:
-  - UAV
-  - landslides
-  - point cloud 
-  - point cloud registration
-  - ICP
+  - digital topography
+  - SPOT-6
+  - stereophotogrammetry
+  - NASA Ames Stereo Pipeline
+  - Calchaquí Valley
 ---
 
 On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwestern Colombia. This work investigates landslide velocities and spatial patterns of deformation through repeated UAV flights.
