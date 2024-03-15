@@ -1,5 +1,4 @@
 ---
-page-layout: full
 title: "Structure from Motion Application for Landslide Characterization and Monitoring"
 author: "Lina Pérez"
 toc_label: "Structure from Motion Application for Landslide Characterization and Monitoring"
@@ -8,10 +7,9 @@ date: 2024-03-12
 toc: true
 toc_sticky: true
 header:
-  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez//19-02-PC.png
+  overlay_image: https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/19-02-PC.png
   overlay_filter: 0.3
   caption: "The 2023 Rosas Landslide Case Study, Cauca Colombia"
-fig-cap-location: bottom
 read_time: false
 tags:
   - UAV
@@ -39,6 +37,7 @@ The Rosas landslide, situated in Colombia, has been closely monitored by several
 
 Furthermore, recent advances in photogrammetric image processing and computer vision have resulted in a technique known as Structure from Motion (SfM). Highly detailed 3D models can be obtained from overlapping multi-view photography with SfM algorithms. While spaceborne and airborne remote sensing techniques are commonly employed for landslide research, these methods may lack the flexibility offered by the novel remote sensing platform of UAVs. When combined with UAV technology, Structure from Motion (SfM) can provide a cost-effective and efficient means of acquiring dense and accurate 3D data of the Earth's surface. In this study, we investigate various methods for processing the extensive UAV data acquired for the Rosas landslide, aiming to produce accurately georeferenced and aligned 3D models.
 
+
 # Study area
 
 The Rosas landslide occurred in the rural district of La Soledad, located within the municipality of Rosas-Cauca, situated in the southwestern region of Colombia. This region lies within the Patía Valley intercordilleran depression, nestled between the Western Cordillera and the Central Cordillera of Colombia. The primary drainage network affected is that of the Chontaduro creek, a tributary of the Esmita River, which is part of the upper Patía River basin (refer to Figure 1).
@@ -59,46 +58,33 @@ As depicted in Figure 1, the area has a historical record of being affected by l
 The geological setting of the study area is profoundly influenced by its location within the Northern Andes, where the convergence of three tectonic plates—the Nazca, Caribbean, and South American plates—gives rise to active N-NE faulting within the Andean block. This convergence, with the Nazca plate moving eastward relative to northwestern South America at a rate of 6 cm/yr, leads to the formation of the Colombia-Trench to the west and the mountain range of the Colombian Andes (Andes Pulido, 2003). Within the Colombian Andes, three distinct mountain ranges—the Western, Central, and Eastern Cordillera—converge southward into a unified range, shaped by deformation and faulting resulting from the interaction of these tectonic plates (Taboada et al., 2000). The study area, encompassing the upper Patía River basin, is situated at the southern Colombian Andes' convergence point between the Western and Central Cordilleras. Here, the Western Cordillera rises dramatically from the Pacific Coastal Plain on its western flank, while to the east, it is separated from the Central Cordillera by the Cauca-Patia valleys spanning a distance of approximately 500 km. The Cauca-Patia valley, resembling a graben-like structure, is characterized by an asymmetric tilt and is filled with Tertiary-Quaternary continental clastics and volcanics. Bounded by the Cauca fault zone to the west and the Romeral fault zone to the east, this depression effectively separates the oceanic Western Cordillera from the ancient crystalline Central Cordillera (Figure 2).
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezGELOGY.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/GELOGY.jpg"/></a>
-
 <figcaption>Figure 2: Geological map of the study area. Sourced from @sgc2020</figcaption>
-
 </figure>
-
 </center>
+
 
 # Landslide event characterization
 
 The Rosas mass movement, situated within the micro-basin of Chontaduro creek, is characterized as an active rotational landslide of a complex nature, exhibiting retrogressive and widening behavior. This landslide initiation point is positioned 900 meters from the summit of Broncazo Hill and 700 meters from its base (Figure 3).
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_Perezlandslide1.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/landslide1.png"/></a>
-
 <figcaption>Figure 3: Panoramic view of Rosas landslide. Sourced from SGC (2023)</figcaption>
-
 </figure>
-
 </center>
 
 The landslide displays distinct patterns of movement and failure mechanisms across its various sections. In the uppermost region, known as the crown, where the movement commences, displacements are attributed to a rotational failure mechanism. Moving to the flanks, which constitute the lateral sides of the landslide, translational faults predominate. Within the body of the landslide, one observes intense deformation, sinking, and the formation of cracks, both transverse and parallel to the primary crown (Figure 4). In the lowermost part of the movement, termed the toe, situated furthest from the crown, translational landslides, soil block falls, and flows of earth, debris, and mud have been observed. These flows are channeled through areas with lower slopes. The dynamic interplay of these movements signifies the complex nature of the landslide, with its activity and behavior evolving in response to variations in water availability in the upper part of the basin.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_Perezlandslide-detail.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/landslide-detail.jpg"/></a>
-
 <figcaption>Figure 4: Identifiable characteristics across the crown, body, and toe of the landslide: 1) A curved concave rupture surface creating a scarp measuring up to 20 meters in height. 2) Presence of tilted blocks, subsidence, and formation of cracks. 3) Occurrence of translational slides and debris flows.</figcaption>
-
 </figure>
-
 </center>
+
 
 ## Geology and failure surface
 
@@ -107,15 +93,10 @@ The initial phase of the mass movement was characterized by a rotational slide, 
 In the microbasin of Chontaduro creek, a geological sequence unfolds, comprising both epiclastic and volcanic rocks attributed to the Galeón Formation (TQpg). Notably, these formations are prominently exposed in areas such as Cerro Broncazo and its environs, encompassing the Quilcacé and Esmita rivers. In these regions, the volcaniclastic deposits can attain substantial thicknesses, reaching up to 800 meters (SGC, 2020).
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezSlide4.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/Slide4.jpg"/></a>
-
 <figcaption>Figure 5: Lithological sequence and unit details observed at the crown of the landslide</figcaption>
-
 </figure>
-
 </center>
 
 The scarp of the crown provided a clear view of the sequential arrangement of materials comprising the mobilized mass. Illustrated in Figure 5 and Figure 6, from bottom to top, the lithological units are delineated as follows:
@@ -126,15 +107,10 @@ The scarp of the crown provided a clear view of the sequential arrangement of ma
 -   Finally, at the apex of the sequence, residual soils stemming from both transport deposits and pyroclastic flows are evident.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezSlide3.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/Slide3.jpg"/></a>
-
 <figcaption>Figure 6: Panoramic view of landslide crown scarp. Blue dashed line depicting the water horizon</figcaption>
-
 </figure>
-
 </center>
 
 As depicted in Figure 6, a highly saturated surface conducive to water flow manifests between the hyperconcentrated flow layer and the pyroclastic flow layer. The permeability of the latter, coupled with the slight permeability of the underlying layer, facilitates water flow across this contact surface. Exhibiting horizontal continuity, this surface could be associated with the sliding surface of the mass movement.Recurrence of the poorly permeable hyperconcentrated lahar layer is notable at the base of the slide, indicating a seamless continuation of the water-saturated surface from the crown to the landslide's base.
@@ -142,15 +118,10 @@ As depicted in Figure 6, a highly saturated surface conducive to water flow mani
 Furthermore, noteworthy is the close proximity of the landslide's crown to the 'Alto de las Yerbas' fault line, as referenced in the technical report on Landslide Hazard Zoning by the SGC (2020), detailed in Figure 7. Findings from the present study imply that structural and lithological factors, compounded by intense rainfall, were the primary catalysts for the occurrence of this significant landslide.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezgeolandslide.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezgeolandslide.png"/></a>
-
 <figcaption>Figure 7: Geological surface units and main fault in the landslide site. Sourced from SGC (2020)</figcaption>
-
 </figure>
-
 </center>
 
 ## Rainfall as trigger mechanism
@@ -160,30 +131,21 @@ According to the Atlas of Colombia (IGAC, 2012), the region experiences an avera
 An important observation to highlight is that within the last 20 years of recorded data, the rainfall during the rainy season of December 2022, preceding the event, was notably exceptional. In November 2022 alone, precipitation levels reached a record high of up to 720 mm, marking it as the highest recorded rainfall within the observed period.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezmonthlyPre.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezmonthlyPre.png"/></a>
-
 <figcaption>Figure 8: Visualization of total monthly rainfall at the Parraga meteorological station spanning the past 20 years. Blue bars represent months with rainfall above the mean, while green bars denote months with precipitation below the mean.</figcaption>
-
 </figure>
-
 </center>
 
 In the other hand, the daily time series recorded at the Párraga station exhibits a range of maximum daily precipitation values, varying between 0 mm and 95 mm. The highest recorded value, 94.8 mm, was documented on January 9th, which coincided with the onset of the landslide event (Figure 9). The cumulative rainfall data was computed over the last 60 days leading up to the triggering of the landslide, revealing an impressive total rainfall accumulation of 2309.3 millimeters recorded up to January 9, 2023 (Figure 9).
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_PerezDailyRainfall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_PerezDailyRainfall.png"/></a>
-
 <figcaption>Figure 9: Total daily and accumulated rainfall at the Parraga meteorological station.</figcaption>
-
 </figure>
-
 </center>
+
 
 # Methods
 
@@ -203,7 +165,7 @@ In this study we adopted the workflow implemented in Agisoft Metashape, describe
 
 ## Image loading and chunks definition
 
-Sixteen distinct chunks were produced by importing photographs from selected flights (refer to Table @tbl-chunks), of which five met key selection criteria: a sufficient quantity of photographs, high image quality characterized by proper exposure and sharpness, and extensive coverage of the landslide area. This careful selection was necessary as some flights were tasked with monitoring more restricted sectors of the mass movement, targeting specific areas such as the crown or the Pan-American Highway. For comprehensive area coverage and improved model resolution during that timeframe, photographs from January 18th and 19th were merged in one single chunk.
+Sixteen distinct chunks were produced by importing photographs from selected flights (refer to Table 1), of which five met key selection criteria: a sufficient quantity of photographs, high image quality characterized by proper exposure and sharpness, and extensive coverage of the landslide area. This careful selection was necessary as some flights were tasked with monitoring more restricted sectors of the mass movement, targeting specific areas such as the crown or the Pan-American Highway. For comprehensive area coverage and improved model resolution during that timeframe, photographs from January 18th and 19th were merged in one single chunk.
 
 | Chunks       | Cameras | Points    | Markers    | Processed |
 |--------------|---------|-----------|------------|-----------|
@@ -224,22 +186,17 @@ Sixteen distinct chunks were produced by importing photographs from selected fli
 | 3/30/2023    | 328     | 327,605   |            |           |
 | 5/18/2023    | 333     | 243,261   |            |           |
 
-*Point clouds generated in* Agisoft\* {#tbl-chunks}\*
+*Table 1: Point clouds generated in Agisoft*
 
 ## Photos alignment and filtering
 
 In each chunk, the photographs underwent an alignment process with the accuracy setting set to high, utilizing equipment source coordinates as a reference point. Camera optimization was conducted, selecting the estimation of the covariance of tie points. Subsequently, apparent outliers were removed from the sparse cloud manually to diminish potential reconstruction inaccuracies. Additional refinement was carried out by filtering based on tie point covariance and uncertainties, employing Metashape's integrated Python scripting capabilities for a more precise adjustment (Figure 10).
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezcovariance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezcovariance.png"/></a>
-
 <figcaption>Figure 10: Tie point covariances obtained after filtering</figcaption>
-
 </figure>
-
 </center>
 
 ## Dense Point Cloud generation
@@ -247,15 +204,10 @@ In each chunk, the photographs underwent an alignment process with the accuracy 
 For all chosen chunks, a dense 3D point cloud was constructed employing high-quality settings and mild depth filtering. This detailed point cloud serves as the foundation for generating Digital Surface Models (DSM) and orthomosaics. Additional settings were selected to reuse depth maps, calculate point colors and calculate point confidence (Figure 11).
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezUAV_landslide_figs_Perezdenseall.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/UAV_landslide_figs_Perezdenseall.png"/></a>
-
 <figcaption>Figure 11: Dense point cloud generated for 14/01/2023 survey</figcaption>
-
 </figure>
-
 </center>
 
 ## Natural points definition and GNSS survey
@@ -263,41 +215,26 @@ For all chosen chunks, a dense 3D point cloud was constructed employing high-qua
 To accurately reference the point clouds, a series of natural markers were established to guarantee high-precision (centimeter-level) localization that was readily identifiable in the field. Utilized reference points included distinct features such as sewer edges, fence corners, and light posts (see Figure 12). Out of the 27 natural markers delineated (see Figure 13), only 21 were successfully surveyed on-site. The survey faced several challenges, including the demolition of referenced structures, obscuring of markers by debris or soil, and inaccessible locations of certain points. The coordinates for each marker were recorded using a Trimble SPS855 GNSS Modular Receiver.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_Perezmarker12.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/marker12.png"/></a>
-
 <figcaption>Figure 12: Example of a marker defined</figcaption>
-
 </figure>
-
 </center>
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_Perezmarkers.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/markers.png"/></a>
-
 <figcaption>Figure 13: Markers defined. Green points represent the markers defined and recorded during field work</figcaption>
-
 </figure>
-
 </center>
 
-Following the download of raw data from the Trimble receiver, the post-processing software GrafNav was employed. GrafNav is an advanced GNSS post-processing suite that supports kinematic and static analysis with an advanced processing engine for GPS, GLONASS, and BeiDou signals. To refine the data, corrections were applied using the Popayan station (POPA), which is the station nearest to the collection site. The required data were acquired from the Colombian open data portal (<https://www.colombiaenmapas.gov.co/>). Both the RINEX files from the field-surveyed markers and the permanent station were inputted into GrafNav to execute the correction process. The precision-adjusted positions of the markers are shown in @Tbl-gnss and Figure 14.
+Following the download of raw data from the Trimble receiver, the post-processing software GrafNav was employed. GrafNav is an advanced GNSS post-processing suite that supports kinematic and static analysis with an advanced processing engine for GPS, GLONASS, and BeiDou signals. To refine the data, corrections were applied using the Popayan station (POPA), which is the station nearest to the collection site. The required data were acquired from the Colombian open data portal (<https://www.colombiaenmapas.gov.co/>). Both the RINEX files from the field-surveyed markers and the permanent station were inputted into GrafNav to execute the correction process. The precision-adjusted positions of the markers are shown in Table 2 and Figure 14.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_PerezGNSS_grafnav.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/GNSS_grafnav.png"/></a>
-
 <figcaption>Figure 14: Points depict the resulting standard deviation for horizontal and height measurements, while bars illustrate a quality metric established by GrafNav.</figcaption>
-
 </figure>
-
 </center>
 
 As depicted in Figure 14, both the resulting horizontal and vertical standard deviations are below 0.656 meters, with mean values of 0.26 and 0.14 meters, respectively. Achieving accuracy at the centimeter level indicates favorable results. However, a metric of quality provided by Grafnav offers additional insight. This metric assigns values as follows:
@@ -333,7 +270,7 @@ The majority of solutions fall within the quality range of 2-3, with one solutio
 | 8/11/2023 | 30:58.0 | 301364,741  | 246498,245   | 1300102   | 1272211   | 4     | 0,364   | 0,259           | 20         |
 | 8/11/2023 | 34:20.0 | 301586,893  | 247430,776   | 1319567   | 1291696   | 5     | 0,604   | 0,323           | 27         |
 
-*GNSS data corrected in Grafnav {#tbl-gnss}*
+*Table 2: GNSS data corrected in Grafnav*
 
 ## Chunk alignment
 
@@ -352,15 +289,10 @@ Subsequently, pre-registration steps were performed on these stable area point c
 2.  **Nearest Neighbor Distance Calculation**: Next, KDtree was employed to compute the nearest neighbor distances between both point clouds (Figure 15). In some regions where there was a lack of overlapping between the point clouds, resulting distances exceeded 3 meters. To address this issue and ensure complete overlap, points farther than 3 meters from one point cloud to the other were filtered out.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_Perezinitialdistance.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/initialdistance.png"/></a>
-
 <figcaption>Figure 15: Nearest neighbor distances between both point clouds.</figcaption>
-
 </figure>
-
 </center>
 
 After the initial filtering step, the alignment process proceeds with an initial coarse alignment to bring the point clouds into close proximity. This alignment method incorporates feature identification to refine the search for corresponding points. This process generally involves two key steps:
@@ -372,15 +304,10 @@ After the initial filtering step, the alignment process proceeds with an initial
 In essence, these refined alignment techniques enable the accurate registration of point clouds by iteratively estimating transformations based on feature correspondences, thereby enhancing the robustness and accuracy of the alignment process. Although the global alignment has improved the distribution of distances, as depicted in Figure 16, with a mean value of less than 2 meters, the Global Registration Modified Hausdorff Distance has increased to 3.75 meters. This discrepancy underscores the necessity for a more precise registration process to minimize the offset between the two point clouds.
 
 <center>
-
 <figure>
-
 <a href="UAV_landslide_figs_Perezglobalregistration.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/globalregistration.png"/></a>
-
 <figcaption>Figure 16: Nearest neighbor distances between both point clouds before and after global registration.</figcaption>
-
 </figure>
-
 </center>
 
 ## ICP registration
@@ -416,7 +343,7 @@ As depicted in Figure 17, the final registration demonstrates excellent performa
 </figure>
 </center>
 
-In @tbl-distance, a comprehensive overview of the effectiveness of various registration methods in enhancing the alignment of point clouds is provided. By meticulously examining the metrics presented in the table, including distances between corresponding points before and after registration, the impact of each method on the alignment quality becomes evident.
+In Table 3, a comprehensive overview of the effectiveness of various registration methods in enhancing the alignment of point clouds is provided. By meticulously examining the metrics presented in the table, including distances between corresponding points before and after registration, the impact of each method on the alignment quality becomes evident.
 
 |                         | Hausdorff Distance | Modified Hausdorff Distance |
 |-------------------------|:------------------:|:---------------------------:|
@@ -424,7 +351,7 @@ In @tbl-distance, a comprehensive overview of the effectiveness of various regis
 | After global alaignment |       145.26       |            3.75             |
 | After ICP               |         \-         |            2.41             |
 
-*Hausdorff and Modified Hausdorff distance calculated throughout the registration process {#tbl-distance}*
+*Table 3: Hausdorff and Modified Hausdorff distance calculated throughout the registration process*
 
 # Key project insights
 
@@ -434,32 +361,32 @@ In @tbl-distance, a comprehensive overview of the effectiveness of various regis
 
 # References
 
-1.  Agisoft. (2023). Metashape professional 2.0 user manual. Retrieved from [https://www.agisoft.com/pdf/metashape-pro\\\_2\\\_0\\\_en.pdf](https://www.agisoft.com/pdf/metashape-pro_2_0_en.pdf){.uri}
+Agisoft. (2023). Metashape professional 2.0 user manual. Retrieved from [https://www.agisoft.com/pdf/metashape-pro\\\_2\\\_0\\\_en.pdf](https://www.agisoft.com/pdf/metashape-pro_2_0_en.pdf){.uri}
 
-2.  Besl, P. J., & McKay, N. D. (1992). Method for registration of 3-d shapes. Sensor Fusion IV: Control Paradigms and Data Structures, 1611, 586–606.
+Besl, P. J., & McKay, N. D. (1992). Method for registration of 3-d shapes. Sensor Fusion IV: Control Paradigms and Data Structures, 1611, 586–606.
 
-3.  Brook, M. S., & Merkle, J. (2019). Monitoring active landslides in the auckland region utilising UAV/structure-from-motion photogrammetry. Japanese Geotechnical Society Special Publication, 6(2), 1–6.
+Brook, M. S., & Merkle, J. (2019). Monitoring active landslides in the auckland region utilising UAV/structure-from-motion photogrammetry. Japanese Geotechnical Society Special Publication, 6(2), 1–6.
 
-4.  Chen, Y., & Medioni, G. (1992). Object modelling by registration of multiple range images. Image and Vision Computing, 10(3), 145–155.
+Chen, Y., & Medioni, G. (1992). Object modelling by registration of multiple range images. Image and Vision Computing, 10(3), 145–155.
 
-5.  Fischler, M. A., & Bolles, R. C. (1981). Random sample consensus: A paradigm for model fitting with applications to image analysis and automated cartography. Communications of the ACM, 24(6), 381–395.
+Fischler, M. A., & Bolles, R. C. (1981). Random sample consensus: A paradigm for model fitting with applications to image analysis and automated cartography. Communications of the ACM, 24(6), 381–395.
 
-6.  IGAC. (2012). Atlas geográfico. In Obtenido de <http://atlasgeografico.net/departamento-del-meta.html>.
+IGAC. (2012). Atlas geográfico. In Obtenido de <http://atlasgeografico.net/departamento-del-meta.html>.
 
-7.  Lucieer, A., Jong, S. M. de, & Turner, D. (2014). Mapping landslide displacements using structure from motion (SfM) and image correlation of multi-temporal UAV photography. Progress in Physical Geography, 38(1), 97–116.
+Lucieer, A., Jong, S. M. de, & Turner, D. (2014). Mapping landslide displacements using structure from motion (SfM) and image correlation of multi-temporal UAV photography. Progress in Physical Geography, 38(1), 97–116.
 
-8.  Niethammer, U., James, M., Rothmund, S., Travelletti, J., & Joswig, M. (2012). UAV-based remote sensing of the super-sauze landslide: Evaluation and results. Engineering Geology, 128, 2–11.
+Niethammer, U., James, M., Rothmund, S., Travelletti, J., & Joswig, M. (2012). UAV-based remote sensing of the super-sauze landslide: Evaluation and results. Engineering Geology, 128, 2–11.
 
-9.  Pulido, N. (2003). Seismotectonics of the northern andes (colombia) and the development of seismic networks. Bulletin of the International Institute of Seismology and Earthquake Engineering, Special Edition, 69–76.
+Pulido, N. (2003). Seismotectonics of the northern andes (colombia) and the development of seismic networks. Bulletin of the International Institute of Seismology and Earthquake Engineering, Special Edition, 69–76.
 
-10. Rusu, R. B., & Cousins, S. (2011). 3d is here: Point cloud library (pcl). 2011 IEEE International Conference on Robotics and Automation, 1–4.
+Rusu, R. B., & Cousins, S. (2011). 3d is here: Point cloud library (pcl). 2011 IEEE International Conference on Robotics and Automation, 1–4.
 
-11. SGC. (2020). ZONIFICACIÓN DE AMENAZA POR MOVIMIENTOS EN MASA EN EL MUNICIPIO DE ROSAS – CAUCA ESCALA 1:25.000.
+SGC. (2020). ZONIFICACIÓN DE AMENAZA POR MOVIMIENTOS EN MASA EN EL MUNICIPIO DE ROSAS – CAUCA ESCALA 1:25.000.
 
-12. SGC. (2023). Informe visita de emergencia a la microcuenca de la quebrada chontaduro y concepto técnico sobre el trazado alterno de la vía panamericana – municipio de rosas, departamento del cauca. Bogotá, enero de 2023.
+SGC. (2023). Informe visita de emergencia a la microcuenca de la quebrada chontaduro y concepto técnico sobre el trazado alterno de la vía panamericana – municipio de rosas, departamento del cauca. Bogotá, enero de 2023.
 
-13. Taboada, A., Rivera, L. A., Fuenzalida, A., Cisternas, A., Philip, H., Bijwaard, H., Olaya, J., & Rivera, C. (2000). Geodynamics of the northern andes: Subductions and intracontinental deformation (colombia). Tectonics, 19(5), 787–813.
+Taboada, A., Rivera, L. A., Fuenzalida, A., Cisternas, A., Philip, H., Bijwaard, H., Olaya, J., & Rivera, C. (2000). Geodynamics of the northern andes: Subductions and intracontinental deformation (colombia). Tectonics, 19(5), 787–813.
 
-14. Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. IEEE Transactions on Pattern Analysis and Machine Intelligence, 38(11), 2241–2254.
+Yang, J., Li, H., Campbell, D., & Jia, Y. (2015). Go-ICP: A globally optimal solution to 3D ICP point-set registration. IEEE Transactions on Pattern Analysis and Machine Intelligence, 38(11), 2241–2254.
 
-15. Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. International Journal of Computer Vision, 13(2), 119–152.
+Zhang, Z. (1994). Iterative point matching for registration of free-form curves and surfaces. International Journal of Computer Vision, 13(2), 119–152.
