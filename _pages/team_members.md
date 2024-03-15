@@ -63,7 +63,7 @@ MSc_students1:
     alt: Lina Maria Peréz
     title: Lina Maria Peréz
     excerpt: 'UAV, Landslide mapping, point clouds'
-    url: 'https://linmaria.github.io/LintheMoment/projects/'
+    url: 'https://linmaria.github.io/LintheMoment/'
   - image_path: /images/LuisKremer2.jpg
     alt: Luis Kremer
     title: Luis Kremer
@@ -111,7 +111,7 @@ MSc_students2:
 - Dr. Manudeo Singh (now Newton fellow at Aberystwyth University, UK)
 - Dr. Carlos Peña (now at University of RU Bochum)
 - Dr. Stefanie Tofelde (now at FU Berlin)
-- Nikolaos Antonoglou (now at German Aerospace Center, DLR)
+- Dr. Nikolaos Antonoglou (now at German Aerospace Center, DLR)
 - Julia Artel (now chemist at private company in Berlin)
 - Dr. Sohini Bhattacharjee (now researcher at University of Kiel)
 - Dr. Ben Purinton (now at the University of Chicago and independent researcher)
