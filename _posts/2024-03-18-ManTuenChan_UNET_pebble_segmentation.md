@@ -37,21 +37,18 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg></a>
-        <figcaption>a: Left image</figcaption>
+        <a href="high_imgL.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg"></a>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg></a>
-        <figcaption>b: Right image</figcaption>
+        <a href="high_imgR.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg"></a>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg></a>
-        <figcaption>c: Depth image</figcaption>
+        <a href="high_depth.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg"></a>
     </figure>
 </div>
 <br/>
 <center>
-    <figcaption>Figure 1: Example of the pebble setup taken from high-left angle.</figcaption>
+    <figcaption>Figure 1: Example of the pebble setup with high-angle images: left, right, and depth images.</figcaption>
 </center>
 
 
@@ -59,20 +56,17 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 <div style="display: flex; flex-direction: column; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
         <a href="low_imgL.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg"></a>
-        <figcaption>a: Left image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
         <a href="low_imgR.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgR.jpg"></a>
-        <figcaption>b: Right image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
         <a href="low_depth.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_depth.jpg"></a>
-        <figcaption>c: Depth image</figcaption>
     </figure>
 </div>
 <br/>
 <center>
-    <figcaption>Figure 2: Example of the pebble setup taken from low-left angle.</figcaption>
+    <figcaption>Figure 2: Example of the pebble setup with low-angle images: left, right, and depth images.</figcaption>
 </center>
 
 
@@ -151,7 +145,7 @@ Figure 6 shows the training history of all splits at the first fold. Accuracy ac
 <figcaption>Figure 6: Model training history.</figcaption>
 </center>
 
-Table 1. Test images
+Table 1: Test images
 
 | Split | Nadir | Oblique high | Oblique mid | Oblique low |
 |:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
