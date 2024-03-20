@@ -53,7 +53,7 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 
 
 
-<div style="display: flex; flex-direction: column; justify-content: center;">
+<div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
         <a href="low_imgL.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg"></a>
     </figure>
@@ -120,7 +120,7 @@ The results of SAM segmentation were demonstrated below. SAM returns a binary ma
 ## U-Net training history and accuracy
 Figure 6 shows the training history of all splits at the first fold. Accuracy accessed through precesion, accuracy, F1 score, and binary IoU. The metrics were only calculated for test images that the models have seen in the training process. Figure 7 shows the accuracy metrics by image at different threshold. Solid line shows the mean value over 8 folds k-fold and the shaded area highlights the 25th to 75th percentiles. For the view angle correponding to each test images please see Table 1. Figure 8 shows the the accuracy variation over the folds. Solid line represent the mean value over all test images with threshold=0.7 while the shaded area indicates the threhold = 0.5-0.9.
 
-<div style="display: flex; flex-direction: column; justify-content: center;">
+<div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
         <a href="pebble_unet_Split1C_kfold0.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png"></a>
         <figcaption>a: Split1C k-fold 0</figcaption>
