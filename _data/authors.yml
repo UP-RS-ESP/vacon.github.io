@@ -1,5 +1,15 @@
 # /_data/authors.yml
 
+Man Tuen Chan:
+  name        : "Man Tuen Chan"
+  bio         : "MSc Student"
+  location    : "University of Potsdam"
+  avatar      : "/images/ManTuenChan_photo2.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:man.tuen.chan@uni-potsdam.de"
+
 Lina Pérez:
   name        : "Lina Pérez"
   bio         : "MSc Student"

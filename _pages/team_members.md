@@ -68,10 +68,10 @@ MSc_students1:
     alt: Luis Kremer
     title: Luis Kremer
     excerpt: 'Terrestrial Lidar (TLS) and Point Cloud segmentation'
-  - image_path: /images/Yagublu_Fuad_UP2.jpg
-    alt: Fuad Yagublu
-    title: Fuad Yagublu
-    excerpt: 'Structure from Motion, Stereo Cameras'
+  - image_path: /images/ManTuenChan_photo2.jpg
+    alt: Man Tuen Chan
+    title: Man TuenChan
+    excerpt: 'Machine Learning, UNET, Stereo Cameras'
 MSc_students2:
   - image_path: /images/sebastian.jpg
     alt: Juan Sebastian Valencia Velasquez
@@ -130,3 +130,5 @@ MSc_students2:
 - Samuel Russell
 - Bashini Mahaarachchi
 - Franziska Boerner
+- Fuad Yagublu
+
