@@ -58,15 +58,15 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg?raw=true width="100%" height="100%"></a>
+        <a href="low_imgL.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg"></a>
         <figcaption>a: Left image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgR.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgR.jpg?raw=true width="100%" height="100%"></a>
+        <a href="low_imgR.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgR.jpg"></a>
         <figcaption>b: Right image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_depth.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_depth.jpg?raw=true width="100%" height="100%"></a>
+        <a href="low_depth.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_depth.jpg"></a>
         <figcaption>c: Depth image</figcaption>
     </figure>
 </div>
@@ -80,11 +80,11 @@ ZED 2i was used to retreive the RGB image, the depth estimation and the reprojec
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_point_cloud.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_point_cloud.png?raw=true width="100%" height="100%"></a>
+        <a href="high_point_cloud.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_point_cloud.png"></a>
         <figcaption>a: High-left angle</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_point_cloud.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_point_cloud.png?raw=true width="100%" height="100%"></a>
+        <a href="low_point_cloud.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_point_cloud.png"></a>
         <figcaption>b: Low-left angle</figcaption>
     </figure>
 </div>
@@ -107,12 +107,6 @@ For all models, an 8 fold k-fold cross-validation was also performed. The traini
 ## SAM segmentation
 The results of SAM segmentation were demonstrated below. SAM returns a binary mask for each individual segments and figure 4 shows an example of aggregated mask plotted with the original image. SAM model was trained with RGB photos, hence depth images were not used. Figure 5 plots the accuracy of the segmentation by image. Image 0 to 12 were nadir images with variation in lighting condition, 13-24 were oblique image with variation in view angle. The accuracy was assessed by pebble. Each segment was compared to the manually labeled masked in which each pebble was labeled with a different ID. Segments where pebble pixels were found was considered a pebble segment. In these segment, the pebble that takes up the most area of the segment was considered the main pebble. If the area of the main pebble inside the segment did not reach 70% of the pebbles total area, the segment will be considered as over-segmented. If the main pebble was not over-segmented and takes up at least 70% of the segment area, it is considered correctly segmented (or SAM segmented pebbles in figure 5). If non of these is true, it will be considered as under-segmented.
 
-<center>
-<figure>
-<a href="UAV_landslide_figs_PerezRosasStudArea.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/RosasStudArea.jpg"/></a>
-<figcaption>Figure 1: Shaded relief map of study area, showing major rivers, towns and a multi-temporal landslide inventory, sourced from SGC (2020)</figcaption>
-</figure>
-</center>
 
 <center>
 <figure>
