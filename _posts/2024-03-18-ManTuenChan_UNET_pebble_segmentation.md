@@ -109,13 +109,21 @@ The results of SAM segmentation were demonstrated below. SAM returns a binary ma
 
 <center>
 <figure>
-<a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png></a><figcaption> Figure 4: Segment-Anything segmentation of the pebble setup. </figcaption>
+<a href="UAV_landslide_figs_PerezRosasStudArea.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/UAV_landslide_figs_Perez/RosasStudArea.jpg"/></a>
+<figcaption>Figure 1: Shaded relief map of study area, showing major rivers, towns and a multi-temporal landslide inventory, sourced from SGC (2020)</figcaption>
+</figure>
+</center>
+
+<center>
+<figure>
+<a href="ZED_sam.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png"></a>
+<figcaption> Figure 4: Segment-Anything segmentation of the pebble setup. </figcaption>
 </figure>
 </center>
 
 <center>
 <figure >
-    <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png></a>
+    <a href="sam_pixel_count.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png"></a>
     <figcaption>Figure 5: Accuracy of SAM segmentation.</figcaption>
 </figure>
 </center>
