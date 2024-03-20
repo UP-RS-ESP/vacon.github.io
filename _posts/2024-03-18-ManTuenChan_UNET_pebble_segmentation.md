@@ -37,15 +37,15 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg></a>
         <figcaption>a: Left image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg></a>
         <figcaption>b: Right image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg></a>
         <figcaption>c: Depth image</figcaption>
     </figure>
 </div>
@@ -109,12 +109,13 @@ The results of SAM segmentation were demonstrated below. SAM returns a binary ma
 
 <center>
 <figure>
-<a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png?raw=true width="80%" height="80%" ></a><figcaption> Figure 4: Segment-Anything segmentation of the pebble setup. </figcaption>
+<a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png></a><figcaption> Figure 4: Segment-Anything segmentation of the pebble setup. </figcaption>
 </figure>
 </center>
+
 <center>
 <figure >
-    <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png?raw=true width="50%" height="40%"></a>
+    <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png></a>
     <figcaption>Figure 5: Accuracy of SAM segmentation.</figcaption>
 </figure>
 </center>
