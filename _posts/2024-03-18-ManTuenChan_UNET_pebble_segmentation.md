@@ -37,15 +37,15 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_imgL.jpg?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_imgL.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgL.jpg?raw=true width="100%" height="100%"></a>
         <figcaption>a: Left image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_imgR.jpg?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_imgR.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_imgR.jpg?raw=true width="100%" height="100%"></a>
         <figcaption>b: Right image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_depth.jpg?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_depth.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_depth.jpg?raw=true width="100%" height="100%"></a>
         <figcaption>c: Depth image</figcaption>
     </figure>
 </div>
@@ -58,15 +58,15 @@ The Stereolabs ZED 2i stereo camera together with their software ZED SDK 4.0 was
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_imgL.jpg?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_imgL.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgL.jpg?raw=true width="100%" height="100%"></a>
         <figcaption>a: Left image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_imgR.jpg?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_imgR.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgR.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_imgR.jpg?raw=true width="100%" height="100%"></a>
         <figcaption>b: Right image</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_depth.jpg?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_depth.jpg?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_depth.jpg?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_depth.jpg?raw=true width="100%" height="100%"></a>
         <figcaption>c: Depth image</figcaption>
     </figure>
 </div>
@@ -80,11 +80,11 @@ ZED 2i was used to retreive the RGB image, the depth estimation and the reprojec
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_point_cloud.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/high_point_cloud.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_point_cloud.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/high_point_cloud.png?raw=true width="100%" height="100%"></a>
         <figcaption>a: High-left angle</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_point_cloud.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/low_point_cloud.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_point_cloud.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/low_point_cloud.png?raw=true width="100%" height="100%"></a>
         <figcaption>b: Low-left angle</figcaption>
     </figure>
 </div>
@@ -109,12 +109,12 @@ The results of SAM segmentation were demonstrated below. SAM returns a binary ma
 
 <center>
 <figure>
-<a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/ZED_sam.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/ZED_sam.png?raw=true width="80%" height="80%" ></a><figcaption> Figure 4: Segment-Anything segmentation of the pebble setup. </figcaption>
+<a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/ZED_sam.png?raw=true width="80%" height="80%" ></a><figcaption> Figure 4: Segment-Anything segmentation of the pebble setup. </figcaption>
 </figure>
 </center>
 <center>
 <figure >
-    <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/sam_pixel_count.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/sam_pixel_count.png?raw=true width="50%" height="40%"></a>
+    <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png?raw=true width="50%" height="40%"></a>
     <figcaption>Figure 5: Accuracy of SAM segmentation.</figcaption>
 </figure>
 </center>
@@ -125,21 +125,21 @@ Figure 6 shows the training history of all splits at the first fold. Accuracy ac
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
         <figcaption>a: Split1C k-fold 0</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
         <figcaption>b: Split1D k-fold 0</figcaption>
     </figure>
 </div>
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
         <figcaption>c: Split2C k-fold 0</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/history/pebble_unet_Split1C_kfold0.png?raw=true width="100%" height="100%"></a>
         <figcaption>d: Split2D k-fold 0</figcaption>
     </figure>
 </div>
@@ -159,21 +159,21 @@ Table 1. Test images
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1C_image_accuracy.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1C_image_accuracy.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1C_image_accuracy.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1C_image_accuracy.png?raw=true width="100%" height="100%"></a>
         <figcaption>a: Split1C</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1D_image_accuracy.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1D_image_accuracy.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1D_image_accuracy.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1D_image_accuracy.png?raw=true width="100%" height="100%"></a>
         <figcaption>b: Split1D</figcaption>
     </figure>
 </div>
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 10px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2C_image_accuracy.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2C_image_accuracy.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2C_image_accuracy.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2C_image_accuracy.png?raw=true width="100%" height="100%"></a>
         <figcaption>c: Split2C</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2D_image_accuracy.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2D_image_accuracy.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2D_image_accuracy.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2D_image_accuracy.png?raw=true width="100%" height="100%"></a>
         <figcaption>d: Split2D</figcaption>
     </figure>
 </div>
@@ -184,21 +184,21 @@ Table 1. Test images
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1C_kfold_consistency.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1C_kfold_consistency.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1C_kfold_consistency.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1C_kfold_consistency.png?raw=true width="100%" height="100%"></a>
         <figcaption>a: Split1C</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1D_kfold_consistency.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split1D_kfold_consistency.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1D_kfold_consistency.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split1D_kfold_consistency.png?raw=true width="100%" height="100%"></a>
         <figcaption>b: Split1D</figcaption>
     </figure>
 </div>
 <div style="display: flex; flex-direction: row; justify-content: center;">
     <figure style="flex: 1; margin-right: 10px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2C_kfold_consistency.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2C_kfold_consistency.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2C_kfold_consistency.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2C_kfold_consistency.png?raw=true width="100%" height="100%"></a>
         <figcaption>c: Split2C</figcaption>
     </figure>
     <figure style="flex: 1; margin-right: 0px;">
-        <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2D_kfold_consistency.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/Accuracy_plot/pebble_unet_Split2D_kfold_consistency.png?raw=true width="100%" height="100%"></a>
+        <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2D_kfold_consistency.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/Accuracy_plot/pebble_unet_Split2D_kfold_consistency.png?raw=true width="100%" height="100%"></a>
         <figcaption>d: Split2D</figcaption>
     </figure>
 </div>
@@ -211,7 +211,7 @@ Through the union of SAM mask and U-Net mask, point cloud of individual pebbles 
 
 <center>
 <figure style="flex: 1; margin-right: 0px;">
-    <a href=https://github.com/VitoChan01/Pebbles/blob/master/figure/pebble_point_cloud.png?raw=true><img src=https://github.com/VitoChan01/Pebbles/blob/master/figure/pebble_point_cloud.png?raw=true width="80%" height="80%"></a>
+    <a href=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/pebble_point_cloud.png?raw=true><img src=https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/pebble_point_cloud.png?raw=true width="80%" height="80%"></a>
     <figcaption>Figure 9: Point cloud of a pebble created from segmented depth map and RGB image </figcaption>
 </figure>
 </center>
