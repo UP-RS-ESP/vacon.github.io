@@ -30,7 +30,7 @@ _This internship was supervised by Prof. Dr. Bodo Bookhagen_
 The study site was the Streuobstwiese Golm located Northeast of the Golm campus, which has a few dozen apple and pear trees.
 
 <figure>
-  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.png"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.png"></a>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.jpg"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.jpg"></a>
  <figcaption> Figure 1. Location of the orchard near campus Golm.</a>  </figcaption>
     </figure>
 
@@ -66,7 +66,7 @@ Using _Density Based Spatial Clustering of Applications with Noise_ (DBSCAN) and
 DBSCAN was implemented using the sklearn library using an $\epsilon$ value of 0.25 and a minimum of 100 points using a ball radius with sklearn. The $\epsilon$ value was tested with multiple values as this determines the maximum distance between two neighbors to be part of the same cluster (Sander et al., 1998).
 
 <figure>
-  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.png"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.png"></a>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.jpg"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.jpg"></a>
  <figcaption>Figure 5. DBSCAN clusters often include only one apple, but often a much larger area if a larger epsilon value was used.</a>  </figcaption>
     </figure>
 
@@ -150,7 +150,7 @@ Compared with the more manual approach of DBSCAN and RANSAC, KPConv shows a sign
 
 <figure>
   <a 
-href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.png?raw=True"><img width="1000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.png"></a>
+href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.jpg?raw=True"><img width="1000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.jpg"></a>
  <figcaption>Figure 8. Comparison of ground truth (left) and prediction (right). Areas of significant misclassification are circled. </a>  </figcaption>
     </figure>
 
