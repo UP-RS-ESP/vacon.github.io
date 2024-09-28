@@ -19,8 +19,6 @@ tags:
   - segmentation
 ---
 
-# Introduction
-
 Detection of fruit in 3D point clouds can help aid in crop yield prediction and can be acheived through clustering and segmentation as shown by Mola et al., 2020. Li et al., 2022 used a deep learning approach to generate bounding boxes around apples and RANSAC to determine the centroid for robotic harvesting. This internship aimed at segmenting apples with simple clustering approach and a deep learning approach.
 
 _This internship was supervised by Prof. Dr. Bodo Bookhagen_
