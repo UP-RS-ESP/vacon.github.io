@@ -31,28 +31,28 @@ The study site was the Streuobstwiese Golm located Northeast of the Golm campus,
 
 <figure>
   <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.jpg"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.jpg"></a>
- <figcaption> Figure 1. Location of the orchard near campus Golm.</a>  </figcaption>
+ <figcaption> Figure 1. Location of the orchard near campus Golm.  </figcaption>
     </figure>
 
 The scans were taken of a single tree from approximately 12 perspectives. The scanner used was a Zoller+Froelich IMAGER® 5016A, which includes RGB and intensity information. Sphere control points from Zoller and Froelich were placed around the base of the tree along with paper targets to aid in the registration process.
 
 <figure>
   <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/apple_site.jpg"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/apple_site.jpg"></a>
- <figcaption> Figure 2. Study site with registration targets.</a>  </figcaption>
+ <figcaption> Figure 2. Study site with registration targets.  </figcaption>
     </figure>
 
 The scans were then registered using the Z+F LaserControl® software. The software uses the sphere control points and paper targets to align the scans. The software also has a feature to remove noise from the point cloud. The final point cloud was then exported as a LAS file.
 
 <figure>
   <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/registration.png?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/registration.png"></a>
- <figcaption>Figure 3. Automated removal during scanning of unreliable points based on pulse return shape. </a>  </figcaption>
+ <figcaption>Figure 3. Automated removal during scanning of unreliable points based on pulse return shape. </figcaption>
     </figure>
 
 The final point cloud was clipped to remove ground points. Due to sunny conditions during scanning, some points, epecially on the top of the tree, had a purple hue (See figure 3).
 
 <figure>
   <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/appletree.png"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/appletree.png"></a>
- <figcaption>Figure 4. Final point cloud after registrations and clipping. </a>  </figcaption>
+ <figcaption>Figure 4. Final point cloud after registrations and clipping. </figcaption>
     </figure>
 
 # Segmentation
@@ -67,7 +67,7 @@ DBSCAN was implemented using the sklearn library using an $\epsilon$ value of 0.
 
 <figure>
   <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.jpg"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.jpg"></a>
- <figcaption>Figure 5. DBSCAN clusters often include only one apple, but often a much larger area if a larger epsilon value was used.</a>  </figcaption>
+ <figcaption>Figure 5. DBSCAN clusters often include only one apple, but often a much larger area if a larger epsilon value was used.  </figcaption>
     </figure>
 
 Then, for each cluster a sample of 4 random points are chosen and a sphere is fit using Random Sampling and Consensus. The parameters for the RANSAC algorithm require some adjustments to match the density of the dataset, which could not be downsampled without losing significant detail. The chosen parameters were:
@@ -110,7 +110,7 @@ After trying DBSCAN and RANSAC with different combinations of values, the above 
 
 <figure>
   <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_dbscanransac.png"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_dbscanransac.png"></a>
- <figcaption>Figure 6. Ground truth (left) compared with DBSCAN+RANSAC results (right). </a>  </figcaption>
+ <figcaption>Figure 6. Ground truth (left) compared with DBSCAN+RANSAC results (right). </figcaption>
     </figure>
 
 
@@ -126,7 +126,7 @@ An alternative approach using deep learning was explored. _Kernel Point Convolut
 <figure>
   <a 
 href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/kpconv.png?raw=True"><img width="1000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/kpconv.png"></a>
- <figcaption>Figure 7. Image convolution (left) and kernel convolution (right). Figure from Thomas et al., 2019. </a>  </figcaption>
+ <figcaption>Figure 7. Image convolution (left) and kernel convolution (right). Figure from Thomas et al., 2019. </figcaption>
     </figure>
 
 For the apple tree, KPConv was tested on half of the tree with ground truth labels of:
@@ -151,7 +151,7 @@ Compared with the more manual approach of DBSCAN and RANSAC, KPConv shows a sign
 <figure>
   <a 
 href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.jpg?raw=True"><img width="1000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.jpg"></a>
- <figcaption>Figure 8. Comparison of ground truth (left) and prediction (right). Areas of significant misclassification are circled. </a>  </figcaption>
+ <figcaption>Figure 8. Comparison of ground truth (left) and prediction (right). Areas of significant misclassification are circled. </figcaption>
     </figure>
 
 # Conclusion
