@@ -146,3 +146,9 @@ We note that camera alignment with pre-calibrated lenses is faster and results i
 <figcaption>Figure 8: Difference between the distortion model generated from a fixed checkerboard setting and a Metashape Agisoft optimized camera calibration from a scene with strong camera geometry. Results for the 50 mm lens are shown. The optimization process in Agisoft Metashape only slightly changed the camera calibration parameters. The tie point cloud and the surface mesh model generated from depth map after the optimization step have high qualities. </figcaption>
 
 # Conclusion
+
+A careful camera calibration results in faster and more accurate photo alignment during the structure from motion process. The point clouds and mesh surfaces generated within Metashape Agisoft with a pre-calibrated camera were more precise with less noise. The photo alignment step also ran faster. The optimized camera calibration parameters with a pre-calibrated camera are different than the optimized results without camera calibration. This suggests that the inversion step optimizing for camera position and distortion poses an ill defined matrix inversion problem. We suggest to always provide pre-calibration parameters.
+
+Our results indicate that reliable results can be generated from various setups. Free or fixed camera setups provide similar parameters. The photo taking with a moving camera is likely faster, although a tripod can provide extra stability in low-light condition. The type of board does not matter, but we prefer to use checkerboards for the ease of use and faster processing.
+
+
