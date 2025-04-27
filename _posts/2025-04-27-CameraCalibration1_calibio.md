@@ -124,4 +124,13 @@ We explore using a limited number of camera calibration parameters to prevent ov
  
 
 ## Checkerboard vs. Charuco (Kalibr) Board
+A comparison between the checkerboard and Charuo board reveals that results are comparable. We note the large relative pose error of the Charuco boards because of less precise subpixel corner detection and fewer calibration points. 
+
+<center>
+<figure >
+    <a href="Sony_ILCE-7RM5_35mm_checkerboard_charuco_free_5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_35mm_checkerboard_charuco_free_5p_25Apr2025_2panel_diff.png"></a>
+</figure>
+</center>
+<figcaption>Figure 7: Difference between the distortion model for the calibration perfromed with the checkerboard and Charuco board. Results for the 35 mm lens are shown. The calibration results tend to agree with generally low differences.  </figcaption>
+
 
