@@ -60,7 +60,14 @@ We find the checkerboards to be more straight forward to use for camera calibrat
 
 The [Kalibr board](https://calib.io/products/kalibr-targets) has 10 columns, 7 rows, and a spacing of 2.5 mm. These values will need to be entered manually. The subpixel refinement method is a *Polynomial fit*.
 
-![Depending on the size of the board and spacing of features, the settings have to be manually adjusted. We have used these settings for the Kalibr board.](Kalibr_parameters_col10_row7.png)
+
+<div style="display: flex; flex-direction: row; justify-content: center;">
+    <figure style="flex: 1; margin-right: 0px;">
+        <a href="high_point_cloud.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Kalibr_parameters_col10_row7.png"></a>
+    </figure>
+</div>
+<br/>
+<figcaption>Figure 1: Depending on the size of the board and spacing of features, the settings have to be manually adjusted. We have used these settings for the Kalibr board.</figcaption>
 
 
 # Results
