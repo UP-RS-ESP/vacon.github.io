@@ -106,10 +106,22 @@ There appears to be only very small differences between fixed and free-board cal
 
 
 ## Radial (2 parameter) vs. Radial and Tangential Distortion (5 parameters) Models
-We note some differences between the 2 and 5 parameter calibration routines. 
-![The 35 mm lens shows different patterns and an overall lower relative pose error with 5 parameters. There are up to 15 pixel difference in calibration offsets at the borders.](Sony_ILCE-7RM5_35mm_checkerboard_free_2p5p_25Apr2025_3panel.png)
+We explore using a limited number of camera calibration parameters to prevent overfitting and explore the lens optics. We use a radial distortion model with only two parameters (k1 and k2 corresponding to a second and fourth order polynome describing the radial field) and no tangential distortion. We compare this to a 5-parameter distortion model that is often applied (k1, k2, k3 describe radial distortion and p1 and p2 describe tangential distortion). 
 
-![The 55 mm lens behaves very well and there is only a small difference between 2 and 5 parameter calibration approaches. This suggests that the 2 parameter distortion model may be sufficient to describe and model offsets. The overall relative pose error is lower with the 5 parameter model.](Sony_ILCE-7RM5_50mm_checkerboard_free_fixed_5p_25Apr2025_3panel.png)
+<center>
+<figure >
+    <a href="Sony_ILCE-7RM5_35mm_checkerboard_free_2p5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_35mm_checkerboard_free_2p5p_25Apr2025_2panel_diff.png"></a>
+</figure>
+</center>
+<figcaption>Figure 5: Difference between 2 and 5 parameter calibration models for the 35 mm lens with moving camera acquistions. We note that the 5 parameter model with higher orders of polynomes better captures the steep curvature in the far corner. Overall, the difference is rather low, suggesting that a two parameter model may be sufficient for some cases.  </figcaption>
+
+<center>
+<figure >
+    <a href="Sony_ILCE-7RM5_50mm_checkerboard_fixed_2p5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_50mm_checkerboard_fixed_2p5p_25Apr2025_2panel_diff.png"></a>
+</figure>
+</center>
+<figcaption>Figure 6: Difference between 2 and 5 parameter calibration models for the 50 mm lens for a fixed setup. A longer focal length has lower distortion on the sides of the lens and the 2 parameter calibration is a reasonable model for this lense. However, in subsequent runs, we will rely on the 5 parameter model, because the overall RPE (relative pose error) is lower.  </figcaption>
+ 
 
 ## Checkerboard vs. Charuco (Kalibr) Board
 
