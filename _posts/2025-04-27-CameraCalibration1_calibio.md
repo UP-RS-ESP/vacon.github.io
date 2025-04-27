@@ -54,20 +54,19 @@ In the *Statistics tab* you should verify that the pooled statistics shows a low
 ## Calibration Boards: Checkerboard vs. Charuco (or Kalibr)
 The checkerboard setup is the most straight forward board to use. The detection of the black and white squares on the board is optimized with sub-pixel refinement approaches that allow a very precise detection of the corners. The detection is fast. The drawback is that the entire checkerboard will need to be included in the photo and all corners need to have a successful subpixel refinement- otherwise the detection process will not work and the photo will not be used. This makes it somewhat difficult to take photos with the checkerboard in the very corner - but these are important for a successful calibration. Also, the detection process of the checkerboard corners is very sensitive to reflection and glare: Using the checkerboard in bright sunlight or with strong lights will likely lead to a failed detection process and hence no data points from these images. It may take some practice (and time) to take good photos with the checkerboard located in the corner. The checkerboard we used for the camera calibration have 28x17 columns x rows with a 10 mm spacing.
 
-The Charuco or Kalibr boards have individual markers for each field. This allows to take photos with only part of the board in the photo. This is a benefit for taking photos from the corner areas. However, the marker detection is much slower than for checkerboards and also less precise, because different sub-pixel refinement methods are chosen. The Charuco board is not that sensitive toward reflection, because if the subpixel detection fails for part of the board, the other corners are still used for the calibration process.
+The Charuco or Kalibr boards have individual markers for each field. This allows to take photos with only part of the board in the photo. This is a benefit for taking photos from the corner areas. However, the marker detection is much slower than for checkerboards and also less precise, because different sub-pixel refinement methods are chosen. The Charuco board is not that sensitive toward reflection, because if the subpixel detection fails for part of the board, the other corners are still used for the calibration process. The [Kalibr board](https://calib.io/products/kalibr-targets) has 10 columns, 7 rows, and a spacing of 2.5 mm. These values will need to be entered manually. The subpixel refinement method is a *Polynomial fit*.
 
 We find the checkerboards to be more straight forward to use for camera calibration, especially with a large number of photos (faster). But both boards produce comparable results.
 
-The [Kalibr board](https://calib.io/products/kalibr-targets) has 10 columns, 7 rows, and a spacing of 2.5 mm. These values will need to be entered manually. The subpixel refinement method is a *Polynomial fit*.
+We emphasize that the boards will need to be very smooth and even. Glueing a laser printed checkerboard on a cardboard will only result in a low-quality calibration board. This may work for a low resolution camera (2MP), but will be imprecise for a high-resolution camera (42 or 61 MP). A board printed on aluminium or LDPE composite sheet is preferable. We printed boards on foam and this gives reasonable results for small calibration boards (A4 size), but the boards are easily bend during transport. A curved or deformed board should not be used for camera calibration.
 
 
-<div style="display: flex; flex-direction: row; justify-content: center;">
-    <figure style="flex: 1; margin-right: 0px;">
-        <a href="high_point_cloud.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Kalibr_parameters_col10_row7.png"></a>
-    </figure>
-</div>
-<br/>
-<figcaption>Figure 1: Depending on the size of the board and spacing of features, the settings have to be manually adjusted. We have used these settings for the Kalibr board.</figcaption>
+<center>
+<figure >
+  <a href="high_point_cloud.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Kalibr_parameters_col10_row7.png"></a>
+</figure>
+</center>
+<figcaption>Figure 1: Depending on the size of the board and spacing of features, the settings have to be manually adjusted. We have used these settings for our Kalibr board.</figcaption>
 
 
 # Results
@@ -83,7 +82,16 @@ We tested the following scenarios:
 
 ## Fixed and Moving-Camera Calibration
 There appears to be only very small differences between fixed and free-board calibrations. 
+
+<center>
+<figure >
+    <a href="sam_pixel_count.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png"></a>
+</figure>
+</center>
+<figcaption>Figure 2: Percentage of correctly segmented, over/under segmented, and not segmented grains in SAM automatic mask generation by image.</figcaption>
+
 ![Sony 7RM5 35 mm calibration with checkerboard and 5 distortion parameters. Differences shows calibration with fixed camera and moving camera (both datasets have more than 100 photos). There are about 6 pixel difference in calibration offset.](Sony_ILCE-7RM5_35mm_checkerboard_free_fixed_5p_25Apr2025_3panel.png)
+
 
 ![Sony 7RM5 50 mm calibration with checkerboard and 5 distortion parameters. Differences shows calibration with fixed camera and moving camera (both datasets have more than 100 photos). There are about 2 pixel difference in calibration offset.](Sony_ILCE-7RM5_50mm_checkerboard_free_fixed_5p_25Apr2025_3panel.png)
 
