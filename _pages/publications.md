@@ -15,6 +15,8 @@ Publications of the University of Potsdam Remote Sensing - Earth Surface Process
 Author(s) | Year | Title | _Journal_ | DOI
 | :--- | :---: | --- | :---: | :---:
 | | **[2024]** | | |
+L Blaschke, D Nian, S Bathiany, M Ben-Yami, T Smith, C Boulton, and N Boers | 2024 | Spatial correlation increase in single-sensor satellite data reveals loss of Amazon rainforest resilience | _Earth’s Future_ | [DOI](https://doi.org/10.1029/2023EF004040)
+S Bathiany, R Bastiaansen, A Bastos, L Blaschke, J Lever, S Loriani, W De Keersmaecker, W Dorigo, M Milenković, C Senf, T Smith, J Verbesselt, and N Boers | 2024 | Ecosystem Resilience Monitoring and Early Warning Using Earth Observation Data: Challenges and Outlook | _Surveys in Geophysics_ | [DOI](https://link.springer.com/article/10.1007/s10712-024-09833-z)
 T M Lenton, J F Abrams, A Bartsch, S Bathiany, C A Boulton, J E Buxton, A Conversi, A M Cunliffe, S Hebden, T Lavergne, B Poulter, A Shepherd, T Smith, D Swingedouw, R Winkelmann, and N Boers | 2024 | Remotely sensing potential climate change tipping points across scales | _Nature Communications_ | [DOI](https://doi.org/10.1038/s41467-023-44609-w)
 K Geißler, N Blaum, G von Maltitz, T Smith, B Bookhagen, H Wanke, M Hipondoka, E Hamunyelae, D Lohmann, D U Lüdtke, M Mbidzo, M Rauchecker, R Hering, K Irob, B Tietjen, A Marquart, F V Skhosana, T Herkenrath and S Uugulu | 2024 | Biodiversity and Ecosystem Functions in Southern African Savanna Rangelands: Threats, Impacts and Solutions. In: von Maltitz, G.P., et al. Sustainability of Southern African Ecosystems under Global Change. | _Ecological Studies_ | [DOI](https://doi.org/10.1007/978-3-031-10948-5_15)
 | | **[2023]** | | |
