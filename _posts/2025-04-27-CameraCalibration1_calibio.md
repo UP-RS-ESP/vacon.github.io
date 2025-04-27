@@ -71,7 +71,7 @@ We emphasize that the boards will need to be very smooth and even. Glueing a las
 
 # Results
 
-We have performed several tests to elucidate the most practical setting for camera calibration. We emphasize that the camera calibration does not need to be done during every photo taking session, but it is useful to have reliable camera calibration parameters. The calibration results were processed with tools available in out github repository [Camera Calibration](https://github.com/UP-RS-ESP/CameraCalibration). The python codes 'calib-to-opencv.py' was used to convert the json output from the Calibrator software to OpenCV xml, and the code 'compareDistortion_from_CC_xml.py' was used to create the figures shown below.
+We have performed several tests to elucidate the most practical setting for camera calibration. We emphasize that the camera calibration does not need to be done during every photo taking session, but it is useful to have reliable camera calibration parameters. The calibration results were processed with tools available in out github repository [Camera Calibration](https://github.com/UP-RS-ESP/CameraCalibration). The python codes *calib-to-opencv.py* was used to convert the json output from the Calibrator software to OpenCV xml, and the code *compareDistortion_from_CC_xml.py* was used to create the figures shown below.
 
 We tested the following scenarios:
 - Fixed vs. moving camera calibration
@@ -85,15 +85,25 @@ There appears to be only very small differences between fixed and free-board cal
 
 <center>
 <figure >
-    <a href="sam_pixel_count.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/ManTuenChan_UNET/sam_pixel_count.png"></a>
+    <a href="Sony_ILCE-7RM5_35mm_checkerboard_free_fixed_5p_25Apr2025_2panel.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_35mm_checkerboard_free_fixed_5p_25Apr2025_2panel.png"></a>
 </figure>
 </center>
-<figcaption>Figure 2: Percentage of correctly segmented, over/under segmented, and not segmented grains in SAM automatic mask generation by image.</figcaption>
+<figcaption>Figure 2: Visualization of the radial and tangential camera calibration parameters for the 35 mm lens (Sony 7RM5). The blue cross marks the camera center and the orange triangle the (cx,cy) coordinate. Arrows indicate the direction of pixel offset when performing camera calibration. Colors and contour lines show magnitude of offset. There are about 20 pixels offsets in the far corners. Calibration was carried out with more than 100 photos for each setting (fixed camera and moving camera). </figcaption>
 
-![Sony 7RM5 35 mm calibration with checkerboard and 5 distortion parameters. Differences shows calibration with fixed camera and moving camera (both datasets have more than 100 photos). There are about 6 pixel difference in calibration offset.](Sony_ILCE-7RM5_35mm_checkerboard_free_fixed_5p_25Apr2025_3panel.png)
+<center>
+<figure >
+    <a href="Sony_ILCE-7RM5_35mm_checkerboard_free_fixed_5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_35mm_checkerboard_free_fixed_5p_25Apr2025_2panel_diff.png"></a>
+</figure>
+</center>
+<figcaption>Figure 3: Offset difference between fixed and moving cameras. The absolute magnitude (left) shows the distortion difference in pixels when using the different camera acquisition setups. The difference is low to moderate, given that the camera has 9504x6336 pixels. The factor difference (difference of both calibrations divided by fixed camera calibration) shows that there are some spots where the difference in camera calibration is about three times as high as distortion offset amount. This likely indicates that there were not enough calibration points taken in this area of the camera field.  </figcaption>
 
+<center>
+<figure >
+    <a href="Sony_ILCE-7RM5_50mm_checkerboard_free_fixed_5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_50mm_checkerboard_free_fixed_5p_25Apr2025_2panel_diff.png"></a>
+</figure>
+</center>
+<figcaption>Figure 4: Same as Figure 3, but for 50 mm lens. Again the difference between fixed and moving (free) camera results in comparable calibration results. The difference between the calibration parameters results in a low to moderate pixel offset. </figcaption>
 
-![Sony 7RM5 50 mm calibration with checkerboard and 5 distortion parameters. Differences shows calibration with fixed camera and moving camera (both datasets have more than 100 photos). There are about 2 pixel difference in calibration offset.](Sony_ILCE-7RM5_50mm_checkerboard_free_fixed_5p_25Apr2025_3panel.png)
 
 ## Radial (2 parameter) vs. Radial and Tangential Distortion (5 parameters) Models
 We note some differences between the 2 and 5 parameter calibration routines. 
