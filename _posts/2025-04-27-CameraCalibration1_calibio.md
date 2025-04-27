@@ -107,7 +107,7 @@ There appears to be only very small differences between fixed and free-board cal
 <figcaption>Figure 4: Same as Figure 3, but for 50 mm lens. Again the difference between fixed and moving (free) camera results in comparable calibration results. The difference between the calibration parameters results in a low to moderate pixel offset. </figcaption>
 
 
-## Radial (2 parameter) vs. Radial and Tangential Distortion (5 parameters) Models
+## Radial (2 parameters) vs. Radial and Tangential Distortion (5 parameters) Models
 We explore using a limited number of camera calibration parameters to prevent overfitting and explore the lens optics.  We use a radial distortion model with only two parameters (k1 and k2 corresponding to a second and fourth order polynome describing the radial field) and no tangential distortion. We compare this to a 5-parameter distortion model that is often applied (k1, k2, k3 describe radial distortion and p1 and p2 describe tangential distortion). We refer to [opencv-camera-model-comparison](https://github.com/UP-RS-ESP/opencv-camera-model-comparison/tree/main) for a more detailed treatment of this topic.  
 
 <center>
