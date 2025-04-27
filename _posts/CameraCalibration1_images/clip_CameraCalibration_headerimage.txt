@@ -1,0 +1,1 @@
+magick -density 150 -extract 9000x2500+0+0 JPG/DSC04868.JPG -resize 25% checkerboard_clip.jpg
