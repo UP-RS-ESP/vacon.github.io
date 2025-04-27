@@ -69,7 +69,7 @@ We emphasize that the boards will need to be very smooth and even. Glueing a las
 <figcaption>Figure 1: Depending on the size of the board and spacing of features, the settings have to be manually adjusted. We have used these settings for our Kalibr board.</figcaption>
 
 
-# Results
+# Results and Discussion
 
 We have performed several tests to elucidate the most practical setting for camera calibration. We emphasize that the camera calibration does not need to be done during every photo taking session, but it is useful to have reliable camera calibration parameters. The calibration results were processed with tools available in out github repository [Camera Calibration](https://github.com/UP-RS-ESP/CameraCalibration). The python codes *calib-to-opencv.py* was used to convert the json output from the Calibrator software to OpenCV xml, and the code *compareDistortion_from_CC_xml.py* was used to create the figures shown below.
 
@@ -131,6 +131,18 @@ A comparison between the checkerboard and Charuo board reveals that results are 
     <a href="Sony_ILCE-7RM5_35mm_checkerboard_charuco_free_5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_35mm_checkerboard_charuco_free_5p_25Apr2025_2panel_diff.png"></a>
 </figure>
 </center>
-<figcaption>Figure 7: Difference between the distortion model for the calibration perfromed with the checkerboard and Charuco board. Results for the 35 mm lens are shown. The calibration results tend to agree with generally low differences.  </figcaption>
+<figcaption>Figure 7: Difference between the distortion model for the calibration performed with the checkerboard and Charuco board. Results for the 35 mm lens are shown. The calibration results tend to agree with generally low differences.  </figcaption>
 
+## Refining Camera Calibration parameters
+A reasonably reliable camera calibration can be used as a starting point for further refinement. Camera calibration relies on the detection of specific markers (e.g., squares), but SIFT features identified during structure from motion processing can also be used. Refining camera calibration within openMVS or Agisoft Metashape is really only useful if there is a very strong camera geometry (i.e., many photos taken from different angles - similar to a calibration processes). The advantage of a SIFT based refinement is that there are usually many more features to perform calibration on. Here, we use the camera calibration parameters generated with the checkerboard and perform a photo alignment using SIFT features within Agisoft Metashape. We use the camera calibration as starting point and allow them to be refined during the optimization process. The setup consists of 124 photos for a 2x2 m area and results in a strong camera geometry. We furthermore have additional markers in the field (24 Agisoft markers and scales). An alternative way to look at this step is to validate the camera calibration.
 
+We note that camera alignment with pre-calibrated lenses is faster and results in much better constrained tie points. The covariances of the tie points are lower than using the same setup without pre- calibration. The resulting calibration parameter differ, suggesting that the matrix inversion solving for camera position (6 parameters) and camera distortion (8 parameters) is not well constrained.
+
+<center>
+<figure >
+    <a href="Sony_ILCE-7RM5_50mm_checkerboard_fixed_MetashapeOptimized_5p_25Apr2025_2panel_diff.png"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/CameraCalibration1_images/Sony_ILCE-7RM5_50mm_checkerboard_fixed_MetashapeOptimized_5p_25Apr2025_2panel_diff.png"></a>
+</figure>
+</center>
+<figcaption>Figure 8: Difference between the distortion model generated from a fixed checkerboard setting and a Metashape Agisoft optimized camera calibration from a scene with strong camera geometry. Results for the 50 mm lens are shown. The optimization process in Agisoft Metashape only slightly changed the camera calibration parameters. The tie point cloud and the surface mesh model generated from depth map after the optimization step have high qualities. </figcaption>
+
+# Conclusion
