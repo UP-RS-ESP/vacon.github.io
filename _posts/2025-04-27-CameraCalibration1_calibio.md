@@ -30,6 +30,8 @@ We have previously elaborated in the github repository [CameraCalibration](https
 
 In this short description, we use the Calibrator Software to generate camera calibration parameters.
 
+All camera calibration xml files in OpenCV format are available at [https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations](https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations) with the Sony 7RM7 data for the 35 and 55 mm lenses in [https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations/sony_ilcm-7rm5](https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations/sony_ilcm-7rm5).
+
 ## Photo-Taking Setup
 We use a [Sony ILCE 7RM5](https://www.sony.com/electronics/support/e-mount-body-ilce-7-series/ilce-7rm5/specifications) ([wikipedia](https://en.wikipedia.org/wiki/Sony_%CE%B17R_V)) with a 35 mm and 50 mm (FE 50 mm F1.4GM) fixed lenses. We recorded photos in the highest resolution with 9504x6336 pixels (61 MP). Photos were taken with ISO 400, F/11, and exposure times ranging from 1/500 to 1/640 s. For a set of images, we used a tripod (photos labeled *fixed*) or a moving camera with fixed board (labeled *free*). All image stabilization and filtering options were turned off. The JPG file sizes are 50-60 MB each.
 
@@ -153,4 +155,4 @@ A careful camera calibration results in faster and more accurate photo alignment
 
 Our results indicate that reliable results can be generated from various setups. Free or fixed camera setups provide similar camera calibration parameters. The photo taking with a moving camera is likely faster, although a tripod can provide extra stability in low-light condition. The type of board does not matter, but we prefer to use checkerboards for the ease of use and faster processing. We have obtained good results using the standard 5-parameter distortion model (3 radial and 2 tangential parameters), but we emphasize that a simpler, 2-parameter model performs equally well in some settings.
 
-
+All camera calibration xml files in OpenCV format are available at [https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations](https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations) with the Sony 7RM7 data for the 35 and 55 mm lenses in [https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations/sony_ilcm-7rm5](https://github.com/UP-RS-ESP/CameraCalibration/tree/main/calibrations/sony_ilcm-7rm5).
