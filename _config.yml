@@ -12,19 +12,19 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Remote Sensing and Earth Surface Processes"
+title                    : "VACON"
 title_separator          : "-"
 name                     : "Remote Sensing and Earth Surface Processes"
 description              : "Team webpage of the Remote Sensing and Earth Surface Processes group at the University of Potsdam"
-url                      : "https://up-rs-esp.github.io/"
+url                      : "https://vacon.github.io/"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "up-rs-esp/up-rs-esp.github" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "up-rs-esp/vacon.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-breadcrumbs            : false # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               :  "discourse" #"staticman_v2" #false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
@@ -96,11 +96,11 @@ social:
   links: # An array of links to social media profiles
 
 # Analytics
-analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          : "G-312448KCX6"
-    anonymize_ip         : true
+# analytics:
+#   provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+#   google:
+#     tracking_id          : "G-312448KCX6"
+#     anonymize_ip         : true
 
 
 # Site Author
