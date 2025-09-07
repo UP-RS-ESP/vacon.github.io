@@ -1,3 +1,3 @@
-# MSc Remote Sensing, geoInformation, and Visualization (RSIV)
+# VACON - VAlles Calchaquíes Observatory Network
 
-The MSc RSIV program at the University of Potsdam is located in the Institute of Geosciences. Please contact [Bodo Bookhagen](mailto:bodo.bookhagen@uni-potsdam.de) for more information.
+Bodo Bookhagen, bodo.bookhagen@uni-potsdam.de
