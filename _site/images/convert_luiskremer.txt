@@ -1,1 +1,0 @@
-convert LuisKremer.jpg -crop 1300x1300+100+400 LuisKremer2.jpg

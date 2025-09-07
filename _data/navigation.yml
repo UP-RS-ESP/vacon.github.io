@@ -1,27 +1,13 @@
-# main links
 main:
-  - title: "Team"
-    url: /team_members/
-
-  - title: "Publications"
-    url: /publications/
-
-  - title: "BSc and MSc Theses"
-    url: /theses/
-    
-  - title: "MSc RSIV"
-    url: /msc-rsiv/
-    
-  - title: "Blog Posts"
-    url: /year-archive/
-
-  - title: "Codes"
-    url: /codes/
-
-
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Curriculum"
+    url: /curriculum/
+  - title: "Instructors"
+    url: /instructors/
+  - title: "Internships"
+    url: /internships/
+  - title: "MSc Theses"
+    url: /msctheses/
+  - title: "Current Students"
+    url: /students/
+  #- title: "About"
+  #  url: /about/

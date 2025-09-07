@@ -1,1 +1,0 @@
-convert LinaMariaPerez.jpg -crop 600x600+800+500 LinaMariaPerez2.jpg

@@ -1,1 +1,0 @@
-convert fig03a_NSAsymm_HighRes.jpg -crop 1200x200+200+100 fig03a_NSAsymm_HighResc.jp

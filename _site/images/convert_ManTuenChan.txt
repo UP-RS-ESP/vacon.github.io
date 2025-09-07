@@ -1,1 +1,0 @@
-convert ManTuenChan_photo.JPG -crop 4000x4000+1500+100 ManTuenChan_photo2.jpg

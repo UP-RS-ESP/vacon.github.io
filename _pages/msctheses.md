@@ -1,11 +1,11 @@
 ---
 title: 'MSc Theses'
-permalink: /theses/
+permalink: /msctheses/
 author_profile: false
 layout: splash
 ---
 
-## List of past MSc Theses in the RSIV program
+## List of MSc Theses in the RSIV program
 
 | *Title* | Additional information and PDF link (if available) |
 |:----|:---:|

@@ -1,1 +1,0 @@
-convert -crop 5000x5000+500+0 -density 300 -quality 100 -resize 500x500 franziskaboerner.jpg boerner.jpg 

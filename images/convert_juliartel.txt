@@ -1,1 +1,0 @@
-convert Artel_highres.jpg -crop 1300x1300+300+100 artel.jpg
