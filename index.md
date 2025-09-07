@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-title: "Remote Sensing and Earth Surface Processes"
+title: "VACON"
 author_profile: false
 classes: wide
 redirect_from:
@@ -13,11 +13,11 @@ header:
   caption: "Photo credit: [Bodo Bookhagen](https://bodobookhagen.github.io/)"
 excerpt: ""
 gallery1:
-  - url: https://up-rs-esp.github.io/_team/
+  - url: https://vacon.github.io/_team/
     image_path: /images/team.png
-  - url: https://up-rs-esp.github.io/_codes/
+  - url: https://vacon.github.io/_codes/
     image_path: /images/codes.png
-  - url: https://up-rs-esp.github.io/_posts/
+  - url: https://vacon.github.io/_posts/
     image_path: /images/blogs_and_tutorials.png
 ---
 

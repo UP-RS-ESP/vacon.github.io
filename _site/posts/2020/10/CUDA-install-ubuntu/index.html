@@ -1,0 +1,436 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>NVIDIA CUDA Install on Ubuntu 18.04 / 20.04 - VACON</title>
+<meta name="description" content="CUDA processing has become an integral part of data-intensive processing. Installation is still cumbersome and changes when new versions become available.  ">
+
+
+  <meta name="author" content="Bodo Bookhagen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="VACON">
+<meta property="og:title" content="NVIDIA CUDA Install on Ubuntu 18.04 / 20.04">
+<meta property="og:url" content="http://localhost:4000/posts/2020/10/CUDA-install-ubuntu/">
+
+
+  <meta property="og:description" content="CUDA processing has become an integral part of data-intensive processing. Installation is still cumbersome and changes when new versions become available.  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-19T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/posts/2020/10/CUDA-install-ubuntu/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Remote Sensing and Earth Surface Processes",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VACON Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--archive wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          VACON
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/team_members/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/theses/">BSc and MSc Theses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/msc-rsiv/">MSc RSIV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/codes/">Codes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/bookhagen.jpg" alt="Bodo Bookhagen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Bodo Bookhagen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Research and Teaching in Remote Sensing and Earth Surface Process</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">University of Potsdam</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:bodo.bookhagen@uni-potsdam.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://bodobookhagen.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/RemotesensingUp" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/bodobookhagen/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:bodo.bookhagen@uni-potsdam.de">
+            <meta itemprop="email" content="bodo.bookhagen@uni-potsdam.de" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">NVIDIA CUDA Install on Ubuntu 18.04 / 20.04</h1>
+    
+    <p>CUDA processing has become an integral part of data-intensive processing. Installation is still cumbersome and changes when new versions become available.</p>
+
+<p>There are several resources available on the net that guide you through the installation procedure - all tailored at different purposes. First and foremost, you should look at the official <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">NVIDIA Documentation</a>.</p>
+
+<p><strong>The following installation procedure is tailored at Ubuntu 18.04 and 20.04.</strong></p>
+
+<p>I advise to manually install the CUDA driver - especially if you are on a compute node and don’t need the CUDA display drivers. Otherwise the system may become unstable with an automatic driver update and may result in nvcc incompatibility.</p>
+
+<h2 id="general-steps-to-install-cuda-drivers-and-toolkits-on-ubuntu-systems">General steps to install CUDA Drivers and Toolkits on Ubuntu Systems</h2>
+<p>It is best to install the CUDA 10.2/11.0 drivers directly from the <a href="https://developer.nvidia.com/cuda-11.0-download-archive">NVIDIA webpage</a>. On Ubuntu 18.04 we use CUDA 10.2, because 18.04 still runs with GCC v8 and on Ubuntu 20.04 we use CUDA 11.0 (GCC v9). By updating your GCC environment, you can also run 11.0 on Ubuntu 18.04. We have not noticed any differences between the versions.</p>
+
+<ol>
+  <li><strong>Deinstall all NDVIDIA repository drivers.</strong> <code class="language-plaintext highlighter-rouge">sudo apt-get purge nvidia-*</code>. If (for some reason) you want to keep the drivers, use <code class="language-plaintext highlighter-rouge">sudo apt-get purge nvidia-cuda*</code>.</li>
+  <li><strong>Download CUDA drivers</strong> from the <a href="https://developer.nvidia.com/cuda-downloads">NVIDIA webpage</a>. For Ubuntu 18.04 use <a href="https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;target_distro=Ubuntu&amp;target_version=1804&amp;target_type=runfilelocal">Download 10.2</a> or
+<code class="language-plaintext highlighter-rouge">wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run</code>
+and the <a href="http://developer.download.nvidia.com/compute/cuda/10.2/Prod/patches/1/cuda_10.2.1_linux.run">Patch 10.2 Aug-26 2020</a> with <code class="language-plaintext highlighter-rouge">wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/patches/1/cuda_10.2.1_linux.run</code>. For Ubuntu 20.04 use <a href="https://developer.nvidia.com/cuda-11.0-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;target_distro=Ubuntu&amp;target_version=2004&amp;target_type=runfilelocal">Download 11.0</a> or <code class="language-plaintext highlighter-rouge">wget http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run</code></li>
+  <li><strong>Before Installation</strong> If you are using the NVIDIA card also for the X Server, you have to turn off the xserver. You can simply switch to the console with Ctrl-Alt-F2, logging in and turning off the xserver with <code class="language-plaintext highlighter-rouge">sudo init 3</code> or in some cases you can use <code class="language-plaintext highlighter-rouge">sudo service lightdm stop</code>. For compute-only servers, you should not be running an X Server.</li>
+  <li><strong>Install the driver</strong> with (here for 10.2. Make sure you are root (<code class="language-plaintext highlighter-rouge">sudo -i</code>): <code class="language-plaintext highlighter-rouge">sh ./cuda_10.2.89_440.33.01_linux.run</code>. Apply patch <code class="language-plaintext highlighter-rouge">sh ./cuda_10.2.1_linux.run</code>.</li>
+  <li>You want to add the binary directory to you PATH variable: <code class="language-plaintext highlighter-rouge">export PATH=$PATH:/usr/local/cuda-10.2/bin</code>.</li>
+  <li>Make sure that <code class="language-plaintext highlighter-rouge">/usr/local/cuda-10.2/lib64</code> is either in LD_LIBRARY PATH with <code class="language-plaintext highlighter-rouge">export LD_LIBRARY PATH=$LD_LIBRARY PATH:/usr/local/cuda-10.2/lib64</code> or add /usr/local/cuda-10.2/lib64 to /etc/ld.so.conf: <code class="language-plaintext highlighter-rouge">echo /usr/local/cuda-10.2/lib64 &gt; /etc/ld.so.conf.d/cuda.conf</code> and run <code class="language-plaintext highlighter-rouge">ldconfig</code></li>
+  <li>Reboot (<code class="language-plaintext highlighter-rouge">sudo reboot</code>). You should now run a fairly recent NDVIDIA driver (440.33) and also should have all nvidia tools installed.</li>
+  <li>Verify by running <code class="language-plaintext highlighter-rouge">nvcc --version</code> and <code class="language-plaintext highlighter-rouge">nvidia-smi</code>.</li>
+</ol>
+
+<p>With <code class="language-plaintext highlighter-rouge">nvidia-smi</code> you should see something along these lines (system <em>aconcagua</em>):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sun Oct 18 07:36:33 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-PCIE...  Off  | 00000000:3B:00.0 Off |                    0 |
+| N/A   35C    P0    34W / 250W |      0MiB / 32510MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-PCIE...  Off  | 00000000:AF:00.0 Off |                    0 |
+| N/A   35C    P0    36W / 250W |      0MiB / 32510MiB |      4%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+</code></pre></div></div>
+
+<p>or on system <em>kailash</em>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla P40           Off  | 00000000:02:00.0 Off |                    0 |
+| N/A   26C    P0    51W / 250W |      0MiB / 22919MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla P40           Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   26C    P0    47W / 250W |      0MiB / 22919MiB |      3%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+</code></pre></div></div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://gitup.uni-potsdam.de/RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="https://www.uni-potsdam.de/de/datenschutzerklaerung.html">Datenschutzerklärung (German)</a></li>
+    <li><a href="https://www.uni-potsdam.de/en/data-protection-declaration.html">Data Protection Declaration (Englisch)</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Remote Sensing and Earth Surface Processes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>

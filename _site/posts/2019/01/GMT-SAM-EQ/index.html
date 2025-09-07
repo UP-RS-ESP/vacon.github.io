@@ -1,0 +1,1371 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Plot SAM topography, USGS earthquake data, NDVI and rainfall with GMT - VACON</title>
+<meta name="description" content="South America is characterized by steep gradients in tectonism, topography, and climate. In this blog entry, we show how these gradients can be visualized documenting the changes in topography, earthquake character, vegetation cover (NDVI), and TRMM rainfall distribution.  ">
+
+
+  <meta name="author" content="Bodo Bookhagen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="VACON">
+<meta property="og:title" content="Plot SAM topography, USGS earthquake data, NDVI and rainfall with GMT">
+<meta property="og:url" content="http://localhost:4000/posts/2019/01/GMT-SAM-EQ/">
+
+
+  <meta property="og:description" content="South America is characterized by steep gradients in tectonism, topography, and climate. In this blog entry, we show how these gradients can be visualized documenting the changes in topography, earthquake character, vegetation cover (NDVI), and TRMM rainfall distribution.  ">
+
+
+
+  <meta property="og:image" content="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_relief_topo_EQ_combined.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-01-13T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/posts/2019/01/GMT-SAM-EQ/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Remote Sensing and Earth Surface Processes",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VACON Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          VACON
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/team_members/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/theses/">BSc and MSc Theses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/msc-rsiv/">MSc RSIV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/codes/">Codes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_relief_topo_EQ_combined.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Plot SAM topography, USGS earthquake data, NDVI and rainfall with GMT
+
+        
+      </h1>
+      
+        <p class="page__lead">South America is characterized by steep gradients in tectonism, topography, and climate. In this blog entry, we show how these gradients can be visualized documenting the changes in topography, earthquake character, vegetation cover (NDVI), and TRMM rainfall distribution.
+
+</p>
+      
+      
+      
+      
+        <p>
+        
+          <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP" class="btn btn--light-outline btn--large">Github</a>
+        
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">SAM Topography and USGS Earthquake Depths
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/bookhagen.jpg" alt="Bodo Bookhagen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Bodo Bookhagen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Research and Teaching in Remote Sensing and Earth Surface Process</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">University of Potsdam</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:bodo.bookhagen@uni-potsdam.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://bodobookhagen.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/RemotesensingUp" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/bodobookhagen/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:bodo.bookhagen@uni-potsdam.de">
+            <meta itemprop="email" content="bodo.bookhagen@uni-potsdam.de" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Plot SAM topography, USGS earthquake data, NDVI and rainfall with GMT">
+    <meta itemprop="description" content="South America is characterized by steep gradients in tectonism, topography, and climate. In this blog entry, we show how these gradients can be visualized documenting the changes in topography, earthquake character, vegetation cover (NDVI), and TRMM rainfall distribution.">
+    <meta itemprop="datePublished" content="2019-01-13T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Plot SAM topography</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#data-sources-and-setup">Data sources and setup</a>
+    <ul>
+      <li><a href="#conda-setup">Conda setup</a></li>
+      <li><a href="#prepare-data">Prepare Data</a>
+        <ul>
+          <li><a href="#prepare-grid--raster-data">Prepare grid / raster data</a>
+            <ul>
+              <li><a href="#prepare-dem-data">Prepare DEM data</a></li>
+              <li><a href="#prepare-modis-evi-and-ndvi-raster-data">Prepare MODIS EVI and NDVI raster data</a></li>
+            </ul>
+          </li>
+          <li><a href="#prepare-vector-data--shapefiles">Prepare vector data / shapefiles</a>
+            <ul>
+              <li><a href="#convert-gridded-output-data-from-hydroshed-to-vector-data">Convert gridded output data from HyDROSHED to vector data</a></li>
+              <li><a href="#prepare-osm-vector-data">Prepare OSM vector data</a></li>
+              <li><a href="#prepare-city-dataset-from-osm">Prepare city dataset from OSM</a></li>
+              <li><a href="#prepare-simplified-city-dataset">Prepare simplified city dataset</a></li>
+              <li><a href="#prepare-earthquake-catalog-from-usgs">Prepare Earthquake catalog from USGS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#generating-a-topographic-map">Generating a topographic map</a></li>
+  <li><a href="#generating-a-grayscale-topographic-map-with-usgs-earthquake-location-and-depths">Generating a grayscale topographic map with USGS earthquake location and depths</a></li>
+  <li><a href="#combining-color-topography-and-eq-depth-into-one-plot-imagemagick">Combining color topography and EQ depth into one plot imagemagick</a></li>
+  <li><a href="#comparing-colorscales">Comparing colorscales</a></li>
+  <li><a href="#create-a-ndvi-and-evi-vegetation-cover-map-for-the-central-andes">Create a NDVI and EVI vegetation cover map for the Central Andes</a>
+    <ul>
+      <li><a href="#evi">EVI</a></li>
+      <li><a href="#combine-ndvi-and-evi-plots-with-imagemagick">Combine NDVI and EVI plots with imagemagick</a></li>
+    </ul>
+  </li>
+  <li><a href="#plot-topography-ndvi-and-trmm2b31-for-the-nw-argentinean-andes">Plot Topography, NDVI, and TRMM2B31 for the NW Argentinean Andes</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>South America is characterized by steep gradients in tectonism, topography, and climate. In this blog entry, we show how these gradients can be visualized documenting the changes in topography, earthquake character, vegetation cover (NDVI), and TRMM rainfall distribution.</p>
+
+<p>South America is characterized by steep gradients in tectonism, topography, and climate. In this blog entry, we show how these gradients can be visualized documenting the changes in topography, earthquake character, vegetation cover (NDVI), and TRMM rainfall distribution. The data and scripts are available at <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP">GMT-SAM-EQ-NDVI-PRECIP</a>.</p>
+
+<h1 id="data-sources-and-setup">Data sources and setup</h1>
+<p>Topographic data are needed. In this example, we rely on the 15s global topography obtained from <a href="ftp://topex.ucsd.edu/pub/srtm15_plus/">ftp://topex.ucsd.edu/pub/srtm15_plus/</a>. The file <a href="ftp://topex.ucsd.edu/pub/srtm15_plus/earth_relief_15s.nc">earth_relief_15s.nc</a> is needed. Use <code class="language-plaintext highlighter-rouge">wget ftp://topex.ucsd.edu/pub/srtm15_plus/earth_relief_15s.nc</code> to obtain the data. This will come in handy for many other examples as well and it will be good to keep a copy on your local computer.</p>
+
+<p class="notice--warning"><em>NOTE:</em> These data are 2.6GB.</p>
+
+<p>Alternatively, you can download the <a href="https://www2.jpl.nasa.gov/srtm/">SRTM DEM</a> at 30m or 90m spatial resolution. I suggest to look at the most recent <a href="https://earthdata.nasa.gov/community/community-data-system-programs/measures-projects/nasadem">NASADEM</a>. Data have not been finalized yet (but will so soon) and can be accessed <a href="https://e4ftl01.cr.usgs.gov/provisional/MEaSUREs/NASADEM/">here</a>. There is a neat github repository <a href="https://github.com/dshean/nasadem">nasadem</a> by David Shean that provides some scripts for downloading and preprocessing. <a href="https://github.com/dshean/tandemx">TanDEM-X</a> data are also available. In any case, for our purposes the 15s data will be just fine.</p>
+
+<p>The data were processed and maps were created with GMT version 5.4.3.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt <span class="nt">--version</span>
+5.4.3
+</code></pre></div></div>
+
+<h2 id="conda-setup">Conda setup</h2>
+<p>Install and start the GMT environment with:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-y</span> <span class="nt">-n</span> gmt5 <span class="nv">gmt</span><span class="o">=</span>5<span class="k">*</span> <span class="nv">python</span><span class="o">=</span>3.6 scipy pandas numpy matplotlib scikit-image gdal spyder imagemagick
+<span class="nb">source </span>activate gmt5
+</code></pre></div></div>
+
+<p>Depending on your system, you may need to change the order of the channels with the following and then re-run the <code class="language-plaintext highlighter-rouge">conda create</code> command from above:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda config <span class="nt">--remove</span> channels defaults
+conda config <span class="nt">--append</span> channels conda-forge/label/dev
+</code></pre></div></div>
+
+<p>Clone the repository with:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP<span class="sb">`</span><span class="nb">.</span>
+</code></pre></div></div>
+
+<h2 id="prepare-data">Prepare Data</h2>
+<h3 id="prepare-grid--raster-data">Prepare grid / raster data</h3>
+<h4 id="prepare-dem-data">Prepare DEM data</h4>
+
+<p class="notice--warning"><em>NOTE:</em> These data are not included on the github page, because they are too large to be stored on github.</p>
+
+<p>We first need to prepare the DEM data for the region of interest. Define the region of interest:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">REGION</span><span class="o">=</span><span class="nt">-80</span>/-60/-40/-15
+</code></pre></div></div>
+
+<p>Next, we clip this region from the global Topo15s file (see above). Make sure to properly set the path to the location of the earth_relief_15s.nc file.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TOPO15_GRD_NC</span><span class="o">=</span>/PATH/TO/FILE/earth_relief_15s.nc
+<span class="nv">TOPO15_GRD_NC_CentralAndes</span><span class="o">=</span>earth_relief_15s_CentralAndes.nc
+gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+</code></pre></div></div>
+
+<p>You can turn this into somewhat more fancy bash-style command lines that verifies if the file exist. This will ensure that you only create and recut the file if it doesn’t exist:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TOPO15_GRD_NC</span><span class="o">=</span>/PATH/TO/FILE/earth_relief_15s.nc
+<span class="nv">TOPO15_GRD_NC_CentralAndes</span><span class="o">=</span>earth_relief_15s_CentralAndes.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_NC_CentralAndes</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate Topo15S Clip </span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Next, generate a hillshade image. Here, we use more sophisticated hillshade calculation and store in <code class="language-plaintext highlighter-rouge">$TOPO15_GRD_HS_NC</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TOPO15_GRD_NC</span><span class="o">=</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+<span class="nv">TOPO15_GRD_HS_NC</span><span class="o">=</span>earth_relief_15s_CentralAndes_HS.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Ne0</span>.6 <span class="nt">-Es75</span>/55+a <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS_NC</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+<p>If you instead want to have a simpler hillshading with less relief, use something akin to the Peucker algorithm. We call this <code class="language-plaintext highlighter-rouge">$TOPO15_GRD_HS2_NC</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TOPO15_GRD_HS2_NC</span><span class="o">=</span>earth_relief_15s_CentralAndes_HS_peucker.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS2_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS2_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Nt1</span> <span class="nt">-Ep</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS2_NC</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<h4 id="prepare-modis-evi-and-ndvi-raster-data">Prepare MODIS EVI and NDVI raster data</h4>
+<p>These have been created from the MODIS product <a href="https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod13a2_v006">MOD13A3</a> and compiled to annual and monthly averages. Data-preprocessing is not shown here. We have generated a Geotiff file containing mean NDVI and EVI from 2001-2017 stored in the files MOD13A3_2001-2017NDVImn.tif and MOD13A3_2001-2017EVImn.tif.</p>
+
+<p>We use <code class="language-plaintext highlighter-rouge">gmt grdcut</code> to extract the relevant region.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">MOD13A3_NDVI</span><span class="o">=</span>/raid-everest/data/MODIS/MOD13A3/MOD13A3_2001-2017NDVImn.tif
+<span class="nv">MOD13A3_NDVI_CentralAndes</span><span class="o">=</span>MOD13A3_2001-2017NDVImn_CentralAndes.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$MOD13A3_NDVI_CentralAndes</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate NDVI Mean Clip </span><span class="nv">$MOD13A3_NDVI_CentralAndes</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$MOD13A3_NDVI</span> <span class="nt">-G</span><span class="nv">$MOD13A3_NDVI_CentralAndes</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Next, we resample this file to the resolution of the topographic data to allow hillshading and more sophisticated visualization. Resampling will be forced with number of lines and rows that have been obtained with <code class="language-plaintext highlighter-rouge">gdalinfo earth_relief_15s_CentralAndes.nc</code>: 4801x6001.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">MOD13A3_NDVI_CentralAndes_rTOPO15</span><span class="o">=</span>MOD13A3_2001-2017NDVImn_CentralAndes_Topo15S.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$MOD13A3_NDVI_CentralAndes_rTOPO15</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"resample NDVI Mean Clip </span><span class="nv">$MOD13A3_NDVI_CentralAndes_rTOPO15</span><span class="s2">"</span>
+    gmt grdsample <span class="nv">$MOD13A3_NDVI_CentralAndes</span> <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nt">-I4801</span>+/6001+ <span class="nt">-G</span><span class="nv">$MOD13A3_NDVI_CentralAndes_rTOPO15</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+<p>We do the same for the EVI data:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">MOD13A3_EVI</span><span class="o">=</span>/raid-everest/data/MODIS/MOD13A3/MOD13A3_2001-2017EVImn.tif
+<span class="nv">MOD13A3_EVI_CentralAndes</span><span class="o">=</span>MOD13A3_2001-2017EVImn_CentralAndes.nc
+<span class="nv">MOD13A3_EVI_CentralAndes_rTOPO15</span><span class="o">=</span>MOD13A3_2001-2017EVImn_CentralAndes_Topo15S.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$MOD13A3_EVI_CentralAndes</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate EVI Mean Clip </span><span class="nv">$MOD13A3_EVI_CentralAndes</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$MOD13A3_EVI</span> <span class="nt">-G</span><span class="nv">$MOD13A3_EVI_CentralAndes</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$MOD13A3_EVI_CentralAndes_rTOPO15</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"resample EVI Mean Clip </span><span class="nv">$MOD13A3_EVI_CentralAndes_rTOPO15</span><span class="s2">"</span>
+    gmt grdsample <span class="nv">$MOD13A3_EVI_CentralAndes</span> <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nt">-I4801</span>+/6001+ <span class="nt">-G</span><span class="nv">$MOD13A3_EVI_CentralAndes_rTOPO15</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<h3 id="prepare-vector-data--shapefiles">Prepare vector data / shapefiles</h3>
+<h4 id="convert-gridded-output-data-from-hydroshed-to-vector-data">Convert gridded output data from HyDROSHED to vector data</h4>
+<p>We have used various software to generate polygon files outlining the hydrologic basins of South America. An easy way to start is to look at <a href="https://hydrosheds.cr.usgs.gov/index.php">Hydroshed</a>. Here, we provide several shapefiles in the subdirectory <a href="GMT_vector_data">GMT_vector_data</a>. The shapefiles have been converted to GMT files using <a href="https://www.gdal.org/ogr2ogr.html">ogr2ogr</a> and the projection has been changed from UTM-19S to GEOGRAPHIC projection (EPSG 4326), where necessary. In the subdirectory GMT_vector_data, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ogr2ogr <span class="nt">-f</span> GMT <span class="nt">-t_srs</span> epsg:4326 AltiplanoPuna_1basin_EPSG4326.gmt AltiplanoPuna_1basin_UTM19S_WGS84.shp
+ogr2ogr <span class="nt">-f</span> GMT <span class="nt">-t_srs</span> epsg:4326 SA_basins_15s_puna_EPSG4326.gmt SA_basins_15s_puna_UTM19S_WGS84.shp
+</code></pre></div></div>
+<p class="notice--warning"><em>NOTE:</em> These files have already been generated.</p>
+
+<p>Now, these gmt files can be plotted with <code class="language-plaintext highlighter-rouge">psxy</code>.</p>
+
+<p class="notice--warning">If you have exceptionally large GMT files, you can compress them with <a href="https://www.gzip.org/">gzip</a> or <a href="http://www.bzip.org/">bzip2</a> (see next section).</p>
+
+<h4 id="prepare-osm-vector-data">Prepare OSM vector data</h4>
+<p>The <a href="https://www.openstreetmap.org/">OpenStreetMap (OSM)</a> dataset is very useful for showing high-resolution shorelines, anthropogenic infrastructure and a variety of other data that are not contained in the GMT vector files. OSM data come in a different format and will need to be converted before usage. <a href="https://wiki.openstreetmap.org/wiki/Downloading_data">OSM Wiki</a> provides some insights, but there are additional steps necessary. this is a multi-step process.</p>
+
+<p>First, get the data from <a href="https://www.geofabrik.de/">geofabrik</a>. They provide pbf files for every continent (or country) that can be converted into GMT or shapefile format:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://download.geofabrik.de/south-america-latest.osm.pbf
+</code></pre></div></div>
+
+<p class="notice--warning">Next, the OSM-pbf file needs to be converted to GMT files. This will need to be done for every attribute separately to keep your database nice and clean. We usually use the following.
+<em>NOTE:</em> gdal/ogr will need to have been compiled with GEOS, SQL and pbf support!</p>
+
+<p class="notice--warning"><em>NOTE:</em> In order to generate the railway database, you have to change /usr/share/gdal/2.2/osmconf.ini and allow the tag railway to be created. See <a href="https://wiki.openstreetmap.org/wiki/User:Bgirardot/How_To_Convert_osm_.pbf_files_to_Esri_Shapefiles">here</a>. You first need to identify the relevant osmconf.ini file using <code class="language-plaintext highlighter-rouge">locate osmconf.ini</code> and then edit that to include additional attributes and fields.</p>
+
+<p class="notice--warning"><em>NOTE:</em> In order to generate the volcano database, you have to change /usr/share/gdal/2.2/osmconf.ini and allow the tag natural to be created.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_roads01.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select highway from lines where highway in ('primary', 'secondary', 'tertiary', 'unclassified', 'residential')"</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_roads02.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select highway from lines where highway not in ('primary', 'secondary', 'tertiary', 'unclassified', 'residential')"</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_lakes.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select natural from multipolygons where natural in ('water')"</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_wetlands.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select natural from multipolygons where natural in ('wetland')"</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_rivers.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select waterway from lines where waterway in ('river')"</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_railway.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select railway from lines where railway in ('rail')"</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_volcano.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select natural from points where natural in ('volcano')"</span>
+</code></pre></div></div>
+<p>If you replace <code class="language-plaintext highlighter-rouge">-f "GMT"</code> with <code class="language-plaintext highlighter-rouge">-f "ESRI Shapefile"</code>, you create ESRI shapefiles as output.</p>
+
+<p>These are large files and processing them with GMT for map making will take some time. I suggest to clip this to the area of interest (will make map making a little faster). Here, we use the coordinates from the <code class="language-plaintext highlighter-rouge">$REGION</code> variable (see above). <code class="language-plaintext highlighter-rouge">-clipsrs</code> expects xmin ymin xmax ymax coordinates.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndesroads01.gmt south-america_roads01.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndesroads02.gmt south-america_roads02.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndeslakes.gmt south-america_lakes.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndeswetlands.gmt south-america_wetlands.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndesrivers.gmt south-america_rivers.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndesrailway.gmt south-america_railway.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> CentralAndesvolcano.gmt south-america_volcano.gmt <span class="nt">-clipsrc</span> <span class="nt">-80</span> <span class="nt">-40</span> <span class="nt">-60</span> <span class="nt">-15</span>
+</code></pre></div></div>
+
+<p>The files <code class="language-plaintext highlighter-rouge">CentralAndeslakes.gmt</code> can be plotted with <code class="language-plaintext highlighter-rouge">gmt psxy</code>.</p>
+
+<h4 id="prepare-city-dataset-from-osm">Prepare city dataset from OSM</h4>
+<p>First, edit osmconf.ini and add <code class="language-plaintext highlighter-rouge">city</code> to the list of attributes in the section <code class="language-plaintext highlighter-rouge">[points]</code>.
+The line <code class="language-plaintext highlighter-rouge">attributes</code> in the <code class="language-plaintext highlighter-rouge">[points]</code> section should read:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">attributes</span><span class="o">=</span>name,barrier,highway,ref,address,is_in,place,man_made,city,population
+</code></pre></div></div>
+
+<p>Next, extract the cities with <code class="language-plaintext highlighter-rouge">ogr2ogr</code> and store name and population <code class="language-plaintext highlighter-rouge">select city,name,population</code> and select only cities with a stored name <code class="language-plaintext highlighter-rouge">where name is not null</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_cities_with_names.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select city,name,population from points where name is not null"</span>
+</code></pre></div></div>
+
+<p>We create a second dataset containing only cities with a stored population:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_cities_with_population.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select city,name,population from points where population is not null"</span>
+</code></pre></div></div>
+
+<p>Alternatively, create a dataset containing any city (also without names):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ogr2ogr <span class="nt">-f</span> <span class="s2">"GMT"</span> south-america_cities.gmt south-america-latest.osm.pbf <span class="nt">-progress</span> <span class="nt">-sql</span> <span class="s2">"select city,name,population from points"</span>
+</code></pre></div></div>
+
+<h4 id="prepare-simplified-city-dataset">Prepare simplified city dataset</h4>
+<p>City locations are also included in the OSM dataset, but a simpler CSV file will do it as well. There are many datasets available, here we are using a free city CSV version currently hosted at <a href="https://www.maxmind.com/en/free-world-cities-database">maxmind</a>. The CSV contains:
+<code class="language-plaintext highlighter-rouge">Country,City,AccentCity,Region,Population,Latitude,Longitude</code>.
+The file contains a global database of cities - we are only interested in showing a few for South America and we preprocess the data to select only Santiago de Chile, Salta, Mendoza and La Paz.</p>
+
+<p class="notice--warning"><em>NOTE:</em> We have converted the gzip-compressed file to a bzip2 compressed file</p>
+
+<p>First we search for the country ar (Argentina) and city Salta and we only use the longitude, latitude columns. In the second command, we add the label Salta to the end of the first row:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bzip2 <span class="nt">-dc</span> worldcitiespop.txt.bz2 | <span class="nb">grep</span> <span class="nt">-w</span> ar | <span class="nb">grep</span> <span class="nt">-w</span> Salta | gmt <span class="k">select</span> <span class="nt">-i6</span>,5 <span class="o">&gt;</span>salta.txt
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s2">"1 s|</span><span class="nv">$|</span><span class="s2"> Salta|"</span> salta.txt
+</code></pre></div></div>
+
+<p>This can be done in the same fashion for the other cities:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bzip2 <span class="nt">-dc</span> worldcitiespop.txt.bz2 | <span class="nb">grep</span> <span class="nt">-w</span> ar | <span class="nb">grep</span> <span class="s2">",Mendoza"</span> | gmt <span class="k">select</span> <span class="nt">-i6</span>,5 <span class="o">&gt;</span>mendoza.txt
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s2">"1 s|</span><span class="nv">$|</span><span class="s2"> Mendoza|"</span> mendoza.txt
+
+bzip2 <span class="nt">-dc</span> worldcitiespop.txt.bz2 | <span class="nb">grep</span> <span class="nt">-w</span> bo | <span class="nb">grep</span> <span class="s2">",La Paz,04"</span> | gmt <span class="k">select</span> <span class="nt">-i8</span>,7 <span class="o">&gt;</span>lapaz.txt
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s2">"1 s|</span><span class="nv">$|</span><span class="s2"> LaPaz|"</span> lapaz.txt
+
+bzip2 <span class="nt">-dc</span> worldcitiespop.txt.bz2 | <span class="nb">grep</span> <span class="nt">-w</span> cl | <span class="nb">grep</span> <span class="s2">",Santiago"</span> | gmt <span class="k">select</span> <span class="nt">-i6</span>,5 <span class="o">&gt;</span>SdC.txt
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s2">"1 s|</span><span class="nv">$|</span><span class="s2"> SdC|"</span> SdC.txt
+</code></pre></div></div>
+<p>The txt files can be plotted with <code class="language-plaintext highlighter-rouge">gmt psxy</code>.</p>
+
+<h4 id="prepare-earthquake-catalog-from-usgs">Prepare Earthquake catalog from USGS</h4>
+<p>There exists different EQ catalogs. Here, we download data from the <a href="https://earthquake.usgs.gov/earthquakes/search/">USGS</a> by selecting a range of magnitude, time, and geographic region and write to a CSV file. If you use the entire geographic region of SAM (or the region we have been working with), you will need to select the magnitude in steps, to produce less than 20k searches (max. allowed number of records to export). Because we will plot the magnitudes with different sizes/colors, this will be useful in any case. We have generated several files with the following names (should be self explanatory): USGS_EQ_CentralAndes_1970_2018_mag3.5_to_4.csv, USGS_EQ_CentralAndes_1970_2018_mag4_to_4.5.csv, USGS_EQ_CentralAndes_1970_2018_mag4.5_to_5.csv, USGS_EQ_CentralAndes_1970_2018_mag5_to_5.5.csv, USGS_EQ_CentralAndes_1970_2018_mag5.5_to_6.csv, USGS_EQ_CentralAndes_1970_2018_mag6_to_9.csv.
+We compress them with <code class="language-plaintext highlighter-rouge">bzip2</code>. <code class="language-plaintext highlighter-rouge">bzip2</code> is much more efficient in compressing ASCII text files than <code class="language-plaintext highlighter-rouge">gzip</code>. A quick test shows that file USGS_EQ_CentralAndes_1970_2018_mag3.5_to_4.csv compressed to 291293 bytes (291 kb) with <code class="language-plaintext highlighter-rouge">bzip2</code> and to 410052 bytes (410 kb) with <code class="language-plaintext highlighter-rouge">gzip</code> (using best compression option <code class="language-plaintext highlighter-rouge">-9</code> for both algorithms). We combine magnitude ranges 4 to 5 and 5 to 6:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bzip2 <span class="nt">-9</span> USGS_EQ_CentralAndes_1970_2018_mag3.5_to_4.csv
+
+<span class="nb">cp </span>USGS_EQ_CentralAndes_1970_2018_mag4_to_4.5.csv USGS_EQ_CentralAndes_1970_2018_mag4_to_5.csv
+<span class="nb">cat </span>USGS_EQ_CentralAndes_1970_2018_mag4.5_to_5.csv <span class="o">&gt;&gt;</span> USGS_EQ_CentralAndes_1970_2018_mag4_to_5.csv
+bzip2 <span class="nt">-9</span> USGS_EQ_CentralAndes_1970_2018_mag4_to_5.csv
+
+<span class="nb">cp </span>USGS_EQ_CentralAndes_1970_2018_mag5_to_5.5.csv USGS_EQ_CentralAndes_1970_2018_mag5_to_6.csv
+<span class="nb">cat </span>USGS_EQ_CentralAndes_1970_2018_mag5.5_to_6.csv <span class="o">&gt;&gt;</span>USGS_EQ_CentralAndes_1970_2018_mag5_to_6.csv
+bzip2 <span class="nt">-9</span> USGS_EQ_CentralAndes_1970_2018_mag5_to_6.csv
+
+bzip2 <span class="nt">-9</span> USGS_EQ_CentralAndes_1970_2018_mag6_to_9.csv
+</code></pre></div></div>
+
+<p>These files are available in the <a href="GMT_vector_data">GMT_vector_data</a> directory.</p>
+
+<h1 id="generating-a-topographic-map">Generating a topographic map</h1>
+<p>After compiling all the various data source, we can use GMT to create a topographic map of SAM.</p>
+
+<p>As a reminder, we have done the following preparatory steps. This excerpt is taken from <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/plot_CentralAndes_TOPO_EQ.sh">plot_CentralAndes_TOPO_EQ.sh</a>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+gmt gmtset MAP_FRAME_PEN    0.5p,black
+gmt gmtset MAP_FRAME_WIDTH    0.1
+gmt gmtset MAP_FRAME_TYPE     plain
+gmt gmtset FONT_TITLE    18p,Helvetica-Bold,black
+gmt gmtset FONT_LABEL    12p,Helvetica-Bold,black
+gmt gmtset PS_PAGE_ORIENTATION    portrait
+gmt gmtset PS_MEDIA    A4
+gmt gmtset FORMAT_GEO_MAP    D
+gmt gmtset MAP_DEGREE_SYMBOL degree
+gmt gmtset PROJ_LENGTH_UNIT cm
+
+<span class="nv">REGION</span><span class="o">=</span><span class="nt">-80</span>/-60/-40/-15
+
+<span class="c"># DEM/Topography Data</span>
+<span class="c">#clip area and generate hillshade</span>
+<span class="nv">TOPO15_GRD_NC</span><span class="o">=</span>/home/bodo/Downloads/earth_relief_15s.nc
+<span class="nv">TOPO15_GRD_NC_CentralAndes</span><span class="o">=</span>earth_relief_15s_CentralAndes.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_NC_CentralAndes</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate Topo15S Clip </span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+<span class="k">fi
+
+</span><span class="nv">TOPO15_GRD_NC</span><span class="o">=</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+<span class="nv">TOPO15_GRD_HS_NC</span><span class="o">=</span>earth_relief_15s_CentralAndes_HS.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Ne0</span>.6 <span class="nt">-Es75</span>/55+a <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS_NC</span>
+<span class="k">fi</span>
+
+<span class="c">#Simpler Peucker algorithm</span>
+<span class="nv">TOPO15_GRD_HS2_NC</span><span class="o">=</span>earth_relief_15s_CentralAndes_HS_peucker.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS2_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS2_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Nt1</span> <span class="nt">-Ep</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS2_NC</span>
+<span class="k">fi</span>
+
+<span class="c"># Vector data</span>
+<span class="nv">AltiplanoPuna_1bas</span><span class="o">=</span>GMT_vector_data/AltiplanoPuna_1basin_UTM19S_WGS84.gmt
+<span class="nv">OSM_CentralAndeslakes</span><span class="o">=</span>GMT_vector_data/CentralAndeslakes.gmt
+<span class="nv">OSM_CentralAndesvolcano</span><span class="o">=</span>GMT_vector_data/CentralAndesvolcano.gmt
+</code></pre></div></div>
+
+<p>At the end of the script, we also set the filenames to Bash variables that we are going to plot (<em>AltiplanoPuna_1bas, OSM_CentralAndeslakes, OSM_CentralAndesvolcano</em>). Make sure you set the proper path if you store the data elsewhere.</p>
+
+<p>Next, we define the parameters for the plot:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## CREATE Topographic map</span>
+<span class="c">#Set Parameters for Plot</span>
+<span class="nv">POSTSCRIPT_BASENAME</span><span class="o">=</span>CentralAndes_Topo15S
+<span class="c">#xmin/xmax/ymin/ymax</span>
+<span class="nv">WIDTH</span><span class="o">=</span>10
+<span class="nv">XSTEP</span><span class="o">=</span>10
+<span class="nv">YSTEP</span><span class="o">=</span>10
+<span class="nv">DPI</span><span class="o">=</span>300
+<span class="nv">CITY_STAR_SIZE</span><span class="o">=</span>0.4c
+</code></pre></div></div>
+
+<p>This is the file prefix <em>POSTSCRIPT_BASENAME</em>, the width of the plot in cm, and the longitude (<em>XSTEP</em>) and latitude (<em>YSTEP</em>) grid spacing. We also set the output DPI to 300 - this generate the figures slightly faster, but you nay want to set this too 600 if you produce your final figure for publication. We also set the size in cm for the stars indicating the cities (<em>CITY_STAR_SIZE</em>).</p>
+
+<p>Next, we set title of the plot and the outputfilename that includes the prefix <em>POSTSCRIPT_BASENAME</em> with a postfix and stores this in <em>POSTSCRIPT1</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TITLE</span><span class="o">=</span><span class="s2">"Topography C. Andes"</span>
+<span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_relieftopo.ps
+</code></pre></div></div>
+
+<p>As a next step, we create the colorscale for the topography. Here, we use the colormap mby.cpt that can be obtain from <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/index.html">cpt-city</a> (or the direct download link for <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/mby/mby.cpt">mpy.cpt</a>). Note that this colorscale stretches from -8000m for ocean depth to 5000m elevation height on land. Different colorscales have diffirent ranges - here we inidcate the ranges for the <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/arendal/arctic.cpt">arctic</a> and relief (built in) colorscales as well, but these are commented out.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Make colorscale</span>
+<span class="nv">DEM_CPT</span><span class="o">=</span>relief_color.cpt
+<span class="c">#gmt makecpt -T-5000/4000/250 -D -Carctic &gt;$DEM_CPT</span>
+<span class="c">#gmt makecpt -T-6000/6000/250 -D -Crelief &gt;$DEM_CPT</span>
+gmt makecpt <span class="nt">-T-8000</span>/5000/250 <span class="nt">-D</span> <span class="nt">-Cmby</span> <span class="o">&gt;</span><span class="nv">$DEM_CPT</span>
+</code></pre></div></div>
+
+<p>We can now start with creating the topographic map:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$DEM_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span>  <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+
+<p>And we may want to add an A in the upper right corner:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span>A | gmt pstext <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-D0</span>.1c/-0.1c <span class="nt">-W0</span>.5p,black <span class="nt">-Gwhite</span> <span class="nt">-C0</span>.2c <span class="nt">-F</span>+cTL+f24p,Helvetica-Bold <span class="nt">-P</span> <span class="nt">-O</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+
+<p>We plot the coastal outline and international border:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-O</span> <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+<p class="notice--warning"><em>NOTE:</em> If you want to generate a title header for your figure add replace <code class="language-plaintext highlighter-rouge">-BWSne</code> with <code class="language-plaintext highlighter-rouge">-BWSne+t"$TITLE"</code>: <code class="language-plaintext highlighter-rouge">gmt pscoast -Bx$XSTEP -By$YSTEP -BWSne -W1/thin,black -R -J -N1/thin,black -O -Df --FORMAT_GEO_MAP=ddd:mm:ssF --MAP_FRAME_PEN=0.5p -P -K &gt;&gt; $POSTSCRIPT1 </code></p>
+
+<p>We can plot volcanos and lakes from the OSM database and define their outline colors with <code class="language-plaintext highlighter-rouge">-W</code> and fill colors with <code class="language-plaintext highlighter-rouge">-L</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt psxy <span class="nv">$OSM_CentralAndeslakes</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wfaint</span>,lightblue <span class="nt">-Glightblue</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$OSM_CentralAndesvolcano</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-St0</span>.15c <span class="nt">-Gred</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+
+<p>Similiarily, add the outline of the Central Anden Plateau (Altiplana-Puna Plateau):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt psxy <span class="nv">$AltiplanoPuna_1bas</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthick</span>,darkblue <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+
+<p>Next, add the cities with a star and label:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext SdC.txt <span class="nt">-D-0</span>.8c/0.0c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext lapaz.txt <span class="nt">-D</span>+0.9c/0.2c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext salta.txt <span class="nt">-D</span>+0.8c/0.0c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext mendoza.txt <span class="nt">-D</span>+1.0c/-0.5c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+
+<p>We also want a topographic colorscale below the figure. We set the minor tick spacing to 1000m <code class="language-plaintext highlighter-rouge">-Baf1000</code> and add label and unit <code class="language-plaintext highlighter-rouge">-Baf1000:"Bathymetry and Elevation":/:"[m]":</code>. We also set the font to 12p</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.0c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$DEM_CPT</span> <span class="nt">-F</span>+c0.1c/0.5c+gwhite+r1p+pthin,black <span class="nt">-Baf1000</span>:<span class="s2">"Bathymetry and Elevation"</span>:/:<span class="s2">"[m]"</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+</code></pre></div></div>
+
+<p>Last, convert the ps file to a PNG file with the option <code class="language-plaintext highlighter-rouge">-Tg</code> and convert to a jpg:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+convert <span class="nt">-alpha</span> off <span class="nt">-quality</span> 100 <span class="nt">-density</span> 150 <span class="nt">-trim</span> <span class="nv">$POSTSCRIPT1</span> <span class="k">${</span><span class="nv">POSTSCRIPT1</span>::-3<span class="k">}</span>.jpg
+</code></pre></div></div>
+
+<p>The resulting map display the bathymetry and topography of SAM with volcanoes in red triangles and major lakes in light blue colors, and cities in black stars with labels.</p>
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_relieftopo.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_relieftopo.jpg" /></a>
+    <figcaption>Bathymetry and Topography of the Central Andes: Elevation and bathymetry from a merged data (see text), lakes (lightblue) and volcanoes (red) are from the OSM database, and major city are shown in black stars. </figcaption>
+</figure>
+
+<h1 id="generating-a-grayscale-topographic-map-with-usgs-earthquake-location-and-depths">Generating a grayscale topographic map with USGS earthquake location and depths</h1>
+<p>We use the approach described in the previous section and add a second figure (B) showing gray-scale topography and USGS earthquake location.</p>
+
+<p>First, let’s define additional vector data (the USGS EQ data that have been prepared above):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Vector data</span>
+<span class="nv">AltiplanoPuna_1bas</span><span class="o">=</span>GMT_vector_data/AltiplanoPuna_1basin_UTM19S_WGS84.gmt
+<span class="nv">OSM_CentralAndeslakes</span><span class="o">=</span>/raid-cachi/bodo/Dropbox/Argentina/GIS_Data/OSM/CentralAndeslakes.gmt
+<span class="nv">OSM_CentralAndesvolcano</span><span class="o">=</span>/raid-cachi/bodo/Dropbox/Argentina/GIS_Data/OSM/CentralAndesvolcano.gmt
+<span class="nv">USGS_EQ_LT4</span><span class="o">=</span>GMT_vector_data/USGS_EQ_CentralAndes_1970_2018_mag3.5_to_4.csv.bz2
+<span class="nv">USGS_EQ_GT4_LT5</span><span class="o">=</span>GMT_vector_data/USGS_EQ_CentralAndes_1970_2018_mag4_to_5.csv.bz2
+<span class="nv">USGS_EQ_GT5_LT6</span><span class="o">=</span>GMT_vector_data/USGS_EQ_CentralAndes_1970_2018_mag5_to_6.csv.bz2
+<span class="nv">USGS_EQ_GT6</span><span class="o">=</span>GMT_vector_data/USGS_EQ_CentralAndes_1970_2018_mag6_to_9.csv.bz2
+</code></pre></div></div>
+
+<p>Next, we plot and color the earthquakes by their depth using the colorscale <em>viridis</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_reliefgray_EQ.ps
+<span class="c">#Make colorscale</span>
+<span class="nv">DEM_CPT</span><span class="o">=</span>relief_gray.cpt
+gmt makecpt <span class="nt">-T-6000</span>/6000/250 <span class="nt">-D</span> <span class="nt">-Cgray</span> <span class="o">&gt;</span><span class="nv">$DEM_CPT</span>
+<span class="nv">EQ_DEPTH_CPT</span><span class="o">=</span>EQ_color.cpt
+gmt makecpt <span class="nt">-Ic</span> <span class="nt">-T0</span>/400/25 <span class="nt">-D</span> <span class="nt">-Cviridis</span> <span class="o">&gt;</span><span class="nv">$EQ_DEPTH_CPT</span>
+<span class="nv">TITLE</span><span class="o">=</span><span class="s2">"USGS EQ 1970-2019"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$DEM_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span> <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="nb">echo </span>B | gmt pstext <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-D0</span>.1c/-0.1c <span class="nt">-W0</span>.5p,black <span class="nt">-Gwhite</span> <span class="nt">-C0</span>.2c <span class="nt">-F</span>+cTL+f24p,Helvetica-Bold <span class="nt">-P</span> <span class="nt">-O</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt psxy $AltiplanoPuna_1bas -R -J -L -Wthick,brown -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+bzip2 <span class="nt">-dc</span> <span class="nv">$USGS_EQ_GT4_LT5</span> | gmt <span class="k">select</span> <span class="nt">-i2</span>,1,3 | gmt psxy <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-Wfaint</span>,black <span class="nt">-Sc0</span>.07c <span class="nt">-C</span><span class="nv">$EQ_DEPTH_CPT</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+bzip2 <span class="nt">-dc</span> <span class="nv">$USGS_EQ_GT6</span> | gmt <span class="k">select</span> <span class="nt">-i2</span>,1,3 | gmt psxy <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-Wfaint</span>,black <span class="nt">-Sc0</span>.25c <span class="nt">-C</span><span class="nv">$EQ_DEPTH_CPT</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+bzip2 <span class="nt">-dc</span> <span class="nv">$USGS_EQ_GT5_LT6</span> | gmt <span class="k">select</span> <span class="nt">-i2</span>,1,3 | gmt psxy <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-Wfaint</span>,black <span class="nt">-Sc0</span>.12c <span class="nt">-C</span><span class="nv">$EQ_DEPTH_CPT</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#-BWSne+t"$TITLE"</span>
+gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">-O</span> <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.5c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$EQ_DEPTH_CPT</span> <span class="nt">-F</span>+c0.1c/0.3c+gwhite+r1p+pthin,black <span class="nt">-Baf100</span>:<span class="s2">"EQ Depth"</span>:/:<span class="s2">"[km]"</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+convert <span class="nt">-alpha</span> off <span class="nt">-quality</span> 100 <span class="nt">-density</span> 150 <span class="nt">-trim</span> <span class="nv">$POSTSCRIPT1</span> <span class="k">${</span><span class="nv">POSTSCRIPT1</span>::-3<span class="k">}</span>.jpg
+</code></pre></div></div>
+
+<p>The resulting figure shows EQ depth for the Central Andes:</p>
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_reliefgray_EQ.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_reliefgray_EQ.jpg" /></a>
+    <figcaption>Topography in grayscale for the Central Andes overlain by USGS earthquakes depths in color</figcaption>
+</figure>
+
+<h1 id="combining-color-topography-and-eq-depth-into-one-plot-imagemagick">Combining color topography and EQ depth into one plot imagemagick</h1>
+<p>We can now combine plot (A) and (B) into on figure using <a href="https://imagemagick.org/script/convert.php">convert</a>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-quality</span> 50 <span class="nt">-density</span> 150 <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_relieftopo.png <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_reliefgray_EQ.png <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> <span class="nt">-bordercolor</span> white <span class="nt">-border</span> 10x0 +repage +append <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_relief_topo_EQ_combined.jpg
+
+convert <span class="nt">-quality</span> 100 <span class="nt">-density</span> 300 <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_relieftopo.png <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_reliefgray_EQ.png <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> <span class="nt">-bordercolor</span> white <span class="nt">-border</span> 10x0 +repage +append <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_relief_topo_EQ_combined.png
+</code></pre></div></div>
+
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_relief_topo_EQ_combined.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_relief_topo_EQ_combined.jpg" /></a>
+    <figcaption>A: Color topography and B: USGS EQ depth </figcaption>
+</figure>
+
+<h1 id="comparing-colorscales">Comparing colorscales</h1>
+<p>If you are interested in using a different colorscale, here is a comparison of the different colorscales mentioned above. The steps to create this figure are in the GMT Bash script <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/blob/master/plot_CentralAndes_colorbar_comparison.sh">plot_CentralAndes_colorbar_comparison.sh</a>.</p>
+
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_topo_colorscales.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_Topo15S_topo_colorscales.jpg" /></a>
+    <figcaption>Color scale comparison for the Central Andes including bathymetry and topography </figcaption>
+</figure>
+
+<h1 id="create-a-ndvi-and-evi-vegetation-cover-map-for-the-central-andes">Create a NDVI and EVI vegetation cover map for the Central Andes</h1>
+<p>Similar to the previous approaches, we set the topographic parameters and variables:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+gmt gmtset MAP_FRAME_PEN    0.5p,black
+gmt gmtset MAP_FRAME_WIDTH    0.1
+gmt gmtset MAP_FRAME_TYPE     plain
+gmt gmtset FONT_TITLE    18p,Helvetica-Bold,black
+gmt gmtset FONT_LABEL    12p,Helvetica-Bold,black
+gmt gmtset PS_PAGE_ORIENTATION    portrait
+gmt gmtset PS_MEDIA    A4
+gmt gmtset FORMAT_GEO_MAP    D
+gmt gmtset MAP_DEGREE_SYMBOL degree
+gmt gmtset PROJ_LENGTH_UNIT cm
+
+<span class="nv">REGION</span><span class="o">=</span><span class="nt">-80</span>/-60/-40/-15
+
+<span class="c"># DEM/Topography Data</span>
+<span class="c">#clip area and generate hillshade</span>
+<span class="nv">TOPO15_GRD_NC</span><span class="o">=</span>/home/bodo/Downloads/earth_relief_15s.nc
+<span class="nv">TOPO15_GRD_NC_CentralAndes</span><span class="o">=</span>earth_relief_15s_CentralAndes.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_NC_CentralAndes</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate Topo15S Clip </span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+<span class="k">fi
+
+</span><span class="nv">TOPO15_GRD_NC</span><span class="o">=</span><span class="nv">$TOPO15_GRD_NC_CentralAndes</span>
+<span class="nv">TOPO15_GRD_HS_NC</span><span class="o">=</span>earth_relief_15s_CentralAndes_HS.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Ne0</span>.6 <span class="nt">-Es75</span>/55+a <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS_NC</span>
+<span class="k">fi</span>
+
+<span class="c">#Simpler Peucker algorithm</span>
+<span class="nv">TOPO15_GRD_HS2_NC</span><span class="o">=</span>earth_relief_15s_CentralAndes_HS_peucker.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS2_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS2_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Nt1</span> <span class="nt">-Ep</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS2_NC</span>
+<span class="k">fi</span>
+
+<span class="c"># Vector data</span>
+<span class="nv">AltiplanoPuna_1bas</span><span class="o">=</span>GMT_vector_data/AltiplanoPuna_1basin_UTM19S_WGS84.gmt
+<span class="nv">OSM_CentralAndeslakes</span><span class="o">=</span>/raid-cachi/bodo/Dropbox/Argentina/GIS_Data/OSM/CentralAndeslakes.gmt
+<span class="nv">OSM_CentralAndesvolcano</span><span class="o">=</span>/raid-cachi/bodo/Dropbox/Argentina/GIS_Data/OSM/CentralAndesvolcano.gmt
+
+<span class="c"># Grid data</span>
+<span class="nv">MOD13A3_NDVI_CentralAndes_rTOPO15</span><span class="o">=</span>MOD13A3_2001-2017NDVImn_CentralAndes_Topo15S.nc
+<span class="nv">MOD13A3_EVI_CentralAndes_rTOPO15</span><span class="o">=</span>MOD13A3_2001-2017EVImn_CentralAndes_Topo15S.nc
+
+<span class="c">## CREATE Topographic map</span>
+<span class="c">#Set Parameters for Plot</span>
+<span class="nv">POSTSCRIPT_BASENAME</span><span class="o">=</span>CentralAndes
+<span class="c">#xmin/xmax/ymin/ymax</span>
+<span class="nv">WIDTH</span><span class="o">=</span>10
+<span class="nv">XSTEP</span><span class="o">=</span>10
+<span class="nv">YSTEP</span><span class="o">=</span>10
+<span class="nv">DPI</span><span class="o">=</span>300
+<span class="nv">CITY_STAR_SIZE</span><span class="o">=</span>0.4c
+</code></pre></div></div>
+
+<p>And then we plot the NDVI data with colorscale <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/ncl/precip4_diff_19lev.cpt">precip4_diff_19lev</a>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TITLE</span><span class="o">=</span><span class="s2">"NDVI - C. Andes"</span>
+<span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi.ps
+<span class="c">#Make colorscale</span>
+<span class="nv">NDVI_CPT</span><span class="o">=</span>ndvi_color.cpt
+gmt makecpt <span class="nt">-T0</span>.0/0.8/0.042 <span class="nt">-D</span> <span class="nt">-Cprecip4_diff_19lev</span> <span class="o">&gt;</span><span class="nv">$NDVI_CPT</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$MOD13A3_NDVI_CentralAndes_rTOPO15</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$NDVI_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span> <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span>+t<span class="s2">"</span><span class="nv">$TITLE</span><span class="s2">"</span> <span class="nt">-Swhite</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-O</span> <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p,black <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$OSM_CentralAndeslakes</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wfaint</span>,lightblue <span class="nt">-Glightblue</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt psxy $OSM_CentralAndesvolcano -R -J -L -St0.15c -Gred -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy <span class="nv">$AltiplanoPuna_1bas</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext SdC.txt -D-0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext lapaz.txt -D+0.9c/0.2c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext salta.txt -D+0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext mendoza.txt -D+1.0c/-0.5c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+<span class="nb">echo </span>A | gmt pstext <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-D0</span>.1c/-0.1c <span class="nt">-W0</span>.5p,black <span class="nt">-C0</span>.2c <span class="nt">-F</span>+cTL+f24p,Helvetica-Bold <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p,black <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-P</span> <span class="nt">-O</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.0c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$NDVI_CPT</span> <span class="nt">-F</span>+c0.1c/0.3c+gwhite+r1p+pthin,black <span class="nt">-Baf1000</span>:<span class="s2">"NDVI"</span>:/:<span class="s2">""</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+convert <span class="nt">-quality</span> 100 <span class="nt">-density</span> 150 <span class="nt">-trim</span> <span class="nv">$POSTSCRIPT1</span> <span class="k">${</span><span class="nv">POSTSCRIPT1</span>::-3<span class="k">}</span>.jpg
+</code></pre></div></div>
+
+<p>The resulting image nicely show the steep vegetation-cover gradient in the Central Andes:</p>
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_ndvi.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_ndvi.jpg" /></a>
+    <figcaption>Mean annual NDVI (MOD13A2, 2001 to 2017) using color scale precip4_diff_19lev.</figcaption>
+</figure>
+
+<h2 id="evi">EVI</h2>
+<p>The NDVI plot can be combined with the EVI plot (also from MOD13A2 data, 2001-2017) using the same approach:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_evi.ps
+<span class="c">#Make colorscale</span>
+<span class="nv">EVI_CPT</span><span class="o">=</span>evi_color.cpt
+gmt makecpt <span class="nt">-T0</span>.0/0.6/0.05 <span class="nt">-D</span> <span class="nt">-Cprecip_diff_12lev</span> <span class="o">&gt;</span><span class="nv">$EVI_CPT</span>
+<span class="nv">TITLE</span><span class="o">=</span><span class="s2">"EVI - C. Andes"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$MOD13A3_EVI_CentralAndes_rTOPO15</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$EVI_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span> <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span>+t<span class="s2">"</span><span class="nv">$TITLE</span><span class="s2">"</span> <span class="nt">-Swhite</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-O</span> <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p,black <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$AltiplanoPuna_1bas</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext SdC.txt -D-0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext lapaz.txt -D+0.9c/0.2c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext salta.txt -D+0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext mendoza.txt -D+1.0c/-0.5c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+<span class="nb">echo </span>B | gmt pstext <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-D0</span>.1c/-0.1c <span class="nt">-W0</span>.5p,black <span class="nt">-C0</span>.2c <span class="nt">-F</span>+cTL+f24p,Helvetica-Bold <span class="nt">-P</span> <span class="nt">-O</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.0c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$NDVI_CPT</span> <span class="nt">-F</span>+c0.1c/0.3c+gwhite+r1p+pthin,black <span class="nt">-Baf1000</span>:<span class="s2">"EVI"</span>:/:<span class="s2">""</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+convert <span class="nt">-quality</span> 100 <span class="nt">-density</span> 150 <span class="nt">-trim</span> <span class="nv">$POSTSCRIPT1</span> <span class="k">${</span><span class="nv">POSTSCRIPT1</span>::-3<span class="k">}</span>.jpg
+</code></pre></div></div>
+
+<h2 id="combine-ndvi-and-evi-plots-with-imagemagick">Combine NDVI and EVI plots with imagemagick</h2>
+<p>We put both files into one plot using convert (see above). We generate a low-resolution version (JPG) and a higher-resolution version (PNG):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-quality</span> 50 <span class="nt">-density</span> 150 <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi.png <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_evi.png <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> <span class="nt">-bordercolor</span> white <span class="nt">-border</span> 10x0 +repage +append <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi_evi.jpg
+
+convert <span class="nt">-quality</span> 100 <span class="nt">-density</span> 300 <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi.png <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_evi.png <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> <span class="nt">-bordercolor</span> white <span class="nt">-border</span> 10x0 +repage +append <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi_evi.png
+</code></pre></div></div>
+
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_ndvi_evi.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/CentralAndes_ndvi_evi.jpg" /></a>
+    <figcaption>Mean annual NDVI (MOD13A2, 2001 to 2017) using color scale precip4_diff_19lev.</figcaption>
+</figure>
+
+<h1 id="plot-topography-ndvi-and-trmm2b31-for-the-nw-argentinean-andes">Plot Topography, NDVI, and TRMM2B31 for the NW Argentinean Andes</h1>
+<p>In the next plot, we use TRMM 2B31 data and generate a plot for the NW Argentinean Andes. Note that the area displayed in the map has been reduced to match the latitudinal range of the TRMM 2B31 data.
+First, we setup the topographic data and clip the relevant data to a different <em>REGION</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+gmt gmtset MAP_FRAME_PEN    0.5p,black
+gmt gmtset MAP_FRAME_WIDTH    0.1
+gmt gmtset MAP_FRAME_TYPE     plain
+gmt gmtset FONT_TITLE    18p,Helvetica-Bold,black
+gmt gmtset FONT_LABEL    12p,Helvetica-Bold,black
+gmt gmtset PS_PAGE_ORIENTATION    portrait
+gmt gmtset PS_MEDIA    A4
+gmt gmtset FORMAT_GEO_MAP    D
+gmt gmtset MAP_DEGREE_SYMBOL degree
+gmt gmtset PROJ_LENGTH_UNIT cm
+
+<span class="nv">REGION</span><span class="o">=</span><span class="nt">-75</span>/-60/-35/-15
+
+<span class="c"># DEM/Topography Data</span>
+<span class="c">#clip area and generate hillshade</span>
+<span class="nv">TOPO15_GRD_NC</span><span class="o">=</span>/home/bodo/Downloads/earth_relief_15s.nc
+<span class="nv">TOPO15_GRD_NC_NWArg</span><span class="o">=</span>earth_relief_15s_NWArg.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_NC_NWArg</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate Topo15S Clip </span><span class="nv">$TOPO15_GRD_NC_NWArg</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_NC_NWArg</span>
+<span class="k">fi
+
+</span><span class="nv">TOPO15_GRD_NC</span><span class="o">=</span><span class="nv">$TOPO15_GRD_NC_NWArg</span>
+<span class="nv">TOPO15_GRD_HS_NC</span><span class="o">=</span>earth_relief_15s_NWArg_HS.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Ne0</span>.6 <span class="nt">-Es75</span>/55+a <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS_NC</span>
+<span class="k">fi</span>
+
+<span class="c">#Simpler Peucker algorithm</span>
+<span class="nv">TOPO15_GRD_HS2_NC</span><span class="o">=</span>earth_relief_15s_NWArg_HS_peucker.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TOPO15_GRD_HS2_NC</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate hillshade </span><span class="nv">$TOPO15_GRD_HS2_NC</span><span class="s2">"</span>
+    gmt grdgradient <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Nt1</span> <span class="nt">-Ep</span> <span class="nt">-G</span><span class="nv">$TOPO15_GRD_HS2_NC</span>
+<span class="k">fi</span>
+
+<span class="c"># Vector data</span>
+<span class="nv">AltiplanoPuna_1bas</span><span class="o">=</span>GMT_vector_data/AltiplanoPuna_1basin_UTM19S_WGS84.gmt
+<span class="nv">OSM_CentralAndeslakes</span><span class="o">=</span>/raid-cachi/bodo/Dropbox/Argentina/GIS_Data/OSM/CentralAndeslakes.gmt
+<span class="nv">OSM_CentralAndesvolcano</span><span class="o">=</span>/raid-cachi/bodo/Dropbox/Argentina/GIS_Data/OSM/CentralAndesvolcano.gmt
+
+<span class="c"># Grid data</span>
+<span class="nv">MOD13A3_NDVI_CentralAndes_rTOPO15</span><span class="o">=</span>MOD13A3_2001-2017NDVImn_CentralAndes_Topo15S.nc
+<span class="nv">MOD13A3_EVI_CentralAndes_rTOPO15</span><span class="o">=</span>MOD13A3_2001-2017EVImn_CentralAndes_Topo15S.nc
+
+<span class="c"># Prepare TRMM data</span>
+<span class="nv">TRMM2B31_1998_2009_MM_PER_YR</span><span class="o">=</span>trmm2b31_annual_mm_per_year.tif
+<span class="nv">TRMM2B31_1998_2009_MM_PER_YR_NWArg</span><span class="o">=</span>trmm2b31_annual_mm_per_year_NWArg.nc
+<span class="nv">TRMM2B31_1998_2009_MM_PER_YR_NWArg_rTOPO15</span><span class="o">=</span>trmm2b31_annual_mm_per_year_NWArg_Topo15S.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate TRMM2B31 Mean clip </span><span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TRMM2B31_1998_2009_MM_PER_YR</span> <span class="nt">-G</span><span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg_rTOPO15</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"resample TRMM2B31 Mean Clip </span><span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg_rTOPO15</span><span class="s2">"</span>
+    gmt grdsample <span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg</span> <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nt">-I3601</span>+/4801+ <span class="nt">-G</span><span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg_rTOPO15</span>
+<span class="k">fi
+
+</span><span class="nv">TRMM2B31_1998_2009_EEVENT_NR</span><span class="o">=</span>trmm2b31_eevent_nr.tif
+<span class="nv">TRMM2B31_1998_2009_EEVENT_NR_NWArg</span><span class="o">=</span>trmm2b31_eevent_nr_NWArg.nc
+<span class="nv">TRMM2B31_1998_2009_EEVENT_NR_NWArg_rTOPO15</span><span class="o">=</span>trmm2b31_eevent_nr_NWArg_Topo15S.nc
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"generate TRMM2B31 Mean clip </span><span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg</span><span class="s2">"</span>
+    gmt grdcut <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nv">$TRMM2B31_1998_2009_EEVENT_NR</span> <span class="nt">-G</span><span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg_rTOPO15</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"resample TRMM2B31 Mean Clip </span><span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg_rTOPO15</span><span class="s2">"</span>
+    gmt grdsample <span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg</span> <span class="nt">-R</span><span class="nv">$REGION</span> <span class="nt">-I3601</span>+/4801+ <span class="nt">-G</span><span class="nv">$TRMM2B31_1998_2009_EEVENT_NR_NWArg_rTOPO15</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Next, we generate the topographic plot:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">POSTSCRIPT_BASENAME</span><span class="o">=</span>NWArg
+<span class="c">#xmin/xmax/ymin/ymax</span>
+<span class="nv">WIDTH</span><span class="o">=</span>10
+<span class="nv">XSTEP</span><span class="o">=</span>10
+<span class="nv">YSTEP</span><span class="o">=</span>10
+<span class="nv">DPI</span><span class="o">=</span>300
+<span class="nv">CITY_STAR_SIZE</span><span class="o">=</span>0.4c
+
+<span class="nv">TITLE</span><span class="o">=</span><span class="s2">"Topo NW Arg"</span>
+<span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_topo.ps
+<span class="c">#Make colorscale</span>
+<span class="nv">DEM_CPT</span><span class="o">=</span>relief_color.cpt
+gmt makecpt <span class="nt">-T-8000</span>/5000/250 <span class="nt">-D</span> <span class="nt">-Cmby</span> <span class="o">&gt;</span><span class="nv">$DEM_CPT</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$DEM_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span>  <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pscoast -Bx$XSTEP -By$YSTEP -BWSne+t"$TITLE" -W1/thin,black -R -J -N1/thin,black -O -Df --FORMAT_GEO_MAP=ddd:mm:ssF --MAP_FRAME_PEN=0.5p -P -K &gt;&gt; $POSTSCRIPT1</span>
+gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-O</span> <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$OSM_CentralAndeslakes</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wfaint</span>,lightblue <span class="nt">-Glightblue</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$OSM_CentralAndesvolcano</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-St0</span>.2c <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$AltiplanoPuna_1bas</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthick</span>,darkblue <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext SdC.txt <span class="nt">-D-0</span>.8c/0.0c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext lapaz.txt <span class="nt">-D</span>+0.9c/0.2c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext salta.txt <span class="nt">-D</span>+0.8c/0.0c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,white <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pstext mendoza.txt <span class="nt">-D</span>+1.0c/-0.5c <span class="nt">-F</span>+f12p,Helvetica <span class="nt">-W0</span>.1p,black <span class="nt">-Gwhite</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.0c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$DEM_CPT</span> <span class="nt">-F</span>+c0.1c/0.3c+gwhite+r1p+pthin,black <span class="nt">-Baf1000</span>:<span class="s2">"Bathymetry and Elevation"</span>:/:<span class="s2">"[m]"</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+</code></pre></div></div>
+
+<p>Then, we generate the NDVI map:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">TITLE</span><span class="o">=</span><span class="s2">"NDVI - NW Arg"</span>
+<span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi.ps
+<span class="c">#Make colorscale</span>
+<span class="nv">NDVI_CPT</span><span class="o">=</span>ndvi_color.cpt
+<span class="c">#gmt makecpt -T0.0/0.8/0.042 -D -Cprecip4_diff_19lev &gt;$NDVI_CPT</span>
+gmt makecpt <span class="nt">-T0</span>.0/0.8/0.067 <span class="nt">-D</span> <span class="nt">-Cprecip_diff_12lev</span>.cpt <span class="o">&gt;</span><span class="nv">$NDVI_CPT</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$MOD13A3_NDVI_CentralAndes_rTOPO15</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$NDVI_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span> <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span> <span class="nt">-Swhite</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-O</span> <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p,black <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$OSM_CentralAndeslakes</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wfaint</span>,lightblue <span class="nt">-Glightblue</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt psxy $OSM_CentralAndesvolcano -R -J -L -St0.15c -Gred -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy <span class="nv">$AltiplanoPuna_1bas</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,darkblue <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext SdC.txt -D-0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext lapaz.txt -D+0.9c/0.2c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext salta.txt -D+0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext mendoza.txt -D+1.0c/-0.5c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.0c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$NDVI_CPT</span> <span class="nt">-F</span>+c0.1c/0.3c+gwhite+r1p+pthin,black <span class="nt">-Baf1000</span>:<span class="s2">"NDVI"</span>:/:<span class="s2">""</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+<span class="c">#convert -quality 100 -density 150 $POSTSCRIPT1 ${POSTSCRIPT1::-3}.jpg</span>
+</code></pre></div></div>
+
+<p>Last, we use the colorscale <a href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/ncl/precip_11lev.cpt">precip_11lev</a> to plot TRMM 2B31 rainfall:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">POSTSCRIPT1</span><span class="o">=</span><span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_trmm2b31.ps
+<span class="c">#Make colorscale</span>
+<span class="nv">RAINFALL_CPT</span><span class="o">=</span>rainfall_color.cpt
+<span class="c">#gmt makecpt -T0.0/2000/167 -D -Cprecip_diff_12lev &gt;$RAINFALL_CPT</span>
+gmt makecpt <span class="nt">-T0</span>.0/2000/182 <span class="nt">-D</span> <span class="nt">-Cprecip_11lev</span> <span class="o">&gt;</span><span class="nv">$RAINFALL_CPT</span>
+<span class="nv">TITLE</span><span class="o">=</span><span class="s2">"Rainfall - NW Arg"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Creating file </span><span class="nv">$POSTSCRIPT1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gmt grdimage <span class="nv">$TRMM2B31_1998_2009_MM_PER_YR_NWArg_rTOPO15</span> <span class="nt">-I</span><span class="nv">$TOPO15_GRD_HS_NC</span> <span class="nt">-JM</span><span class="nv">$WIDTH</span> <span class="nt">-C</span><span class="nv">$RAINFALL_CPT</span> <span class="nt">-R</span><span class="nv">$TOPO15_GRD_NC</span> <span class="nt">-Q</span> <span class="nt">-Xc</span> <span class="nt">-Yc</span> <span class="nt">-E</span><span class="nv">$DPI</span> <span class="nt">-K</span> <span class="nt">-P</span> <span class="o">&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt pscoast <span class="nt">-Bx</span><span class="nv">$XSTEP</span> <span class="nt">-By</span><span class="nv">$YSTEP</span> <span class="nt">-BWSne</span> <span class="nt">-W1</span>/thin,black <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-N1</span>/thin,black <span class="nt">-O</span> <span class="nt">-Df</span> <span class="nt">--FORMAT_GEO_MAP</span><span class="o">=</span>ddd:mm:ssF <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p,black <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-P</span> <span class="nt">-K</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy <span class="nv">$AltiplanoPuna_1bas</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,darkblue <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psxy SdC.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext SdC.txt -D-0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy lapaz.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext lapaz.txt -D+0.9c/0.2c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy salta.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext salta.txt -D+0.8c/0.0c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psxy mendoza.txt <span class="nt">-Sa</span><span class="k">${</span><span class="nv">CITY_STAR_SIZE</span><span class="k">}</span> <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-L</span> <span class="nt">-Wthin</span>,black <span class="nt">-Gblack</span> <span class="nt">-K</span> <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+<span class="c">#gmt pstext mendoza.txt -D+1.0c/-0.5c -F+f12p,Helvetica -W0.1p,black -Gwhite -R -J -K -O -P &gt;&gt; $POSTSCRIPT1</span>
+gmt psscale <span class="nt">-R</span> <span class="nt">-J</span> <span class="nt">-DjBC</span>+h+o-0.0c/-3.0c/+w7c/0.3c+ml <span class="nt">-C</span><span class="nv">$RAINFALL_CPT</span> <span class="nt">-F</span>+c0.1c/0.3c+gwhite+r1p+pthin,black <span class="nt">-Baf1000</span>:<span class="s2">"Mean annual rainfall 1998-2014"</span>:/:<span class="s2">"[mm/yr]"</span>: <span class="nt">--FONT</span><span class="o">=</span>12p <span class="nt">--FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p <span class="nt">--MAP_FRAME_PEN</span><span class="o">=</span>0.5p <span class="nt">--MAP_FRAME_WIDTH</span><span class="o">=</span>0.1 <span class="nt">-O</span> <span class="nt">-P</span> <span class="o">&gt;&gt;</span> <span class="nv">$POSTSCRIPT1</span>
+gmt psconvert <span class="nv">$POSTSCRIPT1</span> <span class="nt">-A</span> <span class="nt">-P</span> <span class="nt">-Tg</span>
+</code></pre></div></div>
+
+<p>Last, we combine the figures into one panel with convert:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-quality</span> 50 <span class="nt">-density</span> 150 <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_topo.png <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_ndvi.png <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_trmm2b31.png <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> <span class="nt">-bordercolor</span> white <span class="nt">-border</span> 10x0 +repage +append <span class="k">${</span><span class="nv">POSTSCRIPT_BASENAME</span><span class="k">}</span>_topo_ndvi_rainfall.jpg
+</code></pre></div></div>
+
+<p>The script is stored in the GMT Bash file <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/blob/master/plot_NWArgentina_Topo_NDVI_Precip.sh">plot_NWArgentina_Topo_NDVI_Precip.sh</a>.</p>
+
+<figure>
+    <a href="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/NWArg_topo_ndvi_rainfall.jpg"><img src="https://github.com/BodoBookhagen/GMT-SAM-EQ-NDVI-PRECIP/raw/master/docs/figures/NWArg_topo_ndvi_rainfall.jpg" /></a>
+    <figcaption>Bathymetry and Topography, mean annual NDVI (MOD13A2, 2001 to 2017) using color scale precip4_diff_19lev, and TRMM 2B31 mean annual rainfall (1998-2014) using colorscale precip_11lev.</figcaption>
+</figure>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#andes" class="page__taxonomy-item" rel="tag">Andes</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#earthquake" class="page__taxonomy-item" rel="tag">Earthquake</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#eq" class="page__taxonomy-item" rel="tag">EQ</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#gmt" class="page__taxonomy-item" rel="tag">GMT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ndvi" class="page__taxonomy-item" rel="tag">NDVI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sam" class="page__taxonomy-item" rel="tag">SAM</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-01-13T00:00:00+01:00">January 13, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Plot+SAM+topography%2C+USGS+earthquake+data%2C+NDVI+and+rainfall+with+GMT%20http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2019%2F01%2FGMT-SAM-EQ%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2019%2F01%2FGMT-SAM-EQ%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2019%2F01%2FGMT-SAM-EQ%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/2019/01/GMT-plot-windvectors/" class="pagination--pager" title="Plot ECMWF wind vectors with GMT
+">Previous</a>
+    
+    
+      <a href="/posts/2019/09/Point-Cloud-Workshop-Oct2019" class="pagination--pager" title="Point Cloud Workshop at the University of Potsdam
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/CameraCalibration1_calibio/" rel="permalink">Camera Calibration (1): Comparison of boards and parameters with calib.io
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Precise Camera Calibration is an important part of generating high-quality points clouds and mesh models. We outline some basic procedures to generate reliab...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/VCM03-DavidHersh/" rel="permalink">Apple segmentation in 3D point clouds
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learn...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ManTuenChan_UNET_pebble_segmentation/" rel="permalink">A U-Net-SegmentAnything 2-pass approach with stereo-depth sensing for river-pebble panoptic segmentation
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+Sediment charateristics and grain-size distribution carries important information on the drainage system, the ecosystem, and the weather conditi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Kathmandu_Workshop_Feb2024/" rel="permalink">Climate Data Collection and Analysis, Kathmandu, Feb 26-27 2024
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Workshop organized and led by Dr Taylor Smith (University of Potsdam, Germany), Dr Bodo Bookhagen (University of Potsdam, Germany) and Dr Shakil Regmi (South...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://gitup.uni-potsdam.de/RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="https://www.uni-potsdam.de/de/datenschutzerklaerung.html">Datenschutzerklärung (German)</a></li>
+    <li><a href="https://www.uni-potsdam.de/en/data-protection-declaration.html">Data Protection Declaration (Englisch)</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Remote Sensing and Earth Surface Processes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -13,7 +13,7 @@ source "https://rubygems.org"
 
 # To upgrade, run `bundle update`.
 
-gem "jekyll"
+gem "jekyll", "~> 3.7"
 gem "minimal-mistakes-jekyll"
 
 # The following plugins are automatically loaded by the theme-gem:
@@ -25,4 +25,8 @@ gem "minimal-mistakes-jekyll"
 #
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
+gem "base64"
+gem "bigdecimal"
+gem "jemoji"
+gem "kramdown-parser-gfm"
 end

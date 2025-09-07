@@ -1,0 +1,622 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Converting BBB recordings to MP4 with Webcam on Deskshare Movie - VACON</title>
+<meta name="description" content="Convert your BBB recordings to a compressed MP4 stream with webcam overlay and logo.  ">
+
+
+  <meta name="author" content="Bodo Bookhagen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="VACON">
+<meta property="og:title" content="Converting BBB recordings to MP4 with Webcam on Deskshare Movie">
+<meta property="og:url" content="http://localhost:4000/BBB-to-MP4-Webcam-and-Deskshare_I/">
+
+
+  <meta property="og:description" content="Convert your BBB recordings to a compressed MP4 stream with webcam overlay and logo.  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-28T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/BBB-to-MP4-Webcam-and-Deskshare_I/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Remote Sensing and Earth Surface Processes",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VACON Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          VACON
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/team_members/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/theses/">BSc and MSc Theses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/msc-rsiv/">MSc RSIV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/codes/">Codes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/bookhagen.jpg" alt="Bodo Bookhagen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Bodo Bookhagen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Research and Teaching in Remote Sensing and Earth Surface Process</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">University of Potsdam</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:bodo.bookhagen@uni-potsdam.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://bodobookhagen.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/RemotesensingUp" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/bodobookhagen/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:bodo.bookhagen@uni-potsdam.de">
+            <meta itemprop="email" content="bodo.bookhagen@uni-potsdam.de" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Converting BBB recordings to MP4 with Webcam on Deskshare Movie">
+    <meta itemprop="description" content="Convert your BBB recordings to a compressed MP4 stream with webcam overlay and logo.">
+    <meta itemprop="datePublished" content="2020-10-28T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Converting BBB recordings to MP4 with Webcam on Deskshare Movie
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Converting BBB recordings to MP4</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#a-shell-script-combining-these-steps">A Shell script combining these steps:</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>Convert your BBB recordings to a compressed MP4 stream with webcam overlay and logo.</p>
+
+<p>Similar to several other academic institutions, we are hosting our own <a href="https://bigbluebutton.org/">Big Blue Button Server (BBB)</a>. This is an open-source and free conference and teaching server tailored for academic environments. The standard player showing recorded teaching session is fairly simple and does not allow to download a video stream (e.g. MP4). However, the necessary files - movie of the shared desktop/presentation and webcamera - are stored on the BBB server and can be converted with <a href="https://ffmpeg.org/">ffmpeg</a> to a combined stream. Also, ffmpeg allows to apply audio-filtering steps that will enhance audio quality.</p>
+
+<p>The next steps are tailored towards combining shared desktops and webcameras and applying a FFT-based noise canceling and speech filter (<a href="https://ffmpeg.org/ffmpeg-filters.html#afftdn">afftdn</a>). We experimented with different low- and high-pass filtering options, but found this to be most useful. If you have a particularly noisy audio stream, you may need to filter this manually or use <a href="https://www.audacityteam.org/">audacity</a>.</p>
+
+<p>These steps also allow you to convert existing recordings. If you plan to record new, high resolution recording, please look at <a href="https://obsproject.com/">OBS</a>.</p>
+
+<p>On the BBB server change to the directory that contains the processed and published recordings. These are usually stored in <code class="language-plaintext highlighter-rouge">/var/bigbluebutton/published/presentation/</code>. Change directory to the meeting id of the recording - these are usually long digits and number combinations that you see in the http address when playing the recording (e.g., <em>bda894a68f6d2aa38dc62dd788e19d357e17948c-1603807633429</em>.)</p>
+
+<p>First, extract audio from webcam stream (stored in <em>video/webcams.webm</em>), filter audio with <em>afftdn</em>, and combine with desktop stream (stored in <em>deskshare/deskshare.webm</em>). We convert the WEBM format to MP4.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -nostdin -threads 4 -i video/webcams.webm -i deskshare/deskshare.webm -af afftdn deskshare_with_sound.mp4
+</code></pre></div></div>
+
+<p>Next, reduce size of video recording by 1/4 (scale by 4). This depends on your video resolution, we are currently using a resolution of</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>video_output_width: 640
+video_output_height: 480
+</code></pre></div></div>
+<p>set in <em>/usr/local/bigbluebutton/core/scripts/presentation.yml</em>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -nostdin -threads 4 -i video/webcams.webm -vf "scale=iw/4:ih/4" webcams_sc4.mp4
+</code></pre></div></div>
+
+<p>Add scaled webcam stream and deskshare video and place webcam stream in upper right corner (often referred to as ‘picture in picture’):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -nostdin -i deskshare_with_sound.mp4 -vf "movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]" completed_ur.mp4
+</code></pre></div></div>
+
+<p>We also add the Institute of Geoscience logo to the upper left corner. We scale the (almost) squared logo to 100x100 pixels.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -nostdin -i completed_ur.mp4 -i geowiss__cmyk_blue_2000px.png -filter_complex "[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]" -map "[outv]" -c:a copy -map 0:a completed_ur_logo.mp4
+</code></pre></div></div>
+
+<p>This file is now ready to be uploaded to a media server for further distribution!</p>
+
+<p><strong>Note that the following video has been downscaled to 640x360 (from 1280x720) with ffmpeg:</strong>
+<code class="language-plaintext highlighter-rouge">ffmpeg -nostdin -ss 00:18:06 -i completed_afftdn_ll.mp4 -t 00:05:00 -vf scale=640:360 -vc copy NB_linearregression.mp4</code></p>
+
+<div style="text-align:center;">
+<video width="320" height="240" controls="">
+  <source src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/mp4/NB_linearregression.mp4" type="video/mp4" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen="" />
+</video>
+</div>
+
+<p><strong>Here is a high-res link to a Media-UP recording of an entire lecture:</strong></p>
+<div style="text-align:center;">
+<iframe width="330" height="270" src="https://mediaup.uni-potsdam.de/player?autostart=n&amp;videoId=djJACa1J&amp;captions=y&amp;chapterId=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+
+<h1 id="a-shell-script-combining-these-steps">A Shell script combining these steps:</h1>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+<span class="c"># Convert the deskshare and webcam to a combined video stream including logo</span>
+<span class="c"># cd /var/bigbluebutton/published/presentation/</span>
+<span class="nv">meetingId</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nb">cd</span> <span class="nv">$meetingId</span>
+
+<span class="c"># add webcam sound to deskshare</span>
+ffmpeg <span class="nt">-nostdin</span> <span class="nt">-threads</span> 4 <span class="nt">-i</span> video/webcams.webm <span class="nt">-i</span> deskshare/deskshare.webm <span class="nt">-af</span> afftdn deskshare_with_sound.mp4
+ffmpeg <span class="nt">-nostdin</span> <span class="nt">-threads</span> 4 <span class="nt">-i</span> video/webcams.webm <span class="nt">-vf</span> <span class="s2">"scale=iw/4:ih/4"</span> webcams_sc4.mp4
+
+<span class="c">#add picture in picture</span>
+ffmpeg <span class="nt">-nostdin</span> <span class="nt">-i</span> deskshare_with_sound.mp4 <span class="nt">-vf</span> <span class="s2">"movie=webcams_sc4.mp4[inner]; [in][inner] overlay=W-w:0 [out]"</span> completed_ur.mp4
+
+<span class="c"># add logo in upper right corner (could be combined with previous command)</span>
+ffmpeg <span class="nt">-nostdin</span> <span class="nt">-i</span> completed_ur.mp4 <span class="nt">-i</span> /var/bigbluebutton/published/presentation/geowiss__cmyk_blue_2000px.png <span class="nt">-filter_complex</span> <span class="s2">"[1:v]scale=100:100[v1];[0:v][v1]overlay[outv]"</span> <span class="nt">-map</span> <span class="s2">"[outv]"</span> <span class="nt">-c</span>:a copy <span class="nt">-map</span> 0:a completed_afftdn_ll.mp4
+
+<span class="nb">rm</span> <span class="nt">-fr</span> deskshare_with_sound.mp4 webcams_sc4.mp4 completed_ur.mp4
+</code></pre></div></div>
+
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io/BBB-to-MP4-Webcam-and-Deskshare_I/' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#bbb" class="page__taxonomy-item" rel="tag">BBB</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#mp4" class="page__taxonomy-item" rel="tag">MP4</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#teaching" class="page__taxonomy-item" rel="tag">teaching</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#webcam" class="page__taxonomy-item" rel="tag">Webcam</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-28T00:00:00+01:00">October 28, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Converting+BBB+recordings+to+MP4+with+Webcam+on+Deskshare+Movie%20http%3A%2F%2Flocalhost%3A4000%2FBBB-to-MP4-Webcam-and-Deskshare_I%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FBBB-to-MP4-Webcam-and-Deskshare_I%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FBBB-to-MP4-Webcam-and-Deskshare_I%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/2020/10/Jupyter-Notebooks-on-Android/" class="pagination--pager" title="Running Jupyter Notebooks on a Android tablet
+">Previous</a>
+    
+    
+      <a href="/posts/2020/11/SAOCOM-Ifgs-and-ISCE/" class="pagination--pager" title="Example of SAOCOM processing with ISCE
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/CameraCalibration1_calibio/" rel="permalink">Camera Calibration (1): Comparison of boards and parameters with calib.io
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Precise Camera Calibration is an important part of generating high-quality points clouds and mesh models. We outline some basic procedures to generate reliab...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/VCM03-DavidHersh/" rel="permalink">Apple segmentation in 3D point clouds
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learn...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ManTuenChan_UNET_pebble_segmentation/" rel="permalink">A U-Net-SegmentAnything 2-pass approach with stereo-depth sensing for river-pebble panoptic segmentation
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+Sediment charateristics and grain-size distribution carries important information on the drainage system, the ecosystem, and the weather conditi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Kathmandu_Workshop_Feb2024/" rel="permalink">Climate Data Collection and Analysis, Kathmandu, Feb 26-27 2024
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Workshop organized and led by Dr Taylor Smith (University of Potsdam, Germany), Dr Bodo Bookhagen (University of Potsdam, Germany) and Dr Shakil Regmi (South...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://gitup.uni-potsdam.de/RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="https://www.uni-potsdam.de/de/datenschutzerklaerung.html">Datenschutzerklärung (German)</a></li>
+    <li><a href="https://www.uni-potsdam.de/en/data-protection-declaration.html">Data Protection Declaration (Englisch)</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Remote Sensing and Earth Surface Processes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>

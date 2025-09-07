@@ -1,0 +1,1 @@
+/usr/bin/convert -background lightblue -fill blue -font Ubuntu-Medium -size 250x250 -gravity center label:Team team_photo.png

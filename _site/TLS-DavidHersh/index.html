@@ -1,0 +1,713 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Terrestrial Laser Scanning in Campus Golm: Data Acquisition and Attributes - VACON</title>
+<meta name="description" content="Collection of full-waveform terrestrial LiDAR data poses unique challenges during data acquisition and generates data with useful extra attributes. The scanning process and resulting data are described here for a dataset collected at the University of Potsdam Golm campus in August, 2022.  ">
+
+
+  <meta name="author" content="David Hersh">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="VACON">
+<meta property="og:title" content="Terrestrial Laser Scanning in Campus Golm: Data Acquisition and Attributes">
+<meta property="og:url" content="http://localhost:4000/TLS-DavidHersh/">
+
+
+  <meta property="og:description" content="Collection of full-waveform terrestrial LiDAR data poses unique challenges during data acquisition and generates data with useful extra attributes. The scanning process and resulting data are described here for a dataset collected at the University of Potsdam Golm campus in August, 2022.  ">
+
+
+
+  <meta property="og:image" content="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/title_background_lr.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-06-07T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/TLS-DavidHersh/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Remote Sensing and Earth Surface Processes",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VACON Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          VACON
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/team_members/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/theses/">BSc and MSc Theses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/msc-rsiv/">MSc RSIV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/codes/">Codes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/title_background_lr.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Terrestrial Laser Scanning in Campus Golm: Data Acquisition and Attributes
+
+        
+      </h1>
+      
+        <p class="page__lead">Collection of full-waveform terrestrial LiDAR data poses unique challenges during data acquisition and generates data with useful extra attributes. The scanning process and resulting data are described here for a dataset collected at the University of Potsdam Golm campus in August, 2022.
+
+</p>
+      
+      
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Golm campus TLS data reflectance
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/profile_picture_Hersh2.jpg" alt="David Hersh" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">David Hersh</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>MSc Student</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">University of Potsdam</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:david.hersh@uni-potsdam.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Terrestrial Laser Scanning in Campus Golm: Data Acquisition and Attributes">
+    <meta itemprop="description" content="Collection of full-waveform terrestrial LiDAR data poses unique challenges during data acquisition and generates data with useful extra attributes. The scanning process and resulting data are described here for a dataset collected at the University of Potsdam Golm campus in August, 2022.">
+    <meta itemprop="datePublished" content="2023-06-07T00:00:00+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Terrestrial laser scanning</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#scanning-process">Scanning Process</a></li>
+  <li><a href="#notes-on-errors-in-data-collection">Notes on errors in data collection</a></li>
+  <li><a href="#data-characteristics-and-attributes">Data characteristics and attributes</a></li>
+  <li><a href="#final-remarks">Final remarks</a></li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>Collection of full-waveform terrestrial LiDAR data poses unique challenges during data acquisition and generates data with useful extra attributes. The scanning process and resulting data are described here for a dataset collected at the University of Potsdam Golm campus in August, 2022.</p>
+
+<p>Terrestrial Laser Scanning (TLS) has applications in natural sciences such as in forestry, where common applications include estimation of above-ground biomass (Gonzales, et al., 2017), and estimation of biophysical parameters (Calders, et al., 2018). Natural hazards such as coastal retreat, glacier movement, lava flows, and landslides can also be monitored with TLS (Jones and Hobbs, 2021). Applications also include infrastructure monitoring including detecting cracks in concrete (Turkan, et al., 2018) and monitoring bridge displacement (Erdélyi, et al., 2020).</p>
+
+<p>The aims of this internship was to create a point cloud of the University of Potsdam Golm campus using a terrestrial laser scanner. This blog describes data acquisition and extra attributes.</p>
+
+<p><em>This internship was supervised by Prof. Dr. Bodo Bookhagen</em></p>
+
+<p>Dr. Benjamin Brede is thanked for providing the Riegl Lidar instrument and for converting the data from the proprietary Riegl format to laz files.</p>
+
+<h1 id="scanning-process">Scanning Process</h1>
+
+<p>Scans were collected from August 22nd to 25th, 2022 using a Riegl VZ-400i scanner. Scan positions were chosen according to the trade-off between time limitations and a complete coverage of the campus. Each scan required approximately 60 seconds to turn 360 degrees, after which the scanner was moved to the next scan position. The distance between scan positions was chosen to be around 30 meters. The Riegl scanner has a real-time viewer which shows the current scan position in purple and previous scans in blue, as well as varying surface brightness to indicate coverage.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig1_VZ_app.jpg?raw=True"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig1_VZ_app.jpg?raw=True" /></a>
+ <figcaption> Figure 1. Scan Position and scan intensity. Brighter areas indicate a higher point density.&lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>During scanning, the scanner screen showed objects which are captured in the point cloud as well as unreliable points (shown in red in figure 2).</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig2_scanpos91_filter.jpg?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig2_scanpos91_filter.jpg?raw=True" /></a>
+ <figcaption>Figure 2. Automated removal during scanning of unreliable points based on pulse return shape.&lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>The unreliable points are based on the pulse shape using a proprietary Riegl algorithm. An example of a theoretical difference between filtered and unfiltered returns is shown in figure 3.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig3_full_waveform_comparison.png?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig3_full_waveform_comparison.png?raw=True" /></a>
+ <figcaption>Figure 3. General shape of full waveform data (left) where each peak represents a return point. When multiple returns are close together, as may be case of vegetation, the return waveform can be filtered to remove this unreliable point (right). Modified from Ullrich &amp; Pfennigbauer, 2011. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>In total, the 222 scans created a complete point cloud of the Golm campus. Scanning from the roofs of buildings 27, 29, and 11 added point data to the top of buildings as well.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig4_roofscanning_clip_lr.jpg?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig4_roofscanning_clip_lr.jpg?raw=True" /></a>
+  <figcaption>Figure 4. VZ-400i scanning from the roof of building 11. The scanner has an attached GNSS receiver at the top and a DSLR camera.&lt;/a&gt;  </figcaption>
+    </figure>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig5_Scan_position_map_lr.jpg?raw=True"><img align="center" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig5_Scan_position_map_lr.jpg?raw=True" /></a>
+ <figcaption>Figure 5. Overview of scan positions around the Golm campus.&lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>The distance between scans was maintained at around 30 meters as shown in figure 6 below. When moving from the ground to roofs, the distance between scans spiked, which causes problems for the on-board registration of the Riegl scanner, resulting in mis-aligned scans.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig6_Scan-scan_distances.png?raw=True"><img align="center" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig6_Scan-scan_distances.png?raw=True" /></a>
+ <figcaption>Figure 6. Distances between consecutive scans.&lt;/a&gt;  </figcaption>
+    </figure>
+
+<h1 id="notes-on-errors-in-data-collection">Notes on errors in data collection</h1>
+
+<p>During planning and the scanning processing, numerous factors can influence the data quality. Some important to consider include:</p>
+
+<ol>
+  <li>Weather conditions
+    <ul>
+      <li>Data collection is not possible in rain or dense fog due to the interaction with water (Rasshofer and Spies, 2011)</li>
+    </ul>
+  </li>
+  <li>Scan position
+    <ul>
+      <li>Avoid occlusions due to objects</li>
+      <li>Keep scan-scan distances as short as possible within time constraints</li>
+      <li>Continuity of scan pattern (eg. pick up where you left off)</li>
+    </ul>
+  </li>
+</ol>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig7_scanpos106_data_occlusion.png?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig7_scanpos106_data_occlusion.png?raw=True" /></a>
+ <figcaption>Figure 7. A scan position close to a large vehicle resulting in a gap in data behind the vehicle. This can be avoided by choosing scan positions away from large objects such as cars and trees. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<h1 id="data-characteristics-and-attributes">Data characteristics and attributes</h1>
+
+<p>After collecting data, the data was pre-processed in the Riegl software and files were exported in .laz format. Each scan had around 9 million points, giving a total number of points collected for the project at around 2 billion.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig8_points_per_scan.jpg?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig8_points_per_scan.jpg?raw=True" /></a>
+ <figcaption>Figure 8. Number of points collected for each scan. Locations closely surrounded by buildings such as the courtyard between 27 and 29 have higher point numbers, while roof scans have as low as approx. 5 million points. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>Unlike with airborne lidar, the point densities of TLS drop quickly with distance from the scanner, therefore, each scan is considered an “unstructured” point cloud where densities are varying primarily with distance from the scanner, but also by the viewing geometry (eg. a building orthogonal to the scanner will be sampled more densely than if scanned from an oblique angle).</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig9_Distance_from_scanner_example.jpg?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig9_Distance_from_scanner_example.jpg?raw=True" /></a>
+ <figcaption>Figure 9. Example of the distribution of points based on the distance from the scanner for a single scan. Most points are within a few meters of the scanner. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>Along with XYZ coordinates, each point has the following data:</p>
+<ul>
+  <li>RGB data from the attached DSLR camera</li>
+  <li>Reflectance</li>
+  <li>Deviation</li>
+  <li>Return number</li>
+  <li>Number of returns</li>
+</ul>
+
+<p>The attached DSLR camera takes 8 photos during scanning. RGB information is added to each scan automatically. The RGB information may be incomplete or incorrect, especially for partially obscured objects such as the far side of a scanned tree. Figure 10 shows common incorrect and missing data.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig10_scanpos50_rgb_annotated.jpg?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig10_scanpos50_rgb_annotated.jpg?raw=True" /></a>
+ <figcaption>Figure 10. Examples of incorrect or missing RGB data common in vegetation. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>One of the important attributes is reflectance. Reflectance is a measure of the strength of the backscatter, which is valuable for classification, object detection and other uses, but has numerous noise components, especially viewing geometry (Kashani, et al., 2015). Using the Riegl scanner, the reflectance values are not corrected for viewing geometry. Therefore, using reflectance for classification or other tasks may require correction for viewing angle first.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig11_scan52_reflectance.png?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig11_scan52_reflectance.png?raw=True" /></a>
+ <figcaption>Figure 11. Difference in reflectance value across the same material. As the scan angle becomes more oblique, more energy is directed away from the scanner, so reflectance decreases along the building height. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>Another attribute of the data is deviation, an integer value describing how many different elements contribute to a given return pulse (Calders et al., 2017). This value is also a function of the distance from the scanner (Li et al., 2018).</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig12_Deviation_example_scanpos40_lr.jpg?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig12_Deviation_example_scanpos40_lr.jpg?raw=True" /></a>
+ <figcaption>Figure 12. Pulse deviation values for a single scan. High values in vegetation indicate that mutiple components are present (eg. an irregular return pulse shape). &lt;/a&gt;  </figcaption>
+    </figure>
+
+<p>A last important extra attribute is the return number and number of returns. Most points in TLS are close to the scanner, and the beam divergence for the Riegl VZ-400i is ~0.3 mrad, resulting in a very small beam footprint. However, the return characteristics may be useful (eg. the first return of multiple returns could indicate vegetation). The return characteristics are shown below.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig13_return_characteristics_scanpos5.png?raw=True"><img width="2000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/TLS_figs_Hersh/fig13_return_characteristics_scanpos5.png?raw=True" /></a>
+ <figcaption>Figure 13. Example return characteristics for 7,566,659 points from scan position 5 include the return number (a), number of returns (b) and with these attributes, the return ratio (c) can be computed as return number/number of returns. &lt;/a&gt;  </figcaption>
+    </figure>
+
+<h1 id="final-remarks">Final remarks</h1>
+
+<p>Terrestrial laser scanning in the (semi-) urban environment of the Golm campus using the Riegl VZ-400i generated a large (over 2 billion points) point cloud. The full waveform data has extra attributes which can be used for classification. Some attributes, such as RGB information, is immediately usable. Other attributes, such as reflectance, may require further processing (eg. correction for viewing geometry) before further use. Data acquisition is time-consuming and susceptible to numerous errors. Therefore, planning for scanning requires careful consideration of weather conditions, objects in the scene (such as vehicles) and ideal scan patterns.</p>
+
+<h1 id="references">References</h1>
+
+<p>Calders, K., Disney, M., Armston, J., Burt, A. J., Brede, B., Origo, N., Muir, J., &amp; Nightingale, J. (2017). Evaluation of the Range Accuracy and the Radiometric Calibration of Multiple Terrestrial Laser Scanning Instruments for Data Interoperability. IEEE Transactions on Geoscience and Remote Sensing, 55(5), 2716–2724. https://doi.org/10.1109/tgrs.2017.2652721</p>
+
+<p>Calders, K., Origo, N., Burt, A. J., Disney, M., Nightingale, J., Raumonen, P., Åkerblom, M., Malhi, Y., &amp; Lewis, P. (2018). Realistic Forest Stand Reconstruction from Terrestrial LiDAR for Radiative Transfer Modelling. Remote Sensing, 10(6), 933. https://doi.org/10.3390/rs10060933</p>
+
+<p>Erdélyi, J., Kopáčik, A., &amp; Kyrinovič, P. (2020). Spatial Data Analysis for Deformation Monitoring of Bridge Structures. Applied Sciences, 10(23), 8731. https://doi.org/10.3390/app10238731</p>
+
+<p>Jones, L., &amp; Hobbs, P. V. (2021). The Application of Terrestrial LiDAR for Geohazard Mapping, Monitoring and Modelling in the British Geological Survey. Remote Sensing, 13(3), 395. https://doi.org/10.3390/rs13030395</p>
+
+<p>Kashani, A., Olsen, M. H., Parrish, C. C., &amp; Wilson, N. (2015). A Review of LIDAR Radiometric Processing: From Ad Hoc Intensity Correction to Rigorous Radiometric Calibration. Sensors, 15(11), 28099–28128. https://doi.org/10.3390/s151128099</p>
+
+<p>Li, X., Yang, B., Xie, X., Li, D., &amp; Xu, L. (2018). Influence of Waveform Characteristics on LiDAR Ranging Accuracy and Precision. Sensors, 18(4), 1156. https://doi.org/10.3390/s18041156</p>
+
+<p>Rasshofer, R. H., Spies, M., &amp; Spies, H. (2011). Influences of weather phenomena on automotive laser radar systems. Advances in Radio Science, 9, 49–60. https://doi.org/10.5194/ars-9-49-2011</p>
+
+<p>Turkan, Y., Hong, J., Laflamme, S., &amp; Puri, N. (2018). Adaptive wavelet neural network for terrestrial laser scanner-based crack detection. Automation in Construction, 94, 191–202. https://doi.org/10.1016/j.autcon.2018.06.017</p>
+
+<p>Ullrich, A., &amp; Pfennigbauer, M. (2011, September). Echo digitization and waveform analysis in airborne and terrestrial laser scanning. In Photogrammetric week (Vol. 11, pp. 217-228).</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#lidar" class="page__taxonomy-item" rel="tag">LiDAR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#point-clouds" class="page__taxonomy-item" rel="tag">Point Clouds</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#terrestrial-laser-scanning" class="page__taxonomy-item" rel="tag">Terrestrial laser scanning</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-06-07T00:00:00+02:00">June 7, 2023</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Terrestrial+Laser+Scanning+in+Campus+Golm%3A+Data+Acquisition+and+Attributes%20http%3A%2F%2Flocalhost%3A4000%2FTLS-DavidHersh%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FTLS-DavidHersh%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FTLS-DavidHersh%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/posts/2023/05/TLS-point-cloud-Golm" class="pagination--pager" title="Point cloud registration: TLS 3-D model of the Golm campus at the University of Potsdam
+">Previous</a>
+    
+    
+      <a href="/TLS_scanline_LuisKremer/" class="pagination--pager" title="A line-based segmentation and subsampling approach for classifying point clouds using the random forest algorithm
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/CameraCalibration1_calibio/" rel="permalink">Camera Calibration (1): Comparison of boards and parameters with calib.io
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Precise Camera Calibration is an important part of generating high-quality points clouds and mesh models. We outline some basic procedures to generate reliab...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/VCM03-DavidHersh/" rel="permalink">Apple segmentation in 3D point clouds
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learn...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ManTuenChan_UNET_pebble_segmentation/" rel="permalink">A U-Net-SegmentAnything 2-pass approach with stereo-depth sensing for river-pebble panoptic segmentation
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+Sediment charateristics and grain-size distribution carries important information on the drainage system, the ecosystem, and the weather conditi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Kathmandu_Workshop_Feb2024/" rel="permalink">Climate Data Collection and Analysis, Kathmandu, Feb 26-27 2024
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Workshop organized and led by Dr Taylor Smith (University of Potsdam, Germany), Dr Bodo Bookhagen (University of Potsdam, Germany) and Dr Shakil Regmi (South...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://gitup.uni-potsdam.de/RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="https://www.uni-potsdam.de/de/datenschutzerklaerung.html">Datenschutzerklärung (German)</a></li>
+    <li><a href="https://www.uni-potsdam.de/en/data-protection-declaration.html">Data Protection Declaration (Englisch)</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Remote Sensing and Earth Surface Processes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>

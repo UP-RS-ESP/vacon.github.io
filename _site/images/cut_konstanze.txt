@@ -1,0 +1,1 @@
+convert -crop 903x903+0+0 -density 300 -quality 100 konstanze.jpg konstanze2.jpg

@@ -1,0 +1,743 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Example of SAOCOM processing with ISCE - VACON</title>
+<meta name="description" content="First results from processing interferograms from SAOCOM - an Argentinean L-band SAR satellite - and ISCE.  ">
+
+
+  <meta name="author" content="Bodo Bookhagen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="VACON">
+<meta property="og:title" content="Example of SAOCOM processing with ISCE">
+<meta property="og:url" content="http://localhost:4000/posts/2020/11/SAOCOM-Ifgs-and-ISCE/">
+
+
+  <meta property="og:description" content="First results from processing interferograms from SAOCOM - an Argentinean L-band SAR satellite - and ISCE.  ">
+
+
+
+  <meta property="og:image" content="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/SAOCOM_filt_topophase.unw.geo.crop.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-08T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/posts/2020/11/SAOCOM-Ifgs-and-ISCE/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Remote Sensing and Earth Surface Processes",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VACON Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          VACON
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/team_members/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/theses/">BSc and MSc Theses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/msc-rsiv/">MSc RSIV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/codes/">Codes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/SAOCOM_filt_topophase.unw.geo.crop.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Example of SAOCOM processing with ISCE
+
+        
+      </h1>
+      
+        <p class="page__lead">First results from processing interferograms from <a href="https://en.wikipedia.org/wiki/SAOCOM">SAOCOM</a> - an Argentinean L-band SAR satellite - and <a href="https://github.com/isce-framework/isce2">ISCE</a>.
+
+</p>
+      
+      
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">SAOCOM Interferogram calculated with ISCE
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/bookhagen.jpg" alt="Bodo Bookhagen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Bodo Bookhagen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Research and Teaching in Remote Sensing and Earth Surface Process</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">University of Potsdam</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:bodo.bookhagen@uni-potsdam.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://bodobookhagen.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/RemotesensingUp" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/bodobookhagen/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:bodo.bookhagen@uni-potsdam.de">
+            <meta itemprop="email" content="bodo.bookhagen@uni-potsdam.de" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Example of SAOCOM processing with ISCE">
+    <meta itemprop="description" content="First results from processing interferograms from SAOCOM - an Argentinean L-band SAR satellite - and ISCE.">
+    <meta itemprop="datePublished" content="2020-11-08T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Example of SAOCOM processing with ISCE</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#setup-config-and-input-files">Setup config and input files</a></li>
+  <li><a href="#get-srtm-dem">Get SRTM DEM</a></li>
+  <li><a href="#additional-preparation-steps">Additional Preparation steps</a></li>
+  <li><a href="#quick-views-of-interferogram-and-coherence">Quick views of interferogram and coherence</a></li>
+  <li><a href="#quick-views-of-ionospheric-impact">Quick views of ionospheric impact</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>First results from processing interferograms from <a href="https://en.wikipedia.org/wiki/SAOCOM">SAOCOM</a> - an Argentinean L-band SAR satellite - and <a href="https://github.com/isce-framework/isce2">ISCE</a>.</p>
+
+<p>These outputs here show processing of the sample data from <a href="https://www.argentina.gob.ar/ciencia/conae">CONAE</a>.
+Obtain sample data from <a href="https://catalogos.conae.gov.ar/catalogo/catalogoSatSaocomAdel.html">CONAE SAOCOM sample data download</a>. ISCE2.4 includes a reader for SAOCOM and allows to process the slc images (provided by CONAE). We rely on the Interferometric synthetic aperture radar Scientific Computing Environment (ISCE) environment, but processing will work with other InSAR processors as well.
+These specific example SAR images are from the National Park El Leoncito (<em>Parque Nacional El Leoncito</em>) in the San Juan province.</p>
+
+<h2 id="setup-config-and-input-files">Setup config and input files</h2>
+<p>We generate three files to control the ISCE-run of SAOCOM data:</p>
+
+<ul>
+  <li>XML file controlling the parameters of <em>stripmapApp.py</em></li>
+  <li>an XML file containing information about the reference data</li>
+  <li>an XML file containing information about the secondary data</li>
+</ul>
+
+<p><em>You will need to adjust directories if you are planing to run this on your own ISCE instance.</em></p>
+
+<p><strong>StripmapApp_SAOCOM.xml:</strong></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;insarApp&gt;</span>
+  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"insar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"sensor name"</span><span class="nt">&gt;</span>SAOCOM_SLC<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"reference"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;catalog&gt;</span>/home/bodo/Dropbox/Argentina/SAOCOM/reference_SAOCOM.xml<span class="nt">&lt;/catalog&gt;</span>
+    <span class="nt">&lt;/component&gt;</span>
+    <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;catalog&gt;</span>/home/bodo/Dropbox/Argentina/SAOCOM/secondary_SAOCOM.xml<span class="nt">&lt;/catalog&gt;</span>
+    <span class="nt">&lt;/component&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"demFilename"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>/home/bodo/Dropbox/Argentina/SAOCOM/demLat_S33_S31_Lon_W070_W068.dem.wgs84<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"do denseoffsets"</span><span class="nt">&gt;</span>True<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"do split spectrum"</span><span class="nt">&gt;</span>True<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"unwrapper name"</span><span class="nt">&gt;</span>snaphu<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"do dispersive"</span><span class="nt">&gt;</span>True<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter kernel x-size"</span><span class="nt">&gt;</span>800<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter kernel y-size"</span><span class="nt">&gt;</span>800<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter kernel sigma_x"</span><span class="nt">&gt;</span>100<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter kernel sigma_y"</span><span class="nt">&gt;</span>100<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter kernel rotation"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter number of iterations"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter mask type"</span><span class="nt">&gt;</span>connected_components<span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"dispersive filter coherence threshold"</span><span class="nt">&gt;</span>0.6<span class="nt">&lt;/property&gt;</span>
+
+  <span class="nt">&lt;/component&gt;</span>
+<span class="nt">&lt;/insarApp&gt;</span>
+</code></pre></div></div>
+
+<p><strong>reference_SAOCOM.xml:</strong></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"reference"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"IMAGEFILE"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Master/67496-EOL1ASARSAO1A515794/Data/slc-acqId0000008546-a-sm7-0000000000-s7dp-vv
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"XEMTFILE"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Master/67496-EOL1ASARSAO1A515794/S1A_OPER_SAR_EOSSP__CORE_L1A_OLF_20200221T122503.xemt
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"XMLFILE"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Master/67496-EOL1ASARSAO1A515794/Data/slc-acqId0000008546-a-sm7-0000000000-s7dp-vv.xml
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"OUTPUT"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Master/67496-EOL1ASARSAO1A515794/slc-acqId0000008546-a-sm7-0000000000-s7dp-vv
+    <span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</code></pre></div></div>
+
+<p><strong>secondary_SAOCOM.xml:</strong></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"reference"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"IMAGEFILE"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Slave/67498-EOL1ASARSAO1A515796/Data/slc-acqId0000010907-a-sm7-0000000000-s7dp-vv
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"XEMTFILE"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Slave/67498-EOL1ASARSAO1A515796/S1A_OPER_SAR_EOSSP__CORE_L1A_OLF_20200221T122606.xemt
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"XMLFILE"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Slave/67498-EOL1ASARSAO1A515796/Data/slc-acqId0000010907-a-sm7-0000000000-s7dp-vv.xml
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"OUTPUT"</span><span class="nt">&gt;</span>
+        /raid/InSAR/SAOCOM/Slave/67498-EOL1ASARSAO1A515796/slc-acqId0000010907-a-sm7-0000000000-s7dp-vv.slc
+    <span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</code></pre></div></div>
+
+<h2 id="get-srtm-dem">Get SRTM DEM</h2>
+<p>Make sure to obtain the DEM and download with <em>dem.py</em>. Alternatively, this will be automatically downloaded from the NASA ftp page, if you have properly setup permission in ~/.netrc.</p>
+
+<p>We use the DEM: <em>demLat_S33_S31_Lon_W070_W068.dem.wgs84</em>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fixImageXml.py -f -i demLat_S33_S31_Lon_W070_W068.dem.wgs84
+</code></pre></div></div>
+
+<h2 id="additional-preparation-steps">Additional Preparation steps</h2>
+<p>Best to uncompress into one folder <em>/raid/InSAR/SAOCOM</em> and process data there.</p>
+
+<h1 id="create-interferogram---run-stripmapapppy">Create Interferogram - Run <em>stripmapApp.py</em></h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /raid/InSAR/SAOCOM
+stripmapApp.py --steps /home/bodo/Dropbox/Argentina/SAOCOM/stripmapApp_SAOCOM.xml 2&gt;&amp;1 | tee SAOCOM_test.log
+</code></pre></div></div>
+
+<h2 id="quick-views-of-interferogram-and-coherence">Quick views of interferogram and coherence</h2>
+<p>Use <em>mdx.py</em> to create a quick outputs of filtered, unwrapped topophase and coherence (filtered phsig).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdx.py <span class="nt">-P</span> interferogram/filt_topophase.unw.geo
+<span class="nb">mv </span>out.ppm SAOCOM_filt_topophase.unw.geo.ppm
+convert <span class="nt">-density</span> 300 <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> SAOCOM_filt_topophase.unw.geo.ppm SAOCOM_filt_topophase.unw.geo.jpg
+</code></pre></div></div>
+
+<figure>
+    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/SAOCOM_filt_topophase.unw.geo.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/SAOCOM_filt_topophase.unw.geo.jpg" /></a>
+    <figcaption>Filtered and unwrapped SAOCOM interferogram.</figcaption>
+</figure>
+
+<p>Same for <em>phsig.cor.geo</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mdx.py <span class="nt">-P</span> interferogram/phsig.cor.geo
+<span class="nb">mv </span>out.ppm SAOCOM_phsig.cor.geo.ppm
+convert <span class="nt">-density</span> 300 <span class="nt">-fuzz</span> 1% <span class="nt">-trim</span> SAOCOM_phsig.cor.geo.ppm SAOCOM_phsig.cor.geo.jpg
+</code></pre></div></div>
+
+<figure>
+    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/SAOCOM_phsig.cor.geo.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/SAOCOM_phsig.cor.geo.jpg" /></a>
+    <figcaption>Filtered coherence calculation using the phsig output.</figcaption>
+</figure>
+
+<p>Generate quick view shown in banner of this page using imagemagick <em>convert</em>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert <span class="nt">-density</span> 300 <span class="nt">-crop</span> 2000x400+0+1000 +repage SAOCOM_filt_topophase.unw.geo.jpg SAOCOM_filt_topophase.unw.geo.crop.jpg
+</code></pre></div></div>
+
+<h2 id="quick-views-of-ionospheric-impact">Quick views of ionospheric impact</h2>
+<p>Using split-spectrum processing included in ISCE (see <a href="https://ieeexplore.ieee.org/document/7987747">paper by Heresh Fattahi et al.</a> and for C-band the <a href="https://ieeexplore.ieee.org/document/8706258?source=authoralert">paper by Cunren Liang et al.</a>), we can estimate the dispersive and non-dispersive components of the ionosphere and correct the interferogram. We note that this specific SAOCOM example contains some ionospheric disturbances.</p>
+
+<figure>
+    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/iono_dispersive.bil.unwCor.filt.geo.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/iono_dispersive.bil.unwCor.filt.geo.jpg" /></a>
+    <figcaption>Ionospheric component (dispersive), unwrapped and filtered data. .</figcaption>
+</figure>
+
+<figure>
+    <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/iono_nondispersive.bil.unwCor.filt.geo.jpg"><img src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/images/iono_nondispersive.bil.unwCor.filt.geo.jpg" /></a>
+    <figcaption>Ionospheric component (non-dispersive), unwrapped and filtered data. Color Scale equals to dispersive ionospheric component shown above.</figcaption>
+</figure>
+
+<script type="text/javascript"> DiscourseEmbed = { discourseUrl: 'https://discourse.up-rs-esp-3.geo.uni-potsdam.de/', discourseEmbedUrl: 'https://up-rs-esp.github.io//posts/2020/11/SAOCOM-Ifgs-and-ISCE/' };
+(function() { var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true; d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d); })(); </script>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#argentina" class="page__taxonomy-item" rel="tag">Argentina</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#central-andes" class="page__taxonomy-item" rel="tag">Central Andes</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#insar" class="page__taxonomy-item" rel="tag">InSAR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#interferogram" class="page__taxonomy-item" rel="tag">interferogram</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ionosphere" class="page__taxonomy-item" rel="tag">ionosphere</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#isce" class="page__taxonomy-item" rel="tag">ISCE</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#saocom" class="page__taxonomy-item" rel="tag">SAOCOM</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-08T00:00:00+01:00">November 8, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Example+of+SAOCOM+processing+with+ISCE%20http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2020%2F11%2FSAOCOM-Ifgs-and-ISCE%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2020%2F11%2FSAOCOM-Ifgs-and-ISCE%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2020%2F11%2FSAOCOM-Ifgs-and-ISCE%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/BBB-to-MP4-Webcam-and-Deskshare_I/" class="pagination--pager" title="Converting BBB recordings to MP4 with Webcam on Deskshare Movie
+">Previous</a>
+    
+    
+      <a href="/posts/2020/12/COVID-19-NOx-CO-emission-Europe/" class="pagination--pager" title="Causes of reduction in airborne NO2 and CO emissions in Europe during the COVID-19 crisis
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/CameraCalibration1_calibio/" rel="permalink">Camera Calibration (1): Comparison of boards and parameters with calib.io
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Precise Camera Calibration is an important part of generating high-quality points clouds and mesh models. We outline some basic procedures to generate reliab...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/VCM03-DavidHersh/" rel="permalink">Apple segmentation in 3D point clouds
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learn...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ManTuenChan_UNET_pebble_segmentation/" rel="permalink">A U-Net-SegmentAnything 2-pass approach with stereo-depth sensing for river-pebble panoptic segmentation
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+Sediment charateristics and grain-size distribution carries important information on the drainage system, the ecosystem, and the weather conditi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Kathmandu_Workshop_Feb2024/" rel="permalink">Climate Data Collection and Analysis, Kathmandu, Feb 26-27 2024
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Workshop organized and led by Dr Taylor Smith (University of Potsdam, Germany), Dr Bodo Bookhagen (University of Potsdam, Germany) and Dr Shakil Regmi (South...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://gitup.uni-potsdam.de/RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="https://www.uni-potsdam.de/de/datenschutzerklaerung.html">Datenschutzerklärung (German)</a></li>
+    <li><a href="https://www.uni-potsdam.de/en/data-protection-declaration.html">Data Protection Declaration (Englisch)</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Remote Sensing and Earth Surface Processes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>

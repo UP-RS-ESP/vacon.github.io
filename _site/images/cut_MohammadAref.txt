@@ -1,0 +1,1 @@
+convert -crop 1432x1432+0+168 -density 300 -quality 100 Mohammad-MohseniAref.jpg Mohammad-MohseniAref2.jpg

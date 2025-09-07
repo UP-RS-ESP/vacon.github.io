@@ -1,0 +1,750 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Apple segmentation in 3D point clouds - VACON</title>
+<meta name="description" content="This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learning approach.  ">
+
+
+  <meta name="author" content="David Hersh">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="VACON">
+<meta property="og:title" content="Apple segmentation in 3D point clouds">
+<meta property="og:url" content="http://localhost:4000/VCM03-DavidHersh/">
+
+
+  <meta property="og:description" content="This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learning approach.  ">
+
+
+
+  <meta property="og:image" content="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_halftree.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-09-27T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/VCM03-DavidHersh/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Remote Sensing and Earth Surface Processes",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VACON Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          VACON
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/team_members/">Team</a>
+            </li><li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/theses/">BSc and MSc Theses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/msc-rsiv/">MSc RSIV</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Blog Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/codes/">Codes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_halftree.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Apple segmentation in 3D point clouds
+
+        
+      </h1>
+      
+        <p class="page__lead">This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learning approach.
+
+</p>
+      
+      
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Ground truth labels for half of the apple tree
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/profile_picture_Hersh2.jpg" alt="David Hersh" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">David Hersh</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>MSc Student</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">University of Potsdam</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:david.hersh@uni-potsdam.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Apple segmentation in 3D point clouds">
+    <meta itemprop="description" content="This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learning approach.">
+    <meta itemprop="datePublished" content="2024-09-27T00:00:00+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Terrestrial laser scanning</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#scanning-and-pre-processing">Scanning and Pre-processing</a></li>
+  <li><a href="#segmentation">Segmentation</a>
+    <ul>
+      <li><a href="#dbscan-and-ransac">DBSCAN and RANSAC</a></li>
+      <li><a href="#deep-learning-approach-using-kpconv">Deep learning approach using KPConv</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion">Conclusion</a></li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>This internship aimed at segmenting apples from a high-resolution Terrestrial Lidar Scan (TLS) Point Cloud with a simple clustering approach and a deep learning approach.</p>
+
+<h1 id="introduction">Introduction</h1>
+<p>Detection of fruit in 3D point clouds can help aid in crop yield prediction and can be acheived through clustering and segmentation as shown by Mola et al., 2020. Li et al., 2022 used a deep learning approach to generate bounding boxes around apples and RANSAC to determine the centroid for robotic harvesting. This internship aimed at segmenting apples with simple clustering approach and a deep learning approach.</p>
+
+<p><em>This internship was supervised by Prof. Dr. Bodo Bookhagen</em></p>
+
+<h1 id="scanning-and-pre-processing">Scanning and Pre-processing</h1>
+
+<p>The study site was the Streuobstwiese Golm located Northeast of the Golm campus, which has a few dozen apple and pear trees.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.jpg"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/study_location.jpg" /></a>
+ <figcaption> Figure 1. Location of the orchard near campus Golm.  </figcaption>
+    </figure>
+
+<p>The scans were taken of a single tree from approximately 12 perspectives. The scanner used was a Zoller+Froelich IMAGER® 5016A, which includes RGB and intensity information. Sphere control points from Zoller and Froelich were placed around the base of the tree along with paper targets to aid in the registration process.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/apple_site.jpg"><img align="right" width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/apple_site.jpg" /></a>
+ <figcaption> Figure 2. Study site with registration targets.  </figcaption>
+    </figure>
+
+<p>The scans were then registered using the Z+F LaserControl® software. The software uses the sphere control points and paper targets to align the scans. The software also has a feature to remove noise from the point cloud. The final point cloud was then exported as a LAS file.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/registration.png?raw=True"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/registration.png" /></a>
+ <figcaption>Figure 3. Automated removal during scanning of unreliable points based on pulse return shape. </figcaption>
+    </figure>
+
+<p>The final point cloud was clipped to remove ground points. Due to sunny conditions during scanning, some points, epecially on the top of the tree, had a purple hue (See figure 3).</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/appletree.png"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/appletree.png" /></a>
+ <figcaption>Figure 4. Final point cloud after registrations and clipping. </figcaption>
+    </figure>
+
+<h1 id="segmentation">Segmentation</h1>
+
+<p>Two general approaches to segmentation were tested. The first was using a combination of DBSCAN and RANSAC. The second was using a deep learning approach using KPConv.</p>
+
+<h2 id="dbscan-and-ransac">DBSCAN and RANSAC</h2>
+
+<p>Using <em>Density Based Spatial Clustering of Applications with Noise</em> (DBSCAN) and <em>Random Sampling and Consensus</em> (RANSAC) was chosen as a first approach due to the simplicity and the ability to easily use RANSAC to fit spheres to each apple. The main goal was to create clusters ideally with only a single apple. Then, using RANSAC, a sphere was fit to each cluster and the root mean squared error (RMSE) was calculated to find the best fitting sphere from the RANSAC iterations.</p>
+
+<p>DBSCAN was implemented using the sklearn library using an $\epsilon$ value of 0.25 and a minimum of 100 points using a ball radius with sklearn. The $\epsilon$ value was tested with multiple values as this determines the maximum distance between two neighbors to be part of the same cluster (Sander et al., 1998).</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.jpg"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/dbscan.jpg" /></a>
+ <figcaption>Figure 5. DBSCAN clusters often include only one apple, but often a much larger area if a larger epsilon value was used.  </figcaption>
+    </figure>
+
+<p>Then, for each cluster a sample of 4 random points are chosen and a sphere is fit using Random Sampling and Consensus. The parameters for the RANSAC algorithm require some adjustments to match the density of the dataset, which could not be downsampled without losing significant detail. The chosen parameters were:</p>
+
+<ul>
+  <li>10,000 iterations per cluster</li>
+  <li>Radius threshold of 0.03 meters (eg. if sphere from the 4 chosen points does not have a radius under 0.03 meters, then skip this iteration)</li>
+  <li>A threshhold for inliers of 0.01 meters</li>
+</ul>
+
+<p>At each RANSAC iteration on a cluster, the Root Mean Squared Error is calculated as:</p>
+
+\[\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (d_i - r)^2}\]
+
+<ul>
+  <li>$n$ is the number of inlier points (points close to the sphere’s surface)</li>
+  <li>$d_i$ is the Euclidean distance of the $i$-th point from the sphere’s center</li>
+  <li>$r$ is the radius of the fitted sphere</li>
+</ul>
+
+<p>The final inlier points were chosen by the lowest RMSE where more that 150 points were inliers and the results saved to a PLY file as a new class. Lastly, the output is compared to a ground truth point cloud and evaluated using the following metrics:</p>
+
+\[\text{Precision} = \frac{TP}{TP + FP}\]
+
+\[\text{Recall} = \frac{TP}{TP+FN}\]
+
+\[\text{F1} = 2 * \frac{Precision * Recall}{Precision + Recall}\]
+
+<p>After trying DBSCAN and RANSAC with different combinations of values, the above parameters yielded the following scores:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Precision</td>
+      <td>0.22</td>
+    </tr>
+    <tr>
+      <td>Recall</td>
+      <td>0.41</td>
+    </tr>
+    <tr>
+      <td>F1</td>
+      <td>0.28</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_dbscanransac.png"><img width="800" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_dbscanransac.png" /></a>
+ <figcaption>Figure 6. Ground truth (left) compared with DBSCAN+RANSAC results (right). </figcaption>
+    </figure>
+
+<p>Overall, the approach of using RANSAC and DBSCAN had a few significant drawbacks:</p>
+
+<ul>
+  <li>There were multiple parameters that required experimentation</li>
+  <li>Even for this relatively small point cloud, the process was slow due to having to iterate over many clusters</li>
+</ul>
+
+<h2 id="deep-learning-approach-using-kpconv">Deep learning approach using KPConv</h2>
+
+<p>An alternative approach using deep learning was explored. <em>Kernel Point Convolutions</em> (KPConv) was introduced by Thomas et al., 2019 and uses “Kernel Points” in a fashion analogous to Convolutional Neural Networks (CNN) and applies convolutions based on the relative position of points determined by a correlation coefficient as a way to avoid discretization into voxels or grids.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/kpconv.png?raw=True"><img width="1000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/kpconv.png" /></a>
+ <figcaption>Figure 7. Image convolution (left) and kernel convolution (right). Figure from Thomas et al., 2019. </figcaption>
+    </figure>
+
+<p>For the apple tree, KPConv was tested on half of the tree with ground truth labels of:</p>
+
+<ol>
+  <li>Branch</li>
+  <li>Apple</li>
+</ol>
+
+<p>This approach utilized a fork of the <a href="https://github.com/HuguesTHOMAS/KPConv-PyTorch">PyTorch KPConv repository</a> and used a copy of the SenSatUrban dataset as a template and updating the class weights to reflect the apple tree dataset for calculating loss. The dataset was split into 5 parts, using 3 for training and 2 for validation and testing. KPConv can take additional features in additional to x,y,z coordinates, and included here was RGB. Kernel points can either be “rigid” where they are initialized in fixed positions, or “deformable” where they can adapt to the local geometry (Thomas et al., 2019). The deformable kernel points were used in this case.</p>
+
+<p>The model training was done over 200 epochs using 12 kernel points and 5 cm kernel radius and without subsampling the original point cloud as it was sparse and KPConv does not require spatially uniform points. Training required around 3 hours on an NVIDIA Quadro M2200 GPU.</p>
+
+<p>The results of KPConv were evaluated using Intersection over Union (IoU). The mean IoU for the full cloud was:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>IoU</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Branch</td>
+      <td>98.78</td>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>59.12</td>
+    </tr>
+    <tr>
+      <td>Mean</td>
+      <td>78.95</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Compared with the more manual approach of DBSCAN and RANSAC, KPConv shows a significant improvement.</p>
+
+<figure>
+  <a href="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.jpg?raw=True"><img width="1000" src="https://github.com/UP-RS-ESP/up-rs-esp.github.io/raw/master/_posts/DavidHersh_Apples/gt_vs_pred.jpg" /></a>
+ <figcaption>Figure 8. Comparison of ground truth (left) and prediction (right). Areas of significant misclassification are circled. </figcaption>
+    </figure>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>The more simple approach of DBSCAN and RANSAC was difficult to apply due to the varying point cloud densities and multiple parameters that required tuning. This approach also does not scale well, but could have been sped up by initializing the 4 RANSAC points using a randomly initialized point and 3 nearest neighbors from a KD tree rather than being randomly initialized from a cluster. In comparison, the approach using KPConv yielded good results and could have been improved by adding additional input features, especially intensity. This approach generated a point-wise classification for the entire point cloud, so a final pass over the apple class in the point cloud using RANSAC similar to Li et al., 2022 could be used to generate final instance segmentations.</p>
+
+<h1 id="references">References</h1>
+
+<p>Gené-Mola, J., Gregorio, E., Cheein, F. A., Guevara, J., Llorens, J., Sanz-Cortiella, R., Escolà, A., &amp; Rosell-Polo, J. R. (2020). Fruit detection, yield prediction and canopy geometric characterization using LiDAR with forced air flow. Computers and Electronics in Agriculture, 168, 105121. https://doi.org/10.1016/j.compag.2019.105121</p>
+
+<p>Sander, J., Ester, M., Kriegel, H., &amp; Xu, X. (1998). A Density-Based algorithm for discovering clusters in large spatial databases with noise. Data Mining and Knowledge Discovery, 2(2), 169–194. https://doi.org/10.1023/a:1009745219419</p>
+
+<p>Thomas, H., Qi, C. R., Deschaud, J., Marcotegui, B., Goulette, F., &amp; Guibas, L. J. (2019, April 18). KPCONV: Flexible and Deformable Convolution for Point Clouds. arXiv.org. https://arxiv.org/abs/1904.08889</p>
+
+<p>Li, T., Feng, Q., Qiu, Q., Xie, F., &amp; Zhao, C. (2022). Occluded Apple Fruit Detection and Localization with a Frustum-Based Point-Cloud-Processing Approach for Robotic Harvesting. Remote Sensing, 14(3), 482. https://doi.org/10.3390/rs14030482</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#lidar" class="page__taxonomy-item" rel="tag">LiDAR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#point-clouds" class="page__taxonomy-item" rel="tag">Point Clouds</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#segmentation" class="page__taxonomy-item" rel="tag">segmentation</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#terrestrial-laser-scanning" class="page__taxonomy-item" rel="tag">Terrestrial laser scanning</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-09-27T00:00:00+02:00">September 27, 2024</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Apple+segmentation+in+3D+point+clouds%20http%3A%2F%2Flocalhost%3A4000%2FVCM03-DavidHersh%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FVCM03-DavidHersh%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FVCM03-DavidHersh%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/ManTuenChan_UNET_pebble_segmentation/" class="pagination--pager" title="A U-Net-SegmentAnything 2-pass approach with stereo-depth sensing for river-pebble panoptic segmentation
+">Previous</a>
+    
+    
+      <a href="/CameraCalibration1_calibio/" class="pagination--pager" title="Camera Calibration (1): Comparison of boards and parameters with calib.io
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/CameraCalibration1_calibio/" rel="permalink">Camera Calibration (1): Comparison of boards and parameters with calib.io
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Precise Camera Calibration is an important part of generating high-quality points clouds and mesh models. We outline some basic procedures to generate reliab...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ManTuenChan_UNET_pebble_segmentation/" rel="permalink">A U-Net-SegmentAnything 2-pass approach with stereo-depth sensing for river-pebble panoptic segmentation
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+Sediment charateristics and grain-size distribution carries important information on the drainage system, the ecosystem, and the weather conditi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Kathmandu_Workshop_Feb2024/" rel="permalink">Climate Data Collection and Analysis, Kathmandu, Feb 26-27 2024
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Workshop organized and led by Dr Taylor Smith (University of Potsdam, Germany), Dr Bodo Bookhagen (University of Potsdam, Germany) and Dr Shakil Regmi (South...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/LinaMariaPerez_UAV_landslide/" rel="permalink">Structure from Motion Application for Landslide Characterization and Monitoring
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">On January 9th, 2023, a catastrophic landslide severely impacted the upper basin of Chontaduro Creek, located in the municipality of Rosas-Cauca in southwest...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/UP-RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://gitup.uni-potsdam.de/RS-ESP" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="https://www.uni-potsdam.de/de/datenschutzerklaerung.html">Datenschutzerklärung (German)</a></li>
+    <li><a href="https://www.uni-potsdam.de/en/data-protection-declaration.html">Data Protection Declaration (Englisch)</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Remote Sensing and Earth Surface Processes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>
