@@ -14,7 +14,7 @@ header:
   caption: "Photo credit: [Bodo Bookhagen](https://bodobookhagen.github.io/)"
 ---
 
-![image-left](/images/3Logo_map_VACON.jpg){: .align-left} The *Valles Calchaquíes Observatory Network* (VACON) consists of continuous GNSS stations and meteorological instruments located in Northwestern Argentina, primarily within the Valles Calchaquíes and surrounding regions. At present, 12 stations are in operation, with the first one established in February 2024. The stations have been installed by the University of Potsdam and IBIGEO at Rosaria de Lerma (CONICET).
+![image-left](/images/3Logo_map_VACON.jpg){: .align-left} The *Valles Calchaquíes Observatory Network* (VACON) consists of continuous GNSS stations and meteorological instruments located in Northwestern Argentina, primarily within the Valles Calchaquíes and surrounding regions. At present, 12 stations are in operation, with the first one established in February 2024. The stations were installed under the auspices of the University of Potsdam and IBIGEO in Rosario de Lerma (CONICET). We are developing the network utilizing local infrastructure and national parks.
 
 The VACON network serves several scientific purposes:
   - GNSS data help improve understanding of deformation processes in the Central Andes.
