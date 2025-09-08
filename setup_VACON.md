@@ -24,3 +24,8 @@ Webpage only needs to be build - not hosted:
 git pull
 bundle exec jekyll build
 
+
+# Install python on VM
+sudo apt install python3 python3-numpy python3-pandas
+
+
