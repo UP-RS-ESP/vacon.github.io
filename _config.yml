@@ -11,7 +11,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "contrast" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -22,11 +22,11 @@ title_separator          : "-"
 subtitle                 : "VAlles Calchaquíes Observatory Network" # site tagline that appears below site title in masthead
 name                     : "Bodo Bookhagen"
 description              : "GNSS and meteorological data from the Central Andes"
-url                      : "https://vacon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://up-rs-esp-3.geo.uni-potsdam.de #"https://vacon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "up-rs-esp/VACON.github" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/images/logo_size.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -169,9 +169,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: https://github.com/UP-RS-ESP
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      url: https://gitup.uni-potsdam.de/RS-ESP
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: https://www.instagram.com/bodobookhagen
