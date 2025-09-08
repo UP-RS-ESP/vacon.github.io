@@ -1,5 +1,5 @@
 cd /home/bodo/vacon.github.io/ClimData/
-python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon.github.io/ClimData/data/clim_data/qt01/ "La Paya" 01_LaPaya
+python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon.github.io/ClimData/clim_data/qt01/ "La Paya" 01_LaPaya
 mv 01_LaPaya*.png /home/bodo/vacon.github.io/ClimData/
 
 cd /home/bodo/vacon.github.io/ClimData/
