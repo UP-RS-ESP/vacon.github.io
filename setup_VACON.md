@@ -19,7 +19,8 @@ rbenv global 3.4.5
 
 sudo apt-get install rubygems
 
+Hosting is done through nginx
+Webpage only needs to be build - not hosted:
+git pull
+bundle exec jekyll build
 
-bundle exec jekyll serve --host 141.89.241.176
-
-rails s -b 192.168.1.103 -p 8080
