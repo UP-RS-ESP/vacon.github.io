@@ -9,7 +9,7 @@ redirect_from:
   - /about.html
 excerpt: "VACON - The *VAlles Calchaquíes Observatory Network* is a network of continuous GNSS stations and meteorological instruments in Northwestern Argentina. "
 header:
-  overlay_image: images/qt04_Angastaco.jpg
+  overlay_image: images/04_Angastaco.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Photo credit: [Bodo Bookhagen](https://bodobookhagen.github.io/)"
 ---
