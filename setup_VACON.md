@@ -26,11 +26,11 @@ bundle exec jekyll build
 
 
 # Install python on VM
-sudo apt install python3 python3-numpy python3-pandas
+sudo apt install python3 python3-numpy python3-pandas python3-tqdm
 
 
 
 crontab -e
-0 2 * * * /home/bodo/vacon.github.io/ClimData/codes/get_climdata_from_gnss.sh 2>&1 | tee /home/bodo/vacon_logs/get_climdata_from_gnss_`date +"%d-%m-%Y"`.log
+30 2 * * * /home/bodo/vacon.github.io/ClimData/codes/get_climdata_from_gnss.sh 2>&1 | tee /home/bodo/vacon_logs/get_climdata_from_gnss_`date +"%d-%m-%Y"`.log
 
 

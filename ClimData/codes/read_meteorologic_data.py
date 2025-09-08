@@ -16,8 +16,6 @@ data_path = sys.argv[1]
 station_name = sys.argv[2]
 file_prefix = sys.argv[3]
 
-# station_name='KNP1'
-# data_path='/home/bodo/Dropbox/India_Nov2023/clim_data/knp1'
 filelist1 = glob.glob(os.path.join(data_path, "*/*.gz"))
 filelist2 = glob.glob(os.path.join(data_path, "*.gz"))
 filelist = filelist1 + filelist2
