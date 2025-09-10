@@ -26,7 +26,7 @@ cd /home/bodo/vacon.github.io/ClimData/
 python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt09/ "San Antonio de los Cobres" 09_SAdelosCobres
 
 cd /home/bodo/vacon.github.io/ClimData/
-python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt10/ "Tolar Grandes" 10_TolarGrandes
+python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt10/ "Tolar Grande" 10_TolarGrande
 
 cd /home/bodo/vacon.github.io/ClimData/
 python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt11/ "Salar Llullaillaco" 11_SalarLlullaillaco

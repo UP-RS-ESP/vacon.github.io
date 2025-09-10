@@ -59,7 +59,6 @@ stations4:
     url: '/images/12_Metan.jpg'
 
 ---
-# Researchers
 
 {% include feature_row id="stations1" type=center%}
 
