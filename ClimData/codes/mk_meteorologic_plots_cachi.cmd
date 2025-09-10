@@ -1,3 +1,8 @@
+#!/bin/bash
+
+/home/bodo/miniconda3/etc/profile.d/conda.sh
+conda activate py310
+
 cd /raid/nwarg/vacon.github.io/ClimData/
 python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt01/ "La Paya" 01_LaPaya
 
