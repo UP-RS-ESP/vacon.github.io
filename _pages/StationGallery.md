@@ -32,31 +32,31 @@ stations2:
     title: 06-Santa Maria
     url: '/images/06_SantaMaria.jpg/'
 stations3:
-  - image_path: /ClimData/07_LosCardones_TempP_last10days.png
+  - image_path: /images/07_LosCardones.jpg
     alt: 07-Los Cardones
     title: 07-Los Cardones
-    url: '/ClimData/07_LosCardones_TempP_last10days.png'
-  - image_path: /ClimData/07_LosCardones_TempP_last10days.png
+    url: '/images/07_LosCardones.jpg'
+  - image_path: /images/08_Alfarcito.jpg
     title: 08-Alfarcito
     alt: 08-Alfarcito
-    url: '/ClimData/08_Alfarcito_TempP_last10days.png'
-  - image_path: /ClimData/09_SAdelosCobres_TempP_last10days.png
+    url: '/images/08_Alfarcito.jpg'
+  - image_path: /images/09_SAdelosCobres.jpg
     alt: 09-San Antonio de los Cobres
     title: 09-San Antonio de los Cobres
-    url: '/ClimData/09_SAdelosCobres_TempP_last10days.png'
+    url: '/images/09_SAdelosCobres.jpg'
 stations4:
-  - image_path: /ClimData/10_TolarGrandes_TempP_last10days.png
+  - image_path: /images/10_TolarGrande.jpg
     alt: 10-Tolar Grande
     title: 10-Tolar Grande
-    url: '/ClimData/10_TolarGrandes_empP_last10days.png'
-  - image_path: /ClimData/11_SalarLlullaillaco_TempP_last10days.png
+    url: '/images/10_TolarGrande.jpg'
+  - image_path: /images/11_SalarLlullaillaco.jpg
     title: 11-Salar Llullaillaco
     alt: 11-Salar Llullaillaco
-    url: '/ClimData/_SalarLlullaillaco_TempP_last10days.png'
-  - image_path: /ClimData/12_Metan_TempP_last10days.png
+    url: '/images/11_SalarLlullaillaco.jpg'
+  - image_path: /images/12_Metan.jpg
     alt: 12-San Jose de Metan
     title: 12-San Jose de Metan
-    url: '/ClimData/12_Metan_TempP_last10days.png'
+    url: '/images/12_Metan.jpg'
 
 ---
 # Researchers
