@@ -15,6 +15,7 @@ from dateutil.tz import gettz
 data_path = sys.argv[1]
 station_name = sys.argv[2]
 file_prefix = sys.argv[3]
+output_path = sys.argv[4]
 
 filelist1 = glob.glob(os.path.join(data_path, "*/*.gz"))
 filelist2 = glob.glob(os.path.join(data_path, "*.gz"))
@@ -164,7 +165,7 @@ fg.suptitle(
     fontweight="bold",
 )
 # ax[1].set_xlim([np.max(df_all.index) - np.timedelta64(10,'D'), np.max(df_all.index)])
-fg.savefig("%s_TempP_last10days.png" % file_prefix, dpi=300)
+fg.savefig("%s/%s_TempP_last10days.png" % (output_path, file_prefix), dpi=300)
 plt.close(fg)
 
 #
