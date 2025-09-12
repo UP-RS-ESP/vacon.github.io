@@ -146,6 +146,7 @@ ax[1].plot(
     color="darkgreen",
     label="Pressure, 10-min rolling mean",
 )
+ax1b.set_ylim([0, 100])
 ax[1].grid()
 ax[1].set_xlabel("Month-Day-Hour (GMT)", fontsize=14, fontweight="bold")
 ax[1].set_ylabel("Pressure (hPa)", fontsize=14, color="darkgreen", fontweight="bold")
