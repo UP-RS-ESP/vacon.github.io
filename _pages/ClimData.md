@@ -44,21 +44,20 @@ stations3:
     title: 09-San Antonio de los Cobres
     url: '/ClimData/09_SAdelosCobres_TempP_last10days.png'
 stations4:
-  - image_path: /ClimData/10_TolarGrandes_TempP_last10days.png
+  - image_path: /ClimData/10_TolarGrande_TempP_last10days.png
     alt: 10-Tolar Grande
     title: 10-Tolar Grande
-    url: '/ClimData/10_TolarGrandes_empP_last10days.png'
+    url: '/ClimData/10_TolarGrande_TempP_last10days.png'
   - image_path: /ClimData/11_SalarLlullaillaco_TempP_last10days.png
     title: 11-Salar Llullaillaco
     alt: 11-Salar Llullaillaco
-    url: '/ClimData/_SalarLlullaillaco_TempP_last10days.png'
+    url: '/ClimData/11_SalarLlullaillaco_TempP_last10days.png'
   - image_path: /ClimData/12_Metan_TempP_last10days.png
     alt: 12-San Jose de Metan
     title: 12-San Jose de Metan
     url: '/ClimData/12_Metan_TempP_last10days.png'
 
 ---
-# Meteorological Data
 
 {% include feature_row id="stations1" type=center%}
 
