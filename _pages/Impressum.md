@@ -9,7 +9,7 @@ toc_label: "Contents"
 last_modified_at: 2026-07-04
 ---
 
-The OGRE website (*Olkaria Geodetic Rift Experiment*) is a scientific project
+The VACON website (*VAlles Calchaquíes Observatory Network*) is a scientific project
 operated by the University of Potsdam. This page provides the legal notice
 required under German law (§ 5 Digitale-Dienste-Gesetz, DDG).
 
@@ -43,7 +43,6 @@ Dortustraße 36
 
 Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
 **DE 138408327**
-<!-- VERIFY: VAT identification number before publishing -->
 
 ### Inhaltlich verantwortlich (gemäß § 18 Abs. 2 MStV)
 
