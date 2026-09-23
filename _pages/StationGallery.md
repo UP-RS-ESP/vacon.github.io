@@ -58,10 +58,31 @@ stations4:
     btn_label: 12-El Galpón
     url: '/images/12_Galpon.jpg'
 stations5:
+  - image_path: /images/13_Belen.jpg
+    alt: 13-Belen
+    btn_label: 13-Belen
+    url: '/images/13_Belen.jpg'
+  - image_path: /images/14_Penon.jpg
+    btn_label: 14-El Peñón
+    alt: 14-El Peñón
+    url: '/images/14_Penon.jpg'
+  - image_path: /images/15_Huacalera.jpg
+    alt: 15-Huacalera
+    btn_label: 15-Huacalera
+    url: '/images/15_Huacalera.jpg'
+stations6:
+  - image_path: /images/16_PastosGrandes.jpg
+    alt: 16-Pastos Grandes
+    btn_label: 16-Pastos Grandes
+    url: '/images/16_Pastos Grandes.jpg'
   - image_path: /images/17_LagunadelosPozuelos.jpg
     alt: 17-Laguna de los Pozuelos
     btn_label: 17-Laguna de los Pozuelos
     url: '/images/17_LagunadelosPozuelos.jpg'
+  - image_path: /images/18_LaHoyada.jpg
+    alt: 18-La Hoyada
+    btn_label: 18-La Hoyada
+    url: '/images/18_LaHoyada.jpg'
 
 
 ---
@@ -75,3 +96,6 @@ stations5:
 {% include feature_row id="stations4" type=center%}
 
 {% include feature_row id="stations5" type=center%}
+
+{% include feature_row id="stations6" type=center%}
+
