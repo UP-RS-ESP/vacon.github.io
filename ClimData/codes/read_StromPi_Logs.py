@@ -35,6 +35,12 @@ def plot_all_StromPiLog():
         "black",
         "lightcoral",
         "black",
+        "crimson",
+        "black",
+        "teal",
+        "black",
+        "goldenrod",
+        "black",
     ]
     now = datetime.datetime.now()
     now.replace(hour=0, minute=0, second=0, microsecond=0)
@@ -106,6 +112,12 @@ def plot_all_StromPiLog():
         "darkorange",
         "black",
         "lightcoral",
+        "black",
+        "crimson",
+        "black",
+        "teal",
+        "black",
+        "goldenrod",
         "black",
     ]
     now = datetime.datetime.now()
@@ -179,7 +191,11 @@ def plot_single_StromPiLog():
         "black",
         "lightcoral",
         "black",
-        "magenta",
+        "crimson",
+        "black",
+        "teal",
+        "black",
+        "goldenrod",
         "black",
     ]
     now = datetime.datetime.now()
