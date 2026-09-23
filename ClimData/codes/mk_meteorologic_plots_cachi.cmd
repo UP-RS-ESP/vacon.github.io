@@ -40,5 +40,20 @@ cd /raid/nwarg/vacon.github.io/ClimData/
 python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt12/ "El Galpón" 12_Galpon /raid/nwarg/vacon.github.io/ClimData/
 
 cd /raid/nwarg/vacon.github.io/ClimData/
+python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt13/ "Belen" 13_Belen /raid/nwarg/vacon.github.io/ClimData/
+
+cd /raid/nwarg/vacon.github.io/ClimData/
+python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt14/ "El Peñón" 14_Penon /raid/nwarg/vacon.github.io/ClimData/
+
+cd /raid/nwarg/vacon.github.io/ClimData/
+python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt15/ "Huacalera" 15_Huacalera /raid/nwarg/vacon.github.io/ClimData/
+
+cd /raid/nwarg/vacon.github.io/ClimData/
+python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt16/ "Pastos Grandes" 16_PastosGrandes /raid/nwarg/vacon.github.io/ClimData/
+
+cd /raid/nwarg/vacon.github.io/ClimData/
 python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt17/ "Laguna de los Pozuelos" 17_Pozuelos /raid/nwarg/vacon.github.io/ClimData/
+
+cd /raid/nwarg/vacon.github.io/ClimData/
+python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt18/ "La Hoyada" 12_Hoyada /raid/nwarg/vacon.github.io/ClimData/
 

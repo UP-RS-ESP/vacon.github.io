@@ -57,6 +57,23 @@ stations4:
     btn_label: 12-El Galpón
     url: '/ClimData/12_Galpon_TempP_last10days.png'
 stations5:
+  - image_path: /ClimData/13_Belen_TempP_last10days.png
+    alt: 13-Belen
+    btn_label: 13-Belen
+    url: '/ClimData/13_Belen_TempP_last10days.png'
+  - image_path: /ClimData/14_Penon_TempP_last10days.png
+    btn_label: 14-El Peñón
+    alt: 14-El Peñón
+    url: '/ClimData/14_Penon_TempP_last10days.png'
+  - image_path: /ClimData/15_Huacalera_TempP_last10days.png
+    alt: 15-Huacalera
+    btn_label: 15-Huacalera
+    url: '/ClimData/15_Huacalera_TempP_last10days.png'
+stations6:
+  - image_path: /ClimData/16_PastosGrandes_TempP_last10days.png
+    alt: 16-Pastos Grandes
+    btn_label: 16-Pastos Grandes
+    url: '/ClimData/16_PastosGrandes_TempP_last10days.png'
   - image_path: /ClimData/17_Pozuelos_TempP_last10days.png
     alt: 17-Laguna de los Pozuelos
     btn_label: 17-Laguna de los Pozuelos
@@ -75,3 +92,8 @@ Click on figure label to enlarge. Only last 10 days of data are shown.
 {% include feature_row id="stations4" type=center%}
 
 {% include feature_row id="stations5" type=center%}
+
+{% include feature_row id="stations6" type=center%}
+
+{% include feature_row id="stations7" type=center%}
+
