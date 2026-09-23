@@ -62,10 +62,10 @@ stations5:
     alt: 13-Belen
     btn_label: 13-Belen
     url: '/images/13_Belen.jpg'
-  - image_path: /images/14_Penon.jpg
+  - image_path: /images/14_ElPenon.jpg
     btn_label: 14-El Peñón
     alt: 14-El Peñón
-    url: '/images/14_Penon.jpg'
+    url: '/images/14_ElPenon.jpg'
   - image_path: /images/15_Huacalera.jpg
     alt: 15-Huacalera
     btn_label: 15-Huacalera
