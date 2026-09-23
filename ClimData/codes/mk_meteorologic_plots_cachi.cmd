@@ -55,5 +55,5 @@ cd /raid/nwarg/vacon.github.io/ClimData/
 python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt17/ "Laguna de los Pozuelos" 17_Pozuelos /raid/nwarg/vacon.github.io/ClimData/
 
 cd /raid/nwarg/vacon.github.io/ClimData/
-python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt18/ "La Hoyada" 12_Hoyada /raid/nwarg/vacon.github.io/ClimData/
+python3 /raid/nwarg/vacon.github.io/ClimData/codes/read_meteorologic_data.py /raid/nwarg/vacon/clim_data/qt18/ "La Hoyada" 18_Hoyada /raid/nwarg/vacon.github.io/ClimData/
 

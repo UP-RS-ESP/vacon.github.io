@@ -50,5 +50,5 @@ cd /home/bodo/vacon.github.io/ClimData/
 python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt17/ "Laguna de los Pozuelos" 17_Pozuelos /home/bodo/vacon.github.io/ClimData/
 
 cd /home/bodo/vacon.github.io/ClimData/
-python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt18/ "La Hoyada" 12_Hoyada /home/bodo/vacon.github.io/ClimData/
+python3 /home/bodo/vacon.github.io/ClimData/codes/read_meteorologic_data.py /home/bodo/vacon/clim_data/qt18/ "La Hoyada" 18_Hoyada /home/bodo/vacon.github.io/ClimData/
 
