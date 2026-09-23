@@ -340,6 +340,7 @@ for i in range(len(filelists)):
                 "output_unit",
             ],
             encoding="latin1",
+            on_bad_lines="skip",
         )
         df["date"] = pd.to_datetime(df["day"] + " " + df["hours"])
         df["date"] = pd.to_datetime(df["date"], utc=True)
