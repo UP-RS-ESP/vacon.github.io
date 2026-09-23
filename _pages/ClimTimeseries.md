@@ -78,10 +78,10 @@ stations6:
     alt: 17-Laguna de los Pozuelos
     btn_label: 17-Laguna de los Pozuelos
     url: '/ClimData/17_Pozuelos_TempP_last10days.png'
-  - image_path: /ClimData/18_LaHoyada_TempP_last10days.png
+  - image_path: /ClimData/18_Hoyada_TempP_last10days.png
     alt: 18-La Hoyada
     btn_label: 18-La Hoyada
-    url: '/ClimData/18_LaHoyada_TempP_last10days.png'
+    url: '/ClimData/18_Hoyada_TempP_last10days.png'
 
 ---
 
